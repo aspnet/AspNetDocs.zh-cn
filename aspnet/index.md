@@ -8,10 +8,10 @@ title: ASP.NET 文档
 ms.date: 08/24/2018
 description: 了解如何开发 ASP.NET 和 ASP.NET Web 应用程序。 获取文档、示例代码、教程等等。
 ms.openlocfilehash: 6309704444d60d42d49c3a8f1683045dc503e761
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 04/06/2020
 ms.locfileid: "78419774"
 ---
 <!-- markdownlint-disable MD033 -->
