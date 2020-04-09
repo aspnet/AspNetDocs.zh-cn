@@ -1,20 +1,20 @@
 ---
 uid: webhooks/receiving/index
-title: ASP.NET Webhook-接收和处理 |Microsoft Docs
+title: ASP.NET网络钩子 - 接收和处理 |微软文档
 author: rick-anderson
-description: 有关在 ASP.NET 中接收和处理 Webhook 的文章
+description: 有关接收和处理ASP.NET中的 WebHook 的文章
 ms.author: riande
 ms.date: 10/14/2016
 ms.assetid: b22046f9-c7a1-4d46-a80c-c7d2e35aad3b
-ms.openlocfilehash: 9d8d8c162d76da4fbb6b429985107c01c1adec26
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 90a55909b48aed5b6808cf9f3e95172a2b07c902
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78517292"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675177"
 ---
-# <a name="aspnet-webhooks---receiving-and-processing"></a><span data-ttu-id="b5b9d-103">ASP.NET Webhook-接收和处理</span><span class="sxs-lookup"><span data-stu-id="b5b9d-103">ASP.NET WebHooks - receiving and processing</span></span>
+# <a name="aspnet-webhooks---receiving-and-processing"></a><span data-ttu-id="b53a6-103">ASP.NET WebHook - 接收和处理</span><span class="sxs-lookup"><span data-stu-id="b53a6-103">ASP.NET WebHooks - receiving and processing</span></span>
 
-* [<span data-ttu-id="b5b9d-104">WebHook 接收方</span><span class="sxs-lookup"><span data-stu-id="b5b9d-104">WebHook Receivers</span></span>](receivers.md)
-* [<span data-ttu-id="b5b9d-105">正在处理 Webhook</span><span class="sxs-lookup"><span data-stu-id="b5b9d-105">Processing WebHooks</span></span>](handlers.md)
-* [<span data-ttu-id="b5b9d-106">接收方依赖关系</span><span class="sxs-lookup"><span data-stu-id="b5b9d-106">Receiver Dependencies</span></span>](dependencies.md)
+* [<span data-ttu-id="b53a6-104">网络钩接收器</span><span class="sxs-lookup"><span data-stu-id="b53a6-104">WebHook Receivers</span></span>](receivers.md)
+* [<span data-ttu-id="b53a6-105">处理 WebHook</span><span class="sxs-lookup"><span data-stu-id="b53a6-105">Processing WebHooks</span></span>](handlers.md)
+* [<span data-ttu-id="b53a6-106">接收器依赖项</span><span class="sxs-lookup"><span data-stu-id="b53a6-106">Receiver Dependencies</span></span>](dependencies.md)
