@@ -1,132 +1,132 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
-title: '迭代 #3 –添加窗体验证C#（） |Microsoft Docs'
-author: microsoft
-description: 在第三次迭代中，我们将添加基本的窗体验证。 我们阻止用户提交窗体，而无需填写所需的窗体字段。 我们还验证 emai 。
+title: 迭代#3 = 添加表单验证 （C#） |微软文档
+author: rick-anderson
+description: 在第三个迭代中，我们添加基本表单验证。 我们防止人们在未填写所需表单字段的情况下提交表单。 我们还验证了 emai...
 ms.author: riande
 ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: af2e86e820f60f0a3d8e3db8f78eba67ef63579a
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: c8442574d4901045f044f53ea12cd8330e8eaaa3
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78437984"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81542373"
 ---
-# <a name="iteration-3--add-form-validation-c"></a>迭代 #3 –添加窗体验证C#（）
+# <a name="iteration-3--add-form-validation-c"></a>迭代 3 – 添加表单验证 (C#)
 
-by [Microsoft](https://github.com/microsoft)
+由[微软](https://github.com/microsoft)
 
 [下载代码](iteration-3-add-form-validation-cs/_static/contactmanager_3_cs1.zip)
 
-> 在第三次迭代中，我们将添加基本的窗体验证。 我们阻止用户提交窗体，而无需填写所需的窗体字段。 我们还验证了电子邮件地址和电话号码。
+> 在第三个迭代中，我们添加基本表单验证。 我们防止人们在未填写所需表单字段的情况下提交表单。 我们还验证电子邮件地址和电话号码。
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>构建联系人管理 ASP.NET MVC 应用程序（C#）
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>构建联系人管理ASP.NET MVC 应用程序 （C#）
 
-在本系列教程中，我们从一开始就生成一个完整的联系人管理应用程序。 联系人管理器应用程序允许您存储联系人信息名称、电话号码和电子邮件地址，以获取人员列表。
+在本系列教程中，我们从头到尾构建整个联系人管理应用程序。 通过联系人管理器应用程序，您可以存储联系人信息 （姓名、电话号码和电子邮件地址） 人员列表。
 
-我们通过多个迭代生成应用程序。 随着每次迭代，我们将逐步改进应用程序。 此多个迭代方法的目标是使您能够了解每个更改的原因。
+我们通过多次迭代构建应用程序。 每次迭代时，我们都会逐步改进应用程序。 此多迭代方法的目标是使您能够了解每次更改的原因。
 
-- 迭代 #1-创建应用程序。 在第一次迭代中，我们以尽可能简单的方式创建联系人管理器。 添加对基本数据库操作的支持：创建、读取、更新和删除（CRUD）。
+- 迭代#1 - 创建应用程序。 在第一次迭代中，我们以最简单的方式创建联系人管理器。 我们添加对基本数据库操作的支持：创建、读取、更新和删除 （CRUD）。
 
-- 迭代 #2-使应用程序看起来不错。 在此迭代中，我们通过修改默认的 ASP.NET MVC 视图母版页和级联样式表来改善应用程序的外观。
+- 迭代#2 - 使应用程序看起来不错。 在此迭代中，我们通过修改默认ASP.NET MVC 视图母版页和级联样式表来改进应用程序的外观。
 
-- 迭代 #3-添加窗体验证。 在第三次迭代中，我们将添加基本的窗体验证。 我们阻止用户提交窗体，而无需填写所需的窗体字段。 我们还验证了电子邮件地址和电话号码。
+- 迭代#3 - 添加表单验证。 在第三个迭代中，我们添加基本表单验证。 我们防止人们在未填写所需表单字段的情况下提交表单。 我们还验证电子邮件地址和电话号码。
 
-- 迭代 #4-使应用程序松散耦合。 在第四次迭代中，我们将利用多种软件设计模式来更轻松地维护和修改联系人管理器应用程序。 例如，我们重构应用程序以使用存储库模式和依赖关系注入模式。
+- 迭代#4 - 使应用程序松散耦合。 在第四次迭代中，我们利用多种软件设计模式，使维护和修改联系人管理器应用程序变得更加容易。 例如，我们重构应用程序以使用存储库模式和依赖项注入模式。
 
-- 迭代 #5-创建单元测试。 在第五次迭代中，通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑生成单元测试。
+- 迭代#5 - 创建单元测试。 在第五次迭代中，我们通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑构建单元测试。
 
-- 迭代 #6-使用测试驱动开发。 在第六次迭代中，我们通过首先编写单元测试并针对单元测试编写代码，向应用程序添加新功能。 在此迭代中，我们添加联系人组。
+- 迭代#6 - 使用测试驱动开发。 在第六次迭代中，我们首先编写单元测试并针对单元测试编写代码，从而向应用程序添加新功能。 在此迭代中，我们添加联系人组。
 
-- 迭代 #7-添加 Ajax 功能。 在第七次迭代中，我们通过添加对 Ajax 的支持来提高应用程序的响应能力和性能。
+- 迭代#7 - 添加Ajax功能。 在第七次迭代中，我们通过增加对Ajax的支持来提高应用程序的响应性和性能。
 
 ## <a name="this-iteration"></a>此迭代
 
-在联系人管理器应用程序的第二次迭代中，我们添加了基本的窗体验证。 我们会在不输入所需表单域的值的情况下，阻止用户提交联系人。 我们还验证电话号码和电子邮件地址（请参阅图1）。
+在联系人管理器应用程序的第二次迭代中，我们添加基本表单验证。 我们防止人员提交联系人而不输入所需表单字段的值。 我们还验证电话号码和电子邮件地址（参见图 1）。
 
-[!["新建项目" 对话框](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![“新建项目”对话框](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
-**图 01**：具有验证的窗体（[单击以查看完全大小的图像](iteration-3-add-form-validation-cs/_static/image2.png)）
+**图 01**： 具有验证的窗体 （[单击以查看全尺寸图像](iteration-3-add-form-validation-cs/_static/image2.png)）
 
-在此迭代中，我们会将验证逻辑直接添加到控制器操作。 通常，不建议将验证添加到 ASP.NET MVC 应用程序。 更好的方法是将应用程序的验证逻辑放在单独的[服务层](http://martinfowler.com/eaaCatalog/serviceLayer.html)中。 在下一次迭代中，我们重构联系人管理器应用程序，使应用程序更易于维护。
+在此迭代中，我们将验证逻辑直接添加到控制器操作中。 通常，这不是向ASP.NET MVC 应用程序添加验证的建议方法。 更好的方法是将应用程序的验证逻辑放在单独的[服务层](http://martinfowler.com/eaaCatalog/serviceLayer.html)中。 在下一次迭代中，我们将重构联系人管理器应用程序，以使应用程序更具可维护性。
 
-在这种情况下，为了简单起见，我们将手动编写所有验证代码。 我们可以利用验证框架，而不是自己编写验证代码。 例如，你可以使用 Microsoft 企业库验证应用程序块（VAB）来实现 ASP.NET MVC 应用程序的验证逻辑。 若要了解有关验证应用程序块的详细信息，请参阅：
+在此迭代中，为了简单化，我们手动编写所有验证代码。 我们可以利用验证框架，而不是自己编写验证代码。 例如，可以使用 Microsoft 企业库验证应用程序块 （VAB） 来实现ASP.NET MVC 应用程序的验证逻辑。 要了解有关验证应用程序块的更多，请参阅：
 
 [*http://msdn.microsoft.com/library/dd203099.aspx*](https://msdn.microsoft.com/library/dd203099.aspx)
 
 ## <a name="adding-validation-to-the-create-view"></a>将验证添加到创建视图
 
-首先，让我们将验证逻辑添加到创建视图。 幸运的是，因为我们生成了带有 Visual Studio 的 "创建" 视图，所以 "创建" 视图已包含所有必要的用户界面逻辑来显示验证消息。 "创建" 视图包含在 "列表 1" 中。
+让我们首先向"创建"视图添加验证逻辑。 幸运的是，由于我们使用 Visual Studio 生成了"创建"视图，因此"创建"视图已包含显示验证消息所需的所有用户界面逻辑。 "创建"视图包含在清单 1 中。
 
-**列表 1-\Views\Contact\Create.aspx**
+**清单 1 - [视图]联系人\创建.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-cs/samples/sample1.aspx)]
 
-请注意，调用 HTML 窗体上立即显示的 ValidationSummary （） helper 方法。 如果存在验证错误消息，则此方法会在项目符号列表中显示验证消息。
+请注意 HTML.验证摘要（） 帮助器方法的调用，该方法显示在 HTML 窗体的紧要上方。 如果存在验证错误消息，则此方法会在项目符号列表中显示验证消息。
 
-此外，请注意，ValidationMessage （）的调用将显示在每个窗体字段的旁边。 ValidationMessage （）帮助器显示单个验证错误消息。 对于列表1，出现验证错误时显示星号。
+此外，请注意，对 Html.验证消息（）的调用出现在每个表单字段旁边。 验证消息（） 帮助程序显示单个验证错误消息。 在清单 1 中，当出现验证错误时，将显示星号。
 
-最后，当存在与帮助器显示的属性相关联的验证错误时，Html. TextBox （） helper 会自动呈现级联样式表类。 .Html （） helper 会呈现名为**输入验证错误的**类。
+最后，当存在与帮助程序显示的属性关联的验证错误时，Html.TextBox（） 帮助程序会自动呈现级联样式表类。 Html.TextBox（） 帮助程序呈现名为**输入验证错误的**类。
 
-创建新的 ASP.NET MVC 应用程序时，会自动在内容文件夹中创建一个名为 "Site" 的样式表。 此样式表包含与验证错误消息的外观相关的 CSS 类的以下定义：
+创建新ASP.NET MVC 应用程序时，将自动在内容文件夹中创建名为 Site.css 的样式表。 此样式表包含与验证错误消息的出现相关的 CSS 类的以下定义：
 
 [!code-css[Main](iteration-3-add-form-validation-cs/samples/sample2.css)]
 
-字段验证-error 类用于为 ValidationMessage （） helper 呈现的输出绘制样式。 输入验证-错误类用于对由 Html. TextBox （） helper 呈现的文本框（输入）进行样式。 验证摘要-错误类用于对 ValidationSummary （）帮助程序呈现的无序列表进行样式。
+字段验证错误类用于设置 Html.验证Message（） 帮助程序呈现的输出的样式。 输入验证错误类用于设置 Html.TextBox（） 帮助程序呈现的文本框（输入）的样式。 验证摘要错误类用于设置 Html.验证摘要（） 帮助程序呈现的无序列表的样式。
 
 > [!NOTE] 
 > 
-> 您可以修改本部分中所述的样式表类，以自定义验证错误消息的外观。
+> 您可以修改本节中描述的样式表类，以自定义验证错误消息的外观。
 
 ## <a name="adding-validation-logic-to-the-create-action"></a>将验证逻辑添加到创建操作
 
-现在，Create view 从不显示验证错误消息，因为我们尚未编写用于生成任何消息的逻辑。 为了显示验证错误消息，需要将错误消息添加到 ModelState。
+现在，"创建"视图从不显示验证错误消息，因为我们尚未编写逻辑来生成任何消息。 为了显示验证错误消息，您需要将错误消息添加到 ModelState。
 
 > [!NOTE] 
 > 
-> 将窗体字段的值分配给属性错误时，UpdateModel （）方法会自动将错误消息添加到 ModelState 中。 例如，如果您尝试将字符串 "apple" 分配给接受日期时间值的出生日期属性，则 UpdateModel （）方法会将错误添加到 ModelState 中。
+> 当将表单字段的值分配给属性时，UpdateModel（） 方法会自动将错误消息添加到 ModelState。 例如，如果您尝试将字符串"apple"分配给接受 DateTime 值的 DateDate 属性，则 UpdateModel（） 方法将错误添加到 ModelState。
 
-清单2中修改的 Create （）方法包含一个新部分，该部分将在新联系人插入数据库之前验证 Contact 类的属性。
+清单 2 中修改的 Create（） 方法包含一个新部分，用于在新联系人插入数据库之前验证 Contact 类的属性。
 
-**列表 2-Controllers\ContactController.cs （通过验证创建）**
+**清单2 - 控制器\联系控制器.cs（通过验证创建）**
 
 [!code-csharp[Main](iteration-3-add-form-validation-cs/samples/sample3.cs)]
 
-"验证" 部分强制实施四个不同的验证规则：
+验证部分强制实施四个不同的验证规则：
 
-- FirstName 属性的长度必须大于零（并且不能仅包含空格）
-- LastName 属性的长度必须大于零（并且不能仅包含空格）
-- 如果电话属性具有值（长度大于0），则电话属性必须与正则表达式匹配。
-- 如果电子邮件属性的值（长度大于0），则 Email 属性必须与正则表达式匹配。
+- FirstName 属性的长度必须大于零（它不能仅由空格组成）
+- LastName 属性的长度必须大于零（它不能仅由空格组成）
+- 如果 Phone 属性具有值（长度大于 0），则 Phone 属性必须匹配正则表达式。
+- 如果 Email 属性的值（长度大于 0），则 Email 属性必须与正则表达式匹配。
 
-如果违反了验证规则，则会将错误消息添加到 ModelState 中的 AddModelError （）方法的帮助下。 将消息添加到 ModelState 时，请提供属性的名称和验证错误消息的文本。 此错误消息将通过 ValidationSummary （）和 ValidationMessage （）帮助程序方法显示在视图中。
+当存在验证规则冲突时，在 AddModelError（） 方法的帮助下，将一条错误消息添加到 ModelState。 将消息添加到 ModelState 时，会提供属性的名称和验证错误消息的文本。 此错误消息由 Html.验证摘要（） 和 Html.验证消息（） 帮助器方法显示在视图中。
 
-执行验证规则后，将检查 ModelState 的 IsValid 属性。 当任何验证错误消息已添加到 ModelState 时，IsValid 属性返回 false。 如果验证失败，则会重新显示带有错误消息的 Create 窗体。
+执行验证规则后，将检查 ModelState 的"IsValid"属性。 将任何验证错误消息添加到 ModelState 时，"IsValid"属性将返回 false。 如果验证失败，则使用错误消息重新显示"创建"窗体。
 
 > [!NOTE] 
 > 
-> 我获取了用于在 [ *http://regexlib.com* ](http://regexlib.com) 中验证正则表达式存储库中的电话号码和电子邮件地址的正则表达式。
+> 我收到用于验证从正则表达式存储库的电话号码和电子邮件地址的正则表达式，[*http://regexlib.com*](http://regexlib.com)
 
-## <a name="adding-validation-logic-to-the-edit-action"></a>向编辑操作添加验证逻辑
+## <a name="adding-validation-logic-to-the-edit-action"></a>将验证逻辑添加到编辑操作
 
-Edit （）操作更新联系人。 Edit （）操作需要执行与 Create （）操作完全相同的验证。 我们应重构 Contact controller，使 Create （）和 Edit （）操作都调用同一验证方法，而不是复制相同的验证代码。
+编辑（） 操作更新联系人。 Edit（） 操作需要执行与 Create（） 操作完全相同的验证。 我们不应复制相同的验证代码，而应重构联系人控制器，以便 Create（） 和 Edit（） 操作调用相同的验证方法。
 
-修改后的 Contact controller 类包含在列表3中。 此类有一个新的 ValidateContact （）方法，该方法在 Create （）和 Edit （）操作中调用。
+修改后的联系人控制器类包含在清单 3 中。 此类具有在 Create（） 和 Edit（） 操作中调用的新验证联系人（） 方法。
 
-**列表 3-Controllers\ContactController.cs**
+**清单3 - 控制器\联系控制器.cs**
 
 [!code-csharp[Main](iteration-3-add-form-validation-cs/samples/sample4.cs)]
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>总结
 
-在此迭代中，我们向联系人管理器应用程序添加了基本的窗体验证。 我们的验证逻辑阻止用户提交新的联系人或编辑现有联系人，而不提供 FirstName 和 LastName 属性的值。 此外，用户必须提供有效的电话号码和电子邮件地址。
+在此迭代中，我们将基本表单验证添加到我们的联系人管理器应用程序中。 我们的验证逻辑可防止用户提交新联系人或编辑现有联系人，而不提供 NameName 和 LASTName 属性的值。 此外，用户必须提供有效的电话号码和电子邮件地址。
 
-在此迭代中，我们以尽可能最简单的方式将验证逻辑添加到了联系人管理器应用程序。 但是，将我们的验证逻辑混合到我们的控制器逻辑将会在长期中产生问题。 随着时间的推移，我们的应用程序将更难以维护和修改。
+在此迭代中，我们以最简单的方式将验证逻辑添加到我们的联系人管理器应用程序中。 但是，从长期来看，将验证逻辑混合到控制器逻辑中将给我们带来问题。 随着时间的推移，我们的应用程序将更难维护和修改。
 
-在下一次迭代中，我们将从控制器重构验证逻辑和数据库访问逻辑。 我们将利用几项软件设计原则，使我们能够创建更松耦合、更易于维护的应用程序。
+在下一次迭代中，我们将重构我们的验证逻辑和数据库访问逻辑的控制器。 我们将利用多种软件设计原则，使我们能够创建一个更松散耦合、更可维护的应用程序。
 
 > [!div class="step-by-step"]
 > [上一页](iteration-2-make-the-application-look-nice-cs.md)

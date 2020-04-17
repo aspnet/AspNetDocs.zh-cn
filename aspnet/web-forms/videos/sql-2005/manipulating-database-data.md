@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/sql-2005/manipulating-database-data
-title: 操作数据库数据 |Microsoft Docs
-author: microsoft
-description: SQL Server 初学者将从 ADO.NET 了解 ADO.NET 对象和 SQL 语句的执行。 探索 SQL 并了解插入、更新和删除 sta 。
+title: 操作数据库数据 |微软文档
+author: rick-anderson
+description: SQL Server 初学者将从ADO.NET了解ADO.NET对象和执行 SQL 语句。 浏览 SQL 并了解插入、更新和删除文件...
 ms.author: riande
 ms.date: 03/29/2006
 ms.assetid: 03a4cdda-480f-43fa-891c-a976633d90ae
 msc.legacyurl: /web-forms/videos/sql-2005/manipulating-database-data
 msc.type: video
-ms.openlocfilehash: 10f9379a27f96ac4acb77af1a6062a42aaecc14f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 9db4985c07cdcc51cb3c45d811fc44366028a59d
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78501092"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543270"
 ---
 # <a name="manipulating-database-data"></a>操作数据库数据
 
-由[Microsoft](https://github.com/microsoft)
+由[微软](https://github.com/microsoft)
 
-SQL Server 初学者将从 ADO.NET 了解 ADO.NET 对象和 SQL 语句的执行。 探索 SQL 并了解 insert、update 和 delete 语句。
+SQL Server 初学者将从ADO.NET了解ADO.NET对象和执行 SQL 语句。 浏览 SQL 并了解插入、更新和删除语句。
 
-[&#9654;观看视频（40分钟）](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
+[&#9654;观看视频（40 分钟）](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
 
 > [!div class="step-by-step"]
 > [上一页](designing-relational-database-tables.md)

@@ -1,26 +1,26 @@
 ---
 uid: web-pages/videos/introduction/index
-title: 网页简介视频 |Microsoft Docs
+title: 网页简介 视频 |微软文档
 author: rick-anderson
-description: 您可以查看哪些视频，以了解有关 Web Pages 和 WebMatrix 的基本知识。
+description: 您可以查看哪些视频来了解有关网页和 WebMatrix 的基础知识。
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: b8a43660-177f-4a00-bb51-be887364c607
 msc.legacyurl: /web-pages/videos/introduction
 msc.type: chapter
-ms.openlocfilehash: e4e9d63ddc701205d9f102e05fe47dd2c552bdf1
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: e1720cf4fc9cdbec216ae0043a14d7118a388d9b
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78512732"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81542976"
 ---
-# <a name="introduction-to-web-pages-videos"></a>网页简介视频
+# <a name="introduction-to-web-pages-videos"></a>网页视频简介
 
-> 您可以查看哪些视频，以了解有关 Web Pages 和 WebMatrix 的基本知识。
+> 您可以查看哪些视频来了解有关网页和 WebMatrix 的基础知识。
 
 > [!NOTE] 
-> WebMatrix 不再建议作为 ASP.NET 网页的集成开发环境。 使用[Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio)或[Visual Studio Code](https://code.visualstudio.com/)。
+> 不再建议将 WebMatrix 作为ASP.NET网页的集成开发环境。 使用[视觉工作室](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio)或[视觉工作室代码](https://code.visualstudio.com/)。
 
 - [ASP.NET 网页的 5 分钟简介](5-minute-introduction-to-aspnet-web-pages.md)
 - [安装和使用 Microsoft WebMatrix 工具](install-and-use-the-microsoft-webmatrix-tool.md)

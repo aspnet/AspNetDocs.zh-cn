@@ -1,223 +1,223 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: '迭代 #5 –创建单元测试（C#） |Microsoft Docs'
-author: microsoft
-description: 在第五次迭代中，通过添加单元测试使应用程序更易于维护和修改。 我们模拟了数据模型类，并生成了用于 o 的单元测试 。
+title: 迭代#5 = 创建单元测试 （C#） |微软文档
+author: rick-anderson
+description: 在第五次迭代中，我们通过添加单元测试使应用程序更易于维护和修改。 我们模拟我们的数据模型类，并为 o...
 ms.author: riande
 ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 32e81cce34a0e0b1f6b01934334e1b66dce89651
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: c005a8ffc3b09c126d796f2feb74d402cb784aa2
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78437840"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81542347"
 ---
-# <a name="iteration-5--create-unit-tests-c"></a>迭代 #5 –创建单元测试（C#）
+# <a name="iteration-5--create-unit-tests-c"></a>迭代 5 — 创建单元测试 (C#)
 
-由[Microsoft](https://github.com/microsoft)
+由[微软](https://github.com/microsoft)
 
 [下载代码](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
 
-> 在第五次迭代中，通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑生成单元测试。
+> 在第五次迭代中，我们通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑构建单元测试。
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>构建联系人管理 ASP.NET MVC 应用程序（C#）
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>构建联系人管理ASP.NET MVC 应用程序 （C#）
 
-在本系列教程中，我们从一开始就生成一个完整的联系人管理应用程序。 联系人管理器应用程序允许您存储联系人信息名称、电话号码和电子邮件地址，以获取人员列表。
+在本系列教程中，我们从头到尾构建整个联系人管理应用程序。 通过联系人管理器应用程序，您可以存储联系人信息 （姓名、电话号码和电子邮件地址） 人员列表。
 
-我们通过多个迭代生成应用程序。 随着每次迭代，我们将逐步改进应用程序。 此多个迭代方法的目标是使您能够了解每个更改的原因。
+我们通过多次迭代构建应用程序。 每次迭代时，我们都会逐步改进应用程序。 此多迭代方法的目标是使您能够了解每次更改的原因。
 
-- 迭代 #1-创建应用程序。 在第一次迭代中，我们以尽可能简单的方式创建联系人管理器。 添加对基本数据库操作的支持：创建、读取、更新和删除（CRUD）。
+- 迭代#1 - 创建应用程序。 在第一次迭代中，我们以最简单的方式创建联系人管理器。 我们添加对基本数据库操作的支持：创建、读取、更新和删除 （CRUD）。
 
-- 迭代 #2-使应用程序看起来不错。 在此迭代中，我们通过修改默认的 ASP.NET MVC 视图母版页和级联样式表来改善应用程序的外观。
+- 迭代#2 - 使应用程序看起来不错。 在此迭代中，我们通过修改默认ASP.NET MVC 视图母版页和级联样式表来改进应用程序的外观。
 
-- 迭代 #3-添加窗体验证。 在第三次迭代中，我们将添加基本的窗体验证。 我们阻止用户提交窗体，而无需填写所需的窗体字段。 我们还验证了电子邮件地址和电话号码。
+- 迭代#3 - 添加表单验证。 在第三个迭代中，我们添加基本表单验证。 我们防止人们在未填写所需表单字段的情况下提交表单。 我们还验证电子邮件地址和电话号码。
 
-- 迭代 #4-使应用程序松散耦合。 在第四次迭代中，我们将利用多种软件设计模式来更轻松地维护和修改联系人管理器应用程序。 例如，我们重构应用程序以使用存储库模式和依赖关系注入模式。
+- 迭代#4 - 使应用程序松散耦合。 在第四次迭代中，我们利用多种软件设计模式，使维护和修改联系人管理器应用程序变得更加容易。 例如，我们重构应用程序以使用存储库模式和依赖项注入模式。
 
-- 迭代 #5-创建单元测试。 在第五次迭代中，通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑生成单元测试。
+- 迭代#5 - 创建单元测试。 在第五次迭代中，我们通过添加单元测试使应用程序更易于维护和修改。 我们模拟数据模型类，并为控制器和验证逻辑构建单元测试。
 
-- 迭代 #6-使用测试驱动开发。 在第六次迭代中，我们通过首先编写单元测试并针对单元测试编写代码，向应用程序添加新功能。 在此迭代中，我们添加联系人组。
+- 迭代#6 - 使用测试驱动开发。 在第六次迭代中，我们首先编写单元测试并针对单元测试编写代码，从而向应用程序添加新功能。 在此迭代中，我们添加联系人组。
 
-- 迭代 #7-添加 Ajax 功能。 在第七次迭代中，我们通过添加对 Ajax 的支持来提高应用程序的响应能力和性能。
+- 迭代#7 - 添加Ajax功能。 在第七次迭代中，我们通过增加对Ajax的支持来提高应用程序的响应性和性能。
 
 ## <a name="this-iteration"></a>此迭代
 
-在联系人管理器应用程序的前一次迭代中，我们重构了应用程序，使其更松耦合。 将应用程序分离到不同的控制器、服务和存储库层。 每一层通过接口与其下面的层交互。
+在 Contact Manager 应用程序的上一次迭代中，我们将应用程序重构为更松散耦合。 我们将应用程序划分为不同的控制器、服务和存储库层。 每个层通过接口与层交互。
 
-我们重构了应用程序，使应用程序更易于维护和修改。 例如，如果需要使用新的数据访问技术，只需更改存储库层，无需接触控制器或服务层。 通过使 Contact Manager 松散耦合起来，我们使应用程序更具弹性性来进行更改。
+我们重构了应用程序，使应用程序更易于维护和修改。 例如，如果需要使用新的数据访问技术，我们可以简单地更改存储库层而不接触控制器或服务层。 通过使联系人管理器松散耦合，我们使应用程序对更改更具弹性。
 
-但当我们需要向联系人管理器应用程序添加新功能时，会发生什么情况？ 或者，修复 bug 后会出现什么情况？ 一种很好的经验证的代码编写，就是每次触摸代码时都会产生新的 bug。
+但是，当我们需要向联系人管理器应用程序添加新功能时，会发生什么情况？ 或者，当我们修复 Bug 时会发生什么情况？ 编写代码的可悲但经过充分验证的事实是，每当您触摸代码时，都会产生引入新 Bug 的风险。
 
-例如，你的经理可能会要求你向联系人经理添加新功能。 她希望你添加对联系人组的支持。 她希望您能够使用户能够将其联系人组织到朋友、商业等的组中。
+例如，一天好，您的经理可能会要求您向联系人管理器添加新功能。 她希望您添加对联系人组的支持。 她希望您允许用户将联系人组织成"朋友"、"业务"等组。
 
-为了实现这一新功能，您将需要修改联系人管理器应用程序的所有三个层。 需要向控制器、服务层和存储库添加新功能。 一旦开始修改代码，就会面临一些重大功能。
+为了实现此新功能，您需要修改联系人管理器应用程序的所有三个层。 您需要向控制器、服务层和存储库添加新功能。 一旦开始修改代码，您就可能会破坏以前起作用的功能。
 
-像之前的迭代一样，将应用程序重构为单独的层是一件好事。 这是一件好事，因为它使我们能够在不触及应用程序的其余部分的情况下对整个层进行更改。 但是，如果要使代码中的代码更易于维护和修改，则需要为代码创建单元测试。
+像上次迭代中所做的那样，将应用程序重构为单独的层是一件好事。 这是一件好事，因为它使我们能够对整个层进行更改，而无需接触应用程序的其余部分。 但是，如果要使层中的代码更易于维护和修改，则需要为代码创建单元测试。
 
-使用单元测试来测试单个代码单元。 这些代码单元小于整个应用程序层。 通常，使用单元测试来验证代码中的某个特定方法的行为是否符合预期。 例如，你可以为 ContactManagerService 类公开的 CreateContact （）方法创建单元测试。
+使用单元测试来测试单个代码单元。 这些代码单位小于整个应用程序层。 通常，使用单元测试来验证代码中的特定方法的行为方式是否达到预期。 例如，您将为 ContactManager 服务类公开的 CreateContact（） 方法创建单元测试。
 
-应用程序的单元测试与安全网络的工作方式相同。 每当在应用程序中修改代码时，都可以运行一组单元测试来检查修改是否会破坏现有功能。 单元测试使代码修改安全。 单元测试使得应用程序中的所有代码都能够更灵活地进行更改。
+应用程序单元测试工作就像安全网一样。 每当修改应用程序中的代码时，都可以运行一组单元测试，以检查修改是否破坏了现有功能。 单元测试使代码可以安全地修改。 单元测试使应用程序中的所有代码都更具更改的弹性。
 
-在此迭代中，我们向联系人管理器应用程序添加单元测试。 这样，在下一次迭代中，我们可以将联系人组添加到我们的应用程序，而无需担心破坏现有功能。
-
-> [!NOTE] 
-> 
-> 有多种单元测试框架，包括 NUnit、xUnit.net 和 MbUnit。 在本教程中，我们将使用 Visual Studio 中包含的单元测试框架。 不过，您可以轻松地使用其中一种替代框架。
-
-## <a name="what-gets-tested"></a>测试的内容
-
-在完美的世界中，所有代码都将包含在单元测试中。 在完美的世界中，您可以获得完美的安全网络。 可以通过执行单元测试来修改应用程序中的任何代码行，并可立即了解更改是否会破坏现有功能。
-
-但是，我们不会在完美的世界中生活。 在实践中，编写单元测试时，您将重点放在编写业务逻辑的测试（例如，验证逻辑）上。 特别是，*不*为数据访问逻辑或视图逻辑编写单元测试。
-
-若要有用，必须非常快速地执行单元测试。 您可以轻松地为应用程序积累数百（甚至上千个）的单元测试。 如果单元测试需要很长时间才能运行，则可以避免执行它们。 换句话说，长时间运行的单元测试不能用于日常编码。
-
-出于此原因，通常不会为与数据库交互的代码编写单元测试。 对活动数据库运行数百个单元测试将会太慢。 相反，您需要模拟您的数据库，并编写与 mock 数据库交互的代码（我们在下面讨论了模拟数据库）。
-
-由于类似的原因，通常不会为视图编写单元测试。 若要测试视图，必须启动 web 服务器。 由于旋转 web 服务器的过程相对较慢，因此不建议为视图创建单元测试。
-
-如果视图包含复杂逻辑，则应考虑将逻辑移到帮助器方法中。 你可以为在不旋转 web 服务器的情况下执行的帮助器方法编写单元测试。
+在此迭代中，我们将单元测试添加到我们的联系人管理器应用程序中。 这样，在下一次迭代中，我们可以将联系人组添加到我们的应用程序中，而不必担心破坏现有功能。
 
 > [!NOTE] 
 > 
-> 编写单元测试时，为数据访问逻辑或查看逻辑编写测试并不是一个好主意，这些测试在构建功能或集成测试时非常有用。
+> 有多种单元测试框架，包括 NUnit、xUnit.net 和 MbUnit。 在本教程中，我们使用 Visual Studio 附带的单位测试框架。 但是，您可以同样轻松地使用这些替代框架之一。
+
+## <a name="what-gets-tested"></a>测试内容
+
+在理想情况下，所有代码都将由单元测试覆盖。 在完美的世界，你会有完美的安全网。 您将能够修改应用程序中的任何代码行，并通过执行单元测试立即知道更改是否中断了现有功能。
+
+然而，我们并不生活在一个完美的世界。 实际上，在编写单元测试时，您专注于为业务逻辑编写测试（例如，验证逻辑）。 特别是，您*不会*为数据访问逻辑或视图逻辑编写单元测试。
+
+为了有用，单元测试必须非常快速地执行。 您可以轻松地为应用程序累积数百（甚至数千个）单元测试。 如果单元测试需要很长时间才能运行，则可以避免执行它们。 换句话说，对于日常编码目的，长时间运行单元测试是无用的。
+
+因此，您通常不会为与数据库交互的代码编写单元测试。 对实时数据库运行数百个单元测试将太慢。 相反，您模拟数据库并编写与模拟数据库交互的代码（我们讨论下面嘲笑数据库）。
+
+出于类似的原因，您通常不会为视图编写单元测试。 为了测试视图，必须启动 Web 服务器。 由于旋转 Web 服务器是一个相对缓慢的过程，因此不建议为视图创建单元测试。
+
+如果视图包含复杂的逻辑，则应考虑将逻辑移动到帮助程序方法中。 您可以为在不旋转 Web 服务器的情况下执行的 Helper 方法编写单元测试。
 
 > [!NOTE] 
 > 
-> ASP.NET MVC 是 Web 窗体视图引擎。 尽管 Web 窗体视图引擎依赖于 web 服务器，但其他视图引擎可能不是。
+> 虽然编写数据访问逻辑或视图逻辑的测试在编写单元测试时不是个好主意，但这些测试在构建功能或集成测试时可能非常有价值。
 
-## <a name="using-a-mock-object-framework"></a>使用 Mock 对象框架
+> [!NOTE] 
+> 
+> ASP.NET MVC 是 Web 窗体视图引擎。 虽然 Web 窗体视图引擎依赖于 Web 服务器，但其他视图引擎可能不是。
 
-构建单元测试时，几乎总是需要利用 Mock 对象框架。 Mock 对象框架使你可以为应用程序中的类创建模拟和存根。
+## <a name="using-a-mock-object-framework"></a>使用模拟对象框架
 
-例如，可以使用 Mock 对象框架生成存储库类的模拟版本。 这样，便可以在单元测试中使用 mock 存储库类，而不是实际存储库类。 使用 mock 存储库可以避免在执行单元测试时执行数据库代码。
+构建单元测试时，您几乎总是需要利用模拟对象框架。 模拟对象框架使您能够为应用程序中的类创建模拟和存根。
 
-Visual Studio 不包括 Mock 对象框架。 但是，有几个适用于 .NET framework 的商业和开源模拟对象框架：
+例如，可以使用 Mock Object 框架生成存储库类的模拟版本。 这样，您可以在单元测试中使用模拟存储库类而不是真正的存储库类。 使用模拟存储库使您能够在执行单元测试时避免执行数据库代码。
 
-1. Moq-此框架在开源 BSD 许可证下提供。 可以从[https://code.google.com/p/moq/](https://code.google.com/p/moq/)下载 Moq。
-2. Rhino 模拟-在开源 BSD 许可证下提供此框架。 可以从[http://ayende.com/projects/rhino-mocks.aspx](http://ayende.com/projects/rhino-mocks.aspx)下载 Rhino 模拟。
-3. Typemock Isolator-这是一个商业框架。 可以从[http://www.typemock.com/](http://www.typemock.com/)下载试用版。
+可视化工作室不包括模拟对象框架。 但是，有几种商业和开源模拟对象框架可用于 .NET 框架：
 
-在本教程中，我决定使用 Moq。 不过，您可以轻松地使用 Rhino 模拟或 Typemock Isolator 为 "联系人管理器" 应用程序创建 Mock 对象。
+1. Moq - 此框架在开源 BSD 许可证下可用。 你可以从[https://code.google.com/p/moq/](https://code.google.com/p/moq/)下载莫克。
+2. 犀牛模拟 - 此框架可在开源 BSD 许可证下提供。 你可以从[http://ayende.com/projects/rhino-mocks.aspx](http://ayende.com/projects/rhino-mocks.aspx)下载犀牛模拟。
+3. 类型隔离器 - 这是一个商业框架。 可以从 下载试用版[http://www.typemock.com/](http://www.typemock.com/)。
 
-你需要先完成以下步骤，然后才能使用 Moq：
+在本教程中，我决定使用 Moq。 但是，您可以同样轻松地使用 Rhino Mocks 或 Typemock 隔离器为联系人管理器应用程序创建 Mock 对象。
+
+在使用 Moq 之前，您需要完成以下步骤：
 
 1. .
-2. 解压缩下载之前，请确保右键单击该文件，然后单击标记为 "**解除阻止**" 的按钮（参见图1）。
+2. 在解压缩下载之前，请确保右键单击文件并单击标记为 **"取消阻止"** 的按钮（参见图 1）。
 3. 解压缩下载。
-4. 右键单击 "ContactManager" 项目中的 "引用" 文件夹，然后选择 "**添加引用**"，添加对 Moq 程序集的引用。 在 "浏览" 选项卡下，浏览到解压缩 Moq 的文件夹，并选择 Moq 程序集。 单击“确定”按钮。
-5. 完成这些步骤后，"引用" 文件夹应如图2所示。
+4. 通过右键单击 ContactManager 中的"引用"文件夹并选择 **"添加引用**"，添加对 Moq 程序集的引用。 在"浏览"选项卡下，浏览到解压缩 Moq 的文件夹，然后选择 Moq.dll 程序集。 单击“确定”**** 按钮。
+5. 完成这些步骤后，参考文件夹应类似于图 2。
 
-[![取消阻止 Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![解除阻止莫克](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
-**图 01**：取消阻止 Moq （[单击查看完全尺寸的图像](iteration-5-create-unit-tests-cs/_static/image2.png)）
+**图 01**： 取消阻止 Moq（[单击以查看全尺寸图像](iteration-5-create-unit-tests-cs/_static/image2.png)）
 
-[添加 Moq 后的 ![引用](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![添加 Moq 后的引用](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
-**图 02**：添加 Moq 后的引用（[单击以查看完全大小的图像](iteration-5-create-unit-tests-cs/_static/image4.png)）
+**图 02**： 添加 Moq（[单击以查看全尺寸图像](iteration-5-create-unit-tests-cs/_static/image4.png)）后的参考
 
 ## <a name="creating-unit-tests-for-the-service-layer"></a>为服务层创建单元测试
 
-首先，让我们为联系人管理器应用程序的服务层创建一组单元测试。 我们将使用这些测试来验证验证逻辑。
+让我们首先为联系人管理器应用程序的服务层创建一组单元测试。 我们将使用这些测试来验证我们的验证逻辑。
 
-在 ContactManager 项目中创建名为 "模型" 的新文件夹。 接下来，右键单击 "模型" 文件夹，然后选择 "**添加"、"新建测试"** 。 此时将显示如图3所示的 "**添加新测试**" 对话框。 选择 "**单元测试**" 模板并将新测试命名为 ContactManagerServiceTest.cs。 单击 **"确定"** 按钮将新测试添加到测试项目中。
+在 ContactManager.测试项目中创建名为"模型"的新文件夹。 接下来，右键单击"模型"文件夹并选择 **"添加、新建测试**"。 将显示图 3 所示**的"添加新测试**"对话框。 选择 **"单元测试"** 模板并命名新测试ContactManagerServiceTest.cs。 单击 **"确定"** 按钮将新测试添加到测试项目。
 
 > [!NOTE] 
 > 
-> 通常，你希望测试项目的文件夹结构与 ASP.NET MVC 项目的文件夹结构相匹配。 例如，你将控制器测试放在控制器文件夹中，在模型文件夹中放置模型测试，依此类推。
+> 通常，您希望测试项目的文件夹结构与 ASP.NET MVC 项目的文件夹结构匹配。 例如，将控制器测试放在控制器文件夹中，在模型文件夹中放置模型测试，等等。
 
-[![Models\ContactManagerServiceTest.cs](iteration-5-create-unit-tests-cs/_static/image3.jpg)](iteration-5-create-unit-tests-cs/_static/image5.png)
+[![型号_联系管理器服务测试.cs](iteration-5-create-unit-tests-cs/_static/image3.jpg)](iteration-5-create-unit-tests-cs/_static/image5.png)
 
-**图 03**： Models\ContactManagerServiceTest.cs （[单击查看完全大小的图像](iteration-5-create-unit-tests-cs/_static/image6.png)）
+**图 03**：型号_ContactManagerServiceTest.cs（[单击以查看全尺寸图像](iteration-5-create-unit-tests-cs/_static/image6.png)）
 
-最初，我们想要测试由 ContactManagerService 类公开的 CreateContact （）方法。 我们会创建以下五项测试：
+最初，我们要测试 ContactManager 服务类公开的 CreateContact（） 方法。 我们将创建以下五个测试：
 
-- CreateContact （）-当有效的联系人传递到方法时，CreateContact （）的测试将返回值 true。
-- CreateContactRequiredFirstName （）-测试在将缺少名字的联系人传递到 CreateContact （）方法时，是否将错误消息添加到模型状态。
-- CreateContactRequiredLastName （）-测试当缺少姓氏的联系人传递到 CreateContact （）方法时，是否将错误消息添加到模型状态。
-- CreateContactInvalidPhone （）-测试将包含无效电话号码的联系人传递到 CreateContact （）方法时，是否将错误消息添加到模型状态。
-- CreateContactInvalidEmail （）-测试将包含无效电子邮件地址的联系人传递到 CreateContact （）方法时，是否将错误消息添加到模型状态。
+- 创建联系人（） - 当有效的联系人传递给方法时，创建联系人（） 的测试返回该值为 true。
+- 创建联系人需要先名（） - 测试当缺少名字的联系人传递给 CreateContact（） 方法时，错误消息是否添加到模型状态。
+- 创建联系人需要LastName（） - 测试当缺少姓氏的联系人传递给 CreateContact（） 方法时，将错误消息添加到模型状态。
+- 创建联系人无效电话（） - 测试当电话号码无效的联系人传递给 CreateContact（） 方法时，错误消息是否添加到模型状态。
+- 创建联系人无效电子邮件（） - 测试当具有无效电子邮件地址的联系人传递给 CreateContact（） 方法时，错误消息是否添加到模型状态。
 
-第一次测试验证有效的联系人是否不产生验证错误。 其余测试检查每个验证规则。
+第一个测试验证有效的联系人未生成验证错误。 其余的测试检查每个验证规则。
 
-这些测试的代码包含在列表1中。
+这些测试的代码包含在清单 1 中。
 
-**列表 1-Models\ContactManagerServiceTest.cs**
+**清单1 - 型号_联系管理器服务测试.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample1.cs)]
 
-由于我们使用的是列表1中的 Contact 类，因此需要在测试项目中添加对 Microsoft 实体框架的引用。 添加对 System.web 程序集的引用。
+由于我们使用清单 1 中的 Contact 类，因此我们需要将对 Microsoft 实体框架的引用添加到我们的测试项目中。 添加对系统.Data.实体程序集的引用。
 
-列表1包含一个名为 Initialize （）的方法，该方法使用 [TestInitialize] 特性修饰。 此方法在运行每个单元测试之前自动调用（它将在每个单元测试之前的5倍之前调用）。 Initialize （）方法使用以下代码行创建 mock 存储库：
+清单1包含一个名为初始化（）的方法，该方法用 [测试初始化] 属性进行修饰。 在运行每个单元测试之前自动调用此方法（在每个单元测试之前调用此方法 5 次）。 初始化（）方法创建具有以下代码行的模拟存储库：
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample2.cs)]
 
-下面这行代码使用 Moq 框架通过 IContactManagerRepository 接口生成模拟存储库。 使用 mock 存储库而不是实际的 EntityContactManagerRepository，以避免在运行每个单元测试时访问数据库。 Mock 存储库实现了 IContactManagerRepository 接口的方法，但方法实际上不会执行任何操作。
+此代码行使用 Moq 框架从 IContactManagerRepository 接口生成模拟存储库。 使用模拟存储库而不是实际的实体联系人管理器存储库，以避免在运行每个单元测试时访问数据库。 模拟存储库实现 IContactManagerRepository 接口的方法，但这些方法实际上不执行任何操作。
 
 > [!NOTE] 
 > 
-> 使用 Moq 框架时，\_mockRepository 和 \_mockRepository 之间存在差异。 前者是指模拟&lt;IContactManagerRepository&gt; 类，其中包含用于指定模拟存储库的行为方式的方法。 后者指的是实现 IContactManagerRepository 接口的实际模拟存储库。
+> 使用 Moq 框架时，mockRepository 和\_\_mockRepository.Object 区别是有区别的。 前者是指模拟&lt;IContactManagerManagerRepository&gt;类，该类包含用于指定模拟存储库如何执行的方法。 后者是指实现 IContactManager存储库接口的实际模拟存储库。
 
-在创建 ContactManagerService 类的实例时，将在 Initialize （）方法中使用 mock 存储库。 所有单个单元测试都使用此 ContactManagerService 类的实例。
+创建 ContactManagerService 类的实例时，模拟存储库在初始化（） 方法中使用。 所有单独的单元测试都使用此联系人管理器服务类的此实例。
 
-列表1包含五个对应于每个单元测试的方法。 其中每个方法都用 [TestMethod] 属性修饰。 运行单元测试时，将调用具有此属性的任何方法。 换言之，使用 [TestMethod] 属性修饰的任何方法都是单元测试。
+清单1包含与每个单元测试对应的五种方法。 这些方法中的每一个都用 [TestMethod] 属性进行修饰。 运行单元测试时，将调用具有此属性的任何方法。 换句话说，使用 [TestMethod] 属性修饰的任何方法都是单元测试。
 
-第一个名为 CreateContact （）的单元测试验证当 Contact 类的有效实例传递给方法时，调用 CreateContact （）将返回值 true。 该测试将创建 Contact 类的实例，调用 CreateContact （）方法，并验证 CreateContact （）是否返回值 true。
+第一个单元测试名为 CreateContact（），验证在将 Contact 类的有效实例传递给该方法时调用 CreateContact（） 返回该值为 true。 测试创建 Contact 类的实例，调用 CreateContact（） 方法，并验证 CreateContact（） 返回该值为 true。
 
-如果调用 CreateContact （）方法时使用了无效的联系人，则剩余的测试将验证该方法返回 false，并将预期的验证错误消息添加到模型状态。 例如，CreateContactRequiredFirstName （）测试创建 Contact 类的实例，其 FirstName 属性的字符串为空。 接下来，将调用 CreateContact （）方法与无效的联系人。 最后，测试验证 CreateContact （）是否返回 false，并且模型状态是否包含预期的验证错误消息 "名字是必需的"。
+其余测试验证当使用无效的 Contact 调用 CreateContact（） 方法时，该方法将返回 false，并且预期的验证错误消息将添加到模型状态。 例如，"创建联系人需求名称（）"测试将创建联系人类的实例，该类的 FirstName 属性具有空字符串。 接下来，使用无效的联系人调用 CreateContact（） 方法。 最后，测试验证 CreateContact（） 返回 false，并且模型状态包含预期的验证错误消息"需要名字"。
 
-您可以通过选择 "**测试"、"运行" 解决方案中的所有测试（CTRL + R、A）** 来运行列表1中的单元测试。 测试结果将显示在 "测试结果" 窗口中（参见图4）。
+您可以通过选择菜单选项 **"测试"、"运行"、"解决方案中的所有测试"（CTRL+R、A）** 来在清单 1 中运行单元测试。 测试结果显示在"测试结果"窗口中（参见图 4）。
 
 [![测试结果](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
-**图 04**：测试结果（[单击查看完全大小的图像](iteration-5-create-unit-tests-cs/_static/image8.png)）
+**图 04**： 测试结果 （[单击以查看全尺寸图像](iteration-5-create-unit-tests-cs/_static/image8.png)）
 
 ## <a name="creating-unit-tests-for-controllers"></a>为控制器创建单元测试
 
-NETMVC 应用程序控制用户交互的流。 测试控制器时，需要测试控制器是否返回正确的操作结果和查看数据。 你还可能需要测试控制器是否以预期的方式与模型类交互。
+ASP.NETMVC 应用程序控制用户交互流。 测试控制器时，要测试控制器是否返回正确的操作结果并查看数据。 您可能还希望测试控制器是否与模型类以预期的方式交互。
 
-例如，列表2包含 Contact controller Create （）方法的两个单元测试。 第一个单元测试验证当有效的联系人传递到 Create （）方法时，Create （）方法将重定向到索引操作。 换言之，当传递了有效的联系人时，Create （）方法应返回表示索引操作的 RedirectToRouteResult。
+例如，清单 2 包含联系人控制器 Create（） 方法的两个单元测试。 第一个单元测试验证当有效的联系人传递到 Create（） 方法时，Create（） 方法重定向到 Index 操作。 换句话说，当传递有效的联系人时，Create（） 方法应返回表示索引操作的重定向到RouteResult。
 
-测试控制器层时，不需要测试 ContactManager 服务层。 因此，我们会在 Initialize 方法中模拟包含以下代码的服务层：
+在测试控制器层时，我们不想测试 ContactManager 服务层。 因此，我们在初始化方法中使用以下代码模拟服务层：
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample3.cs)]
 
-在 CreateValidContact （）单元测试中，我们模拟了用以下代码行调用服务层 CreateContact （）方法的行为：
+在 CreateValidContact（） 单元测试中，我们用以下代码行模拟调用服务层 CreateContact（） 方法的行为：
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample4.cs)]
 
-如果调用了 CreateContact （）方法，则这行代码会导致模拟 ContactManager 服务返回值 true。 通过模拟服务层，我们可以测试控制器的行为，而无需在服务层中执行任何代码。
+此代码行在调用其 CreateContact（） 方法时，会导致模拟 ContactManager 服务返回该值 true。 通过模拟服务层，我们可以测试控制器的行为，而无需在服务层中执行任何代码。
 
-第二个单元测试验证当向方法传递无效的联系人时，Create （）操作是否返回 "创建" 视图。 我们会使服务层 CreateContact （）方法将值 false 返回给以下代码行：
+第二个单元测试验证 Create（） 操作在将无效联系人传递给方法时是否返回"创建"视图。 我们使服务层 CreateContact（） 方法使用以下代码行返回错误值：
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample5.cs)]
 
-如果 Create （）方法的行为与我们所期望的一样，则它应在服务层返回值为 false 时返回 Create view。 这样一来，控制器就可以在 "创建" 视图中显示验证错误消息，并且用户有机会更正无效的联系人属性。
+如果 Create（） 方法按预期方式进行，则当服务层返回值为 false 时，它应返回"创建"视图。 这样，控制器可以在"创建"视图中显示验证错误消息，并且用户有机会更正无效的"联系人"属性。
 
-如果打算为控制器构建单元测试，则需要从控制器操作返回显式视图名称。 例如，不要返回如下所示的视图：
+如果计划为控制器生成单元测试，则需要从控制器操作中返回显式视图名称。 例如，不要返回如下所示的视图：
 
 return View();
 
-相反，返回如下所示的视图：
+相反，返回视图如下所示：
 
-返回视图（"Create"）;
+返回视图（"创建"）;
 
-如果在返回视图时不是显式的，则 ViewResult. ViewName 属性返回空字符串。
+如果在返回视图时不是显式，则 ViewResult.ViewName 属性将返回一个空字符串。
 
-**列表 2-Controllers\ContactControllerTest.cs**
+**清单2 - 控制器\联系控制器测试.cs**
 
 [!code-csharp[Main](iteration-5-create-unit-tests-cs/samples/sample6.cs)]
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
-在此迭代中，我们为联系人管理器应用程序创建了单元测试。 我们可以随时运行这些单元测试，以验证应用程序是否仍按预期方式运行。 单元测试可充当应用程序的安全网络，使我们能够在将来安全地修改应用程序。
+在此迭代中，我们为联系人管理器应用程序创建了单元测试。 我们可以随时运行这些单元测试，以验证我们的应用程序是否仍按预期方式运行。 单元测试作为我们应用程序的安全网，使我们能够在未来安全地修改我们的应用程序。
 
-我们创建了两组单元测试。 首先，我们通过为服务层创建单元测试来测试验证逻辑。 接下来，我们通过为控制器层创建单元测试来测试流控制逻辑。 在测试我们的服务层时，我们通过模拟存储库层将我们的服务层的测试与存储库层隔离开来。 测试控制器层时，我们会通过模拟服务层，将我们的控制器层的测试隔离开来。
+我们创建了两组单元测试。 首先，我们通过为服务层创建单元测试来测试验证逻辑。 接下来，我们通过为控制器层创建单元测试来测试流量控制逻辑。 在测试服务层时，我们通过模拟存储库层将服务层的测试与存储库层隔离开来。 测试控制器层时，我们通过模拟服务层来隔离控制器层的测试。
 
-在下一次迭代中，我们修改联系人管理器应用程序，使其支持联系人组。 我们将使用名为 "测试驱动开发" 的软件设计过程将这一新功能添加到应用程序。
+在下一次迭代中，我们修改联系人管理器应用程序，以便它支持联系人组。 我们将使用称为测试驱动开发的软件设计过程将这项新功能添加到我们的应用程序中。
 
 > [!div class="step-by-step"]
 > [上一页](iteration-4-make-the-application-loosely-coupled-cs.md)

@@ -1,173 +1,173 @@
 ---
 uid: web-forms/overview/moving-to-aspnet-20/master-pages
-title: 母版页 |Microsoft Docs
-author: microsoft
-description: 成功的网站的关键组件之一是一致的外观。 在 ASP.NET 1.x 中，开发人员使用用户控件来复制常见页面 elem 。
+title: 母版页 |微软文档
+author: rick-anderson
+description: 成功网站的关键组件之一是外观一致。 在ASP.NET 1.x 中，开发人员使用用户控件来复制通用页面 elem...
 ms.author: riande
 ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 36f2caf7c2c9bcafd22c8f6681c1d6b19fe5078a
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: b493feb21d2e3d6429f0a23df5aab66e0c4c5b07
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78457580"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543179"
 ---
 # <a name="master-pages"></a>母版页
 
-由[Microsoft](https://github.com/microsoft)
+由[微软](https://github.com/microsoft)
 
-> 成功的网站的关键组件之一是一致的外观。 在 ASP.NET 1.x 中，开发人员使用用户控件跨 Web 应用程序复制常见页面元素。 虽然这无疑是一个可行的解决方案，但使用用户控件确实存在一些缺点。 例如，对用户控件位置的更改需要对一个站点中的多个页面进行更改。 在将用户控件插入页面后，还不会在设计视图中呈现这些控件。
+> 成功网站的关键组件之一是外观一致。 在ASP.NET 1.x 中，开发人员使用用户控件跨 Web 应用程序复制公共页面元素。 虽然这当然是一个可行的解决方案，但使用用户控件确实有一些缺点。 例如，更改用户控件的位置需要更改到站点中的多个页面。 在页面上插入后，用户控件也不会在"设计"视图中呈现。
 
-成功的网站的关键组件之一是一致的外观。 在 ASP.NET 1.x 中，开发人员使用用户控件跨 Web 应用程序复制常见页面元素。 虽然这无疑是一个可行的解决方案，但使用用户控件确实存在一些缺点。 例如，对用户控件位置的更改需要对一个站点中的多个页面进行更改。 在将用户控件插入页面后，还不会在设计视图中呈现这些控件。
+成功网站的关键组件之一是外观一致。 在ASP.NET 1.x 中，开发人员使用用户控件跨 Web 应用程序复制公共页面元素。 虽然这当然是一个可行的解决方案，但使用用户控件确实有一些缺点。 例如，更改用户控件的位置需要更改到站点中的多个页面。 在页面上插入后，用户控件也不会在"设计"视图中呈现。
 
-ASP.NET 2.0 将母版页作为一种保持一致的外观和感觉的方式引入，你很快就会看到，母版页表示对用户控件方法的重大改进。
+ASP.NET 2.0 引入母版页作为保持一致外观和感觉的一种方式，正如您很快就会看到的那样，母版页代表了对用户控制方法的重大改进。
 
-## <a name="why-master-pages"></a>母版页的原因
+## <a name="why-master-pages"></a>为什么选择母版页？
 
-您可能想知道为什么在 ASP.NET 2.0 中需要母版页。 毕竟，网站开发人员已在 ASP.NET 1.x 中使用用户控件在页面之间共享内容区域。 由于用户控件是创建通用布局的最佳解决方案，因此实际上有多种原因。
+您可能想知道为什么 ASP.NET 2.0 需要母版页。 毕竟，网站开发人员已经在ASP.NET 1.x 中使用用户控件在页面之间共享内容区域。 实际上，用户控件是创建公共布局的不太理想的解决方案的原因有很多。
 
-用户控件并不实际定义页面布局。 相反，它们定义了页面部分的布局和功能。 这两者之间的区别非常重要，因为它使用户控制解决方案的可管理性更难。 例如，要更改用户控件在页面上的位置，则必须编辑显示用户控件的实际页面。 如果只有几个页面，但在大型站点中，这种方法很快就会成为站点管理工作的麻烦！
+用户控件实际上不定义页面布局。 相反，它们定义页面的一部分的布局和功能。 这两者之间的区别很重要，因为它使用户控制解决方案的可管理性变得更加困难。 例如，如果要更改页面上的用户控件的位置，必须编辑显示用户控件的实际页面。 如果你只有几页，这很好，但在大型网站，它迅速成为一个网站管理噩梦！
 
-使用用户控件定义通用布局的另一个缺点是，ASP.NET 本身的体系结构。 如果更改了用户控件的任何公共成员，则需要重新编译使用该用户控件的所有页。 接下来，ASP.NET 将在首次访问页面时重新 JIT。 同样，这会为较大的站点生成不可缩放的体系结构和站点管理问题。
+使用用户控件定义公共布局的另一个缺点是ASP.NET本身的体系结构。 如果更改了用户控件的任何公共成员，则需要重新编译使用用户控件的所有页面。 反过来，ASP.NET将在首次访问页面时重新 JIT。 这再次产生了一个不可扩展的体系结构和大型站点的站点管理问题。
 
-这两个问题（及更多）都通过 ASP.NET 2.0 中的母版页得到了良好的处理。
+ASP.NET 2.0 中的母版页很好地解决了这两个问题（以及更多问题）。
 
-## <a name="how-master-pages-work"></a>母版页的工作方式
+## <a name="how-master-pages-work"></a>母版页的工作原理
 
-母版页类似于其他页面的模板。 应在其他页面之间共享的页面元素（例如菜单、边框等）添加到母版页中。 将新页面添加到站点时，可以将它们与母版页关联。 与母版页关联的页称为 "**内容页**"。 默认情况下，内容页将从母版页获得外观。 但是，在创建母版页时，可以定义页面中内容页可以替换为其自身内容的部分。 使用 ASP.NET 2.0 中引入的新控件定义这些部分。**ContentPlaceHolder**控件。
+母版页类似于其他页面的模板。 应在其他页面（即菜单、边框等）之间共享的页面元素将添加到母版页中。 将新页面添加到网站时，可以将它们与母版页相关联。 与母版页关联的页面称为**内容页**。 默认情况下，内容页从母版页中呈现外观。 但是，在创建母版页时，可以定义内容页可以替换为其自己的内容的部分内容。 这些部分使用 ASP.NET 2.0 中引入的新控件进行定义;**ContentPlaceHolder 控件**。
 
-一个母版页可以包含任意数量的 ContentPlaceHolder 控件（或全部无）。在 "内容" 页上，ContentPlaceHolder 控件中的内容显示在**内容**控件中，另一个新控件 ASP.NET 2.0。 默认情况下，内容页内容控件为空，因此你可以提供自己的内容。 如果要使用内容控件中的母版页的内容，则可以执行此操作，如本模块后面的内容所示。 内容控件通过内容控件的 ContentPlaceHolderID 特性映射到 ContentPlaceHolder 控件。 下面的代码将内容控件映射到母版页上名为 mainBody 的 ContentPlaceHolder 控件。
+母版页可以包含任意数量的 ContentPlaceHolder 控件（或根本没有。在内容页上，"ContentPlaceHolder"控件中的内容将显示在**内容**控件中，这是 ASP.NET 2.0 中的另一个新控件。 默认情况下，内容页 内容控件为空，以便您可以提供自己的内容。 如果要使用内容控件内母版页中的内容，可以执行此操作，正如您将在此模块的后面部分看到的。 内容控件通过内容控件的"内容霍尔德ID"属性映射到 ContentPlaceHolderId 控件。 下面的代码将内容控件映射到主页上称为 mainBody 的 ContentPlaceHolder 控件。
 
 [!code-aspx[Main](master-pages/samples/sample1.aspx)]
 
 > [!NOTE]
-> 你通常会听到人们将母版页描述为其他页面的基类。 事实上，事实不是这样。 母版页和内容页之间的关系不是继承之一。
+> 您经常会听到人们将母版页描述为其他页面的基类。 这实际上不是真的。 母版页和内容页之间的关系不是继承关系。
 
-**图 1**显示了在 Visual Studio 2005 中显示的母版页和关联的内容页。 你可以在母版页和内容页中的相应内容控件中查看 ContentPlaceHolder 控件。 请注意，ContentPlaceHolder 外部的母版页内容可见，但在内容页中显示为灰色。 内容页仅可以 supplanted ContentPlaceHolder 内的内容。 来自母版页的所有其他内容都是不可变的。
+**图 1**显示了母版页和关联的内容页，因为它们出现在 Visual Studio 2005 中。 您可以在母版页中查看 ContentPlaceHolder 控件，并在内容页中看到相应的内容控件。 请注意，内容霍尔德持有人外部的母版页内容可见，但在内容页中显示为灰色。 只有 ContentPlaceHolder 中的内容可以由内容页取代。 来自母版页的所有其他内容是不可改变的。
 
-![母版页及其关联的内容页](master-pages/_static/image1.jpg)
+![母版页及其关联内容页](master-pages/_static/image1.jpg)
 
-**图 1**：母版页及其关联的内容页
+**图 1**： 母版页及其关联内容页
 
 ## <a name="creating-a-master-page"></a>创建母版页
 
-若要创建新的母版页：
+要创建新的母版页，
 
 1. 打开 Visual Studio 2005 并创建新网站。
-2. 单击 "文件"、"新建"、"文件"。
-3. 从 "添加新项" 对话框中选择 "主文件"，如**图 2**所示。
+2. 单击"文件，新建，文件"。
+3. 从"添加新项目"对话框中选择主文件，如图**2**所示。
 4. 单击“添加”。
 
-![创建新的母版页](master-pages/_static/image2.jpg)
+![创建新母版页](master-pages/_static/image2.jpg)
 
-**图 2**：创建新的母版页
+**图 2**： 创建新母版页
 
-请注意，母版页的文件扩展名为*master*。 这是母版页不同于普通页面的方法之一。 另一个主要区别是，在代替 @Page 指令时，母版页包含 @Master 指令。 切换到刚刚创建的母版页的 "源" 视图，然后查看代码。
+请注意，母版页的文件扩展名是 *.master*。 这是母版页与普通页面不同的方式之一。 另一个主要区别是，母版页代替指令@Page，包含一个@Master指令。 切换到您刚刚创建的母版页的源视图并查看代码。
 
-默认情况下，新的母版页将具有一个 ContentPlaceHolder 控件。 在大多数情况下，首先创建公共页面元素，然后插入需要自定义内容的 ContentPlaceHolder 控件，这样做会更有意义。 在这些情况下，开发人员需要删除默认的 ContentPlaceHolder 控件并在开发页面时插入新控件。 尽管 ContentPlaceHolder 控件确实显示大小调整控点，但无法调整其大小。 ContentPlaceHolder 控件根据其所包含的内容自动调整大小，但有一个例外;如果将 ContentPlaceHolder 控件放置在块元素（例如表单元）内，则它将根据元素的大小进行调整。
+默认情况下，新的母版页将有一个 ContentPlaceHolder 控件。 在大多数情况下，首先创建公共页面元素，然后插入需要自定义内容的 ContentPlaceHolder 控件更有意义。 在这些情况下，开发人员将希望删除默认的 ContentPlaceHolder 控件，并在页面开发时插入新的控件。 ContentPlaceHolder 控件虽然确实显示大小调整句柄，但它们不会调整大小。 ContentPlaceHolder 控件的大小会自动基于它包含的内容，但有一个例外;如果将 ContentPlaceHolder 控件放置在块元素（如表单元格）内，则该控件将根据元素的大小进行大小调整。
 
-## <a name="lab-1-working-with-master-pages"></a>实验室1使用母版页
+## <a name="lab-1-working-with-master-pages"></a>实验室 1 使用母版页
 
-在此实验室中，您将创建一个新的母版页，并定义三个 ContentPlaceHolder 控件。 然后，将创建一个新的内容页并替换至少一个 ContentPlaceHolder 控件中的内容。
+在本实验中，您将创建一个新的母版页，并定义三个 ContentPlaceHolder 控件。 然后，您将创建新的内容页，并至少从其中一个 ContentPlaceHolder 控制中替换内容。
 
-1. 创建一个母版页并插入 ContentPlaceHolder 控件。 
+1. 创建母版页并插入内容霍尔德控件。 
 
-    1. 如上所述，创建新的母版页。
-    2. 删除默认的 ContentPlaceHolder 控件。
-    3. 通过单击控件的灰色上边框来选择 ContentPlaceHolder 控件，然后按键盘上的 DEL 键将其删除。
-    4. 使用*标头和端*模板插入新表，如图3所示。 将宽度和高度分别更改为90%，使整个表在设计器中可见。
+    1. 如上文所述，创建新的母版页。
+    2. 删除默认的"内容放置"控件。
+    3. 通过单击控件的上边框，然后点击键盘上的 DEL 键将其删除，选择 ContentPlaceHolder 控件。
+    4. 使用*标题和侧*模板插入新表，如图 3 所示。 将宽度和高度更改为 90%，以便整个表在设计器中可见。
 
 ![](master-pages/_static/image3.jpg)
 
-**图3**
+**图 3**
 
-1. 将光标置于表的每个单元格中，并将*valign*属性设置为*top*。
-2. 从 "工具箱" 中，将 "ContentPlaceHolder" 控件插入到表的顶部单元格中（标题单元格）。
-3. 插入此 ContentPlaceHolder 控件时，你会注意到，行高会占用整个页面，如图4所示。 此时，不要担心这一点。
+1. 将光标放入表的每个单元格中，并将*valign*属性设置为*顶部*。
+2. 在工具箱中，在表的顶部单元格（标题单元格）中插入 ContentPlaceHolder 控件。
+3. 插入此 ContentPlaceHolder 控件时，您会注意到行高度将占用几乎整个页面，如图 4 所示。 在这一点上不要担心。
 
-![空格与 ContentPlaceHolder 位于同一单元中](master-pages/_static/image1.gif)
+![空白空间与内容霍尔德位于同一单元格中](master-pages/_static/image1.gif)
 
-**图 4**：空白空间与 ContentPlaceHolder 位于同一单元中
+**图 4**： 空白空间与内容霍尔德位于同一单元格中
 
-1. 将 ContentPlaceHolder 控件放在其他两个单元格中。 插入其他 ContentPlaceHolder 控件后，表单元格的大小应与预期的大小相同。 该页现在应类似于**图 5**所示的页面。
+1. 将 ContentPlaceHolder 控件放在其他两个单元格中。 插入其他 ContentPlaceHolder 控件后，表单元格的大小应如您所料。 该页现在应类似于**图 5**所示的页面。
 
-![具有所有 ContentPlaceHolder 控件的主节点。 请注意，标题单元格的单元格高度现在就是](master-pages/_static/image2.gif)
+![包含所有内容位置所有者控件的主控形状。 请注意，头单元格的单元格高度现在正是它应该的](master-pages/_static/image2.gif)
 
-**图 5**：包含所有 ContentPlaceHolder 控件的主节点。 请注意，标题单元格的单元格高度现在就是
+**图 5**： 包含所有内容霍尔德控件的主控形状。 请注意，头单元格的单元格高度现在正是它应该的
 
-1. 在三个 ContentPlaceHolder 控件中的每个控件中输入一些所选文本。
-2. 将母版页保存为 exercise1。
-3. 创建新的 Web 窗体，并将其与 exercise1 母版页关联。
-4. 在 Visual Studio 2005 中选择 "文件"、"新建" 和 "文件"。
-5. 在 "添加新项" 对话框中选择 " **Web 窗体**"。
-6. 请确保选中 "选择母版页" 复选框，如图6所示。
+1. 在三个 ContentPlaceHolder 控件中的每个控件中输入您选择的文本。
+2. 将母版页另存为练习1.master。
+3. 创建新的 Web 窗体并将其与练习1.master 页相关联。
+4. 选择文件，新建，文件在可视化工作室2005年。
+5. 在"添加新项目"对话框中选择 **"Web 窗体**"。
+6. 确保选中"选择母版页"复选框，如图 6 所示。
 
 ![添加新的内容页](master-pages/_static/image3.gif)
 
-**图 6**：添加新的内容页
+**图 6**： 添加新的内容页
 
 1. 单击“添加”。
-2. 在 "选择母版页" 对话框中选择 "exercise1"，如图7所示。
-3. 单击 "确定" 以添加新的内容页面。
+2. 在"选择母版页对话框中选择练习1.master，如图 7 所示。
+3. 单击"确定"以添加新内容页。
 
-新的内容页将显示在 Visual Studio 中，其中，母版页上的每个 ContentPlaceHolder 控件都有一个内容控件。 默认情况下，内容控件为空，以便您可以添加自己的内容。 如果希望它们使用母版页上的 ContentPlaceHolder 控件中的内容，只需单击智能标记符号（控件右上角的小黑色箭头），然后从智能标记中选择 "*默认为主控内容*"，如**图 8**所示。 当你执行此操作时，菜单项会更改以*创建自定义内容*。 在该点单击该点将从母版页中删除内容，以便为该特定内容控件定义自定义内容。
+新内容页显示在 Visual Studio 中，母版页上每个 ContentPlaceHolder 控件都有一个内容控件。 默认情况下，内容控件为空，以便您可以添加自己的内容。 如果您希望他们使用母版页上的 ContentPlaceHolder 控件中的内容，只需单击智能标记符号（控件右上角的小黑箭头），然后从智能标记中选择 *"默认到母版内容*"，如图**8**所示。 执行此操作时，菜单项将更改为 *"创建自定义内容*"。 此时单击它会从母版页中删除内容，允许您为该特定内容控件定义自定义内容。
 
-![将内容控件设置为默认母版页内容](master-pages/_static/image4.gif)
+![将内容控件设置为默认为母版页内容](master-pages/_static/image4.gif)
 
 **图 7**：将内容控件设置为默认为母版页内容
 
 ## <a name="connecting-master-page-and-content-pages"></a>连接母版页和内容页
 
-可以通过以下四种不同方式之一配置母版页和内容页之间的关联：
+母版页和内容页之间的关联可以通过以下四种不同方式之一进行配置：
 
-- @Page 指令的<strong>MasterPageFile</strong>特性
-- 在代码中设置**MasterPageFile**属性。
-- **&lt;页面**在应用程序配置文件（应用程序的根文件夹中的 web.config）&gt;元素
-- **&lt;页面&gt;** 子文件夹配置文件中的元素（子文件夹中的 web.config）
+- 指令的@Page<strong>母版页面文件</strong>属性
+- 在代码中设置**Page.MasterPageFile**属性。
+- 应用程序配置文件中的**&lt;页面&gt;** 元素（应用程序根文件夹中的 Web.config）
+- 子文件夹配置文件中的**&lt;页面&gt;** 元素（子文件夹中的 Web.config）
 
-## <a name="masterpagefile-attribute"></a>MasterPageFile 特性
+## <a name="masterpagefile-attribute"></a>母版文件属性
 
-使用 MasterPageFile 属性可以轻松地将母版页应用到特定的 ASP.NET 页面。 当您在练习1中选中 "**选择母版页**" 复选框时，也可以使用此方法来应用母版页。
+MasterPageFile 属性使将母版页应用于特定ASP.NET页面变得容易。 当您选中 **"选择母版页**"复选框时，它也是用于应用母版页的方法，就像练习 1 中所做的那样。
 
-## <a name="setting-pagemasterpagefile-in-code"></a>在代码中设置 MasterPageFile
+## <a name="setting-pagemasterpagefile-in-code"></a>设置页面.MasterPage文件代码
 
-通过在代码中设置 MasterPageFile 属性，您可以在运行时将特定母版页应用于内容。 当你可能需要根据用户角色或某些其他条件应用特定母版页时，这非常有用。 必须在 PreInit 方法中设置 MasterPageFile 属性。 如果在 PreInit 方法之后设置，则会引发 InvalidOperationException。 在其上设置此属性的页面上，还必须将内容控件作为页面的顶级控件。 否则，在设置 MasterPageFile 属性时，将引发 HttpException。
+通过在代码中设置 MasterPageFile 属性，可以在运行时将特定的母版页应用于您的内容。 在可能需要根据用户角色或其他一些条件应用特定母版页的情况下，这非常有用。 必须在 PreInit 方法中设置 MasterPageFile 属性。 如果在 PreInit 方法之后设置，将引发无效操作异常。 正在设置此属性的页面还必须具有"内容"控件作为该页的顶级控件。 否则，在设置 MasterPageFile 属性时，将引发 HttpException。
 
-## <a name="using-the-ltpagesgt-element"></a>使用 &lt;pages&gt; 元素
+## <a name="using-the-ltpagesgt-element"></a>使用&lt;页面&gt;元素
 
-通过在 web.config 文件的 &lt;pages&gt; 元素中设置 masterPageFile 属性，可以为页面配置母版页。 使用此方法时，请记住，在应用程序结构中较低的 web.config 文件可以重写此设置。 @Page 指令中设置的任何 MasterPageFile 属性还将重写此设置。 通过使用 &lt;pages&gt; 元素，可以轻松创建在特定文件夹或文件中需要重写的*主*母版页。
+您可以通过在 Web.config 文件的&lt;页面&gt;元素中设置 masterPageFile 属性来配置页面的母版页。 使用此方法时，请记住，应用程序结构中较低的 Web.config 文件可以覆盖此设置。 @Page指令中的任何 MasterPageFile 属性集也将覆盖此设置。 使用&lt;页面&gt;元素可以创建可在特定文件夹或文件中在必要时重写*的主版*页变得简单。
 
 ## <a name="properties-in-master-pages"></a>母版页中的属性
 
-母版页只需在母版页内使这些属性公开即可公开属性。 例如，下面的代码定义了一个名为 SomeProperty 的属性：
+母版页只需在母版页中公开这些属性，即可公开属性。 例如，以下代码定义名为"某些属性"的属性：
 
 [!code-csharp[Main](master-pages/samples/sample2.cs)]
 
-若要从 "内容" 页访问 SomeProperty 属性，需要使用 Master 属性，如下所示：
+要从"内容"页访问"某些属性"属性，您需要使用"主"属性，如下所示：
 
 [!code-csharp[Main](master-pages/samples/sample3.cs)]
 
 ## <a name="nesting-master-pages"></a>嵌套母版页
 
-母版页是确保大型 Web 应用程序的常见外观的理想解决方案。 但是，在某些情况下，大型站点的某些部分共享公共接口并不常见，而其他部分则共享不同的接口。 为了满足这种需要，多个母版页是最佳解决方案。 但是，这仍不能解决这样一种情况：大型应用程序可能有某些组件（例如菜单）在所有页面和其他仅在站点的特定部分中共享的组件之间共享。 对于这种情况，嵌套的母版页非常适合需要。 正如您所看到的，普通的母版页包含一个母版页和一个内容页面。 在嵌套的母版页情况下，有两个母版页;父主机和子主节点。 子母版页也是内容页，其母版页是父级母版页。
+母版页是确保大型 Web 应用程序的共同外观的完美解决方案。 但是，大型站点的某些部分共享公共接口，而其他部分共享不同的接口的情况并不少见。 为了满足这一需求，多个母版页是完美的解决方案。 但是，这仍然不能解决大型应用程序可能具有某些组件（例如菜单）这一事实，这些组件仅在网站的某些部分之间共享的所有页面和其他组件之间共享。 对于这种情况，嵌套母版页很好地满足了需求。 正如您所看到的，普通母版页由母版页和内容页组成。 在嵌套母版页的情况下，有两个母版页;父主控形状和子母版。 子母版页也是内容页，其母版页是父母版页。
 
 下面是典型母版页的代码：
 
 [!code-aspx[Main](master-pages/samples/sample4.aspx)]
 
-在嵌套的主方案中，这将是父主节点。 另一个母版页将使用此页作为其母版页，代码如下所示：
+在嵌套主方案中，这将是父主控形状。 另一个母版页将使用此页作为其母版页，该代码如下所示：
 
 [!code-aspx[Main](master-pages/samples/sample5.aspx)]
 
-请注意，在这种情况下，子主节点也是父主节点的内容页。 所有子母版页的内容都显示在内容控件中，该控件从父级的 ContentPlaceHolder 控件获取其内容。
+请注意，在这种情况下，子母版也是父主控形状的内容页。 所有子主控内容都显示在内容控件中，该控件从父级的 ContentPlaceHolder 控件中获取其内容。
 
 > [!NOTE]
-> 设计器支持不可用于嵌套母版页。 使用嵌套母版进行开发时，需要使用源视图。
+> 设计器支持不适用于嵌套母版页。 使用嵌套母版进行开发时，需要使用源视图。
 
-此视频演示如何使用嵌套母版页。
+此视频显示了使用嵌套母版页的演练。
 
 ![](master-pages/_static/image1.png)
 
@@ -175,4 +175,4 @@ ASP.NET 2.0 将母版页作为一种保持一致的外观和感觉的方式引�
 
 ![选择母版页](master-pages/_static/image4.jpg)
 
-**图 8**：选择母版页
+**图 8**： 选择母版页

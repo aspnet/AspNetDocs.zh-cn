@@ -1,211 +1,211 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb
-title: 用实体框架创建模型类（VB） |Microsoft Docs
-author: microsoft
-description: 在本教程中，了解如何将 ASP.NET MVC 与 Microsoft 实体框架结合使用。 了解如何使用实体向导创建 ADO.NET 实体 Da 。
+title: 使用实体框架 （VB） 创建模型类 |微软文档
+author: rick-anderson
+description: 在本教程中，您将了解如何将 ASP.NET MVC 与 Microsoft 实体框架一起使用。 您将了解如何使用实体向导创建ADO.NET实体 Da...
 ms.author: riande
 ms.date: 01/27/2009
 ms.assetid: ff8322c9-12f3-4e24-aba6-a38046b9bb0d
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f6c896c6f5f6d898ac6f99d5998fb29cb73bcb10
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: cdba91969a6ed9c02965999bbc48d5c5cdea140d
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78437006"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81542646"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-vb"></a>使用 Entity Framework 创建模型类 (VB)
 
-由[Microsoft](https://github.com/microsoft)
+由[微软](https://github.com/microsoft)
 
-> 在本教程中，了解如何将 ASP.NET MVC 与 Microsoft 实体框架结合使用。 了解如何使用实体向导创建 ADO.NET 实体数据模型。 在本教程中，我们将构建一个 web 应用程序，该应用程序演示如何使用实体框架来选择、插入、更新和删除数据库数据。
+> 在本教程中，您将了解如何将 ASP.NET MVC 与 Microsoft 实体框架一起使用。 您将了解如何使用实体向导创建ADO.NET实体数据模型。 在本教程中，我们将构建一个 Web 应用程序，说明如何使用实体框架选择、插入、更新和删除数据库数据。
 
-本教程的目的是说明如何在生成 ASP.NET MVC 应用程序时使用 Microsoft 实体框架来创建数据访问类。 本教程假定你以前没有 Microsoft 实体框架知识。 在本教程结束时，您将了解如何使用实体框架来选择、插入、更新和删除数据库记录。
+本教程的目的是说明如何在构建ASP.NET MVC 应用程序时使用 Microsoft 实体框架创建数据访问类。 本教程假定之前对 Microsoft 实体框架没有了解。 在本教程结束时，您将了解如何使用实体框架来选择、插入、更新和删除数据库记录。
 
-Microsoft 实体框架是一种对象关系映射（O/RM）工具，它使您能够从数据库中自动生成数据访问层。 使用实体框架可以避免手动生成数据访问类的单调工作。
+Microsoft 实体框架是一个对象关系映射 （O/RM） 工具，使您能够从数据库自动生成数据访问层。 实体框架使您能够避免手动构建数据访问类的繁琐工作。
 
 > [!NOTE] 
 > 
-> ASP.NET MVC 与 Microsoft 实体框架之间没有必要的连接。 可以将实体框架一些替代方法用于 ASP.NET MVC。 例如，你可以使用其他 O/RM 工具（如 Microsoft LINQ to SQL、NHibernate 或 SubSonic）来构建 MVC 模型类。
+> ASP.NET MVC 和 Microsoft 实体框架之间没有基本联系。 实体框架有几个替代方法可用于mVCASP.NET。 例如，您可以使用其他 O/RM 工具（如 Microsoft LINQ 到 SQL、NHibernate 或 SubSonic）构建 MVC 模型类。
 
-为了说明如何将 Microsoft 实体框架与 ASP.NET MVC 结合使用，我们将构建一个简单的示例应用程序。 我们将创建一个电影数据库应用程序，用于显示和编辑电影数据库记录。
+为了说明如何使用微软实体框架进行ASP.NET MVC，我们将构建一个简单的示例应用程序。 我们将创建一个影片数据库应用程序，使您能够显示和编辑影片数据库记录。
 
-本教程假定你具有 Visual Studio 2008 或带有 Service Pack 1 的 Visual Web Developer 2008。 需要 Service Pack 1 才能使用实体框架。 你可以从以下地址下载 Visual Studio 2008 Service Pack 1 或带 Service Pack 1 的 Visual Web Developer：
+本教程假定您拥有 Visual Studio 2008 或带 Service Pack 1 的可视化 Web 开发人员 2008。 您需要服务包 1 才能使用实体框架。 您可以通过以下地址下载 Visual Studio 2008 服务包 1 或带服务包 1 的可视化 Web 开发人员：
 
 > [https://www.asp.net/downloads/](https://www.asp.net/downloads)
 
-## <a name="creating-the-movie-sample-database"></a>创建电影示例数据库
+## <a name="creating-the-movie-sample-database"></a>创建影片示例数据库
 
-电影数据库应用程序使用名为电影的数据库表，其中包含以下列：
+影片数据库应用程序使用名为"Movie"的数据库表，其中包含以下列：
 
-| 列名 | 数据类型 | 是否允许空？ | 为主键？ |
+| 列名 | 数据类型 | 允许 Nulls？ | 是主键吗？ |
 | --- | --- | --- | --- |
-| Id | int | False | True |
-| 标题 | nvarchar(100) | False | False |
-| 导演 | nvarchar(100) | False | False |
+| ID | int | False | True |
+| 标题 | 恩瓦尔查尔 （100） | False | False |
+| 导演 | 恩瓦尔查尔 （100） | False | False |
 
-可以通过以下步骤将此表添加到 ASP.NET MVC 项目：
+您可以按照以下步骤将此表添加到ASP.NET MVC 项目中：
 
-1. 右键单击 "解决方案资源管理器" 窗口中的 "应用\_Data" 文件夹，然后选择 "**添加"、"新建项**" 菜单。
-2. 从 "**添加新项**" 对话框中，选择 " **SQL Server 数据库**"，为数据库指定名称 MoviesDB，然后单击 "**添加**" 按钮。
-3. 双击 MoviesDB 文件以打开 "服务器资源管理器/数据库资源管理器" 窗口。
-4. 展开 "MoviesDB" 数据库连接，右键单击 "表" 文件夹，然后选择 "**添加新表**" 菜单选项。
-5. 在表设计器中，添加 "Id"、"标题" 和 "主管" 列。
-6. 单击 "**保存**" 按钮（它具有软盘图标），以将新表保存为电影名称。
+1. 右键单击"解决方案\_资源管理器"窗口中的应用数据文件夹，然后选择菜单选项 **"添加，新建项目"。**
+2. 在 **"添加新项目"** 对话框中，选择**SQL Server 数据库**，为数据库指定名称 MoviesDB.mdf，然后单击"**添加**"按钮。
+3. 双击 MoviesDB.mdf 文件以打开服务器资源管理器/数据库资源管理器窗口。
+4. 展开 MoviesDB.mdf 数据库连接，右键单击"表"文件夹，然后选择菜单选项 **"添加新表**"。
+5. 在表设计器中，添加 Id、标题和控制器列。
+6. 单击 **"保存**"按钮（它有软盘的图标）以保存新表的名称"电影"。
 
-创建电影数据库表后，应将一些示例数据添加到表中。 右键单击电影表，然后选择菜单选项 "**显示表数据**"。 可以在显示的网格中输入虚假电影数据。
+创建"影片"数据库表后，应向该表添加一些示例数据。 右键单击"影片"表并选择菜单选项 **"显示表数据**"。 您可以将假影片数据输入显示的网格中。
 
-## <a name="creating-the-adonet-entity-data-model"></a>创建 ADO.NET 实体数据模型
+## <a name="creating-the-adonet-entity-data-model"></a>创建ADO.NET实体数据模型
 
-若要使用实体框架，需要创建一个实体数据模型。 你可以利用 Visual Studio*实体数据模型向导*来自动从数据库生成实体数据模型。
+为了使用实体框架，您需要创建实体数据模型。 您可以使用可视化工作室*实体数据模型向导*从数据库自动生成实体数据模型。
 
-请执行这些步骤：
+执行以下步骤:
 
-1. 右键单击 "解决方案资源管理器" 窗口中的 "模型" 文件夹，然后选择 "**添加"、"新建项**" 菜单。
-2. 在 "**添加新项**" 对话框中，选择数据类别（请参阅图1）。
-3. 选择 " **ADO.NET 实体数据模型**" 模板，将 "名称" 指定实体数据模型为 "MoviesDBModel"，然后单击 "**添加**" 按钮。 单击 "**添加**" 按钮将启动数据模型向导。
-4. 在 "**选择模型内容**" 步骤中，选择 "**从数据库生成**" 选项，然后单击 "**下一步**" 按钮（参见图2）。
-5. 在 "**选择你的数据连接**" 步骤中，选择 "MoviesDB" 数据库连接，输入实体连接设置 "名称 MoviesDBEntities"，然后单击 "**下一步**" 按钮（见图3）。
-6. 在 "**选择数据库对象**" 步骤中，选择 "电影数据库" 表，然后单击 "**完成**" 按钮（见图4）。
+1. 右键单击"解决方案资源管理器"窗口中的"模型"文件夹，然后选择菜单选项 **"添加，新项目**"。
+2. 在"**添加新项目"** 对话框中，选择"数据"类别（参见图 1）。
+3. 选择**ADO.NET实体数据模型**模板，为实体数据模型指定名称"电影 DBModel.edmx"，然后单击 **"添加**"按钮。 单击 **"添加**"按钮将启动"数据模型向导"。
+4. 在 **"选择模型内容"** 步骤中，选择"**从数据库生成**"选项，然后单击 **"下一步**"按钮（参见图 2）。
+5. 在 **"选择数据连接**"步骤中，选择 MoviesDB.mdf 数据库连接，输入实体连接设置名称"电影 DB实体"，然后单击 **"下一步**"按钮（参见图 3）。
+6. 在 **"选择数据库对象**"步骤中，选择"影片数据库"表并单击 **"完成"** 按钮（参见图 4）。
 
-完成这些步骤后，将打开 "ADO.NET 实体数据模型设计器（Entity Designer）"。
+完成这些步骤后，将打开ADO.NET实体数据模型设计器（实体设计器）。
 
-**图 1-创建新实体数据模型**
+**图 1 = 创建新的实体数据模型**
 
 ![clip_image002](creating-model-classes-with-the-entity-framework-vb/_static/image1.jpg)
 
-**图 2-选择模型内容步骤**
+**图 2 = 选择模型内容步骤**
 
 ![clip_image004](creating-model-classes-with-the-entity-framework-vb/_static/image2.jpg)
 
-**图 3-选择你的数据连接**
+**图 3 = 选择数据连接**
 
 ![clip_image006](creating-model-classes-with-the-entity-framework-vb/_static/image3.jpg)
 
-**图 4-选择数据库对象**
+**图 4 = 选择数据库对象**
 
 ![clip_image008](creating-model-classes-with-the-entity-framework-vb/_static/image4.jpg)
 
-## <a name="modifying-the-adonet-entity-data-model"></a>修改 ADO.NET 实体数据模型
+## <a name="modifying-the-adonet-entity-data-model"></a>修改ADO.NET实体数据模型
 
-创建实体数据模型后，可以通过利用 Entity Designer 来修改模型（请参阅图5）。 您可以通过双击 "解决方案资源管理器" 窗口中的 "模型" 文件夹中包含的 "MoviesDBModel" 文件，随时打开 Entity Designer。
+创建实体数据模型后，可以使用实体设计器修改模型（参见图 5）。 您可以随时通过双击解决方案资源管理器窗口中的"模型"文件夹中的"电影 DBModel.edmx 文件"来打开实体设计器。
 
-**图5– ADO.NET 实体数据模型设计器**
+**图 5 = ADO.NET实体数据模型设计器**
 
 ![clip_image010](creating-model-classes-with-the-entity-framework-vb/_static/image5.jpg)
 
-例如，您可以使用 Entity Designer 更改实体模型数据向导生成的类的名称。 向导已创建名为 "电影" 的新数据访问类。 换言之，向导为类提供与数据库表的名称相同的名称。 由于我们将使用此类来表示特定的电影实例，因此应将类从电影重命名为电影。
+例如，可以使用实体设计器更改实体模型数据向导生成的类的名称。 向导创建了名为"电影"的新数据访问类。 换句话说，向导为类指定与数据库表相同的名称。 由于我们将使用此类来表示特定的"影片"实例，因此应将类从"影片"重命名为"影片"。
 
-如果要重命名实体类，可以双击 "Entity Designer 中的类名称，然后输入新名称（见图6）。 或者，在 Entity Designer 中选择实体后，可以更改属性窗口中的实体的名称。
+如果要重命名实体类，可以双击实体设计器中的类名称并输入新名称（参见图 6）。 或者，您可以在实体设计器中选择实体后，在"属性"窗口中更改实体的名称。
 
-**图 6-更改实体名称**
+**图 6 = 更改实体名称**
 
 ![clip_image012](creating-model-classes-with-the-entity-framework-vb/_static/image6.jpg)
 
-请记住在进行修改后保存实体数据模型，方法是单击 "保存" 按钮（软盘的图标）。 在幕后，Entity Designer 将生成一组 Visual Basic 的 .NET 类。 可以通过从 "解决方案资源管理器" 窗口打开 MoviesDBModel 文件来查看这些类。
+请记住，通过单击"保存"按钮（软盘的图标）进行修改后保存实体数据模型。 在后台，实体设计器生成一组 Visual Basic .NET 类。 您可以通过从解决方案资源管理器窗口中打开 MoviesDBModel.Designer.vb 文件来查看这些类。
 
-请勿修改设计器 .vb 文件中的代码，因为下次使用 Entity Designer 时，所做的更改将被覆盖。 如果要扩展在设计器 .vb 文件中定义的实体类的功能，则可以在单独的文件中创建*分部类*。
+不要修改 Designer.vb 文件中的代码，因为下次使用实体设计器时，您的更改将被覆盖。 如果要扩展在 Designer.vb 文件中定义的实体类的功能，则可以在单独的文件中创建*部分类*。
 
-#### <a name="selecting-database-records-with-the-entity-framework"></a>选择包含实体框架的数据库记录
+#### <a name="selecting-database-records-with-the-entity-framework"></a>使用实体框架选择数据库记录
 
-接下来，我们将创建一个显示电影记录列表的页面，开始构建电影数据库应用程序。 列表1中的 Home 控制器公开一个名为 Index （）的操作。 Index （）操作利用实体框架从电影数据库表中返回所有电影记录。
+让我们通过创建显示影片记录列表的页面开始构建影片数据库应用程序。 清单 1 中的主控制器公开名为 Index（） 的操作。 索引（） 操作利用实体框架从影片数据库表中返回所有影片记录。
 
-**列表1– Controllers\HomeController.vb**
+**清单1 = 控制器\主控制器.vb**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample1.vb)]
 
-请注意，列表1中的控制器包含构造函数。 构造函数初始化名为 \_db 的类级字段。 \_db 字段表示由 Microsoft 实体框架生成的数据库实体。 \_db 字段是 Entity Designer 生成的 MoviesDBEntities 类的实例。
+请注意，清单 1 中的控制器包括一个构造函数。 构造函数初始化名为\_db 的类级字段。 db\_字段表示由 Microsoft 实体框架生成的数据库实体。 db\_字段是实体设计器生成的 MoviesDBEntity 类的实例。
 
-\_db 字段用于索引（）操作，用于从电影数据库表中检索记录。 表达式 \_db。MovieSet 表示电影数据库表中的所有记录。 System.linq.enumerable.tolist （）方法用于将电影集转换为电影对象的通用集合： List （电影）。
+db\_字段在 Index（） 操作中使用，以从"影片"数据库表中检索记录。 表达式\_db。MovieSet 表示"影片"数据库表中的所有记录。 ToList（） 方法用于将影片集转换为影片对象的通用集合：列表（影片）。
 
-可以通过 LINQ to Entities 的帮助检索电影记录。 列表1中的 Index （）操作使用 LINQ*方法语法*来检索数据库记录集。 如果您愿意，也可以改用 LINQ*查询语法*。 以下两个语句执行的操作完全相同：
+影片记录在 LINQ 到实体的帮助下检索。 清单 1 中的 Index（） 操作使用 LINQ*方法语法*来检索数据库记录集。 如果您愿意，可以使用 LINQ*查询语法*。 以下两个语句执行相同的操作：
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample2.vb)]
 
-使用您最直观的任何 LINQ 语法–方法语法或查询语法。 这两种方法之间没有性能差异–唯一的区别在于样式。
+使用您认为最直观的 LINQ 语法（方法语法或查询语法）。 这两种方法在性能上没有差别 ，唯一的区别是风格。
 
-清单2中的视图用于显示电影记录。
+清单 2 中的视图用于显示影片记录。
 
-**列表 2-Views\Home\Index.aspx**
+**清单 2 = 视图\home_Index.aspx**
 
 [!code-aspx[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample3.aspx)]
 
-"列表 2" 中的视图包含**每个**循环遍历每个电影记录并显示影片记录的 "标题" 和 "控制器" 属性值的。 请注意，"编辑" 和 "删除" 链接将显示在每个记录的旁边。 此外，"添加电影" 链接将显示在视图的底部（请参阅图7）。
+清单 2 中的视图包含一个 **"每个"** 循环，该循环遍历每个影片记录并显示影片记录的标题和导演属性的值。 请注意，每个记录旁边都会显示"编辑"和"删除"链接。 此外，视图底部还显示"添加影片"链接（参见图 7）。
 
-**图7–索引视图**
+**图 7 = 索引视图**
 
 ![clip_image014](creating-model-classes-with-the-entity-framework-vb/_static/image7.jpg)
 
-索引视图是*类型化的视图*。 索引视图的 &lt;% @ 页面%&gt; 指令包含 Inherits 属性。 Inherits 属性将 ViewData 属性强制转换为电影对象的强类型化的泛型列表集合–一个列表（电影）。
+索引视图是*键入的视图*。 索引视图具有&lt;%@ Page&gt; % 指令，该指令包含继承属性。 继承属性将 ViewData.Model 属性强制转换为影片对象的强类型泛型列表集合 - 列表（影片）。
 
-## <a name="inserting-database-records-with-the-entity-framework"></a>插入具有实体框架的数据库记录
+## <a name="inserting-database-records-with-the-entity-framework"></a>将数据库记录插入实体框架
 
-您可以使用实体框架以便于将新记录插入数据库表中。 列表3包含向 Home 控制器类添加的两个新操作，可用于将新记录插入到电影数据库表中。
+您可以使用实体框架轻松将新记录插入到数据库表中。 清单3包含添加到主控制器类的两个新操作，可用于将新记录插入到 Movie 数据库表中。
 
-**列表3– Controllers\HomeController.vb （添加方法）**
+**清单3 = 控制器\主控制器.vb（添加方法）**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample4.vb)]
 
-第一个 Add （）操作只返回视图。 视图包含用于添加新的电影数据库记录的窗体（参见图8）。 提交窗体时，将调用第二个 Add （）操作。
+第一个 Add（） 操作仅返回视图。 该视图包含用于添加新影片数据库记录的窗体（参见图 8）。 提交表单时，将调用第二个 Add（） 操作。
 
-请注意，第二个 Add （）操作是用 AcceptVerbs 特性修饰的。 此操作只能在执行 HTTP POST 操作时调用。 换句话说，此操作只能在发布 HTML 窗体时调用。
+请注意，第二个 Add（） 操作用 AcceptVerbs 属性进行修饰。 仅当执行 HTTP POST 操作时，才能调用此操作。 换句话说，此操作只能在发布 HTML 窗体时调用。
 
-第二个 Add （）操作使用 ASP.NET MVC TryUpdateModel （）方法的帮助创建实体框架 Movie 类的新实例。 TryUpdateModel （）方法使用传递给 Add （）方法的 FormCollection 中的字段，并将这些 HTML 窗体字段的值分配给 Movie 类。
+第二个 Add（） 操作在 ASP.NET MVC TryUpdateModel（） 方法的帮助下创建实体框架影片类的新实例。 TryUpdateModel（） 方法获取传递给 Add（） 方法的窗体集合中的字段，并将这些 HTML 表单字段的值分配给 Movie 类。
 
-使用实体框架时，在使用 TryUpdateModel 或 UpdateModel 方法更新实体类的属性时，必须提供属性的 "白列表"。
+使用实体框架时，在使用 TryUpdateModel 或 UpdateModel 方法更新实体类的属性时，必须提供属性的"白名单"。
 
-接下来，Add （）操作执行一些简单的窗体验证。 操作将验证 Title 和 Director 属性是否都具有值。 如果存在验证错误，则会将验证错误消息添加到 ModelState。
+接下来，Add（） 操作执行一些简单的表单验证。 该操作验证"标题"和"控制器"属性是否具有值。 如果存在验证错误，则会向 ModelState 添加验证错误消息。
 
-如果没有验证错误，则会将一个新的电影记录添加到 "电影数据库" 表，并提供实体框架的帮助。 新记录将添加到数据库，其中包含以下两行代码：
+如果没有验证错误，则在实体框架的帮助下，将新的影片记录添加到"电影"数据库表。 新记录将添加到数据库中，并带有以下两行代码：
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample5.vb)]
 
-第一行代码将新的 Movie 实体添加到实体框架正在跟踪的电影集。 第二行代码保存对要追溯到基础数据库的电影所做的任何更改。
+第一行代码将新的影片实体添加到实体框架正在跟踪的影片集中。 第二行代码将保存对被跟踪回基础数据库的"电影"所做的任何更改。
 
-**图8– "添加" 视图**
+**图 8 = 添加视图**
 
 ![clip_image016](creating-model-classes-with-the-entity-framework-vb/_static/image8.jpg)
 
-## <a name="updating-database-records-with-the-entity-framework"></a>用实体框架更新数据库记录
+## <a name="updating-database-records-with-the-entity-framework"></a>使用实体框架更新数据库记录
 
-您可以遵循与使用实体框架相同的方法编辑数据库记录，就像我们在插入新的数据库记录的方法一样。 列表4包含两个名为 Edit （）的新控制器操作。 第一个 Edit （）操作返回用于编辑电影记录的 HTML 窗体。 第二个 Edit （）操作尝试更新数据库。
+您可以采用几乎相同的方法，使用实体框架编辑数据库记录，就像我们刚才采用的方法插入新的数据库记录一样。 清单4包含两个名为 Edit（） 的新控制器操作。 第一个 Edit（） 操作返回用于编辑影片记录的 HTML 窗体。 第二个 Edit（） 操作尝试更新数据库。
 
-**列表4– Controllers\HomeController.vb （编辑方法）**
+**清单4 = 控制器\主控制器.vb（编辑方法）**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample6.vb)]
 
-第二个 Edit （）操作通过从数据库检索与正在编辑的电影的 Id 相匹配的电影记录开始。 下面的 LINQ to Entities 语句获取与特定 Id 匹配的第一个数据库记录：
+第二个 Edit（） 操作首先从与正在编辑的影片的 ID 匹配的数据库检索影片记录。 以下 LINQ 到实体语句获取与特定 Id 匹配的第一个数据库记录：
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample7.vb)]
 
-接下来，使用 TryUpdateModel （）方法将 HTML 窗体字段的值分配给 movie 实体的属性。 请注意，提供允许列表来指定要更新的确切属性。
+接下来，TryUpdateModel（） 方法用于将 HTML 表单字段的值分配给影片实体的属性。 请注意，提供了一个白名单，以指定要更新的确切属性。
 
-接下来，执行一些简单的验证来验证电影标题和控制器属性是否都具有值。 如果任一属性缺少值，则会将验证错误消息添加到 ModelState，ModelState 将返回值 false。
+接下来，执行一些简单的验证，以验证影片标题和导演属性是否具有值。 如果任一属性缺少值，则验证错误消息将添加到 ModelState 和 ModelState。IsValid 返回该值为 false。
 
-最后，如果没有验证错误，则通过调用 SaveChanges （）方法，使用任何更改更新基础电影数据库表。
+最后，如果没有验证错误，则通过调用 SaveChanges（） 方法，将更新基础"电影"数据库表与任何更改。
 
-编辑数据库记录时，需要将正在编辑的记录的 Id 传递给执行数据库更新的控制器操作。 否则，控制器操作将不知道要在基础数据库中更新哪个记录。 "列表 5" 中包含的 "编辑" 视图包含一个隐藏的窗体字段，该字段表示正在编辑的数据库记录的 Id。
+编辑数据库记录时，需要将正在编辑的记录的 Id 传递给执行数据库更新的控制器操作。 否则，控制器操作将不知道要在基础数据库中更新哪个记录。 清单 5 中包含的"编辑"视图包含一个隐藏表单字段，该字段表示要编辑的数据库记录的 ID。
 
-**列表5– Views\Home\Edit.aspx**
+**清单5 = 视图\home_编辑.aspx**
 
 [!code-aspx[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample8.aspx)]
 
-## <a name="deleting-database-records-with-the-entity-framework"></a>删除具有实体框架的数据库记录
+## <a name="deleting-database-records-with-the-entity-framework"></a>使用实体框架删除数据库记录
 
-在本教程中，需要处理的最终数据库操作是删除数据库记录。 您可以使用清单6中的控制器操作删除特定的数据库记录。
+本教程中需要处理的最终数据库操作是删除数据库记录。 您可以使用清单 6 中的控制器操作删除特定的数据库记录。
 
-**列表 6--\Controllers\HomeController.vb （删除操作）**
+**清单6 -- [控制器]主控制器.vb（删除操作）**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample9.vb)]
 
-Delete （）操作首先检索与传递给操作的 Id 相匹配的 "电影" 实体。 接下来，通过调用 DeleteObject （）方法并随后使用 SaveChanges （）方法从数据库中删除此电影。 最后，将用户重定向回索引视图。
+Delete（） 操作首先检索与传递给该操作的 ID 匹配的 Movie 实体。 接下来，通过调用 DeleteObject（） 方法后跟 SaveChanges（） 方法从数据库中删除影片。 最后，用户被重定向回索引视图。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
-本教程的目的是演示如何通过利用 ASP.NET MVC 和 Microsoft 实体框架来构建数据库驱动的 web 应用程序。 您学习了如何构建可用于选择、插入、更新和删除数据库记录的应用程序。
+本教程的目的是演示如何利用ASP.NET MVC 和 Microsoft 实体框架构建数据库驱动的 Web 应用程序。 您学习了如何构建一个应用程序，使您能够选择、插入、更新和删除数据库记录。
 
-首先，我们讨论了如何使用实体数据模型向导在 Visual Studio 中生成实体数据模型。 接下来，您将了解如何使用 LINQ to Entities 从数据库表中检索一组数据库记录。 最后，我们使用了实体框架来插入、更新和删除数据库记录。
+首先，我们讨论了如何使用实体数据模型向导从 Visual Studio 中生成实体数据模型。 接下来，您将学习如何使用 LINQ 到实体从数据库表中检索一组数据库记录。 最后，我们使用实体框架插入、更新和删除数据库记录。
 
 > [!div class="step-by-step"]
 > [上一页](validation-with-the-data-annotation-validators-cs.md)

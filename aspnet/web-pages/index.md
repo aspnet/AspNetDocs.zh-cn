@@ -1,30 +1,30 @@
 ---
 uid: web-pages/index
-title: ASP.NET 网页 |Microsoft Docs
+title: ASP.NET网页 |微软文档
 author: rick-anderson
-description: 下载 WebMatrix & 了解如何以一种简便的方式快速构建网页，以将服务器代码与 HTML 组合在一起。
+description: 下载 WebMatrix &了解如何以轻量级方式快速构建网页，以将服务器代码与 HTML 相结合。
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
-ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: d767325a376e5daa0ea4236f67c88e6b97ae71a7
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78520670"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543517"
 ---
 # <a name="aspnet-web-pages"></a>ASP.NET 网页
 
 > [!NOTE] 
-> WebMatrix 不再建议作为 ASP.NET 网页的集成开发环境。 使用[Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio)或[Visual Studio Code](https://code.visualstudio.com/)。
+> 不再建议将 WebMatrix 作为ASP.NET网页的集成开发环境。 使用[视觉工作室](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio)或[视觉工作室代码](https://code.visualstudio.com/)。
 
 - [指南](overview/index.md)
 
     - [入门](overview/getting-started/index.md)
 
-        - [在 Visual Studio 中对 ASP.NET 网页进程编程](overview/getting-started/program-asp-net-web-pages-in-visual-studio.md)
+        - [在 Visual Studio 中对 ASP.NET 网页进行编程](overview/getting-started/program-asp-net-web-pages-in-visual-studio.md)
         - [ASP.NET Web 编程 Razor 语法简介](overview/getting-started/introducing-razor-syntax-c.md)
         - [ASP.NET 网页 (Visual Basic)](overview/getting-started/introducing-razor-syntax-vb.md)
         - [ASP.NET 网页 (Razor) 常见问题解答](overview/getting-started/aspnet-web-pages-razor-faq.md)
@@ -46,19 +46,19 @@ ms.locfileid: "78520670"
         - [在 ASP.NET 网站中创建可读 URL](overview/routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
     - [UI、布局和主题](overview/ui-layouts-and-themes/index.md)
 
-        - [使用表单](overview/ui-layouts-and-themes/4-working-with-forms.md)
-        - [在 ASP.NET 网站中验证用户输入](overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
+        - [使用窗体](overview/ui-layouts-and-themes/4-working-with-forms.md)
+        - [在 ASP.NET 网页站点中验证用户输入](overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
         - [创建一致外观](overview/ui-layouts-and-themes/3-creating-a-consistent-look.md)
         - [自定义站点范围内的行为](overview/ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
         - [使用图像](overview/ui-layouts-and-themes/9-working-with-images.md)
         - [使用视频](overview/ui-layouts-and-themes/10-working-with-video.md)
-        - [在 ASP.NET 网站中创建和使用帮助程序](overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
+        - [在 ASP.NET 网页站点中创建和使用帮助程序](overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
         - [安装帮助程序](overview/ui-layouts-and-themes/installing-helpers.md)
         - [ASP.NET 网页的 Twitter 帮助程序](overview/ui-layouts-and-themes/twitter-helper.md)
-        - [在 ASP.NET 网站中显示地图](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
+        - [在 ASP.NET 网页站点中显示地图](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
     - [移动](overview/mobile/index.md)
 
-        - [为移动设备呈现 ASP.NET 网站](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
+        - [为移动设备呈现 ASP.NET 网页站点](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
     - [使用数据](overview/data/index.md)
 
         - [使用数据](overview/data/5-working-with-data.md)
@@ -75,22 +75,22 @@ ms.locfileid: "78520670"
         - [通过 CAPTCHA 阻止自动化程序（机器人）使用 ASP.NET 网站](overview/security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site.md)
     - [性能](overview/performance-and-traffic/index.md)
 
-        - [使用缓存提高网站的性能](overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
+        - [使用缓存提高网站性能](overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
         - [分析流量](overview/performance-and-traffic/14-analyzing-traffic.md)
-        - [在 ASP.NET 网站 (Razor) 中绑定和缩小资产](overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
+        - [在 ASP.NET 网页 (Razor) 中绑定和缩小资产](overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
     - [API 参考](overview/api-reference/index.md)
 
         - [ASP.NET API 快速参考](overview/api-reference/asp-net-web-pages-api-reference.md)
-    - [发布](overview/releases/index.md)
+    - [发行版本](overview/releases/index.md)
 
         - [ASP.NET 网页 3.2 的新增功能](overview/releases/whats-new-in-aspnet-web-pages-32.md)
         - [ASP.NET 网页 3.1 的新增功能](overview/releases/whats-new-aspnet-web-pages-31.md)
         - [ASP.NET 网页 2 的常用功能](overview/releases/top-features-in-web-pages-2.md)
-        - [ASP.NET 网页 2 开发者预览自述文件](overview/releases/aspnet-web-pages-2-developer-preview-readme.md)
+        - [ASP.NET 网页 2 开发人员预览自述文件](overview/releases/aspnet-web-pages-2-developer-preview-readme.md)
         - [并行运行不同版本的 ASP.NET 网页](overview/releases/running-v1-and-v2-sites-side-by-side.md)
 - [视频](videos/index.md)
 
-    - [介绍](videos/introduction/index.md)
+    - [简介](videos/introduction/index.md)
 
         - [ASP.NET 网页的 5 分钟简介](videos/introduction/5-minute-introduction-to-aspnet-web-pages.md)
         - [安装和使用 Microsoft WebMatrix 工具](videos/introduction/install-and-use-the-microsoft-webmatrix-tool.md)
@@ -102,7 +102,7 @@ ms.locfileid: "78520670"
         - [在 WebMatrix 中创建“编辑数据”页](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [在 WebMatrix 中创建“删除数据”页](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [使用 WebMatrix 将网站发布到 Internet](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [ASP.NET Razor Pages](videos/aspnet-razor-pages/index.md)
+    - [ASP.NET剃刀页面](videos/aspnet-razor-pages/index.md)
 
         - [WebMatrix 和 ASP.NET 网页入门](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [ASP.NET Web 编程 Razor 语法简介](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
