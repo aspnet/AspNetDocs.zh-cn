@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/building-20-applications/lesson-6-working-with-stylesheets-and-master-pages
-title: '[第6课：]使用样式表和母版页 |Microsoft Docs'
-author: microsoft
-description: 在本课中，您将学习如何使用样式表和 MasterPages 为 web 应用程序中的所有页面维持一致的外观。
+title: '[第6课：]使用样式表和母版页 |微软文档'
+author: rick-anderson
+description: 在本课中，您将开始了解如何使用样式表和 MasterPages 来维护 Web 应用程序中所有页面的一致外观。
 ms.author: riande
 ms.date: 11/28/2005
 ms.assetid: 321513ca-a52e-4142-9124-24eacb6048b4
 msc.legacyurl: /web-forms/videos/building-20-applications/lesson-6-working-with-stylesheets-and-master-pages
 msc.type: video
-ms.openlocfilehash: e04a276d991b7e0979bfb43f326e2c9ab7bfbb9c
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 5b9d377e0807fda32ebba10fab943bb9fb746888
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78514466"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543647"
 ---
-# <a name="lesson-6-working-with-stylesheets-and-master-pages"></a><span data-ttu-id="6bdb5-103">[第 6 课：] 使用样式表和母版页</span><span class="sxs-lookup"><span data-stu-id="6bdb5-103">[Lesson 6:] Working with Stylesheets and Master Pages</span></span>
+# <a name="lesson-6-working-with-stylesheets-and-master-pages"></a><span data-ttu-id="7849c-103">[第 6 课：] 使用样式表和母版页</span><span class="sxs-lookup"><span data-stu-id="7849c-103">[Lesson 6:] Working with Stylesheets and Master Pages</span></span>
 
-<span data-ttu-id="6bdb5-104">由[Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="6bdb5-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="7849c-104">由[微软](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="7849c-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="6bdb5-105">在本课中，您将学习如何使用样式表和 MasterPages 为 web 应用程序中的所有页面维持一致的外观。</span><span class="sxs-lookup"><span data-stu-id="6bdb5-105">In this lesson, you will begin to learn how style sheets and MasterPages can be used to maintain a consistent appearance for all pages in a web application.</span></span>
+<span data-ttu-id="7849c-105">在本课中，您将开始了解如何使用样式表和 MasterPages 来维护 Web 应用程序中所有页面的一致外观。</span><span class="sxs-lookup"><span data-stu-id="7849c-105">In this lesson, you will begin to learn how style sheets and MasterPages can be used to maintain a consistent appearance for all pages in a web application.</span></span>
 
-[<span data-ttu-id="6bdb5-106">&#9654;观看视频（24分钟）</span><span class="sxs-lookup"><span data-stu-id="6bdb5-106">&#9654; Watch video (24 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/lesson-6-working-with-stylesheets-and-master-pages)
+[<span data-ttu-id="7849c-106">&#9654;观看视频（24 分钟）</span><span class="sxs-lookup"><span data-stu-id="7849c-106">&#9654; Watch video (24 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/lesson-6-working-with-stylesheets-and-master-pages)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="6bdb5-107">[上一页](lesson-5-debugging-and-tracing-your-website.md)
-> [下一页](lesson-7-databinding-to-user-interface-controls.md)</span><span class="sxs-lookup"><span data-stu-id="6bdb5-107">[Previous](lesson-5-debugging-and-tracing-your-website.md)
+> <span data-ttu-id="7849c-107">[上一页](lesson-5-debugging-and-tracing-your-website.md)
+> [下一页](lesson-7-databinding-to-user-interface-controls.md)</span><span class="sxs-lookup"><span data-stu-id="7849c-107">[Previous](lesson-5-debugging-and-tracing-your-website.md)
 [Next](lesson-7-databinding-to-user-interface-controls.md)</span></span>
