@@ -29,7 +29,7 @@
   "need_preview_pull_request": true,
   "need_pr_comments": false,
   "contribution_branch_mappings": {
-           "live-sxs": "live"
+    "live-sxs": "live"
   },
   "dependent_repositories": [
     {
@@ -75,5 +75,8 @@
     }
   },
   "need_generate_pdf": false,
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
