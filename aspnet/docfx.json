@@ -45,15 +45,16 @@
       ],
       "_navRel": "/foo",
       "breadcrumb_path": "/aspnet/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
       "ms.prod": "aspnet-framework",
       "ms.topic": "conceptual",
-      "uhfHeaderId": "MSDocsHeader-DotNet",
+      "uhfHeaderId": [],
       "searchScope": [
         "ASP.NET"
       ],
       "_op_documentIdPathDepotMapping": {
         "./": {
-          "depot_name": "MSDN.aspnet-conceptual",
+          "depot_name": "MSDN.zh-cn",
           "folder_relative_path_in_docset": "./"
         }
       }
