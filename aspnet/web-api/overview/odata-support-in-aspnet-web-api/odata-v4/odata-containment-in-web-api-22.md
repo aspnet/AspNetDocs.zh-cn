@@ -2,18 +2,18 @@
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 title: 使用 Web API 2.2 的 OData v4 中的包含 |Microsoft Docs
 author: rick-anderson
-description: 通常，仅当实体封装在实体集内时，才能访问该实体。 但 OData v4 提供两个附加选项：单一实例和 Con 。
+description: 通常，仅当实体封装在实体集内时，才能访问该实体。 但 OData v4 提供两个附加选项：单一实例和 Con .。。
 ms.author: riande
 ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: 50050e40c4c42bf6d769d077c27864ee6417d4db
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 3be81eac9de4686a0d187396e951b121ea65bac4
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78421400"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172999"
 ---
 # <a name="containment-in-odata-v4-using-web-api-22"></a>使用 Web API 2.2 的 OData v4 中的包容
 
@@ -21,7 +21,7 @@ ms.locfileid: "78421400"
 
 > 通常，仅当实体封装在实体集内时，才能访问该实体。 但 OData v4 提供了两个额外的选项，即 Singleton 和包容，两者都支持 WebAPI 2.2。
 
-本主题说明如何在 WebApi 2.2 的 OData 终结点中定义包含。 有关包含的详细信息，请参阅包含的内容[为 OData v4](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx)。 若要在 Web API 中创建 OData V4 终结点，请参阅[使用 ASP.NET Web API 2.2 创建 odata V4 终结点](create-an-odata-v4-endpoint.md)。
+本主题说明如何在 WebApi 2.2 的 OData 终结点中定义包含。 有关包含的详细信息，请参阅包含的内容[为 OData v4](https://devblogs.microsoft.com/odata/tutorial-sample-containment-is-coming-with-odata-v4/)。 若要在 Web API 中创建 OData V4 终结点，请参阅[使用 ASP.NET Web API 2.2 创建 odata V4 终结点](create-an-odata-v4-endpoint.md)。
 
 首先，我们将使用此数据模型在 OData 服务中创建包含域模型：
 
@@ -37,18 +37,18 @@ ms.locfileid: "78421400"
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample1.cs)]
 
-    `Contained` 特性用于包含导航属性。
+    `Contained`特性用于包含导航属性。
 2. 基于 CLR 类型生成 EDM 模型。
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample2.cs)]
 
-    如果 `Contained` 特性添加到相应的导航属性中，`ODataConventionModelBuilder` 将处理生成 EDM 模型。 如果该属性是集合类型，则还将创建一个 `GetCount(string NameContains)` 函数。
+    `ODataConventionModelBuilder`如果将 `Contained` 特性添加到相应的导航属性中，则将处理生成 EDM 模型。 如果该属性是集合类型，则 `GetCount(string NameContains)` 还将创建一个函数。
 
     生成的元数据将如下所示：
 
     [!code-xml[Main](odata-containment-in-web-api-22/samples/sample3.xml?highlight=10)]
 
-    `ContainsTarget` 特性指示导航属性是一个包含。
+    `ContainsTarget`属性指示导航属性是一个包含。
 
 ## <a name="define-the-containing-entity-set-controller"></a>定义包含实体集控制器
 
@@ -56,6 +56,6 @@ ms.locfileid: "78421400"
 
 [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample4.cs)]
 
-如果 OData 路径为4个或更多个段，则仅属性路由工作，如以上控制器中的 `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]`。 否则，特性和常规路由都适用：例如，`GetPayInPIs(int key)` 匹配 `GET ~/Accounts(1)/PayinPIs`。
+如果 OData 路径为4个或更多个段，则只能使用特性路由，如 `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]` 以上控制器中所示。 否则，特性和常规路由都适用：例如， `GetPayInPIs(int key)` 匹配 `GET ~/Accounts(1)/PayinPIs` 。
 
 *感谢在本文的原始内容中 Leo 的。*
