@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ec025e757d00cbfbfbcda9408739d2593908bc07
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78513668"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240627"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>使用 Visual Studio 的 ASP.NET Web 部署：部署到生产环境
 
@@ -33,7 +33,7 @@ ms.locfileid: "78513668"
 
 ## <a name="get-a-microsoft-azure-account"></a>获取 Microsoft Azure 帐户
 
-如果还没有 Azure 帐户，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅 [Azure 免费试用](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)。
+如果还没有 Azure 帐户，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅 [Azure 免费试用](https://azure.microsoft.com/free/dotnet/)。
 
 ## <a name="create-a-staging-environment"></a>创建过渡环境
 
@@ -110,14 +110,14 @@ ms.locfileid: "78513668"
     ![保存 .publishsettings 文件](deploying-to-production/_static/image6.png)
 
     > [!WARNING]
-    > 安全性- *.publishsettings*文件包含用于管理 Azure 订阅和服务的凭据（未编码）。 确保此文件安全的最佳做法是，将其暂时存储在您的源目录的外部（例如存储在 Libraries\Documents 文件夹中），然后在完成导入后将其删除。 获得 *.publishsettings*文件访问权的恶意用户可以编辑、创建和删除你的 Azure 服务。
+    > 安全性- *.publishsettings*文件包含用于管理 Azure 订阅和服务的凭据（未编码）。 确保此文件安全的最佳做法是，将其暂时存储在源目录的外部（例如存储在 Libraries\Documents 文件夹中），然后在完成导入后将其删除。 获得 *.publishsettings*文件访问权的恶意用户可以编辑、创建和删除你的 Azure 服务。
 
 ### <a name="create-a-publish-profile"></a>创建发布配置文件
 
 1. 在 Visual Studio 中，右键单击**解决方案资源管理器**中的 ContosoUniversity 项目，然后从上下文菜单中选择 "**发布**"。
 
-    “发布 Web”向导随即打开。
-2. 单击“配置文件”选项卡。
+    “发布 Web”向导随即打开。****
+2. 单击“配置文件”选项卡。****
 3. 单击“导入”。
 4. 导航到之前下载的 *.publishsettings*文件，然后单击 "**打开**"。
 
@@ -127,10 +127,10 @@ ms.locfileid: "78513668"
     验证连接后，"**验证连接**" 按钮旁边会显示一个绿色复选标记。
 
     对于某些宿主提供程序，单击 "**验证连接**" 时，可能会看到 "**证书错误**" 对话框。 如果执行此操作，请验证服务器名称是否与预期的相同。 如果服务器名称正确，请选择 "**为 Visual Studio 的未来会话保存此证书**"，然后单击 "**接受**"。 （此错误意味着宿主提供程序已选择避免为你要部署到的 URL 购买 SSL 证书。 如果你希望使用有效的证书建立安全连接，请与你的托管提供商联系。）
-6. 单击 **“下一步”** 。
+6. 单击“下一步”。
 
     ![“连接”选项卡中的连接成功图标和“下一步”按钮](deploying-to-production/_static/image8.png)
-7. 在 "**设置**" 选项卡中，展开 "**文件发布选项**"，然后选择 **"从应用程序中排除文件\_Data 文件夹**。
+7. 在 "**设置**" 选项卡中，展开 "**文件发布选项**"，然后**从 "应用程序 \_ 数据" 文件夹中选择 "排除文件"**。
 
     有关 "**文件发布选项**" 下的其他选项的信息，请参阅[部署到 IIS](deploying-to-iis.md)教程。 在数据库配置步骤结束时，显示此步骤的结果和以下数据库配置步骤的屏幕截图。
 8. 在 "**数据库**" 部分的 " **DefaultConnection** " 下，为成员资格数据库配置数据库部署。
@@ -141,9 +141,9 @@ ms.locfileid: "78513668"
       3. 在 "**配置数据库更新**" 对话框中，单击 "**添加 SQL 脚本**"。
       4. 在 "**添加 SQL 脚本**" 框中，导航到之前在 "解决方案" 文件夹中保存的*aspnet-data-prod*脚本，然后单击 "**打开**"。
       5. 关闭 "**配置数据库更新**" 对话框。
-10. 在 "**数据库**" 部分的 " **SchoolContext** " 下，选择 "**执行 Code First 迁移（在应用程序启动时运行）** 。
+10. 在 "**数据库**" 部分的 " **SchoolContext** " 下，选择 "**执行 Code First 迁移（在应用程序启动时运行）**。
 
-    Visual Studio 显示 `DbContext` 类的**执行 Code First 迁移**而不是**Update 数据库**。 如果要使用 dbDacFx 提供程序（而不是迁移）来部署使用 `DbContext` 类访问的数据库，请如何实现参阅 MSDN 上的 Visual Studio 的 Web 部署常见问题和 ASP.NET 中的[部署 Code First 数据库 "](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) 。
+    Visual Studio 显示**Execute Code First 迁移**，而不是类的**Update 数据库** `DbContext` 。 如果要使用 dbDacFx 提供程序（而不是迁移）来部署通过使用类访问的数据库 `DbContext` ，请参阅 MSDN 上的 Visual Studio 的 Web 部署常见问题和 ASP.NET 中的[如何实现部署不迁移的 Code First 数据库？](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations)
 
     "**设置**" 选项卡现在类似于以下示例：
 
@@ -160,22 +160,22 @@ ms.locfileid: "78513668"
 ### <a name="configure-a-publish-profile-transform-for-the-environment-indicator"></a>为环境指示器配置发布配置文件转换
 
 > [!NOTE]
-> 本部分说明如何为环境指示器设置 web.config 转换。 因为指示器位于 `<appSettings>` 元素中，所以在部署到 Azure App Service 时，可以使用另一种方法来指定转换。 有关详细信息，请参阅[在 Azure 中指定 web.config 设置](web-config-transformations.md#watransforms)。
+> 本部分说明如何设置环境指示器的 Web.config 转换。 因为指示器位于元素中，所以在 `<appSettings>` 部署到 Azure App Service 时，可以使用另一种方法来指定转换。 有关详细信息，请参阅[在 Azure 中指定 Web.config 设置](web-config-transformations.md#watransforms)。
 
 1. 在**解决方案资源管理器**中，展开 "**属性**"，然后展开**PublishProfiles**。
 2. 右键单击 " *.pubxml*"，然后单击 "**添加配置转换**"。
 
     ![为暂存添加配置转换](deploying-to-production/_static/image11.png)
 
-    Visual *Studio 将创建 web.config 转换文件*并将其打开。
-3. 在 web.config*转换文件*中，将以下代码插入到紧随开始 `configuration` 标记之后。
+    Visual Studio 将创建*Web.Staging.config*转换文件并将其打开。
+3. 在*Web.Staging.config*转换文件中，将以下代码插入到紧随开始 `configuration` 标记的后面。
 
     [!code-xml[Main](deploying-to-production/samples/sample1.xml)]
 
     当使用过渡发布配置文件时，此转换会将环境指示器设置为 "生产"。 在已部署的 web 应用中，你将看不到任何后缀，如 "Contoso 大学" H1 标题后面的 "（开发人员）" 或 "（测试）"。
-4. 右键单击 " *web.config* " 文件，然后单击 "**预览转换**"，以确保编码的转换生成所需的更改。
+4. 右键单击*Web.Staging.config*文件，然后单击 "**预览转换**"，以确保编码的转换会生成预期的更改。
 
-    Web.config**预览**窗口显示了同时应用*web.config*转换和*web.config 转换的结果。 "转换*"。
+    **Web.config 预览**"窗口显示应用*Web.Release.config*转换和*Web.Staging.config*转换的结果。
 
 ### <a name="prevent-public-use-of-the-test-app"></a>阻止公共使用测试应用
 
@@ -183,18 +183,18 @@ ms.locfileid: "78513668"
 
 - 设置防火墙规则，仅允许从用于测试暂存的 IP 地址访问过渡应用。
 - 使用不可能猜到的经过模糊处理的 URL。
-- 创建一个*机器人 .txt*文件，以确保搜索引擎不会对测试应用进行爬网，并在搜索结果中向其报告链接。
+- 创建一个*robots.txt*文件，以确保搜索引擎不会对测试应用进行爬网，并在搜索结果中向其报告链接。
 
 这些方法中的第一种方法是最有效的，但在本教程中不涉及，因为这将要求你部署到 Azure 云服务而不是 Azure App Service。 有关 Azure 中的云服务和 IP 限制的详细信息，请参阅[Azure 提供的计算托管选项](https://docs.microsoft.com/azure/cloud-services/cloud-services-choose-me)和[阻止特定 IP 地址访问 Web 角色](https://msdn.microsoft.com/library/windowsazure/jj154098.aspx)。 如果要部署到第三方托管提供商，请与提供商联系，以了解如何实现 IP 限制。
 
-在本教程中，你将创建一个*机器人 .txt*文件。
+在本教程中，您将创建一个*robots.txt*文件。
 
 1. 在**解决方案资源管理器**中，右键单击 ContosoUniversity 项目，然后单击 "**添加新项**"。
-2. 创建一个名为 "*机器人*" 的新**文本文件**，然后在其中输入以下文本：
+2. 创建一个名为 " *robots.txt*" 的新**文本文件**，并在其中添加以下文本：
 
     [!code-console[Main](deploying-to-production/samples/sample2.cmd)]
 
-    "`User-agent`" 行通知搜索引擎文件中的规则适用于所有搜索引擎 web 爬网程序（机器人），`Disallow` 行指定不应爬网网站上的任何页面。
+    `User-agent`该行通知搜索引擎文件中的规则适用于所有搜索引擎 web 爬网程序（机器人）， `Disallow` 行指定不应爬网网站上的任何页面。
 
     你确实希望搜索引擎为你的生产应用程序编目，因此你需要从生产部署中排除此文件。 为此，你将在创建生产发布配置文件时配置其设置。
 
@@ -202,13 +202,13 @@ ms.locfileid: "78513668"
 
 1. 右键单击 Contoso 大学项目，然后单击 "**发布**"，打开 "**发布 Web** " 向导。
 2. 请确保选择了**暂存**配置文件。
-3. 单击“发布”。
+3. 单击“发布” 。
 
-    “输出”窗口会显示已执行的部署操作并报告部署的成功完成。 默认浏览器会自动打开到已部署的 web 应用的 URL。
+    “输出”窗口会显示已执行的部署操作并报告部署的成功完成。**** 默认浏览器会自动打开到已部署的 web 应用的 URL。
 
 ## <a name="test-in-the-staging-environment"></a>在过渡环境中测试
 
-请注意，环境指示器不存在（"（测试）" 或 "（开发）" 在 H1 标题后，这表明环境指示器的*web.config 转换已*成功。
+请注意，环境指示器不存在（"（测试）" 或 "（Dev）" 在 H1 标题之后，这表明环境指示器的*Web.config*转换已成功。
 
 ![主页过渡](deploying-to-production/_static/image12.png)
 
@@ -224,9 +224,9 @@ ms.locfileid: "78513668"
 
 你创建的应用程序现在在云中的 web 应用中运行，就像你将用于生产的应用程序一样。 由于一切都能正常运行，因此下一步是部署到生产环境。
 
-## <a name="deploy-to-production"></a>部署到生产环境
+## <a name="deploy-to-production"></a>部署到生产
 
-除了需要从部署中排除*机器人 .txt*外，创建生产 web 应用并将其部署到生产的过程与用于过渡的过程相同。 为此，你将编辑发布配置文件。
+除了需要从部署中排除*robots.txt*之外，创建生产 web 应用并将其部署到生产的过程与用于过渡的过程相同。 为此，你将编辑发布配置文件。
 
 ### <a name="create-the-production-environment-and-the-production-publish-profile"></a>创建生产环境和生产发布配置文件
 
@@ -240,9 +240,9 @@ ms.locfileid: "78513668"
 4. 将发布配置文件重命名为 "*生产*"。
 5. 按照用于过渡的相同过程，为环境指示器配置发布配置文件转换。
 
-### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>编辑 .pubxml 文件以排除机器人 .txt
+### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>编辑 .pubxml 文件以排除 robots.txt
 
-发布配置文件是 &lt;*profilename&gt;命名*的，位于*PublishProfiles*文件夹中。 *PublishProfiles*文件夹位于C# web 应用程序项目中的 "*属性*" 文件夹下、VB web 应用程序项目中的 "*我的项目*" 文件夹下或 Web 应用项目中的 "*应用\_Data* " 文件夹下。 每个 *.pubxml*文件都包含适用于一个发布配置文件的设置。 您在 "发布 Web" 向导中输入的值存储在这些文件中，您可以对其进行编辑以创建或更改不能在 Visual Studio UI 中使用的设置。
+发布配置文件的名称为 &lt; profilename &gt; *. .Pubxml* ，位于*PublishProfiles*文件夹中。 *PublishProfiles*文件夹位于 c # web 应用程序项目中的 "*属性*" 文件夹下、VB web 应用程序项目的 "*我的项目*" 文件夹下或 Web 应用项目中的 "*应用 \_ 数据*" 文件夹下。 每个 *.pubxml*文件都包含适用于一个发布配置文件的设置。 您在 "发布 Web" 向导中输入的值存储在这些文件中，您可以对其进行编辑以创建或更改不能在 Visual Studio UI 中使用的设置。
 
 默认情况下，当你创建发布配置文件时， *.pubxml*文件包含在项目中，但你可以将其从项目中排除，Visual Studio 仍将使用它们。 Visual Studio 将在*PublishProfiles*文件夹中查找 *.pubxml*文件，无论它们是否包含在项目中。
 
@@ -255,7 +255,7 @@ ms.locfileid: "78513668"
 
     ![打开 .pubxml 文件](deploying-to-production/_static/image13.png)
 3. 右键单击 " *.pubxml* "，然后单击 "**打开**"。
-4. 在紧靠右 `PropertyGroup` 元素之前添加以下行：
+4. 紧靠在结束元素之前添加以下行 `PropertyGroup` ：
 
     [!code-xml[Main](deploying-to-production/samples/sample3.xml)]
 
@@ -265,20 +265,20 @@ ms.locfileid: "78513668"
 
     有关如何排除文件和文件夹的详细信息，请参阅 MSDN 上的**Visual Studio 和 ASP.NET 的 Web 部署常见问题解答**中的 "[能否从部署中排除特定文件或文件夹"](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment) 。
 
-### <a name="deploy-to-production"></a>部署到生产环境
+### <a name="deploy-to-production"></a>部署到生产
 
-1. 打开 "**发布 Web** " 向导，确保已选择 "**生产**发布配置文件"，然后单击 "**预览**" 选项卡上的 "**开始预览**"，验证*机器人 .txt*文件是否不会复制到生产应用。
+1. 打开 "**发布 Web** " 向导，确保已选择 "**生产**发布配置文件"，然后单击 "**预览**" 选项卡上的 "**开始预览**" 以验证是否不会将*robots.txt*文件复制到生产应用。
 
     ![要发布到生产的文件预览](deploying-to-production/_static/image14.png)
 
-    查看要复制的文件的列表。 你将看到所有 *.cs*文件，包括*aspx.cs*、 *. aspx.designer.cs*、 *Master.cs*和*Master.designer.cs*文件。 所有此代码都已编译到*ContosoUniversity*和*ContosoUniversity*文件中，这些文件将在*bin*文件夹中找到。 由于只需要 *.dll*来运行应用程序，并且您之前指定仅应部署运行应用程序所需的文件，因此，不会将 *.cs*文件复制到目标环境。 由于相同的原因，将省略*obj*文件夹和*ContosoUniversity*和 *.csproj*文件。
+    查看要复制的文件的列表。 你将看到所有 *.cs*文件，包括*aspx.cs*、 *. aspx.designer.cs*、 *Master.cs*和*Master.designer.cs*文件。 所有此代码都已编译到*ContosoUniversity.dll*和*ContosoUniversity*文件中，这些文件将在*bin*文件夹中找到。 由于只需要 *.dll*来运行应用程序，并且您之前指定仅应部署运行应用程序所需的文件，因此，不会将 *.cs*文件复制到目标环境。 由于相同的原因，将省略*obj*文件夹和*ContosoUniversity*和 *.csproj*文件。
 
     单击 "**发布**" 以部署到生产环境。
 2. 在生产环境中测试，遵循用于过渡的相同过程。
 
-    除 URL 之外的所有内容和缺少*机器人 .txt*文件的内容完全相同。
+    除了 URL 和缺少*robots.txt*文件，所有内容都与过渡完全相同。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 现在，你已成功部署并测试了 web 应用，并且该应用可通过 Internet 公开使用。
 

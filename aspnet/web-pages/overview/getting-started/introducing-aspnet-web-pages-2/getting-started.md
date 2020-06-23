@@ -2,22 +2,22 @@
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 title: 入门 | Microsoft Docs
 author: Rick-Anderson
-description: WebMatrix 不再建议作为 ASP.NET 网页的集成开发环境。 使用 Visual Studio 或 Visual Studio Code。 本指南 。
+description: WebMatrix 不再建议作为 ASP.NET 网页的集成开发环境。 使用 Visual Studio 或 Visual Studio Code。 本指南 .。。
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: bb863f8605e6f8faca3b285607b63a3e88e83012
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ac2111980e6393388a0530375fb9ef78dbbfaff6
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78440240"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240763"
 ---
 # <a name="getting-started"></a>入门
 
-作者： [Tom FitzMacken](https://github.com/tfitzmac)
+ 作者 [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
 
@@ -59,16 +59,16 @@ ms.locfileid: "78440240"
 假设你熟悉以下内容：
 
 - **HTML**。 不需要深入的专业技能。 我们不会解释 HTML，但也不会使用任何复杂的内容。 我们将提供 HTML 教程的链接，在这些教程中，我们认为它们非常有用。
-- **级联样式表（CSS）** 。 与 HTML 相同。
+- **级联样式表（CSS）**。 与 HTML 相同。
 - **基本数据库思想**。 如果你使用了电子表格进行数据的排序和筛选，那么这就是我们通常为本教程设置的专业知识水平。
 
-我们还假定你对学习基本编程感兴趣。 ASP.NET 网页使用名C#为的编程语言。 您无需在编程中使用任何背景，只需对其感兴趣。 如果你以前在网页中编写了任何 JavaScript，则会有许多背景知识。
+我们还假定你对学习基本编程感兴趣。 ASP.NET 网页使用称为 c # 的编程语言。 您无需在编程中使用任何背景，只需对其感兴趣。 如果你以前在网页中编写了任何 JavaScript，则会有许多背景知识。
 
 请注意，如果你熟悉编程，你可能会发现，此教程最初会缓慢移动，同时我们会使新的程序员保持速度缓慢。 不过，在我们过去的几个教程中，将会有更少的基本编程说明，并将以更快的速度移动。
 
 ## <a name="what-do-you-need"></a>你需要什么？
 
-你将需要以下项目：
+以下是需要做好的准备：
 
 - 运行 Windows 8、Windows 7、Windows Server 2008 或 Windows Server 2012 的计算机。
 - 动态 internet 连接。
@@ -133,7 +133,7 @@ WebMatrix 是一种工具，可集成网页编辑器、数据库实用工具、�
 
 在 ASP.NET 网站的 "网页"[页](../../../index.md)上，单击 "**安装**"。
 
-![显示 &quot;安装 WebMatrix&quot; "按钮的 ASP.NET 网站](getting-started/_static/image3.png)
+![显示 " &quot; 安装 WebMatrix" 按钮的 ASP.NET 网站 &quot;](getting-started/_static/image3.png)
 
 安装 WebMatrix 之前，系统会要求你接受许可条款和隐私声明。
 
@@ -153,7 +153,7 @@ WebMatrix 是一种工具，可集成网页编辑器、数据库实用工具、�
 
 完成后，安装过程可以自动启动 WebMatrix。 如果不是，在 Windows 中，从 "**开始**" 菜单启动 " **Microsoft WebMatrix**"。
 
-首次启动 WebMatrix 时，有机会使用 Microsoft 帐户登录到 Microsoft Azure。 登录后，你将通过 Azure 接收10个免费的 web 应用。 这些免费的 web 应用提供了一种方便的方法来测试你的应用。 如果还没有 Azure 帐户，但有 MSDN 订阅，则可以[激活 msdn 订阅权益](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604)。 否则，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅 [Azure 免费试用](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)。
+首次启动 WebMatrix 时，有机会使用 Microsoft 帐户登录到 Microsoft Azure。 登录后，你将通过 Azure 接收10个免费的 web 应用。 这些免费的 web 应用提供了一种方便的方法来测试你的应用。 如果还没有 Azure 帐户，但有 MSDN 订阅，则可以[激活 msdn 订阅权益](https://www.windowsazure.com/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A443DD604)。 否则，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅 [Azure 免费试用](https://azure.microsoft.com/free/dotnet/)。
 
 你现在无需登录即可继续学习本教程。 如果你现在不登录，则你仍可以选择在以后登录。 本系列教程的最后一个[主题](publishing.md)介绍如何将网站部署到 Azure;因此，您需要登录才能完成该主题。
 
@@ -175,7 +175,7 @@ WebMatrix 是一种工具，可集成网页编辑器、数据库实用工具、�
 
 ![选定了空站点模板的 WebMatrix 快速入门窗口](getting-started/_static/image10.png)
 
-单击 **“下一步”** 。
+单击“下一步”。
 
 如果已登录到 Microsoft 帐户，则可以在 Azure 上创建网站。 根据你的站点的名称，建议默认名称**WebPagesMovies.azurewebsites.net** ;但是，感叹号表示此名称在 Windows Azure 上不可用。 为简单起见，请选择 "**跳过**" 以跳过在 Azure 上立即创建网站。 稍后在本系列中，我们会将该站点发布到 Azure。
 
@@ -199,7 +199,7 @@ WebMatrix 创建并打开站点：
 
 在功能区中，单击 "**新建**" 下的箭头，然后单击 "**新建文件**"。
 
-![使用功能区中的 &quot;New&quot; 命令创建新文件](getting-started/_static/image14.png)
+![使用 &quot; 功能区中的 "新建" &quot; 命令创建新文件](getting-started/_static/image14.png)
 
 WebMatrix 显示文件类型的列表。 选择 " **CSHTML**"，然后在 "**名称**" 框中，键入 "HelloWorld"。 CSHTML 页面是 ASP.NET 网页页面。
 
@@ -217,9 +217,9 @@ WebMatrix 创建页面并在编辑器中打开它。
 
 这就是添加代码的，正如您很快所见。
 
-请注意，页面的不同部分 &mdash; 元素名称、属性和文本，以及顶部的块，都采用不同的颜色。 这称为*语法突出显示*，使所有内容保持清晰。 这是一项功能，使用它可以轻松地在 WebMatrix 中使用网页。
+请注意， &mdash; 元素名称、属性和文本以及顶部块的不同部分均采用不同的颜色。 这称为*语法突出显示*，使所有内容保持清晰。 这是一项功能，使用它可以轻松地在 WebMatrix 中使用网页。
 
-为 `<head>` 和 `<body>` 元素添加内容，如以下示例中所示。 （如果需要，可以只复制以下块，并将整个现有页面替换为此代码。）
+为 `<head>` 和元素添加内容， `<body>` 如以下示例中所示。 （如果需要，可以只复制以下块，并将整个现有页面替换为此代码。）
 
 [!code-cshtml[Main](getting-started/samples/sample2.cshtml)]
 
@@ -235,13 +235,13 @@ WebMatrix 创建页面并在编辑器中打开它。
 
 WebMatrix 启动可用于在计算机上测试页面的内置 web 服务器（IIS Express）。 （无需在 WebMatrix 中 IIS Express，你必须将页面发布到 web 服务器上的某个位置，然后才能对其进行测试。）页面将显示在默认浏览器中。
 
-![&quot;在浏览器中运行 Hello World&quot; 页](getting-started/_static/image19.png)
+![&quot;&quot;在浏览器中运行的 Hello World 页面](getting-started/_static/image19.png)
 
-请注意，当你在 WebMatrix 中测试某个页面时，浏览器中的 URL 类似于 `http://localhost:33651/HelloWorld.cshtml.` 名称*localhost*引用本地服务器，这意味着该页面由你自己的计算机上的 web 服务器提供服务。 如上所述，WebMatrix 包含一个名为 IIS Express 的 web 服务器程序，该程序在启动页面时运行。
+请注意，当你在 WebMatrix 中测试某个页面时，浏览器中的 URL 类似于 `http://localhost:33651/HelloWorld.cshtml.` 名称*localhost* ，这就是指本地服务器，这意味着该页由你自己的计算机上的 web 服务器提供服务。 如上所述，WebMatrix 包含一个名为 IIS Express 的 web 服务器程序，该程序在启动页面时运行。
 
 *Localhost*后面的数字（例如*localhost： 33651*）是指计算机上的*端口号*。 这是 IIS Express 用于此特定网站的 "通道" 号。 创建站点时，从1024到65536的范围内随机选择端口号，而创建的每个站点都是不同的。 （测试自己的站点时，端口号几乎肯定会与33561不同。）通过为每个网站使用不同的端口，IIS Express 可以使其与你的站点直接通信。
 
-稍后，当你将站点发布到公共 web 服务器时，你将不会再看到 URL 中的*localhost* 。 此时，你将看到更典型的 URL，例如 `http://myhostingsite/mywebsite/HelloWorld.cshtml` 或页面的任何内容。 你将在本系列教程的后面部分了解有关发布站点的详细信息。
+稍后，当你将站点发布到公共 web 服务器时，你将不会再看到 URL 中的*localhost* 。 此时，您将看到更典型的 URL，例如 `http://myhostingsite/mywebsite/HelloWorld.cshtml` 或页面的任何内容。 你将在本系列教程的后面部分了解有关发布站点的详细信息。
 
 ## <a name="adding-some-server-side-code"></a>添加一些服务器端代码
 
@@ -251,17 +251,17 @@ WebMatrix 启动可用于在计算机上测试页面的内置 web 服务器（II
 
 [!code-cshtml[Main](getting-started/samples/sample3.cshtml)]
 
-这只是一些 Razor 代码。 很明显，它会获取当前日期和时间，并将该值放入名为 `currentDateTime`的*变量*中。 你将在下一教程中详细了解 Razor 语法。
+这只是一些 Razor 代码。 很明显，它会获取当前日期和时间，并将该值放入名为的*变量*中 `currentDateTime` 。 你将在下一教程中详细了解 Razor 语法。
 
-在页面的正文中，在 `<p>Hello World!</p>` 元素的后面添加以下内容：
+在页面的正文中，在元素后面 `<p>Hello World!</p>` 添加以下内容：
 
 [!code-html[Main](getting-started/samples/sample4.html)]
 
-此代码将获取放置在顶部 `currentDateTime` 变量中的值，并将其插入页面的标记中。 `@` 字符标记页面中的 ASP.NET 网页代码。
+此代码将获取在顶部置于变量中的值 `currentDateTime` ，并将其插入到页面的标记中。 `@`字符标记页面中的 ASP.NET 网页代码。
 
 再次运行页面（WebMatrix 会在运行页面之前保存更改）。 此时会在页面中看到日期和时间。
 
-![使用动态生成的时间显示 &quot;Hello World 浏览器中运行的&quot; 页](getting-started/_static/image20.png)
+![&quot;&quot;在浏览器中运行的 Hello World 页面，其中包含动态生成的时间显示](getting-started/_static/image20.png)
 
 稍等片刻，然后在浏览器中刷新页面。 更新日期和时间。
 
@@ -269,7 +269,7 @@ WebMatrix 启动可用于在计算机上测试页面的内置 web 服务器（II
 
 [!code-html[Main](getting-started/samples/sample5.html)]
 
-请注意，在顶部 `@{ }` 块不存在。 另请注意，"日期和时间" 显示将显示实际的字符串（`1/18/2012 2:49:50 PM` 或任何内容），而不是 `@currentDateTime` *。* 这里发生的情况是，当你运行页面时，ASP.NET 处理了标记为 `@`的所有代码（在本例中非常少）。 此代码生成输出，并将输出插入到页面中。
+请注意， `@{ }` 顶部的块不存在。 另请注意，"日期和时间" 显示将显示实际的字符串（ `1/18/2012 2:49:50 PM` 或任何内容），而不是 `@currentDateTime` 像在 *.* # 页中一样。 这里发生的情况是，当你运行页面时，ASP.NET 处理了标记为的所有代码（在此例中很少） `@` 。 此代码生成输出，并将输出插入到页面中。
 
 ## <a name="this-is-what-aspnet-web-pages-are-about"></a>这就是 ASP.NET 网页的内容
 
@@ -288,4 +288,4 @@ WebMatrix 启动可用于在计算机上测试页面的内置 web 服务器（II
 [从头开始创建 ASP.NET 网站](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch)。 本教程专门介绍如何使用 WebMatrix （不 ASP.NET 网页）。 本文更详细地介绍了 WebMatrix 的一些其他功能，我们不会在本教程集中介绍。
 
 > [!div class="step-by-step"]
-> [下一部分](intro-to-web-pages-programming.md)
+> [下一页](intro-to-web-pages-programming.md)

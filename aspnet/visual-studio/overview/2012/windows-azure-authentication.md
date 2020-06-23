@@ -8,12 +8,12 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ab75218cbe3817c14a064e9816388aebc7e431f7
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78449462"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240557"
 ---
 # <a name="windows-azure-authentication"></a>Microsoft Azure 身份验证
 
@@ -25,7 +25,7 @@ ms.locfileid: "78449462"
 >
 > 有关如何在本地 Active Directory 和 Windows Azure Active Directory 租户之间设置同步的详细信息，请参阅[使用 AD FS 2.0 实现和管理单一登录](https://technet.microsoft.com/library/jj205462.aspx)。
 >
-> Windows Azure Active Directory 当前以[免费预览版服务](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)的形式提供。
+> Windows Azure Active Directory 当前以[免费预览版服务](https://azure.microsoft.com/free/dotnet/)的形式提供。
 
 ## <a name="requirements"></a>要求：
 
@@ -65,7 +65,7 @@ ms.locfileid: "78449462"
 ![](windows-azure-authentication/_static/image6.png)
 
 此对话框将显示使用 Azure Active Directory 原则预配应用程序所需的 "**域**"、"**应用程序主体 Id** " 和 "**答复 URL** "。 需要将此信息提供给有足够权限来预配应用程序的人员。 有关如何使用 cmdlet 来手动创建服务主体的详细信息，请参阅[如何使用 Windows Azure Active Directory ASP.NET 应用程序实现单一登录](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect)。
-成功预配应用程序后，可以单击 "继续"，**以通过所选设置更新**web.config。 如果要在等待预配发生的同时继续开发应用程序，则可以单击 "**关闭" 以记住项目文件中的设置**。 下次调用 "启用 Windows Azure 身份验证" 并取消选中 "设置" 复选框时，将看到相同的设置，你可以单击 "**继续**"，然后单击 "**将这些设置应用到**web.config"。
+成功预配应用程序后，可以单击 "继续"**以更新具有所选设置的 web.config**。 如果要在等待预配发生的同时继续开发应用程序，则可以单击 "**关闭" 以记住项目文件中的设置**。 下次调用 "启用 Windows Azure 身份验证" 并取消选中 "设置" 复选框时，将看到相同的设置，你可以单击 "**继续**"，然后单击 " **web.config中的" 应用这些设置**"。
 
 1. 等待你的应用程序配置为进行 Windows Azure 身份验证，并已设置为 Windows Azure Active Directory。
 2. 为应用程序启用 Windows Azure 身份验证后，单击 "**关闭"：**
@@ -85,9 +85,9 @@ ms.locfileid: "78449462"
 
 启用 Windows Azure 身份验证会对应用程序进行以下更改：
 
-- 将反跨站点请求伪造（[CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))）类（*应用\_Start\AntiXsrfConfig.cs* ）添加到项目。
-- `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` 的 NuGet 包将添加到你的项目中。
-- 应用程序中的 Windows Identity Foundation 设置将配置为接受来自 Windows Azure Active Directory 租户的安全令牌。 单击下面的图像可查看对*web.config 文件所*做更改的扩展视图。
+- 反跨站点请求伪造（[CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))）类（*应用 \_ Start\AntiXsrfConfig.cs* ）已添加到你的项目中。
+- NuGet 包 `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` 将添加到你的项目中。
+- 应用程序中的 Windows Identity Foundation 设置将配置为接受来自 Windows Azure Active Directory 租户的安全令牌。 单击下面的图像可查看对*Web.config*文件所做更改的扩展视图。
 
      ![](windows-azure-authentication/_static/image9.png)
 - 将在 Windows Azure Active Directory 租户中设置应用程序的服务主体。
@@ -141,7 +141,7 @@ Windows Azure 身份验证当前不提供必要的角色声明，因此可以执
 
 #### <a name="browsing-to-an-application-with-windows-azure-authentication-results-in-the-error-acs20016-the-domain-of-the-logged-in-user-livecom-does-not-match-any-allowed-domain-of-this-sts"></a>使用 Windows Azure 身份验证浏览到应用程序会导致错误 "ACS20016 已登录用户的域（live.com）与此 STS 的任何允许域都不匹配"
 
-如果你已登录到 Microsoft 帐户（例如 hotmail.com、live.com、outlook.com），并且尝试访问已启用 Windows Azure 身份验证的应用程序，你可能会收到400错误响应，因为你的 Microsoft 帐户的域Windows Azure Active Directory 无法识别。 若要登录到应用程序，请先从你的 Microsoft 帐户注销。
+如果你已登录到 Microsoft 帐户（例如 hotmail.com、live.com、outlook.com），并且尝试访问已启用 Windows Azure 身份验证的应用程序，你可能会收到400错误响应，因为 Windows Azure Active Directory 无法识别你的 Microsoft 帐户的域。 若要登录到应用程序，请先从你的 Microsoft 帐户注销。
 
 #### <a name="logging-into-an-application-with-windows-azure-authentication-enabled-and-a-x509certificatevalidationmode-other-than-none-results-in-certificate-validation-errors-for-the-accountsaccesscontrolwindowsnet-certificate"></a>登录到启用了 Windows Azure 身份验证的应用程序，如果 X509certificatevalidationmode.custom 不为 "无"，则会导致 accounts.accesscontrol.windows.net 证书的证书验证错误
 
