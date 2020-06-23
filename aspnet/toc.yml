@@ -1,4 +1,4 @@
-- name: ASP.NET 文档
+- name: ASP.NET Core 文档
   href: /aspnet/core/
 - name: ASP.NET 概述
   href: overview.md
@@ -72,9 +72,9 @@
         - name: 安全性、身份验证和授权
           href: web-forms/overview/security/index.md
           items:
-            - name: '创建具有用户注册、电子邮件确认和密码重置功能的安全 ASP.NET Web 窗体应用 (C#)'
+            - name: 创建具有用户注册、电子邮件确认和密码重置功能的安全 ASP.NET Web 窗体应用 (C#)
               href: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md
-            - name: '创建具有 SMS 双因素身份验证功能的 ASP.NET Web 窗体应用 (C#)'
+            - name: 创建具有 SMS 双因素身份验证功能的 ASP.NET Web 窗体应用 (C#)
               href: web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md
         - name: 性能
           href: web-forms/overview/performance-and-caching/index.md
@@ -314,25 +314,25 @@
             - name: ASP.NET 3.5 - Web 窗体母版页
               href: web-forms/overview/older-versions-getting-started/master-pages/index.md
               items:
-                - name: '使用母版页创建站点范围内布局 (C#)'
+                - name: 使用母版页创建站点范围内布局 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs.md
-                - name: '多个 ContentPlaceHolder 和默认内容 (C#)'
+                - name: 多个 ContentPlaceHolder 和默认内容 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs.md
-                - name: '指定母版页中的标题、元标记和其他 HTML 标头 (C#)'
+                - name: 指定母版页中的标题、元标记和其他 HTML 标头 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md
-                - name: '母版页中的 URL (C#)'
+                - name: 母版页中的 URL (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs.md
-                - name: '内容页中的控件 ID 命名 (C#)'
+                - name: 内容页中的控件 ID 命名 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs.md
-                - name: '从内容页与母版页交互 (C#)'
+                - name: 从内容页与母版页交互 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs.md
-                - name: '从母版页与内容页交互 (C#)'
+                - name: 从母版页与内容页交互 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs.md
-                - name: '母版页和 ASP.NET AJAX (C#)'
+                - name: 母版页和 ASP.NET AJAX (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs.md
-                - name: '以编程方式指定母版页 (C#)'
+                - name: 以编程方式指定母版页 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs.md
-                - name: '嵌套的母版页 (C#)'
+                - name: 嵌套的母版页 (C#)
                   href: web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs.md
                 - name: 使用母版页创建站点范围内布局 (VB)
                   href: web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb.md
@@ -357,37 +357,37 @@
             - name: 在 Visual Studio 2008 及更早版本中部署网站项目
               href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index.md
               items:
-                - name: 'ASP.NET 托管选项 (C#)'
+                - name: ASP.NET 托管选项 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs.md
-                - name: '确定需要部署哪些文件 (C#)'
+                - name: 确定需要部署哪些文件 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs.md
-                - name: '使用 FTP 客户端部署站点 (C#)'
+                - name: 使用 FTP 客户端部署站点 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs.md
-                - name: '使用 Visual Studio 部署站点 (C#)'
+                - name: 使用 Visual Studio 部署站点 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs.md
-                - name: '开发和生产之间的常见配置差异 (C#)'
+                - name: 开发和生产之间的常见配置差异 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs.md
-                - name: 'IIS 和 ASP.NET 开发服务器之间的核心差异 (C#)'
+                - name: IIS 和 ASP.NET 开发服务器之间的核心差异 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/core-differences-between-iis-and-the-asp-net-development-server-cs.md
-                - name: '部署数据库 (C#)'
+                - name: 部署数据库 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-cs.md
-                - name: '配置生产 Web 应用程序以使用生产数据库 (C#)'
+                - name: 配置生产 Web 应用程序以使用生产数据库 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs.md
-                - name: '配置使用应用程序服务的网站 (C#)'
+                - name: 配置使用应用程序服务的网站 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs.md
-                - name: '数据库开发和部署策略 (C#)'
+                - name: 数据库开发和部署策略 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs.md
-                - name: '显示自定义错误页 (C#)'
+                - name: 显示自定义错误页 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs.md
-                - name: '处理未经处理的异常 (C#)'
+                - name: 处理未经处理的异常 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs.md
-                - name: 'ASP.NET 运行状况监视的日志记录错误详细信息 (C#)'
+                - name: ASP.NET 运行状况监视的日志记录错误详细信息 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md
-                - name: 'ELMAH 的日志记录错误详细信息 (C#)'
+                - name: ELMAH 的日志记录错误详细信息 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs.md
-                - name: '预编译网站 (C#)'
+                - name: 预编译网站 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs.md
-                - name: '生产网站的用户和角色 (C#)'
+                - name: 生产网站的用户和角色 (C#)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md
                 - name: ASP.NET 托管选项 (VB)
                   href: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb.md
@@ -427,11 +427,11 @@
             - name: 入门
               href: web-forms/overview/ajax-control-toolkit/getting-started/index.md
               items:
-                - name: 'AJAX 控件工具包入门 (C#)'
+                - name: AJAX 控件工具包入门 (C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md
-                - name: '使用 AJAX 控件工具包控件和控件扩展程序 (C#)'
+                - name: 使用 AJAX 控件工具包控件和控件扩展程序 (C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md
-                - name: '创建自定义 AJAX 控件工具包控件扩展程序 (C#)'
+                - name: 创建自定义 AJAX 控件工具包控件扩展程序 (C#)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md
                 - name: AJAX 控件工具包入门 (VB)
                   href: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb.md
@@ -442,9 +442,9 @@
             - name: Accordion
               href: web-forms/overview/ajax-control-toolkit/accordion/index.md
               items:
-                - name: '数据绑定到 Accordion (C#)'
+                - name: 数据绑定到 Accordion (C#)
                   href: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs.md
-                - name: '动态添加 Accordion 窗格 (C#)'
+                - name: 动态添加 Accordion 窗格 (C#)
                   href: web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-cs.md
                 - name: 数据绑定到 Accordion (VB)
                   href: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb.md
@@ -453,31 +453,31 @@
             - name: 动画
               href: web-forms/overview/ajax-control-toolkit/animation/index.md
               items:
-                - name: '将动画添加到控件 (C#)'
+                - name: 将动画添加到控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs.md
-                - name: '同时执行多个动画 (C#)'
+                - name: 同时执行多个动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs.md
-                - name: '逐一执行多个动画 (C#)'
+                - name: 逐一执行多个动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs.md
-                - name: '取决于条件的动画 (C#)'
+                - name: 取决于条件的动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-cs.md
-                - name: '选取列表中的一个动画 (C#)'
+                - name: 选取列表中的一个动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-cs.md
-                - name: '响应用户交互的动画 (C#)'
+                - name: 响应用户交互的动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs.md
-                - name: '动画过程中禁用操作 (C#)'
+                - name: 动画过程中禁用操作 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs.md
-                - name: '触发另一控件的动画 (C#)'
+                - name: 触发另一控件的动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md
-                - name: '从服务器端修改动画 (C#)'
+                - name: 从服务器端修改动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md
-                - name: '使用客户端代码执行动画 (C#)'
+                - name: 使用客户端代码执行动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md
-                - name: '使用客户端代码更改动画 (C#)'
+                - name: 使用客户端代码更改动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md
-                - name: '对 UpdatePanel 控件执行动画处理 (C#)'
+                - name: 对 UpdatePanel 控件执行动画处理 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md
-                - name: '动态控制 UpdatePanel 动画 (C#)'
+                - name: 动态控制 UpdatePanel 动画 (C#)
                   href: web-forms/overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs.md
                 - name: 将动画添加到控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb.md
@@ -508,13 +508,13 @@
             - name: CascadingDropdown
               href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/index.md
               items:
-                - name: '使用 CascadingDropDown 填充列表 (C#)'
+                - name: 使用 CascadingDropDown 填充列表 (C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs.md
-                - name: '通过数据库使用 CascadingDropDown (C#)'
+                - name: 通过数据库使用 CascadingDropDown (C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-cs.md
-                - name: '使用 CascadingDropDown 预设置列表条目 (C#)'
+                - name: 使用 CascadingDropDown 预设置列表条目 (C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs.md
-                - name: '通过 CascadingDropDown 使用自动回发 (C#)'
+                - name: 通过 CascadingDropDown 使用自动回发 (C#)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs.md
                 - name: 使用 CascadingDropDown 填充列表 (VB)
                   href: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-vb.md
@@ -527,37 +527,37 @@
             - name: CollapsiblePanel
               href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/index.md
               items:
-                - name: '通过 JavaScript 折叠和展开面板 (C#)'
+                - name: 通过 JavaScript 折叠和展开面板 (C#)
                   href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-cs.md
                 - name: 通过 JavaScript 折叠和展开面板 (VB)
                   href: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb.md
             - name: ColorPicker
               href: web-forms/overview/ajax-control-toolkit/colorpicker/index.md
               items:
-                - name: 'ColorPicker 控件扩展程序 (C#)'
+                - name: ColorPicker 控件扩展程序 (C#)
                   href: web-forms/overview/ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-cs.md
                 - name: ColorPicker 控件扩展程序 (VB)
                   href: web-forms/overview/ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb.md
             - name: 组合框
               href: web-forms/overview/ajax-control-toolkit/combobox/index.md
               items:
-                - name: '组合框控件 (C#)'
+                - name: 组合框控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-cs.md
                 - name: 组合框控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-vb.md
             - name: ConfirmButton
               href: web-forms/overview/ajax-control-toolkit/confirmbutton/index.md
               items:
-                - name: '在 Repeater 中使用 ConfirmButton (C#)'
+                - name: 在 Repeater 中使用 ConfirmButton (C#)
                   href: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs.md
                 - name: 在 Repeater 中使用 ConfirmButton (VB)
                   href: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb.md
             - name: DropShadow
               href: web-forms/overview/ajax-control-toolkit/dropshadow/index.md
               items:
-                - name: '调整 DropShadow 的 Z-索引 (C#)'
+                - name: 调整 DropShadow 的 Z-索引 (C#)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md
-                - name: '通过客户端代码操作 DropShadow 属性 (C#)'
+                - name: 通过客户端代码操作 DropShadow 属性 (C#)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md
                 - name: 调整 DropShadow 的 Z-索引 (VB)
                   href: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md
@@ -566,11 +566,11 @@
             - name: DynamicPopulate
               href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/index.md
               items:
-                - name: '动态填充控件 (C#)'
+                - name: 动态填充控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs.md
-                - name: '使用 JavaScript 代码动态填充控件 (C#)'
+                - name: 使用 JavaScript 代码动态填充控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-using-javascript-code-cs.md
-                - name: '通过用户控件和 JavaScript 使用 DynamicPopulate (C#)'
+                - name: 通过用户控件和 JavaScript 使用 DynamicPopulate (C#)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs.md
                 - name: 动态填充控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-vb.md
@@ -581,34 +581,34 @@
             - name: FilteredTextBox
               href: web-forms/overview/ajax-control-toolkit/filteredtextbox/index.md
               items:
-                - name: '仅允许在文本框中使用特定字符 (C#)'
+                - name: 仅允许在文本框中使用特定字符 (C#)
                   href: web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs.md
                 - name: 仅允许在文本框中使用特定字符 (VB)
                   href: web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-vb.md
             - name: HoverMenu
               href: web-forms/overview/ajax-control-toolkit/hovermenu/index.md
               items:
-                - name: '通过 Repeater 控件使用 HoverMenu (C#)'
+                - name: 通过 Repeater 控件使用 HoverMenu (C#)
                   href: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs.md
                 - name: 通过 Repeater 控件使用 HoverMenu (VB)
                   href: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-vb.md
             - name: HTMLEditor
               href: web-forms/overview/ajax-control-toolkit/htmleditor/index.md
               items:
-                - name: 'HTML 编辑器控件 (C#)'
+                - name: HTML 编辑器控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-cs.md
                 - name: HTML 编辑器控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-vb.md
             - name: ModalPopup
               href: web-forms/overview/ajax-control-toolkit/modalpopup/index.md
               items:
-                - name: '通过服务器代码启动模式弹出窗口 (C#)'
+                - name: 通过服务器代码启动模式弹出窗口 (C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs.md
-                - name: '通过 Repeater 控件使用 ModalPopup (C#)'
+                - name: 通过 Repeater 控件使用 ModalPopup (C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-cs.md
-                - name: '通过 ModalPopup 处理回发 (C#)'
+                - name: 通过 ModalPopup 处理回发 (C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-cs.md
-                - name: '定位 ModalPopup (C#)'
+                - name: 定位 ModalPopup (C#)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-cs.md
                 - name: 通过服务器代码启动模式弹出窗口 (VB)
                   href: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-vb.md
@@ -621,39 +621,39 @@
             - name: MutuallyExclusiveCheckbox
               href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/index.md
               items:
-                - name: '创建互斥复选框 (C#)'
+                - name: 创建互斥复选框 (C#)
                   href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-cs.md
                 - name: 创建互斥复选框 (VB)
                   href: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-vb.md
             - name: NoBot
               href: web-forms/overview/ajax-control-toolkit/nobot/index.md
               items:
-                - name: '外部测试机器人 (C#)'
+                - name: 外部测试机器人 (C#)
                   href: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs.md
                 - name: 外部测试机器人 (VB)
                   href: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-vb.md
             - name: NumericUpDown
               href: web-forms/overview/ajax-control-toolkit/numericupdown/index.md
               items:
-                - name: '使用 Web 服务后端创建数字增大/减小控件 (C#)'
+                - name: 使用 Web 服务后端创建数字增大/减小控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs.md
                 - name: 使用 Web 服务后端创建数字增大/减小控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md
             - name: PasswordStrength
               href: web-forms/overview/ajax-control-toolkit/passwordstrength/index.md
               items:
-                - name: '测试密码强度 (C#)'
+                - name: 测试密码强度 (C#)
                   href: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs.md
                 - name: 测试密码强度 (VB)
                   href: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb.md
             - name: 弹出项
               href: web-forms/overview/ajax-control-toolkit/popup/index.md
               items:
-                - name: '使用多个弹出控件 (C#)'
+                - name: 使用多个弹出控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs.md
-                - name: '使用带 UpdatePanel 的弹出控件处理回发 (C#)'
+                - name: 使用带 UpdatePanel 的弹出控件处理回发 (C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md
-                - name: '使用没有 UpdatePanel 的弹出控件处理回发 (C#)'
+                - name: 使用没有 UpdatePanel 的弹出控件处理回发 (C#)
                   href: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs.md
                 - name: 使用多个弹出控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md
@@ -664,16 +664,16 @@
             - name: 评级
               href: web-forms/overview/ajax-control-toolkit/rating/index.md
               items:
-                - name: '创建分级控件 (C#)'
+                - name: 创建分级控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs.md
                 - name: 创建分级控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-vb.md
             - name: ReorderList
               href: web-forms/overview/ajax-control-toolkit/reorderlist/index.md
               items:
-                - name: '通过 ReorderList 使用回发 (C#)'
+                - name: 通过 ReorderList 使用回发 (C#)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-cs.md
-                - name: '通过 ReorderList 进行拖放 (C#)'
+                - name: 通过 ReorderList 进行拖放 (C#)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs.md
                 - name: 通过 ReorderList 使用回发 (VB)
                   href: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb.md
@@ -682,9 +682,9 @@
             - name: Slider
               href: web-forms/overview/ajax-control-toolkit/slider/index.md
               items:
-                - name: '带自动回发的滑块控件 (C#)'
+                - name: 带自动回发的滑块控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs.md
-                - name: '数据绑定滑块控件 (C#)'
+                - name: 数据绑定滑块控件 (C#)
                   href: web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs.md
                 - name: 带自动回发的滑块控件 (VB)
                   href: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-vb.md
@@ -693,9 +693,9 @@
             - name: TextBoxWatermark
               href: web-forms/overview/ajax-control-toolkit/textboxwatermark/index.md
               items:
-                - name: '在 FormView 中使用 TextBoxWatermark (C#)'
+                - name: 在 FormView 中使用 TextBoxWatermark (C#)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs.md
-                - name: '通过验证控件使用 TextBoxWatermark (C#)'
+                - name: 通过验证控件使用 TextBoxWatermark (C#)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs.md
                 - name: 在 FormView 中使用 TextBoxWatermark (VB)
                   href: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb.md
@@ -707,11 +707,11 @@
             - name: 介绍
               href: web-forms/overview/data-access/introduction/index.md
               items:
-                - name: '创建数据访问层 (C#)'
+                - name: 创建数据访问层 (C#)
                   href: web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs.md
-                - name: '创建业务逻辑层 (C#)'
+                - name: 创建业务逻辑层 (C#)
                   href: web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs.md
-                - name: '母版页和站点导航 (C#)'
+                - name: 母版页和站点导航 (C#)
                   href: web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs.md
                 - name: 创建数据访问层 (VB)
                   href: web-forms/overview/data-access/introduction/creating-a-data-access-layer-vb.md
@@ -722,11 +722,11 @@
             - name: 基本报告
               href: web-forms/overview/data-access/basic-reporting/index.md
               items:
-                - name: '使用 ObjectDataSource 显示数据 (C#)'
+                - name: 使用 ObjectDataSource 显示数据 (C#)
                   href: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-cs.md
-                - name: '声明性参数 (C#)'
+                - name: 声明性参数 (C#)
                   href: web-forms/overview/data-access/basic-reporting/declarative-parameters-cs.md
-                - name: '以编程方式设置 ObjectDataSource 的参数值 (C#)'
+                - name: 以编程方式设置 ObjectDataSource 的参数值 (C#)
                   href: web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs.md
                 - name: 使用 ObjectDataSource 显示数据 (VB)
                   href: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb.md
@@ -737,13 +737,13 @@
             - name: 母版/详细信息
               href: web-forms/overview/data-access/masterdetail/index.md
               items:
-                - name: '使用一个 DropDownList 实现母版/详细信息筛选 (C#)'
+                - name: 使用一个 DropDownList 实现母版/详细信息筛选 (C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md
-                - name: '使用两个 DropDownList 实现母版/详细信息筛选 (C#)'
+                - name: 使用两个 DropDownList 实现母版/详细信息筛选 (C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs.md
-                - name: '跨两个页面的母版/详细信息筛选 (C#)'
+                - name: 跨两个页面的母版/详细信息筛选 (C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-across-two-pages-cs.md
-                - name: '使用带有详细信息 DetailView 的可选母版 GridView 来实现母版/详细信息查看 (C#)'
+                - name: 使用带有详细信息 DetailView 的可选母版 GridView 来实现母版/详细信息查看 (C#)
                   href: web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs.md
                 - name: 使用一个 DropDownList 实现母版/详细信息筛选 (VB)
                   href: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-vb.md
@@ -756,15 +756,15 @@
             - name: 自定义格式设置
               href: web-forms/overview/data-access/custom-formatting/index.md
               items:
-                - name: '基于数据的自定义格式设置 (C#)'
+                - name: 基于数据的自定义格式设置 (C#)
                   href: web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-cs.md
-                - name: '在 GridView 控件中使用 TemplateField (C#)'
+                - name: 在 GridView 控件中使用 TemplateField (C#)
                   href: web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-cs.md
-                - name: '在 DetailsView 控件中使用 TemplateField (C#)'
+                - name: 在 DetailsView 控件中使用 TemplateField (C#)
                   href: web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-cs.md
-                - name: 'FormView 的模板 (C#)'
+                - name: FormView 的模板 (C#)
                   href: web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs.md
-                - name: '在 GridView 的页脚中显示摘要信息 (C#)'
+                - name: 在 GridView 的页脚中显示摘要信息 (C#)
                   href: web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs.md
                 - name: 基于数据的自定义格式设置 (VB)
                   href: web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-vb.md
@@ -779,21 +779,21 @@
             - name: 编辑、插入和删除数据
               href: web-forms/overview/data-access/editing-inserting-and-deleting-data/index.md
               items:
-                - name: '插入、更新和删除数据概述 (C#)'
+                - name: 插入、更新和删除数据概述 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md
-                - name: '检查与插入、更新和删除操作有关的事件 (C#)'
+                - name: 检查与插入、更新和删除操作有关的事件 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md
-                - name: '在 ASP.NET 页中处理 BLL 和 DAL 级别的异常 (C#)'
+                - name: 在 ASP.NET 页中处理 BLL 和 DAL 级别的异常 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md
-                - name: '向编辑和插入界面添加验证控件 (C#)'
+                - name: 向编辑和插入界面添加验证控件 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md
-                - name: '自定义数据修改界面 (C#)'
+                - name: 自定义数据修改界面 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md
-                - name: '实现乐观并发 (C#)'
+                - name: 实现乐观并发 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md
-                - name: '删除时添加客户端确认 (C#)'
+                - name: 删除时添加客户端确认 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs.md
-                - name: '限制基于用户的数据修改功能 (C#)'
+                - name: 限制基于用户的数据修改功能 (C#)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-cs.md
                 - name: 插入、更新和删除数据概述 (VB)
                   href: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md
@@ -814,13 +814,13 @@
             - name: 分页和排序
               href: web-forms/overview/data-access/paging-and-sorting/index.md
               items:
-                - name: '分页和排序报表数据 (C#)'
+                - name: 分页和排序报表数据 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs.md
-                - name: '通过大量数据有效分页 (C#)'
+                - name: 通过大量数据有效分页 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs.md
-                - name: '排序自定义分页数据 (C#)'
+                - name: 排序自定义分页数据 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs.md
-                - name: '创建自定义的排序用户界面 (C#)'
+                - name: 创建自定义的排序用户界面 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs.md
                 - name: 分页和排序报表数据 (VB)
                   href: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-vb.md
@@ -833,20 +833,20 @@
             - name: 自定义按钮操作
               href: web-forms/overview/data-access/custom-button-actions/index.md
               items:
-                - name: '添加和响应 GridView 的按钮 (C#)'
+                - name: 添加和响应 GridView 的按钮 (C#)
                   href: web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-cs.md
                 - name: 添加和响应 GridView 的按钮 (VB)
                   href: web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb.md
             - name: 使用 DataList 和 Repeater 显示数据
               href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/index.md
               items:
-                - name: '使用 DataList 和 Repeater 控件显示数据 (C#)'
+                - name: 使用 DataList 和 Repeater 控件显示数据 (C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs.md
-                - name: '基于数据设置 DataList 和 Repeater 的格式 (C#)'
+                - name: 基于数据设置 DataList 和 Repeater 的格式 (C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs.md
-                - name: '使用 DataList 控件每行显示多条记录 (C#)'
+                - name: 使用 DataList 控件每行显示多条记录 (C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs.md
-                - name: '嵌套的数据 Web 控件 (C#)'
+                - name: 嵌套的数据 Web 控件 (C#)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs.md
                 - name: 使用 DataList 和 Repeater 控件显示数据 (VB)
                   href: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-vb.md
@@ -859,11 +859,11 @@
             - name: 使用 DataList 和 Repeater 的筛选方案
               href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/index.md
               items:
-                - name: '使用一个 DropDownList 实现母版/详细信息筛选 (C#)'
+                - name: 使用一个 DropDownList 实现母版/详细信息筛选 (C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-cs.md
-                - name: '跨两个页面的母版/详细信息筛选 (C#)'
+                - name: 跨两个页面的母版/详细信息筛选 (C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-acess-two-pages-datalist-cs.md
-                - name: '通过详细信息 DataList 使用母版记录项目符号列表的母版/详细信息 (C#)'
+                - name: 通过详细信息 DataList 使用母版记录项目符号列表的母版/详细信息 (C#)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md
                 - name: 使用一个 DropDownList 实现母版/详细信息筛选 (VB)
                   href: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-vb.md
@@ -874,15 +874,15 @@
             - name: 通过 DataList 编辑和删除数据
               href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/index.md
               items:
-                - name: '编辑和删除 DataList 中的数据的概述 (C#)'
+                - name: 编辑和删除 DataList 中的数据的概述 (C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md
-                - name: '执行批量更新 (C#)'
+                - name: 执行批量更新 (C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md
-                - name: '处理 BLL 和 DAL 级别的异常 (C#)'
+                - name: 处理 BLL 和 DAL 级别的异常 (C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs.md
-                - name: '向 DataList 的编辑界面添加验证控件 (C#)'
+                - name: 向 DataList 的编辑界面添加验证控件 (C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs.md
-                - name: '自定义 DataList 的编辑界面 (C#)'
+                - name: 自定义 DataList 的编辑界面 (C#)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs.md
                 - name: 编辑和删除 DataList 中的数据的概述 (VB)
                   href: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-vb.md
@@ -897,9 +897,9 @@
             - name: 使用 DataList 和 Repeater 分页和排序
               href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/index.md
               items:
-                - name: '分页 DataList 或 Repeater 控件中的报表数据 (C#)'
+                - name: 分页 DataList 或 Repeater 控件中的报表数据 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs.md
-                - name: '排序 DataList 或 Repeater 控件中的数据 (C#)'
+                - name: 排序 DataList 或 Repeater 控件中的数据 (C#)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs.md
                 - name: 分页 DataList 或 Repeater 控件中的报表数据 (VB)
                   href: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb.md
@@ -908,20 +908,20 @@
             - name: 使用 DataList 和 Repeater 自定义按钮操作
               href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/index.md
               items:
-                - name: 'DataList 和 Repeater 中的自定义按钮 (C#)'
+                - name: DataList 和 Repeater 中的自定义按钮 (C#)
                   href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs.md
                 - name: DataList 和 Repeater 中的自定义按钮 (VB)
                   href: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb.md
             - name: 从 ASP.NET 页面直接访问数据库
               href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/index.md
               items:
-                - name: '使用 SqlDataSource 控件查询数据 (C#)'
+                - name: 使用 SqlDataSource 控件查询数据 (C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md
-                - name: '通过 SqlDataSource 使用参数化查询 (C#)'
+                - name: 通过 SqlDataSource 使用参数化查询 (C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs.md
-                - name: '使用 SqlDataSource 插入、更新和删除数据 (C#)'
+                - name: 使用 SqlDataSource 插入、更新和删除数据 (C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs.md
-                - name: '使用 SqlDataSource 实现乐观并发 (C#)'
+                - name: 使用 SqlDataSource 实现乐观并发 (C#)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-cs.md
                 - name: 使用 SqlDataSource 控件查询数据 (VB)
                   href: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-vb.md
@@ -934,11 +934,11 @@
             - name: 增强 GridView
               href: web-forms/overview/data-access/enhancing-the-gridview/index.md
               items:
-                - name: '添加 GridView 单选按钮列 (C#)'
+                - name: 添加 GridView 单选按钮列 (C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-cs.md
-                - name: '添加 GridView 复选框列 (C#)'
+                - name: 添加 GridView 复选框列 (C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md
-                - name: '从 GridView 页脚插入新记录 (C#)'
+                - name: 从 GridView 页脚插入新记录 (C#)
                   href: web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs.md
                 - name: 添加 GridView 单选按钮列 (VB)
                   href: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-vb.md
@@ -949,13 +949,13 @@
             - name: 处理二进制文件
               href: web-forms/overview/data-access/working-with-binary-files/index.md
               items:
-                - name: '上载文件 (C#)'
+                - name: 上载文件 (C#)
                   href: web-forms/overview/data-access/working-with-binary-files/uploading-files-cs.md
-                - name: '显示数据 Web 控件中的二进制数据 (C#)'
+                - name: 显示数据 Web 控件中的二进制数据 (C#)
                   href: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs.md
-                - name: '添加新纪录时增加文件上载选项 (C#)'
+                - name: 添加新纪录时增加文件上载选项 (C#)
                   href: web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs.md
-                - name: '上载和删除现有的二进制数据 (C#)'
+                - name: 上载和删除现有的二进制数据 (C#)
                   href: web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs.md
                 - name: 上载文件 (VB)
                   href: web-forms/overview/data-access/working-with-binary-files/uploading-files-vb.md
@@ -968,13 +968,13 @@
             - name: 缓存数据
               href: web-forms/overview/data-access/caching-data/index.md
               items:
-                - name: '使用 ObjectDataSource 缓存数据 (C#)'
+                - name: 使用 ObjectDataSource 缓存数据 (C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-cs.md
-                - name: '缓存体系结构中的数据 (C#)'
+                - name: 缓存体系结构中的数据 (C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs.md
-                - name: '在应用程序启动时缓存数据 (C#)'
+                - name: 在应用程序启动时缓存数据 (C#)
                   href: web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs.md
-                - name: '使用 SQL 缓存依赖项 (C#)'
+                - name: 使用 SQL 缓存依赖项 (C#)
                   href: web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs.md
                 - name: 使用 ObjectDataSource 缓存数据 (VB)
                   href: web-forms/overview/data-access/caching-data/caching-data-with-the-objectdatasource-vb.md
@@ -987,20 +987,20 @@
             - name: 数据库驱动站点地图
               href: web-forms/overview/data-access/database-driven-site-maps/index.md
               items:
-                - name: '生成自定义数据库驱动站点地图提供程序 (C#)'
+                - name: 生成自定义数据库驱动站点地图提供程序 (C#)
                   href: web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-cs.md
                 - name: 生成自定义数据库驱动站点地图提供程序 (VB)
                   href: web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-vb.md
             - name: 处理批量数据
               href: web-forms/overview/data-access/working-with-batched-data/index.md
               items:
-                - name: '包装事务内的数据库修改 (C#)'
+                - name: 包装事务内的数据库修改 (C#)
                   href: web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-cs.md
-                - name: '批量更新 (C#)'
+                - name: 批量更新 (C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-updating-cs.md
-                - name: '批量删除 (C#)'
+                - name: 批量删除 (C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs.md
-                - name: '批量插入 (C#)'
+                - name: 批量插入 (C#)
                   href: web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs.md
                 - name: 包装事务内的数据库修改 (VB)
                   href: web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb.md
@@ -1013,23 +1013,23 @@
             - name: 高级数据访问方案
               href: web-forms/overview/data-access/advanced-data-access-scenarios/index.md
               items:
-                - name: '新建适用于类型化数据集的 TableAdapter 的存储过程 (C#)'
+                - name: 新建适用于类型化数据集的 TableAdapter 的存储过程 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md
-                - name: '使用适用于类型化数据集的 TableAdapter 的现有存储过程 (C#)'
+                - name: 使用适用于类型化数据集的 TableAdapter 的现有存储过程 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md
-                - name: '更新 TableAdapter 以使用 JOIN (C#)'
+                - name: 更新 TableAdapter 以使用 JOIN (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs.md
-                - name: '添加其他 DataTable 列 (C#)'
+                - name: 添加其他 DataTable 列 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs.md
-                - name: '处理计算列 (C#)'
+                - name: 处理计算列 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs.md
-                - name: '配置数据访问层的连接和命令级别的设置 (C#)'
+                - name: 配置数据访问层的连接和命令级别的设置 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs.md
-                - name: '保护连接字符串和其他配置信息 (C#)'
+                - name: 保护连接字符串和其他配置信息 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs.md
-                - name: '调试存储过程 (C#)'
+                - name: 调试存储过程 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs.md
-                - name: '使用托管代码创建存储过程和用户定义的函数 (C#)'
+                - name: 使用托管代码创建存储过程和用户定义的函数 (C#)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs.md
                 - name: 新建适用于类型化数据集的 TableAdapter 的存储过程 (VB)
                   href: web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md
@@ -1055,11 +1055,11 @@
             - name: ASP.NET 3.5 - 安全简介
               href: web-forms/overview/older-versions-security/introduction/index.md
               items:
-                - name: '安全基础知识和 ASP.NET 支持 (C#)'
+                - name: 安全基础知识和 ASP.NET 支持 (C#)
                   href: web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs.md
-                - name: 'Forms 身份验证概述 (C#)'
+                - name: Forms 身份验证概述 (C#)
                   href: web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs.md
-                - name: 'Forms 身份验证配置和高级主题 (C#)'
+                - name: Forms 身份验证配置和高级主题 (C#)
                   href: web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs.md
                 - name: 安全基础知识和 ASP.NET 支持 (VB)
                   href: web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb.md
@@ -1070,15 +1070,15 @@
             - name: ASP.NET 3.5 - 成员身份
               href: web-forms/overview/older-versions-security/membership/index.md
               items:
-                - name: '在 SQL Server 中创建成员身份架构 (C#)'
+                - name: 在 SQL Server 中创建成员身份架构 (C#)
                   href: web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs.md
-                - name: '创建用户帐户 (C#)'
+                - name: 创建用户帐户 (C#)
                   href: web-forms/overview/older-versions-security/membership/creating-user-accounts-cs.md
-                - name: '针对成员身份用户存储验证用户凭据 (C#)'
+                - name: 针对成员身份用户存储验证用户凭据 (C#)
                   href: web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs.md
-                - name: '基于用户的身份验证 (C#)'
+                - name: 基于用户的身份验证 (C#)
                   href: web-forms/overview/older-versions-security/membership/user-based-authorization-cs.md
-                - name: '存储其他用户信息 (C#)'
+                - name: 存储其他用户信息 (C#)
                   href: web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs.md
                 - name: 在 SQL Server 中创建成员身份架构 (VB)
                   href: web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb.md
@@ -1093,11 +1093,11 @@
             - name: ASP.NET 3.5 - 角色
               href: web-forms/overview/older-versions-security/roles/index.md
               items:
-                - name: '创建和管理角色 (C#)'
+                - name: 创建和管理角色 (C#)
                   href: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs.md
-                - name: '向用户分配角色 (C#)'
+                - name: 向用户分配角色 (C#)
                   href: web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs.md
-                - name: '基于角色的授权 (C#)'
+                - name: 基于角色的授权 (C#)
                   href: web-forms/overview/older-versions-security/roles/role-based-authorization-cs.md
                 - name: 创建和管理角色 (VB)
                   href: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb.md
@@ -1108,11 +1108,11 @@
             - name: ASP.NET 3.5 - 安全管理
               href: web-forms/overview/older-versions-security/admin/index.md
               items:
-                - name: '生成用于从多个用户帐户中选择一个帐户的界面 (C#)'
+                - name: 生成用于从多个用户帐户中选择一个帐户的界面 (C#)
                   href: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs.md
-                - name: '恢复和更改密码 (C#)'
+                - name: 恢复和更改密码 (C#)
                   href: web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs.md
-                - name: '解锁和审批用户帐户 (C#)'
+                - name: 解锁和审批用户帐户 (C#)
                   href: web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs.md
                 - name: 生成用于从多个用户帐户中选择一个帐户的界面 (VB)
                   href: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-vb.md
@@ -1867,7 +1867,7 @@
               href: web-forms/videos/aspnet-dynamic-data/how-to-enable-table-specific-routing-in-dynamic-data-applications.md
             - name: 在 ASP.NET 动态数据应用程序中使用属性验证
               href: web-forms/videos/aspnet-dynamic-data/how-to-use-attribute-validation-in-aspnet-dynamic-data-applications.md
-            - name: '在 VB 或 C# 中使用命令性逻辑实现自定义字段验证'
+            - name: 在 VB 或 C# 中使用命令性逻辑实现自定义字段验证
               href: web-forms/videos/aspnet-dynamic-data/how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c.md
             - name: 从 DynamicData 数据网格中删除列
               href: web-forms/videos/aspnet-dynamic-data/how-to-remove-columns-from-your-dynamicdata-data-grids.md
@@ -2150,15 +2150,15 @@
         - name: 安全性、身份验证和授权
           href: mvc/overview/security/index.md
           items:
-            - name: '创建 ASP.NET MVC 5 应用，实现 Facebook、Twitter、LinkedIn 和 Google OAuth2 登录 (C#)'
+            - name: 创建 ASP.NET MVC 5 应用，实现 Facebook、Twitter、LinkedIn 和 Google OAuth2 登录 (C#)
               href: mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md
-            - name: '创建具有登录、电子邮件确认和密码重置功能的安全 ASP.NET MVC 5 Web 应用 (C#)'
+            - name: 创建具有登录、电子邮件确认和密码重置功能的安全 ASP.NET MVC 5 Web 应用 (C#)
               href: mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md
             - name: 具有 SMS 和电子邮件双因素身份验证的 ASP.NET MVC 5 应用
               href: mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md
             - name: ASP.NET MVC 和网页中的 XSRF/CSRF 防护
               href: mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md
-            - name: '阻止打开重定向攻击 (C#)'
+            - name: 阻止打开重定向攻击 (C#)
               href: mvc/overview/security/preventing-open-redirection-attacks.md
         - name: 部署
           href: mvc/overview/deployment/index.md
@@ -2261,26 +2261,26 @@
             - name: ASP.NET MVC 3 入门
               href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/index.md
               items:
-                - name: 'ASP.NET MVC 3 入门 (C#)'
+                - name: ASP.NET MVC 3 入门 (C#)
                   href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/index.md
                   items:
-                    - name: 'ASP.NET MVC 3 简介 (C#)'
+                    - name: ASP.NET MVC 3 简介 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md
-                    - name: '添加控制器 (C#)'
+                    - name: 添加控制器 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller.md
-                    - name: '添加视图 (C#)'
+                    - name: 添加视图 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-view.md
-                    - name: '添加模型 (C#)'
+                    - name: 添加模型 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md
-                    - name: '从控制器访问模型的数据 (C#)'
+                    - name: 从控制器访问模型的数据 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller.md
-                    - name: '检查 Edit 方法和编辑视图 (C#)'
+                    - name: 检查 Edit 方法和编辑视图 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/examining-the-edit-methods-and-edit-view.md
-                    - name: '向电影模型和表添加新字段 (C#)'
+                    - name: 向电影模型和表添加新字段 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-new-field.md
-                    - name: '向模型添加验证 (C#)'
+                    - name: 向模型添加验证 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model.md
-                    - name: '改进 Details 和 Delete 方法 (C#)'
+                    - name: 改进 Details 和 Delete 方法 (C#)
                       href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods.md
                 - name: ASP.NET MVC 3 入门 (VB.NET)
                   href: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/index.md
@@ -2356,7 +2356,7 @@
                   href: mvc/overview/older-versions-1/overview/asp-net-mvc-overview.md
                 - name: 了解 ASP.NET MVC 的执行流程
                   href: mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process.md
-                - name: '了解模型、视图和控制器 (C#)'
+                - name: 了解模型、视图和控制器 (C#)
                   href: mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs.md
                 - name: 了解模型、视图和控制器 (VB)
                   href: mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-vb.md
@@ -2382,19 +2382,19 @@
             - name: 模型（数据）
               href: mvc/overview/older-versions-1/models-data/index.md
               items:
-                - name: '使用 Entity Framework 创建模型类 (C#)'
+                - name: 使用 Entity Framework 创建模型类 (C#)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs.md
-                - name: '使用 LINQ to SQL 创建模型类 (C#)'
+                - name: 使用 LINQ to SQL 创建模型类 (C#)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs.md
-                - name: '显示数据库数据表 (C#)'
+                - name: 显示数据库数据表 (C#)
                   href: mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs.md
-                - name: '执行简单验证 (C#)'
+                - name: 执行简单验证 (C#)
                   href: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs.md
-                - name: '使用 IDataErrorInfo 接口进行验证 (C#)'
+                - name: 使用 IDataErrorInfo 接口进行验证 (C#)
                   href: mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-cs.md
-                - name: '使用服务层进行验证 (C#)'
+                - name: 使用服务层进行验证 (C#)
                   href: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs.md
-                - name: '使用数据注释验证程序进行验证 (C#)'
+                - name: 使用数据注释验证程序进行验证 (C#)
                   href: mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs.md
                 - name: 使用 Entity Framework 创建模型类 (VB)
                   href: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb.md
@@ -2413,15 +2413,15 @@
             - name: ASP.NET MVC 视图
               href: mvc/overview/older-versions-1/views/index.md
               items:
-                - name: 'ASP.NET MVC 视图概述 (C#)'
+                - name: ASP.NET MVC 视图概述 (C#)
                   href: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs.md
-                - name: '创建自定义 HTML 帮助程序 (C#)'
+                - name: 创建自定义 HTML 帮助程序 (C#)
                   href: mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs.md
-                - name: '用于生成 HEML 帮助程序的 TagBuilder 类 (C#)'
+                - name: 用于生成 HEML 帮助程序的 TagBuilder 类 (C#)
                   href: mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs.md
-                - name: '使用视图母版页创建页面布局 (C#)'
+                - name: 使用视图母版页创建页面布局 (C#)
                   href: mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs.md
-                - name: '向视图母版页传递数据 (C#)'
+                - name: 向视图母版页传递数据 (C#)
                   href: mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs.md
                 - name: ASP.NET MVC 视图概述 (VB)
                   href: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb.md
@@ -2436,17 +2436,17 @@
             - name: 控制器和路由
               href: mvc/overview/older-versions-1/controllers-and-routing/index.md
               items:
-                - name: 'ASP.NET MVC 路由概述 (C#)'
+                - name: ASP.NET MVC 路由概述 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs.md
-                - name: '了解操作筛选器 (C#)'
+                - name: 了解操作筛选器 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs.md
-                - name: '通过输出缓存提升性能 (C#)'
+                - name: 通过输出缓存提升性能 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs.md
-                - name: '向缓存页添加动态内容 (C#)'
+                - name: 向缓存页添加动态内容 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs.md
-                - name: '创建控制器 (C#)'
+                - name: 创建控制器 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-cs.md
-                - name: '创建操作 (C#)'
+                - name: 创建操作 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs.md
                 - name: ASP.NET MVC 路由概述 (VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb.md
@@ -2460,13 +2460,13 @@
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb.md
                 - name: 创建操作 (VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb.md
-                - name: 'ASP.NET MVC 控制器概述 (C#)'
+                - name: ASP.NET MVC 控制器概述 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs.md
-                - name: '创建自定义路由 (C#)'
+                - name: 创建自定义路由 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-cs.md
-                - name: '创建路由约束 (C#)'
+                - name: 创建路由约束 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-cs.md
-                - name: '创建自定义路由约束 (C#)'
+                - name: 创建自定义路由约束 (C#)
                   href: mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs.md
                 - name: ASP.NET MVC 控制器概述 (VB)
                   href: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb.md
@@ -2479,18 +2479,18 @@
             - name: 部署
               href: mvc/overview/older-versions-1/deployment/index.md
               items:
-                - name: '通过不同版本的 IIS 使用 ASP.NET MVC (C#)'
+                - name: 通过不同版本的 IIS 使用 ASP.NET MVC (C#)
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs.md
                 - name: 通过不同版本的 IIS 使用 ASP.NET MVC (VB)
                   href: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb.md
             - name: 安全性
               href: mvc/overview/older-versions-1/security/index.md
               items:
-                - name: '使用 Forms 身份验证对用户进行身份验证 (C#)'
+                - name: 使用 Forms 身份验证对用户进行身份验证 (C#)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs.md
-                - name: '使用 Windows 身份验证对用户进行身份验证 (C#)'
+                - name: 使用 Windows 身份验证对用户进行身份验证 (C#)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs.md
-                - name: '阻止 JavaScript 注入攻击 (C#)'
+                - name: 阻止 JavaScript 注入攻击 (C#)
                   href: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs.md
                 - name: 使用 Forms 身份验证对用户进行身份验证 (VB)
                   href: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb.md
@@ -2501,7 +2501,7 @@
             - name: 单元测试
               href: mvc/overview/older-versions-1/unit-testing/index.md
               items:
-                - name: '为 ASP.NET MVC 应用程序创建单元测试 (C#)'
+                - name: 为 ASP.NET MVC 应用程序创建单元测试 (C#)
                   href: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs.md
                 - name: 为 ASP.NET MVC 应用程序创建单元测试 (VB)
                   href: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md
@@ -2570,7 +2570,7 @@
             - name: 电影数据库
               href: mvc/overview/older-versions-1/movie-database/index.md
               items:
-                - name: '使用 ASP.NET MVC 在 15 分钟内创建电影数据库应用程序 (C#)'
+                - name: 使用 ASP.NET MVC 在 15 分钟内创建电影数据库应用程序 (C#)
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md
                 - name: 使用 ASP.NET MVC 在 15 分钟内创建电影数据库应用程序 (VB)
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb.md
@@ -2757,7 +2757,7 @@
         - name: 入门
           href: web-api/overview/getting-started-with-aspnet-web-api/index.md
           items:
-            - name: 'Web API 2 入门 (C#)'
+            - name: Web API 2 入门 (C#)
               href: web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md
             - name: Web API 2 的操作结果
               href: web-api/overview/getting-started-with-aspnet-web-api/action-results.md
@@ -2807,7 +2807,7 @@
         - name: 移动客户端
           href: web-api/overview/mobile-clients/index.md
           items:
-            - name: '从 Windows Phone 8 应用程序调用 Web API (C#)'
+            - name: 从 Windows Phone 8 应用程序调用 Web API (C#)
               href: web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md
         - name: OData
           href: web-api/overview/odata-support-in-aspnet-web-api/index.md
@@ -2817,7 +2817,7 @@
               items:
                 - name: 创建 OData v4 终结点
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint.md
-                - name: '创建 OData v4 客户端应用 (C#)'
+                - name: 创建 OData v4 客户端应用 (C#)
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app.md
                 - name: OData v4 中的实体关系
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/entity-relations-in-odata-v4.md
@@ -2840,7 +2840,7 @@
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations.md
                 - name: Web API 2 中的 OData 操作
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions.md
-                - name: '从 .NET 客户端调用 OData 服务 (C#)'
+                - name: 从 .NET 客户端调用 OData 服务 (C#)
                   href: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client.md
             - name: Web API 2 对 OData 查询选项的支持
               href: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options.md
@@ -2892,7 +2892,7 @@
               href: web-api/overview/security/authentication-and-authorization-in-aspnet-web-api.md
             - name: 在 Web API 2.2 中使用单独的帐户保护 Web API
               href: web-api/overview/security/individual-accounts-in-web-api.md
-            - name: '使用 Web API 的外部身份验证服务 (C#)'
+            - name: 使用 Web API 的外部身份验证服务 (C#)
               href: web-api/overview/security/external-authentication-services.md
             - name: 在 Web API 中抵御跨站点请求伪造 (CSRF) 攻击
               href: web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks.md
@@ -2922,7 +2922,7 @@
               href: web-api/overview/advanced/configuring-aspnet-web-api.md
             - name: Web API 2 中的依赖项注入
               href: web-api/overview/advanced/dependency-injection.md
-            - name: '从 .NET 客户端调用 Web API (C#)'
+            - name: 从 .NET 客户端调用 Web API (C#)
               href: web-api/overview/advanced/calling-a-web-api-from-a-net-client.md
             - name: Web API 中的 HTTP 消息处理程序
               href: web-api/overview/advanced/http-message-handlers.md
@@ -2965,7 +2965,7 @@
                   href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6.md
                 - name: 创建主页面
                   href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md
-            - name: '自承载 Web API 1 (C#)'
+            - name: 自承载 Web API 1 (C#)
               href: web-api/overview/older-versions/self-host-a-web-api.md
             - name: 使用 ASP.NET Web API 生成 RESTful API
               href: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api.md
@@ -3220,11 +3220,11 @@
         - name: API 指南
           href: signalr/overview/guide-to-the-api/index.md
           items:
-            - name: '中心 API 指南 - 服务器 (C#)'
+            - name: 中心 API 指南 - 服务器 (C#)
               href: signalr/overview/guide-to-the-api/hubs-api-guide-server.md
             - name: 中心 API 指南 - JavaScript 客户端
               href: signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client.md
-            - name: '中心 API 指南 - .NET 客户端 (C#)'
+            - name: 中心 API 指南 - .NET 客户端 (C#)
               href: signalr/overview/guide-to-the-api/hubs-api-guide-net-client.md
             - name: 了解和处理 SignalR 中的连接生存期事件
               href: signalr/overview/guide-to-the-api/handling-connection-lifetime-events.md
@@ -3480,14 +3480,14 @@
               href: identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md
             - name: 借助 Azure Active Directory 开发 ASP.NET 应用
               href: identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md
-            - name: 'ASP.NET Identity：通过 EntityFramework MySQL 提供程序使用 MySQL 存储 (C#)'
+            - name: ASP.NET Identity：通过 EntityFramework MySQL 提供程序使用 MySQL 存储 (C#)
               href: identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md
         - name: 功能和 API
           href: identity/overview/features-api/index.md
           items:
             - name: 向 ASP.NET 和 Azure 应用服务部署密码和其他敏感数据的最佳做法
               href: identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md
-            - name: 'ASP.NET Identity 中的帐户确认和密码恢复 (C#)'
+            - name: ASP.NET Identity 中的帐户确认和密码恢复 (C#)
               href: identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md
             - name: 使用 SMS 和 ASP.NET Identity 的双因素身份验证
               href: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md
@@ -3505,7 +3505,7 @@
           items:
             - name: 将现有网站从 SQL 成员身份迁移到 ASP.NET Identity
               href: identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md
-            - name: '将成员身份和用户配置文件的通用提供程序数据迁移到 ASP.NET Identity (C#)'
+            - name: 将成员身份和用户配置文件的通用提供程序数据迁移到 ASP.NET Identity (C#)
               href: identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity.md
 - name: Ajax
   href: ajax/index.md
@@ -3775,9 +3775,9 @@
           href: SameSite/system-web-samesite.md
         - name: SameSite 知识库文章
           uid: samesite/kbs-samesite
-        - name: 'C# MVC'
+        - name: C# MVC
           uid: samesite/csMVC
-        - name: 'C# WebForms'
+        - name: C# WebForms
           uid: samesite/CSharpWebForms
         - name: VB WebForms
           uid: samesite/vbWF
