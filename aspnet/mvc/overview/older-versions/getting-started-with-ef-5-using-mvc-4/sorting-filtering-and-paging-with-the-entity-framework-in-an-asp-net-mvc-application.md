@@ -2,18 +2,18 @@
 uid: mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 title: 使用 ASP.NET MVC 应用程序中的实体框架进行排序、筛选和分页（第3个，共10个） |Microsoft Docs
 author: tdykstra
-description: Contoso 大学示例 web 应用程序演示如何使用实体框架 5 Code First 和 Visual Studio 。
+description: Contoso 大学示例 web 应用程序演示如何使用实体框架 5 Code First 和 Visual Studio .。。
 ms.author: riande
 ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: b1ddb70805dcb07fb60eea895ff572c054bde5c6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 48938b378a741a0f1c351c2cb1d33b5140c6cf93
+ms.sourcegitcommit: 8d34fb54e790cfba2d64097afc8276da5b22283e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595222"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85484396"
 ---
 # <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>使用 ASP.NET MVC 应用程序中的实体框架进行排序、筛选和分页（第3个，共10个）
 
@@ -27,7 +27,7 @@ ms.locfileid: "74595222"
 > > 
 > > 如果遇到无法解决的问题，请[下载已完成的章节](building-the-ef5-mvc4-chapter-downloads.md)并尝试重现你的问题。 通常可以通过将代码与已完成的代码进行比较，查找问题的解决方案。 有关一些常见错误以及如何解决这些错误，请参阅[错误和解决方法。](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
 
-在上一教程中，你为 `Student` 实体的基本 CRUD 操作实现了一组网页。 在本教程中，您将向**学生**索引页添加排序、筛选和分页功能。 同时，还将创建一个执行简单分组的页面。
+在上一教程中，你为实体的基本 CRUD 操作实现了一组网页 `Student` 。 在本教程中，您将向**学生**索引页添加排序、筛选和分页功能。 同时，还将创建一个执行简单分组的页面。
 
 下图展示了完成操作后的页面外观。 列标题是用户可以单击以按该列排序的链接。 重复单击列标题可在升降排序顺序之间切换。
 
@@ -35,7 +35,7 @@ ms.locfileid: "74595222"
 
 ## <a name="add-column-sort-links-to-the-students-index-page"></a>向学生索引页添加列排序链接
 
-若要将排序添加到 "学生索引" 页，您将更改 `Student` 控制器的 `Index` 方法，并将代码添加到 `Student` 索引视图。
+若要将排序添加到 "学生索引" 页，您将更改 `Index` 控制器的方法， `Student` 并将代码添加到 " `Student` 索引" 视图中。
 
 ### <a name="add-sorting-functionality-to-the-index-method"></a>向 Index 方法添加排序功能
 
@@ -45,13 +45,13 @@ ms.locfileid: "74595222"
 
 此代码接收来自 URL 中的查询字符串的 `sortOrder` 参数。 查询字符串值由 ASP.NET MVC 作为操作方法的参数提供。 该参数将是一个字符串，可为“Name”或“Date”，可选择后跟下划线和字符串“desc”来指定降序。 默认排序顺序为升序。
 
-首次请求索引页时，没有任何查询字符串。 学生按 `LastName`按升序显示，这是 `switch` 语句中由秋季事例建立的默认设置。 当用户单击列标题超链接时，查询字符串中会提供相应的 `sortOrder` 值。
+首次请求索引页时，没有任何查询字符串。 学生将按升序显示 `LastName` ，这是语句中的贯穿事例建立的默认设置 `switch` 。 当用户单击列标题超链接时，查询字符串中会提供相应的 `sortOrder` 值。
 
-使用两个 `ViewBag` 变量，以便视图可以使用适当的查询字符串值配置列标题超链接：
+使用这两个 `ViewBag` 变量，以便视图可以使用适当的查询字符串值配置列标题超链接：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.cs)]
 
-这些是三元语句。 第一个参数指定如果 `sortOrder` 参数为 null 或为空，则 `ViewBag.NameSortParm` 应设置为 "name\_desc";否则，应将其设置为空字符串。 通过这两个语句，视图可如下设置列标题超链接：
+这些是三元语句。 第一个参数指定如果 `sortOrder` 参数为 null 或为空，则 `ViewBag.NameSortParm` 应将设置为 "名称 \_ desc"; 否则，它应设置为空字符串。 通过这两个语句，视图可如下设置列标题超链接：
 
 | 当前排序顺序 | 姓氏超链接 | 日期超链接 |
 | --- | --- | --- |
@@ -60,15 +60,15 @@ ms.locfileid: "74595222"
 | 日期升序 | ascending | descending |
 | 日期降序 | ascending | ascending |
 
-方法使用[LINQ to Entities](https://msdn.microsoft.com/library/bb386964.aspx)指定排序所依据的列。 此代码在 `switch` 语句之前创建[IQueryable](https://msdn.microsoft.com/library/bb351562.aspx)变量，在 `switch` 语句中对其进行修改，并在 `switch` 语句后调用 `ToList` 方法。 当创建和修改 `IQueryable` 变量时，不会向数据库发送任何查询。 在通过调用方法（如 `ToList`）将 `IQueryable` 对象转换为集合之前，不会执行查询。 因此，此代码将产生单个查询，该查询在 `return View` 语句之前不会执行。
+方法使用[LINQ to Entities](https://msdn.microsoft.com/library/bb386964.aspx)指定排序所依据的列。 此代码在语句之前创建[IQueryable](https://msdn.microsoft.com/library/bb351562.aspx)变量 `switch` ，在语句中对其进行修改 `switch` ，并在 `ToList` 语句后调用方法 `switch` 。 当创建和修改 `IQueryable` 变量时，不会向数据库发送任何查询。 在您 `IQueryable` 通过调用方法（如）将对象转换为集合之前，不会执行查询 `ToList` 。 因此，此代码将产生单个查询，该查询在语句之前不会执行 `return View` 。
 
 ### <a name="add-column-heading-hyperlinks-to-the-student-index-view"></a>向 "学生索引" 视图添加列标题超链接
 
-在*Views\Student\Index.cshtml*中，将标题行的 `<tr>` 和 `<th>` 元素替换为突出显示的代码：
+在*Views\Student\Index.cshtml*中，将 `<tr>` 标题行的和元素替换为 `<th>` 突出显示的代码：
 
 [!code-cshtml[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample3.cshtml?highlight=5-15)]
 
-此代码使用 `ViewBag` 属性中的信息设置具有适当查询字符串值的超链接。
+此代码使用属性中的信息 `ViewBag` 设置具有适当查询字符串值的超链接。
 
 运行页面，然后单击 "**姓氏**" 和 "**注册日期**" 列标题，验证排序是否正常。
 
@@ -88,14 +88,14 @@ ms.locfileid: "74595222"
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=1,7-11)]
 
-已向 `Index` 方法添加 `searchString` 参数。 还向 LINQ 语句添加了 `where` 子句，该子句仅选择其名字或姓氏中包含搜索字符串的学生。 将从要添加到 "索引" 视图中的文本框接收搜索字符串值。仅当存在要搜索的值时，才会执行添加[where](https://msdn.microsoft.com/library/bb535040.aspx)子句的语句。
+已向 `Index` 方法添加 `searchString` 参数。 还向 LINQ 语句添加了一个 `where` 子句，该子句仅选择其名字或姓氏中包含搜索字符串的学生。 将从要添加到 "索引" 视图中的文本框接收搜索字符串值。仅当存在要搜索的值时，才会执行添加[where](https://msdn.microsoft.com/library/bb535040.aspx)子句的语句。
 
 > [!NOTE]
-> 在许多情况下，你可以对实体框架实体集或作为内存中集合上的扩展方法调用同一方法。 结果通常是相同的，但在某些情况下可能会有所不同。 例如，将空字符串传递给它时，`Contains` 方法的 .NET Framework 实现将返回所有行，但 SQL Server Compact 4.0 的实体框架提供程序将为空字符串返回零行。 因此，该示例中的代码（将 `Where` 语句置于 `if` 语句中）可确保您获得的所有版本 SQL Server 的结果相同。 此外，默认情况下，`Contains` 方法的 .NET Framework 实现会执行区分大小写的比较，但默认情况下实体框架 SQL Server 提供程序执行不区分大小写的比较。 因此，调用 `ToUpper` 方法来使测试明确区分大小写确保在稍后更改代码以使用存储库时结果不会发生变化，这将返回一个 `IEnumerable` 集合，而不是 `IQueryable` 对象。 （在 `IEnumerable` 集合上调用 `Contains` 方法时，将获得 .NET Framework 实现；当在 `IQueryable` 对象上调用它时，将获得数据库提供程序实现。）
+> 在许多情况下，你可以对实体框架实体集或作为内存中集合上的扩展方法调用同一方法。 结果通常是相同的，但在某些情况下可能会有所不同。 例如，将 `Contains` 空字符串传递给它时，方法的 .NET Framework 实现将返回所有行，但 SQL Server Compact 4.0 的实体框架提供程序将为空字符串返回零行。 因此，示例中的代码（将语句放入 `Where` `if` 语句中）可确保您获得的所有版本 SQL Server 的结果相同。 此外，默认情况下，方法的 .NET Framework 实现会 `Contains` 执行区分大小写的比较，但实体框架 SQL Server 提供程序默认情况下执行不区分大小写的比较。 因此，调用 `ToUpper` 方法以使测试明确区分大小写确保在稍后更改代码以使用存储库时结果不会更改，这将返回 `IEnumerable` 集合而不是 `IQueryable` 对象。 （在 `IEnumerable` 集合上调用 `Contains` 方法时，将获得 .NET Framework 实现；当在 `IQueryable` 对象上调用它时，将获得数据库提供程序实现。）
 
 ### <a name="add-a-search-box-to-the-student-index-view"></a>向“学生索引”视图添加搜索框
 
-在*Views\Student\Index.cshtml*中，将突出显示的代码添加到开始 `table` 标记之前，以便创建标题、文本框和**搜索**按钮。
+在*Views\Student\Index.cshtml*中，将突出显示的代码添加到开始标记之前，以便 `table` 创建标题、文本框和**搜索**按钮。
 
 [!code-cshtml[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample5.cshtml?highlight=5-10)]
 
@@ -107,13 +107,13 @@ ms.locfileid: "74595222"
 
 ## <a name="add-paging-to-the-students-index-page"></a>向学生索引页添加分页
 
-若要将分页添加到 "学生索引" 页，你将首先安装**PagedList** NuGet 包。 然后，在 `Index` 方法中进行其他更改，并向 `Index` 视图添加分页链接。 **PagedList**是 ASP.NET Mvc 的许多良好分页和排序包之一，这里的用途只是一个示例，而不是针对其他选项的建议。 下图显示了页面链接。
+若要将分页添加到 "学生索引" 页，你将首先安装**PagedList** NuGet 包。 然后在方法中进行其他更改 `Index` ，并向视图添加分页链接 `Index` 。 **PagedList**是 ASP.NET Mvc 的许多良好分页和排序包之一，这里的用途只是一个示例，而不是针对其他选项的建议。 下图显示了页面链接。
 
 ![Students_index_page_with_paging](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image5.png)
 
 ### <a name="install-the-pagedlistmvc-nuget-package"></a>安装 PagedList NuGet 包
 
-NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **PagedList**包将为 `IQueryable` 和 `IEnumerable` 集合安装 `PagedList` 的集合类型和扩展方法。 扩展方法在 `IQueryable` 或 `IEnumerable`之外的 `PagedList` 集合中创建单个数据页，而 `PagedList` 集合提供了几个便于分页的属性和方法。 **PagedList**包安装显示分页按钮的分页帮助程序。
+NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **PagedList**包 `PagedList` 为和集合安装集合类型和扩展方法 `IQueryable` `IEnumerable` 。 扩展方法在或的集合中创建单个数据页 `PagedList` `IQueryable` `IEnumerable` ，而 `PagedList` 集合提供了几个便于分页的属性和方法。 **PagedList**包安装显示分页按钮的分页帮助程序。
 
 从 "**工具**" 菜单中，选择 " **Nuget 包管理器**"，然后**管理解决方案的 nuget 包**。
 
@@ -121,13 +121,13 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image6.png)
 
-在 "**选择项目**" 框中，单击 **"确定"** 。
+在 "**选择项目**" 框中，单击 **"确定"**。
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image7.png)
 
 ### <a name="add-paging-functionality-to-the-index-method"></a>向 Index 方法添加分页功能
 
-在*Controllers\StudentController.cs*中，添加 `PagedList` 命名空间的 `using` 语句：
+在*Controllers\StudentController.cs*中， `using` 为 `PagedList` 命名空间添加语句：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample6.cs)]
 
@@ -135,21 +135,21 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample7.cs)]
 
-此代码将 `page` 参数、当前排序顺序参数和当前筛选器参数添加到方法签名，如下所示：
+此代码会将 `page` 参数、当前排序顺序参数和当前筛选器参数添加到方法签名，如下所示：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample8.cs)]
 
-第一次显示页面时，或者如果用户没有单击分页或排序链接，所有参数都将为 NULL。 如果单击了分页链接，`page` 变量将包含要显示的页码。
+第一次显示页面时，或者如果用户没有单击分页或排序链接，所有参数都将为 NULL。 如果单击了页面链接，则该 `page` 变量将包含要显示的页码。
 
-`A ViewBag` 属性提供当前排序顺序的视图，因为它必须包含在分页链接中，以便在分页时保持排序顺序相同：
+`A ViewBag`属性提供当前排序顺序的视图，因为它必须包含在分页链接中，以便在分页时保持排序顺序相同：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample9.cs)]
 
-`ViewBag.CurrentFilter`的另一个属性提供当前筛选器字符串的视图。 此值必须包含在分页链接中，以便在分页过程中保持筛选器设置，并且在页面重新显示时必须将其还原到文本框中。 如果在分页过程中搜索字符串发生变化，则页面必须重置为 1，因为新的筛选器会导致显示不同的数据。 在文本框中输入值并按 "提交" 按钮时，将更改搜索字符串。 在这种情况下，`searchString` 参数不为 null。
+其他属性 `ViewBag.CurrentFilter` 提供当前筛选器字符串的视图。 此值必须包含在分页链接中，以便在分页过程中保持筛选器设置，并且在页面重新显示时必须将其还原到文本框中。 如果在分页过程中搜索字符串发生变化，则页面必须重置为 1，因为新的筛选器会导致显示不同的数据。 在文本框中输入值并按 "提交" 按钮时，将更改搜索字符串。 在这种情况下， `searchString` 参数不为 null。
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample10.cs)]
 
-在方法结束时，学生 `IQueryable` 对象的 `ToPagedList` 扩展方法会将学生查询转换为支持分页的集合类型中的一页学生。 然后，将一页学生传递到视图：
+在方法结束时， `ToPagedList` 学生对象上的扩展方法 `IQueryable` 会将学生查询转换为支持分页的集合类型中的一页学生。 然后，将一页学生传递到视图：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample11.cs)]
 
@@ -163,7 +163,7 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 页面顶部的 `@model` 语句指定视图现在获取的是 `PagedList` 对象，而不是 `List` 对象。
 
-`PagedList.Mvc` 的 `using` 语句提供对用于分页按钮的 MVC 帮助器的访问权限。
+的 `using` 语句 `PagedList.Mvc` 提供对分页按钮的 MVC 帮助器的访问。
 
 代码使用[html.beginform](https://msdn.microsoft.com/library/system.web.mvc.html.formextensions.beginform(v=vs.108).aspx)的重载，以允许它指定[FormMethod](https://msdn.microsoft.com/library/system.web.mvc.formmethod(v=vs.100).aspx/css)。
 
@@ -183,13 +183,13 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 [!code-cshtml[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cshtml)]
 
-如果没有要显示的页，则显示 "页 0/0"。 （在这种情况下，页码大于页面计数，因为 `Model.PageNumber` 为1，`Model.PageCount` 为0。）
+如果没有要显示的页，则显示 "页 0/0"。 （在这种情况下，页码大于页计数 `Model.PageNumber` ，因为为1，并且 `Model.PageCount` 为0。）
 
 页面按钮由 `PagedListPager` 帮助器显示：
 
 [!code-cshtml[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample17.cshtml)]
 
-`PagedListPager` 帮助程序提供了许多可自定义的选项，包括 Url 和样式。 有关详细信息，请参阅 GitHub 站点上的[TroyGoode/PagedList](https://github.com/TroyGoode/PagedList) 。
+`PagedListPager`帮助程序提供了许多可自定义的选项，包括 url 和样式。 有关详细信息，请参阅 GitHub 站点上的[TroyGoode/PagedList](https://github.com/TroyGoode/PagedList) 。
 
 运行页面。
 
@@ -201,10 +201,10 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 ## <a name="create-an-about-page-that-shows-student-statistics"></a>创建显示学生统计信息的 "关于" 页面
 
-对于 Contoso 大学网站的 "关于" 页，您将显示已注册每个注册日期的学生数。 这需要对组进行分组和简单计算。 若要完成此操作，需要执行以下操作：
+对于 Contoso 大学网站的“关于”页，将显示每个注册日期注册了多少名学生。 这需要对组进行分组和简单计算。 若要完成此操作，需要执行以下操作：
 
 - 为需要传递给视图的数据创建一个视图模型类。
-- 修改 `Home` 控制器中的 `About` 方法。
+- 修改 `About` 控制器中的方法 `Home` 。
 - 修改 `About` 视图。
 
 ### <a name="create-the-view-model"></a>创建视图模型
@@ -215,7 +215,7 @@ NuGet **PagedList**包会自动将**PagedList**包作为依赖项安装。 **Pag
 
 ### <a name="modify-the-home-controller"></a>修改主控制器
 
-在*HomeController.cs*中，将以下 `using` 语句添加到文件顶部：
+在*HomeController.cs*中，在 `using` 文件顶部添加以下语句：
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample19.cs)]
 
@@ -249,15 +249,15 @@ LINQ 语句按注册日期对学生实体进行分组，计算每组中实体的
 
 ### <a name="using-code-first-migrations-to-deploy-the-database"></a>使用 Code First 迁移部署数据库
 
-若要部署数据库，你将使用 Code First 迁移。 当你创建用于配置从 Visual Studio 部署的设置的发布配置文件时，你将选中一个标记为 "**执行 Code First 迁移（在应用程序启动时运行）** " 的复选框。 此设置会导致部署过程在目标服务器上自动配置应用程序*web.config*文件，以便 Code First 使用 `MigrateDatabaseToLatestVersion` 初始值设定项类。
+若要部署数据库，你将使用 Code First 迁移。 当你创建用于配置从 Visual Studio 部署的设置的发布配置文件时，你将选中一个标记为 "**执行 Code First 迁移（在应用程序启动时运行）**" 的复选框。 此设置会导致部署过程在目标服务器上自动配置应用程序*Web.config*文件，使 Code First 使用 `MigrateDatabaseToLatestVersion` 初始值设定项类。
 
-在部署过程中，Visual Studio 不会对数据库执行任何操作。 部署后，当部署的应用程序首次访问数据库时，Code First 会自动创建数据库，或将数据库架构更新到最新版本。 如果应用程序实现迁移 `Seed` 方法，则该方法将在创建数据库或更新架构之后运行。
+在部署过程中，Visual Studio 不会对数据库执行任何操作。 部署后，当部署的应用程序首次访问数据库时，Code First 会自动创建数据库，或将数据库架构更新到最新版本。 如果应用程序实现了迁移 `Seed` 方法，则该方法将在创建数据库或更新架构之后运行。
 
-迁移 `Seed` 方法插入测试数据。 如果要部署到生产环境，则必须更改 `Seed` 方法，以便它只插入要插入到生产数据库中的数据。 例如，在您的当前数据模型中，您可能希望在开发数据库中有真实的课程，但实际的学生。 您可以编写一个 `Seed` 方法来加载开发中的两个，然后在部署到生产环境之前注释掉虚构的学生。 或者，您可以编写一个 `Seed` 方法来仅加载课程，并使用应用程序的 UI 手动输入测试数据库中的虚构学生。
+迁移 `Seed` 方法插入测试数据。 如果要部署到生产环境，则必须更改 `Seed` 方法，使其只插入要插入到生产数据库中的数据。 例如，在您的当前数据模型中，您可能希望在开发数据库中有真实的课程，但实际的学生。 你可以编写一个 `Seed` 方法，用于在开发中加载，然后在部署到生产环境之前注释掉虚构的学生。 或者，您可以编写一个 `Seed` 方法以仅加载课程，并使用应用程序的 UI 手动输入测试数据库中的虚构学生。
 
 ### <a name="get-a-windows-azure-account"></a>获取 Microsoft Azure 帐户
 
-需要一个 Microsoft Azure 帐户。 如果还没有，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅[Windows Azure 免费试用版](https://azure.microsoft.com/free/?WT.mc_id=A443DD604)。
+需要一个 Microsoft Azure 帐户。 如果还没有，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅[Windows Azure 免费试用版](https://azure.microsoft.com/free/dotnet/)。
 
 ### <a name="create-a-web-site-and-a-sql-database-in-windows-azure"></a>在 Microsoft Azure 中创建网站和 SQL 数据库
 
@@ -286,7 +286,7 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
 7. 单击对话框底部的向右箭头。 向导将前进到 "**数据库设置**" 步骤。
 8. 在 "**名称**" 框中，输入*ContosoUniversityDB*。
 9. 在 "**服务器**" 框中，选择 "**新建 SQL 数据库服务器**"。 或者，如果你以前创建了一个服务器，则可以从下拉列表中选择该服务器。
-10. 输入管理员的**登录名**和**密码**。 如果选择了 "**新建 SQL 数据库服务器**"，则不在此处输入现有名称和密码，你将输入一个新的名称和密码，你现在要定义该名称和密码，以便稍后在访问数据库时使用。 如果选择了之前创建的服务器，则需输入该服务器的凭据。 对于本教程，不选中 "***高级***" 复选框。 使用***高级***选项可以设置数据库[排序规则](https://msdn.microsoft.com/library/aa174903(v=SQL.80).aspx)。
+10. 输入管理员的**登录名**和**密码**。 如果选择了“新建 SQL 数据库服务器”，则在此处不要输入现有名称和密码。应输入新的名称和密码，现在定义的名称和密码会在以后访问数据库时使用。**** 如果选择了之前创建的服务器，则需输入该服务器的凭据。 对于本教程，不选中 "***高级***" 复选框。 使用***高级***选项可以设置数据库[排序规则](https://msdn.microsoft.com/library/aa174903(v=SQL.80).aspx)。
 11. 选择为网站选择的相同**区域**。
 12. 单击框右下角的复选标记以指示你已完成。   
   
@@ -300,7 +300,7 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
 
 ## <a name="deploy-the-application-to-windows-azure"></a>将应用程序部署到 Microsoft Azure
 
-1. 在 Visual Studio 中，右键单击**解决方案资源管理器**的项目，然后从上下文菜单中选择 "**发布**"。  
+1. 在 Visual Studio 中，在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“发布”。********  
   
     ![项目上下文菜单中的“发布”](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image18.png)
 2. 在 "**发布 Web** " 向导的 "**配置文件**" 选项卡中，单击 "**导入**"。  
@@ -321,7 +321,7 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
     ![下载 .publishsettings 文件](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image22.png)
 
     > [!WARNING]
-    > 安全性- *.publishsettings*文件包含用于管理 microsoft Azure 订阅和服务的凭据（未编码）。 此文件的最佳安全方案是，将其暂时存储在源目录的外部（例如，在*Libraries\Documents*文件夹中），然后在导入完成后将其删除。 获得 `.publishsettings` 文件访问权的恶意用户可以编辑、创建和删除您的 Microsoft Azure 服务。
+    > 安全性- *.publishsettings*文件包含用于管理 microsoft Azure 订阅和服务的凭据（未编码）。 此文件的最佳安全方案是，将其暂时存储在源目录的外部（例如，在*Libraries\Documents*文件夹中），然后在导入完成后将其删除。 获得文件访问权的恶意用户 `.publishsettings` 可以编辑、创建和删除您的 Microsoft Azure 服务。
 
     d. 在 "**导入 Microsoft Azure 订阅**" 对话框中，单击 "**浏览**" 并导航到 *.publishsettings*文件。
 
@@ -329,22 +329,22 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
 
     e. 单击“导入”。
 
-    ![导入](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image24.png)
-4. 在 "**导入发布配置文件**" 对话框中，选择 "**从 Microsoft Azure 网站导入**"，从下拉列表中选择你的网站，然后单击 **"确定"** 。  
+    ![进口](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image24.png)
+4. 在 "**导入发布配置文件**" 对话框中，选择 "**从 Microsoft Azure 网站导入**"，从下拉列表中选择你的网站，然后单击 **"确定"**。  
   
     ![导入发布配置文件](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image25.png)
 5. 在 "**连接**" 选项卡中，单击 "**验证连接**" 确保设置正确。  
   
     ![验证连接](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image26.png)
-6. 验证连接后，"**验证连接**" 按钮旁边会显示一个绿色复选标记。 单击 **“下一步”** 。  
+6. 验证连接后，"**验证连接**" 按钮旁边会显示一个绿色复选标记。 单击“下一步”****。  
   
     ![验证成功的连接](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image27.png)
 7. 打开 " **SchoolContext** " 下的 "**远程连接字符串**" 下拉列表，然后选择您创建的数据库的连接字符串。
-8. 选择 **"执行 Code First 迁移（在应用程序启动时运行）** 。
-9. 取消选中 "在运行时为**UserContext （DefaultConnection）** **使用此连接字符串**，因为此应用程序未使用成员资格数据库"。   
+8. 选择 **"执行 Code First 迁移（在应用程序启动时运行）**。
+9. 取消选中 "在运行时为**UserContext （DefaultConnection）****使用此连接字符串**，因为此应用程序未使用成员资格数据库"。   
   
     ![“设置”选项卡](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image28.png)
-10. 单击 **“下一步”** 。
+10. 单击“下一步”****。
 11. 在 "**预览**" 选项卡中，单击 "**开始预览**"。  
   
     ![“预览”选项卡中的“开始预览”按钮](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image29.png)  
@@ -352,27 +352,27 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
     该选项卡会显示将复制到服务器的文件的列表。 显示预览并不是发布应用程序所必需的，但它是一个需要了解的很有用的功能。 在本例中，你不需要对显示的文件列表执行任何操作。 下次部署该应用程序时，此列表中仅包含已更改的文件。  
   
     ![“开始预览”文件输出](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image30.png)
-12. 单击“发布”。  
+12. 单击“发布” 。  
     Visual Studio 开始执行将文件复制到 Microsoft Azure 服务器的过程。
-13. "**输出**" 窗口将显示已执行的部署操作并报告部署的成功完成。  
+13. “输出”窗口会显示已执行的部署操作并报告部署的成功完成。****  
   
     ![报告部署成功的输出窗口](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image31.png)
 14. 成功完成部署后，默认浏览器会自动打开并指向已部署网站的 URL。  
-    你创建的应用程序现在在云中运行。 单击 "学生" 选项卡。  
+    创建的应用程序现在云中运行。 单击 "学生" 选项卡。  
   
     ![Students_index_page_with_paging](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image32.png)
 
-此时，你的*SchoolContext*数据库已在 WINDOWS Azure SQL 数据库中创建，因为你选择了 **"执行 Code First 迁移（在应用启动时运行）** 。 已部署网站中的*web.config 文件已*更改，以便在代码第一次读取或写入数据库中的数据时（在你选择 "**学生**" 选项卡时出现这种情况） [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项：
+此时，你的*SchoolContext*数据库已在 WINDOWS Azure SQL 数据库中创建，因为你选择了 **"执行 Code First 迁移（在应用启动时运行）**。 已部署网站中的*Web.config*文件已更改，以便[MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项在代码第一次读取或写入数据库中的数据时（在你选择 "**学生**" 选项卡时发生）：
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image33.png)
 
-部署过程还会创建一个新的连接字符串 *（SchoolContext\_DatabasePublish*），以用于更新数据库架构和播种数据库的 Code First 迁移。
+部署过程还为 Code First 迁移创建了一个新的连接字符串 *（SchoolContext \_ DatabasePublish*），以用于更新数据库架构和播种数据库。
 
 ![Database_Publish 连接字符串](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image34.png)
 
 *DefaultConnection*连接字符串用于成员资格数据库（在本教程中未使用）。 *SchoolContext*连接字符串是针对 ContosoUniversity 数据库的。
 
-在*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*中，可以在自己的计算机上找到 web.config 文件的已部署版本。你可以通过使用 FTP 来访问已部署的*web.config*文件。 有关说明，请参阅[使用 Visual Studio 进行 ASP.NET Web 部署：部署代码更新](../../../../web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update.md)。 按照以 "使用 FTP 工具" 开头的说明操作，需要以下三项内容： FTP URL、用户名和密码。 "
+可以在*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*的计算机上查找 Web.config 文件的已部署版本。你可以通过使用 FTP 访问已部署的*Web.config*文件本身。 有关说明，请参阅[使用 Visual Studio 进行 ASP.NET Web 部署：部署代码更新](../../../../web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update.md)。 按照以 "使用 FTP 工具" 开头的说明操作，需要以下三项内容： FTP URL、用户名和密码。 "
 
 > [!NOTE]
 > Web 应用不会实现安全性，因此查找 URL 的任何人都可以更改数据。 有关如何保护网站的说明，请参阅将[包含成员资格、OAuth 和 SQL 数据库的 secure ASP.NET MVC 应用程序部署到 Microsoft Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data)网站。 可以通过使用 Microsoft Azure 管理门户或 Visual Studio 中的**服务器资源管理器**阻止其他人使用该站点来停止站点。
@@ -381,9 +381,9 @@ Microsoft Azure SQL 数据库是根据 SQL Server 技术构建的基于云的关
 
 ## <a name="code-first-initializers"></a>Code First 初始值设定项
 
-在 "部署" 部分中，你看到了正在使用的[MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项。 Code First 还提供了可使用的其他初始值设定项，包括[CreateDatabaseIfNotExists](https://msdn.microsoft.com/library/gg679221(v=vs.103).aspx) （默认值）、 [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=VS.103).aspx)和[DropCreateDatabaseAlways](https://msdn.microsoft.com/library/gg679506(v=VS.103).aspx)。 `DropCreateAlways` 初始值设定项可用于设置单元测试的条件。 您还可以编写自己的初始值设定项，如果您不想等到应用程序从数据库中读取或写入数据，则可以显式调用初始值设定项。 有关初始值设定项的全面说明，请参阅本书[编程实体框架：](http://shop.oreilly.com/product/0636920022220.do)通过 Julie Lerman 和 Rowan 莎莎 Code First 的第6章。
+在 "部署" 部分中，你看到了正在使用的[MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项。 Code First 还提供了可使用的其他初始值设定项，包括[CreateDatabaseIfNotExists](https://msdn.microsoft.com/library/gg679221(v=vs.103).aspx) （默认值）、 [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=VS.103).aspx)和[DropCreateDatabaseAlways](https://msdn.microsoft.com/library/gg679506(v=VS.103).aspx)。 `DropCreateAlways`初始值设定项可用于设置单元测试的条件。 您还可以编写自己的初始值设定项，如果您不想等到应用程序从数据库中读取或写入数据，则可以显式调用初始值设定项。 有关初始值设定项的全面说明，请参阅本书[编程实体框架：](http://shop.oreilly.com/product/0636920022220.do)通过 Julie Lerman 和 Rowan 莎莎 Code First 的第6章。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
 
 在本教程中，您已了解如何创建数据模型并实现基本的 CRUD、排序、筛选、分页和分组功能。 在下一教程中，您将通过扩展数据模型开始查看更高级的主题。
 

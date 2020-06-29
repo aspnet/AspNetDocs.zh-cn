@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 21a3efa865e5b5498dfb0f2adec199800fc70c58
-ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
+ms.openlocfilehash: 2f3a6d57a7963eb7aafde62e344ae6b970af87e2
+ms.sourcegitcommit: 8d34fb54e790cfba2d64097afc8276da5b22283e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172961"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85484225"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>教程：在 ASP.NET MVC 应用中使用 EF 迁移并将其部署到 Azure
 
@@ -41,15 +41,15 @@ ms.locfileid: "84172961"
 
 这种使数据库与数据模型保持同步的方法适用于多种情况，但将应用程序部署到生产环境的情况除外。 当应用程序在生产环境中运行时，它通常存储您要保留的数据，并且您不希望每次进行更改（例如添加新列）时都丢失任何数据。 [Code First 迁移](https://msdn.microsoft.com/data/jj591621)功能通过启用 Code First 更新数据库架构（而不是删除并重新创建数据库）来解决此问题。 在本教程中，你将部署应用程序，并准备好要启用迁移。
 
-1. 通过注释掉或删除 `contexts` 已添加到应用程序 web.config 文件中的元素，禁用前面设置的初始值设定项。
+1. 通过注释掉或删除 `contexts` 已添加到应用程序 Web.config 文件中的元素，禁用先前设置的初始值设定项。
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample1.xml?highlight=2,6)]
-2. 同样，*在应用程序的 web.config 文件*中，将连接字符串中的数据库名称更改为 ContosoUniversity2。
+2. 同样，在应用程序*Web.config*文件中，将连接字符串中的数据库名称更改为 ContosoUniversity2。
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.xml?highlight=2)]
 
     此更改将设置项目，以便第一个迁移创建新数据库。 这并不是必需的，但稍后您将看到它是一个很好的想法。
-3. 在“工具”菜单中，选择“NuGet 包管理器” > “包管理器控制台”。************
+3. 在“工具”菜单中，选择“NuGet 包管理器” > “包管理器控制台”。  
 
 1. 在 `PM>` 提示符下输入以下命令：
 
@@ -129,7 +129,7 @@ ms.locfileid: "84172961"
 
 ### <a name="use-code-first-migrations-to-deploy-the-database"></a>使用 Code First 迁移部署数据库
 
-若要部署该数据库，你将使用 Code First 迁移。 当你创建用于配置从 Visual Studio 进行部署的设置时所用的发布配置文件时，你将选中标记为 "**更新数据库**" 的复选框。 此设置会导致部署过程在目标服务器上自动配置应用程序*web.config*文件，以便 Code First 使用 `MigrateDatabaseToLatestVersion` 初始值设定项类。
+若要部署该数据库，你将使用 Code First 迁移。 当你创建用于配置从 Visual Studio 进行部署的设置时所用的发布配置文件时，你将选中标记为 "**更新数据库**" 的复选框。 此设置会导致部署过程在目标服务器上自动配置应用程序*Web.config*文件，使 Code First 使用 `MigrateDatabaseToLatestVersion` 初始值设定项类。
 
 在部署过程中，Visual Studio 不会对数据库执行任何操作，而是将项目复制到目标服务器。 运行已部署的应用程序并在部署后首次访问数据库时，Code First 会检查数据库是否与数据模型相匹配。 如果存在不匹配的情况，Code First 会自动创建数据库（如果它尚不存在）或将数据库架构更新到最新版本（如果数据库存在但与模型不匹配）。 如果应用程序实现了迁移 `Seed` 方法，则该方法将在创建数据库或更新架构之后运行。
 
@@ -138,7 +138,7 @@ ms.locfileid: "84172961"
 ### <a name="get-an-azure-account"></a>获取 Azure 帐户
 
 你将需要一个 Azure 帐户。 如果你还没有 Visual Studio 订阅，则可以[激活订阅权益](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/
-)。 否则，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅[Azure 免费试用](https://azure.microsoft.com/free/)。
+)。 否则，只需花费几分钟就能创建一个免费试用帐户。 有关详细信息，请参阅 [Azure 免费试用](https://azure.microsoft.com/free/dotnet/)。
 
 ### <a name="create-a-web-site-and-a-sql-database-in-azure"></a>在 Azure 中创建网站和 SQL 数据库
 
@@ -196,7 +196,7 @@ Azure 中的 web 应用将在共享宿主环境中运行，这意味着它将在
 
     应用现在正在云中运行。
 
-此时，已在 Azure SQL 数据库中创建*SchoolContext*数据库，因为你选择了 **"执行 Code First 迁移（在应用启动时运行）**。 已部署网站中的*web.config 文件已*更改，以便在代码第一次读取或写入数据库中的数据时（在你选择 "**学生**" 选项卡时发生此情况） [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项：
+此时，已在 Azure SQL 数据库中创建*SchoolContext*数据库，因为你选择了 **"执行 Code First 迁移（在应用启动时运行）**。 已部署网站中的*Web.config*文件已更改，以便在代码第一次读取或写入数据库中的数据时（在你选择 "**学生**" 选项卡时发生此情况） [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx)初始值设定项：
 
 ![Web.config 文件摘录](https://asp.net/media/4367421/mig.png)
 
@@ -204,7 +204,7 @@ Azure 中的 web 应用将在共享宿主环境中运行，这意味着它将在
 
 ![Web.config 文件中的连接字符串](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image26.png)
 
-在*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*中，可以在自己的计算机上找到 web.config 文件的已部署版本。你可以通过使用 FTP 来访问已部署的*web.config*文件。 有关说明，请参阅[使用 Visual Studio 进行 ASP.NET Web 部署：部署代码更新](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update)。 按照以 "使用 FTP 工具" 开头的说明操作，需要以下三项内容： FTP URL、用户名和密码。 "
+可以在*ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*的计算机上查找 Web.config 文件的已部署版本。你可以通过使用 FTP 访问已部署的*Web.config*文件本身。 有关说明，请参阅[使用 Visual Studio 进行 ASP.NET Web 部署：部署代码更新](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update)。 按照以 "使用 FTP 工具" 开头的说明操作，需要以下三项内容： FTP URL、用户名和密码。 "
 
 > [!NOTE]
 > Web 应用不会实现安全性，因此查找 URL 的任何人都可以更改数据。 有关如何保护网站的说明，请参阅[将包含成员资格、OAuth 和 SQL 数据库的 secure ASP.NET MVC 应用程序部署到 Azure](/aspnet/core/security/authorization/secure-data)。 可以通过在 Visual Studio 中使用 Azure 管理门户或**服务器资源管理器**停止服务来阻止其他人使用该站点。
@@ -213,7 +213,7 @@ Azure 中的 web 应用将在共享宿主环境中运行，这意味着它将在
 
 ## <a name="advanced-migrations-scenarios"></a>高级迁移方案
 
-如果你通过按本教程中的说明自动运行迁移来部署数据库，并且你要部署到在多台服务器上运行的网站，则可能会收到多个服务器尝试同时运行迁移。 迁移是原子的，因此，如果两个服务器尝试运行相同的迁移，则将会成功，另一个服务器将失败（假定操作无法完成两次）。 在这种情况下，如果想要避免这些问题，可以手动调用迁移，并设置自己的代码，使其只发生一次。 有关详细信息，请参阅 Rowan 莎莎博客上的[代码中的运行和脚本迁移](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/) [，以及从](/ef/ef6/modeling/code-first/migrations/migrate-exe)命令行执行迁移。
+如果你通过按本教程中的说明自动运行迁移来部署数据库，并且你要部署到在多台服务器上运行的网站，则可能会收到多个服务器尝试同时运行迁移。 迁移是原子的，因此，如果两个服务器尝试运行相同的迁移，则将会成功，另一个服务器将失败（假定操作无法完成两次）。 在这种情况下，如果想要避免这些问题，可以手动调用迁移，并设置自己的代码，使其只发生一次。 有关详细信息，请参阅 Rowan 莎莎博客和[Migrate.exe](/ef/ef6/modeling/code-first/migrations/migrate-exe)上的[代码中的运行和脚本迁移](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/)（用于从命令行执行迁移）。
 
 有关其他迁移方案的信息，请参阅[迁移 Screencast 系列](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx)。
 
