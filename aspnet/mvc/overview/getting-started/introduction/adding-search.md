@@ -8,69 +8,67 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: 7b49c1e6425080693229c6c132df3879504c835c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f6d6d32a648fed453be924790a1b55698c9cf209
+ms.sourcegitcommit: 0d583ed9253103f3e50b6d729276e667591cdd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379529"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211472"
 ---
 # <a name="search"></a>搜索
 
-
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+[!INCLUDE [Tutorial Note](index.md)]
 
 ## <a name="adding-a-search-method-and-search-view"></a>添加搜索方法和搜索视图
 
-在本部分中，你将添加到搜索功能`Index`操作方法，您可以搜索电影的流派或名称。
+在本部分中，你将向操作方法添加搜索功能 `Index` ，以允许你按流派或名称搜索电影。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-若要匹配此部分的屏幕截图，需要运行应用程序 (F5)，并将以下电影添加到数据库。
+若要匹配此部分的屏幕截图，需要运行应用程序 (F5) 并将以下电影添加到数据库中。
 
 | 标题 | 发布日期 | 流派 | 价格 |
 | ----- | ------------ | ----- | ----- |
 | Ghostbusters | 6/8/1984 | 喜剧 | 6.99 |
 | Ghostbusters II | 6/16/1989 | 喜剧 | 6.99 |
-| 颗行星的大猩猩 | 3/27/1986 | 操作 | 5.99 |
-
+| Apes 的世界 | 3/27/1986 | 操作 | 5.99 |
 
 ## <a name="updating-the-index-form"></a>更新索引窗体
 
-通过更新开始`Index`到现有的操作方法`MoviesController`类。 下面是代码：
+首先将 `Index` 操作方法更新到现有 `MoviesController` 类。 代码如下：
 
 [!code-csharp[Main](adding-search/samples/sample1.cs?highlight=1,6-9)]
 
-第一行`Index`方法将创建以下[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询用于选择电影：
+方法的第一行 `Index` 创建以下[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询来选择电影：
 
 [!code-csharp[Main](adding-search/samples/sample2.cs)]
 
-该查询在此情况下，定义，但尚未尚未针对数据库运行。
+此时将定义该查询，但尚未对该数据库运行该查询。
 
-如果`searchString`参数包含一个字符串，电影查询则修改要筛选的搜索字符串，使用下面的代码的值：
+如果 `searchString` 参数包含一个字符串，则使用以下代码修改电影查询以筛选搜索字符串的值：
 
 [!code-csharp[Main](adding-search/samples/sample3.cs)]
 
-上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的用于[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询用作标准查询运算符方法的参数，如[其中](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx)上述代码中使用的方法。 进行定义或通过调用一个方法，如修改后不会执行 LINQ 查询`Where`或`OrderBy`。 相反，延迟查询执行，这意味着表达式的计算延迟，直到真正循环访问其实现的值或[ `ToList` ](https://msdn.microsoft.com/library/bb342261.aspx)调用方法。 在中`Search`示例中，该查询中执行*Index.cshtml*视图。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
+上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询中用作标准查询运算符方法的参数，如以上代码中使用的[Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx)方法。 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `Search` 示例中，将在 "*索引*" 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
 
 > [!NOTE]
-> [Contains](https://msdn.microsoft.com/library/bb155125.aspx)方法运行数据库，而不是 c# 代码更高版本。 在数据库中， [Contains](https://msdn.microsoft.com/library/bb155125.aspx)映射到[SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx)，这是不区分大小写。
+> [Contains](https://msdn.microsoft.com/library/bb155125.aspx)方法在数据库上运行，而不是上面的 c # 代码。 在数据库上，[包含](https://msdn.microsoft.com/library/bb155125.aspx)映射到[SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx)，这是不区分大小写的。
 
-现在可以更新`Index`将向用户显示窗体的视图。
+现在可以更新 `Index` 将向用户显示窗体的视图。
 
 运行应用程序并导航到 */Movies/Index*。 将查询字符串（如 `?searchString=ghost`）追加到 URL。 筛选的电影将显示出来。
 
 ![SearchQryStr](adding-search/_static/image1.png)
 
-如果您更改的签名`Index`方法，以使名为的参数`id`，则`id`参数将匹配`{id}`占位符默认路由中的设置*应用\_用户RouteConfig.cs*文件。
+如果将方法的签名更改 `Index` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *应用 \_ Start\RouteConfig.cs*文件中设置的默认路由的占位符匹配。
 
 [!code-json[Main](adding-search/samples/sample4.json)]
 
-原始`Index`方法如下所示::
+原始方法如下所 `Index` 示：
 
 [!code-csharp[Main](adding-search/samples/sample5.cs)]
 
-已修改`Index`方法看起来，如下所示：
+修改后的 `Index` 方法如下所示：
 
 [!code-csharp[Main](adding-search/samples/sample6.cs?highlight=1,3)]
 
@@ -78,91 +76,91 @@ ms.locfileid: "59379529"
 
 ![](adding-search/_static/image2.png)
 
-但是，不能指望用户在每次要搜索电影时都修改 URL。 因此需要添加 UI 来帮助他们筛选电影。 如果已更改的签名`Index`方法来测试如何传递绑定路由的 ID 参数，将其更改回来，以使您`Index`方法采用字符串参数名为`searchString`:
+但是，不能指望用户在每次要搜索电影时都修改 URL。 因此需要添加 UI 来帮助他们筛选电影。 如果更改了方法的签名 `Index` 以测试如何传递路由绑定 ID 参数，请将其更改回，使 `Index` 方法使用名为的字符串参数 `searchString` ：
 
 [!code-csharp[Main](adding-search/samples/sample7.cs)]
 
-打开*Views\Movies\Index.cshtml*文件，并紧后面`@Html.ActionLink("Create New", "Create")`，添加以下突出显示的窗体标记：
+打开*Views\Movies\Index.cshtml*文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下突出显示的窗体标记：
 
 [!code-cshtml[Main](adding-search/samples/sample8.cshtml?highlight=12-15)]
 
-`Html.BeginForm`帮助程序将创建一个打开`<form>`标记。 `Html.BeginForm`帮助器后，窗体会发布到其自身，当用户通过单击提交窗体**筛选器**按钮。
+`Html.BeginForm`帮助器创建开始 `<form>` 标记。 `Html.BeginForm`当用户通过单击 "**筛选器**" 按钮提交窗体时，帮助器会使窗体发布到其自身。
 
-Visual Studio 2013 具有较好的改进时显示和编辑视图文件。 当你运行应用程序时的视图文件打开时，Visual Studio 2013 调用正确的控制器操作方法，以显示该视图。
+Visual Studio 2013 在显示和编辑视图文件时具有良好的改善。 当你运行应用程序时打开了一个视图文件，Visual Studio 2013 会调用正确的控制器操作方法来显示视图。
 
 ![](adding-search/_static/image3.png)
 
-索引视图 （如在上图中所示） 在 Visual Studio 中打开，点击 Ctr F5 或按 F5 运行应用程序，然后再尝试搜索电影。
+在 Visual Studio 中打开索引视图 (如上图) 中所示），点击 Ctr F5 或 F5 运行应用程序，然后尝试搜索电影。
 
 ![](adding-search/_static/image4.png)
 
-没有任何`HttpPost`重载`Index`方法。 您不需要它，因为该方法不更改状态的应用程序，只需筛选数据。
+`HttpPost`方法没有重载 `Index` 。 不需要该方法，因为该方法不会更改应用程序的状态，只是对数据进行筛选。
 
-可添加以下 `HttpPost Index` 方法。 在这种情况下，操作调用程序将匹配`HttpPost Index`方法，和`HttpPost Index`方法将运行下图中所示。
+可添加以下 `HttpPost Index` 方法。 在这种情况下，操作调用程序将与 `HttpPost Index` 方法匹配， `HttpPost Index` 方法将运行，如下图所示。
 
 [!code-csharp[Main](adding-search/samples/sample9.cs)]
 
 ![SearchPostGhost](adding-search/_static/image5.png)
 
-但是，即使添加 `Index` 方法的 `HttpPost` 版本，其实现方式也受到限制。 假设你想要将特定搜索加入书签，或向朋友发送一个链接，让他们单击链接即可查看筛选出的相同电影列表。 请注意，HTTP POST 请求的 URL 是 GET 请求 （localhost:xxxxx/Movies/Index） 的 URL 相同--没有 URL 本身中的搜索信息。 右现在，搜索字符串信息发送到服务器作为窗体字段值。 这意味着无法捕获该搜索信息加入书签或发送给朋友，在 URL 中。
+但是，即使添加 `Index` 方法的 `HttpPost` 版本，其实现方式也受到限制。 假设你想要将特定搜索加入书签，或向朋友发送一个链接，让他们单击链接即可查看筛选出的相同电影列表。 请注意，HTTP POST 请求的 URL 与 GET 请求的 URL (localhost： xxxxx/电影/索引) 相同--URL 本身中没有搜索信息。 目前，搜索字符串信息将作为窗体字段值发送到服务器。 这意味着你无法捕获该搜索信息以在 URL 中将其书签或发送给朋友。
 
-解决方法是使用的重载`BeginForm`，它指定 POST 请求，应将搜索信息添加到 URL，并且应路由到`HttpGet`版本的`Index`方法。 替换现有无参数`BeginForm`方法替换为以下标记：
+解决方案是使用 `BeginForm` 的重载，该重载指定 POST 请求应将搜索信息添加到 URL，并且应将其路由到该 `HttpGet` 方法的版本 `Index` 。 将现有的无参数 `BeginForm` 方法替换为以下标记：
 
 [!code-cshtml[Main](adding-search/samples/sample10.cshtml)]
 
 ![BeginFormPost_SM](adding-search/_static/image6.png)
 
-现在提交搜索时，URL 包含搜索查询字符串。 即使具备 `HttpPost Index` 方法，搜索也将转到 `HttpGet Index` 操作方法。
+现在，在提交搜索时，URL 包含搜索查询字符串。 即使具备 `HttpPost Index` 方法，搜索也将转到 `HttpGet Index` 操作方法。
 
 ![IndexWithGetURL](adding-search/_static/image7.png)
 
-## <a name="adding-search-by-genre"></a>添加按流派搜索
+## <a name="adding-search-by-genre"></a>按流派添加搜索
 
-如果添加了`HttpPost`版本的`Index`方法，现在将其删除。
+如果已添加该 `HttpPost` 方法的版本 `Index` ，请立即将其删除。
 
-接下来，你将添加特定功能，让用户按流派搜索电影。 将 `Index` 方法替换为以下代码：
+接下来，你将添加一项功能，使用户能够按流派搜索电影。 将 `Index` 方法替换为以下代码：
 
 [!code-csharp[Main](adding-search/samples/sample11.cs)]
 
-此版本的`Index`方法采用附加参数，即`movieGenre`。 前的几行代码创建`List`对象以保存从数据库的电影流派。
+此版本的 `Index` 方法采用其他参数，即 `movieGenre` 。 前几行代码创建一个 `List` 对象，用于保存数据库中的电影流派。
 
 下面的代码是一种 LINQ 查询，可从数据库中检索所有流派。
 
 [!code-csharp[Main](adding-search/samples/sample12.cs)]
 
-该代码使用`AddRange`方法的泛型`List`集合以添加到列表中的所有不同的流派。 (而无需`Distinct`修饰符，则添加重复的流派 — 例如，将在我们的示例中两次添加喜剧)。 然后代码将存储在流派列表的`ViewBag.MovieGenre`对象。 将类别数据 （此类电影流派） 作为[SelectList](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx)对象中`ViewBag`，则访问下拉列表框中的类别数据是典型的 MVC 应用程序的方法。
+该代码使用 `AddRange` 泛型集合的方法 `List` 将所有不同的流派添加到列表中。  (没有 `Distinct` 修饰符，将添加重复的流派，例如，在我们的示例) 中添加了两次。 然后，代码会在对象中存储流派列表 `ViewBag.MovieGenre` 。 将类别数据 (此类电影流派) 为中的[SelectList](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx)对象 `ViewBag` ，然后访问下拉列表框中的类别数据是 MVC 应用程序的典型方法。
 
-下面的代码演示了如何检查`movieGenre`参数。 如果不为空，则代码进一步约束电影查询，以限制到指定类型的所选的电影。
+下面的代码演示如何检查 `movieGenre` 参数。 如果不为空，则代码会进一步限制影片查询，以将所选电影限制为指定的流派。
 
 [!code-csharp[Main](adding-search/samples/sample13.cs)]
 
-如前面所述，运行查询时不在数据库上直到电影列表循环访问 (这在视图中，会发生后`Index`操作方法返回)。
+如前文所述，此查询不会在数据库上运行，直到在该 `Index` 操作方法返回) 后，将电影列表循环访问后 (会发生在视图中。
 
-## <a name="adding-markup-to-the-index-view-to-support-search-by-genre"></a>将标记添加到索引视图，以支持按流派搜索
+## <a name="adding-markup-to-the-index-view-to-support-search-by-genre"></a>将标记添加到索引视图以支持按流派搜索
 
-添加`Html.DropDownList`到帮助程序*Views\Movies\Index.cshtml*文件，再`TextBox`帮助器。 完成的标记如下所示：
+将 `Html.DropDownList` helper 添加到*Views\Movies\Index.cshtml*文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
 
 [!code-cshtml[Main](adding-search/samples/sample14.cshtml?highlight=11)]
 
-在下面的代码：
+在以下代码中：
 
 [!code-cshtml[Main](adding-search/samples/sample15.cshtml)]
 
-参数"MovieGenre"提供的键`DropDownList`帮助器以查找`IEnumerable<SelectListItem>`中`ViewBag`。 `ViewBag`填充操作方法中：
+参数 "MovieGenre" 为 `DropDownList` 帮助器提供用于在中查找的键 `IEnumerable<SelectListItem>` `ViewBag` 。 在 `ViewBag` 操作方法中填充：
 
 [!code-csharp[Main](adding-search/samples/sample16.cs?highlight=10)]
 
-"All"提供选项标签参数。 如果在浏览器中查看该选择，您将看到其"值"属性为空。 由于我们的控制器仅筛选`if`字符串不是`null`或为空，将提交为空值`movieGenre`显示所有流派。
+参数 "All" 提供选项标签。 如果在浏览器中检查该选项，将看到其 "value" 属性为空。 由于控制器仅筛选 `if` 字符串不为 `null` 或空，因此提交的空值将 `movieGenre` 显示所有流派。
 
-此外可以设置默认情况下选择的选项。 如果您希望"喜剧"作为默认选项，则会更改控制器中的代码如下所示：
+还可以设置默认情况下选择的选项。 如果需要将 "喜剧" 作为默认选项，可以更改控制器中的代码，如下所示：
 
 [!code-cshtml[Main](adding-search/samples/sample17.cshtml)]
 
-运行应用程序，并浏览到 */Movies/Index*。 按流派、 电影名称和这两个条件，请尝试搜索。
+运行应用程序并浏览到 */Movies/Index*。 尝试按流派、电影名称和这两个条件进行搜索。
 
 ![](adding-search/_static/image8.png)
 
-在本部分中创建了搜索操作方法和视图，以让用户搜索电影标题和流派。 在下一部分中，将探讨如何将属性添加到`Movie`模型以及如何添加初始值设定项将自动创建测试数据库。
+在本部分中，你创建了一个搜索操作方法和视图，让用户按电影标题和流派进行搜索。 在下一部分中，你将了解如何将属性添加到 `Movie` 模型，以及如何添加将自动创建测试数据库的初始化表达式。
 
 > [!div class="step-by-step"]
 > [上一页](examining-the-edit-methods-and-edit-view.md)
