@@ -10,11 +10,11 @@ ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "58425270"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "86188665"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>教程：了解 MVC 5 Web 应用的高级 EF 方案
 
@@ -41,17 +41,17 @@ ms.locfileid: "58425270"
 > * 实体框架 Power Tools
 > * 实体框架源代码
 
-## <a name="prerequisite"></a>必备组件
+## <a name="prerequisite"></a>先决条件
 
 * [实现继承](implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
 ## <a name="perform-raw-sql-queries"></a>执行原始 SQL 查询
 
-实体框架 Code First API 包括使你能够将 SQL 命令直接传递到数据库的方法。 有下列选项：
+实体框架 Code First API 包括使你能够将 SQL 命令直接传递到数据库的方法。 你有以下选择：
 
-- 对于返回实体类型的查询，请使用[DbSet. SqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx)方法。 返回的对象必须是`DbSet`对象所需的类型，并且数据库上下文会自动跟踪这些对象，除非关闭跟踪。 （有关[AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx)方法，请参阅以下部分。）
+- 对于返回实体类型的查询，请使用[DbSet. SqlQuery](https://msdn.microsoft.com/library/system.data.entity.dbset.sqlquery.aspx)方法。 返回的对象必须是对象所需的类型 `DbSet` ，并且数据库上下文会自动跟踪这些对象，除非关闭跟踪。  (参见以下有关[AsNoTracking](https://msdn.microsoft.com/library/system.data.entity.dbextensions.asnotracking.aspx)方法的部分。 ) 
 - 对于返回非实体类型的查询，请使用[SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery.aspx)方法。 数据库上下文不会跟踪返回的数据，即使你使用该方法来检索实体类型也是如此。
-- 对于非查询命令，请使用[ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx) 。
+- 将[Database.ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456.aspx)用于非查询命令。
 
 使用 Entity Framework 的优点之一是它可避免你编写跟数据库过于耦合的代码 它会自动生成 SQL 查询和命令，使得你无需自行编写。 但在某些情况下，你需要运行已手动创建的特定 SQL 查询，并且这些方法使你能够处理此类异常。
 
@@ -59,13 +59,13 @@ ms.locfileid: "58425270"
 
 ### <a name="calling-a-query-that-returns-entities"></a>调用返回实体的查询
 
-`TEntity` [DbSet&lt;TEntity&gt; ](https://msdn.microsoft.com/library/gg696460.aspx)类提供一个方法，该方法可用于执行返回类型为的实体的查询。 若要查看其工作原理，请更改`Details` `Department`控制器的方法中的代码。
+[DbSet &lt; &gt; TEntity](https://msdn.microsoft.com/library/gg696460.aspx)类提供一个方法，该方法可用于执行返回类型为的实体的查询 `TEntity` 。 若要查看其工作原理，请更改控制器的方法中的代码 `Details` `Department` 。
 
-在*DepartmentController.cs*中，在`Details` `db.Departments.FindAsync`方法中，将方法调用`db.Departments.SqlQuery`替换为方法调用，如以下突出显示的代码所示：
+在*DepartmentController.cs*中，在 `Details` 方法中，将 `db.Departments.FindAsync` 方法调用替换为 `db.Departments.SqlQuery` 方法调用，如以下突出显示的代码所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample1.cs?highlight=8-14)]
 
-为了验证新代码是否正常工作，请选择“院系”选项卡，然后选择其中某一院系的“详细信息”。 确保所有数据都按预期方式显示。
+为了验证新代码是否正常工作，请选择“院系”选项卡，然后选择其中某一院系的“详细信息” 。 确保所有数据都按预期方式显示。
 
 ### <a name="calling-a-query-that-returns-other-types-of-objects"></a>调用返回其他类型对象的查询
 
@@ -75,7 +75,7 @@ ms.locfileid: "58425270"
 
 假设您要编写在 SQL 中直接检索此数据的代码，而不是使用 LINQ。 为此，您需要运行一个返回除 entity 对象之外的内容的查询，这意味着您需要使用[SqlQuery](https://msdn.microsoft.com/library/system.data.entity.database.sqlquery(v=VS.103).aspx)方法。
 
-在*HomeController.cs*中，将`About`方法中的 LINQ 语句替换为 SQL 语句，如以下突出显示的代码所示：
+在*HomeController.cs*中，将方法中的 LINQ 语句替换为 `About` SQL 语句，如以下突出显示的代码所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample3.cs?highlight=3-18)]
 
@@ -83,17 +83,17 @@ ms.locfileid: "58425270"
 
 ### <a name="calling-an-update-query"></a>调用更新查询
 
-假设 Contoso 大学管理员希望能够在数据库中执行大容量更改，如更改每个课程的信用额度。 如果该大学提供了大量课程，那么将所有课程作为实体来检索并单独更改就非常低效。 在本节中，您将实现一个网页，该网页使用户能够指定更改所有课程的信用额度的因素，并通过执行 SQL `UPDATE`语句进行更改。 
+假设 Contoso 大学管理员希望能够在数据库中执行大容量更改，如更改每个课程的信用额度。 如果该大学提供了大量课程，那么将所有课程作为实体来检索并单独更改就非常低效。 在本节中，您将实现一个网页，该网页使用户能够指定更改所有课程的信用额度的因素，并通过执行 SQL 语句进行更改 `UPDATE` 。 
 
-在*CourseController.cs*中， `UpdateCourseCredits`为`HttpGet`和`HttpPost`添加方法：
+在*CourseController.cs*中， `UpdateCourseCredits` 为和添加方法 `HttpGet` `HttpPost` ：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 
-当控制器处理`HttpGet`请求时， `ViewBag.RowsAffected`变量中将不会返回任何内容，并且该视图将显示一个空的文本框和一个提交按钮。
+当控制器处理请求时 `HttpGet` ，变量中将不会返回任何内容 `ViewBag.RowsAffected` ，并且该视图将显示一个空的文本框和一个提交按钮。
 
-`multiplier` 单击`HttpPost` "更新" 按钮时，将调用方法，并在文本框中输入值。 然后，该代码执行更新课程的 SQL，并将受影响的行数返回到`ViewBag.RowsAffected`变量中的视图。 当视图获取该变量中的值时，它将显示更新的行数，而不是文本框和提交按钮。
+单击 "**更新**" 按钮时，将 `HttpPost` 调用方法，并在 `multiplier` 文本框中输入值。 然后，该代码执行更新课程的 SQL，并将受影响的行数返回到变量中的视图 `ViewBag.RowsAffected` 。 当视图获取该变量中的值时，它将显示更新的行数，而不是文本框和提交按钮。
 
-在*CourseController.cs*中，右键单击其中一个方法`UpdateCourseCredits` ，然后单击 "**添加视图**"。 此时将显示 "**添加视图**" 对话框。 保留默认值，然后选择 "**添加**"。
+在*CourseController.cs*中，右键单击其中一个 `UpdateCourseCredits` 方法，然后单击 "**添加视图**"。 此时将显示 "**添加视图**" 对话框。 保留默认值，然后选择 "**添加**"。
 
 在*Views\Course\UpdateCourseCredits.cshtml*中，将模板代码替换为以下代码：
 
@@ -103,7 +103,7 @@ ms.locfileid: "58425270"
 
 ![Update_Course_Credits_initial_page_with_2_entered](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image1.png)
 
-单击**Update**。 你会看到受影响的行数。
+单击“更新”。 你会看到受影响的行数。
 
 单击“返回列表”可以查看课程列表，其中学分已替换为修改后的数字。
 
@@ -116,19 +116,19 @@ ms.locfileid: "58425270"
 您可以使用[AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx)方法禁用内存中实体对象的跟踪。 可能想要执行的典型方案包括以下操作：
 
 - 查询检索到关闭跟踪可能会明显提高性能的大量数据。
-- 您希望附加实体以便对其进行更新，但您之前检索到不同用途的同一实体。 由于数据库上下文已跟踪了该实体，因此无法附加要更改的实体。 解决这种情况的一种方法是将`AsNoTracking`选项与前面的查询一起使用。
+- 您希望附加实体以便对其进行更新，但您之前检索到不同用途的同一实体。 由于数据库上下文已跟踪了该实体，因此无法附加要更改的实体。 解决这种情况的一种方法是将 `AsNoTracking` 选项与前面的查询一起使用。
 
-有关演示如何使用[AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx)方法的示例，请参阅[本教程的早期版本](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md)。 此版本的教程不会在编辑方法中对已创建模型联编程序的实体设置修改标志，因此不需要`AsNoTracking`。
+有关演示如何使用[AsNoTracking](https://msdn.microsoft.com/library/gg679352(v=vs.103).aspx)方法的示例，请参阅[本教程的早期版本](../../older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application.md)。 此版本的教程不会在编辑方法中对已创建模型联编程序的实体设置修改标志，因此不需要 `AsNoTracking` 。
 
 ## <a name="examine-sql-sent-to-database"></a>检查发送到数据库的 SQL
 
 有时能够以查看发送到数据库的实际 SQL 查询对于开发者来说是很有用的。 在前面的教程中，你已了解如何在侦听器代码中执行此操作;现在，你将看到一些无需编写侦听器代码即可执行此操作的方法。 若要尝试此操作，你将看到一个简单的查询，然后在你添加预先加载、筛选和排序选项时，查看该查询所发生的情况。
 
-在 controller */CourseController*中，将`Index`方法替换为以下代码，以便暂时停止预先加载：
+在 controller */CourseController*中，将 `Index` 方法替换为以下代码，以便暂时停止预先加载：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
-现在，在`return`语句上设置一个断点（将光标置于该行上）。 按**F5**在调试模式下运行项目，然后选择 "课程索引" 页。 当代码到达断点时，检查`sql`变量。 你会看到发送到 SQL Server 的查询。 这是一个简单`Select`的语句。
+现在，在语句上设置一个断点 `return` (F9，并将光标置于该行) 上。 按**F5**在调试模式下运行项目，然后选择 "课程索引" 页。 当代码到达断点时，检查 `sql` 变量。 你会看到发送到 SQL Server 的查询。 这是一个简单的 `Select` 语句。
 
 [!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
 
@@ -136,33 +136,33 @@ ms.locfileid: "58425270"
 
 ![](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image10.png)
 
-现在，你将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载`Department`导航属性。
+现在，你将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载 `Department` 导航属性。
 
-在*CourseController.cs*中，将`Index`方法替换为以下代码：
+在*CourseController.cs*中，将 `Index` 方法替换为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 
-还原`return`语句上的断点。
+还原语句上的断点 `return` 。
 
-方法接收`SelectedDepartment`参数中下拉列表的选定值。 如果未选择任何内容，则此参数将为 null。
+方法接收参数中下拉列表的选定值 `SelectedDepartment` 。 如果未选择任何内容，则此参数将为 null。
 
-将包含所有部门的集合传递给下拉列表的视图。`SelectList` 传递给`SelectList`构造函数的参数指定值字段名称、文本字段名称和选定项。
+将 `SelectList` 包含所有部门的集合传递给下拉列表的视图。 传递给 `SelectList` 构造函数的参数指定值字段名称、文本字段名称和选定项。
 
-对于`Course`存储`Get`库的方法，代码指定筛选器表达式、排序顺序`Department`以及预先加载导航属性。 如果未在下拉列表`true`中选择任何内容（即为 null）， `SelectedDepartment`则筛选表达式始终返回。
+对于 `Get` 存储库的方法 `Course` ，代码指定筛选器表达式、排序顺序以及预先加载 `Department` 导航属性。 `true`如果未在下拉列表中选择任何内容，则筛选表达式始终返回 (即 `SelectedDepartment` 为 null) 。
 
-在*Views\Course\Index.cshtml*中，紧跟在开始`table`标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
+在*Views\Course\Index.cshtml*中，紧跟在开始 `table` 标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample9.cshtml)]
 
 仍设置断点后，运行 "课程索引" 页。 在代码第一次命中断点时继续，以便在浏览器中显示该页。 从下拉列表中选择一个部门，然后单击 "**筛选器**"。
 
-这次，第一个断点将用于下拉列表的部门查询。 跳过该操作， `query`并在下一次代码到达断点时查看变量，以便查看查询`Course`现在的外观。 你将看到如下所示的内容：
+这次，第一个断点将用于下拉列表的部门查询。 跳过该操作，并在 `query` 下一次代码到达断点时查看变量，以便查看 `Course` 查询现在的外观。 你将看到如下所示的内容：
 
 [!code-sql[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample10.sql)]
 
-您可以看到，该查询现在是一个`JOIN`查询，该`Department`查询将数据与`Course`数据一起加载，并且它包含`WHERE`一个子句。
+您可以看到，该查询现在是一个 `JOIN` 查询，该查询将 `Department` 数据与 `Course` 数据一起加载，并且它包含一个 `WHERE` 子句。
 
-`var sql = courses.ToString()`删除行。
+删除 `var sql = courses.ToString()` 行。
 
 ## <a name="create-an-abstraction-layer"></a>创建抽象层
 
@@ -182,7 +182,7 @@ ms.locfileid: "58425270"
 
 ## <a name="proxy-classes"></a>代理类
 
-当实体框架创建实体实例时（例如，在执行查询时），它通常会将其创建为作为实体代理的动态生成的派生类型的实例。 例如，请参阅以下两个调试器映像。 在第一个图像中，你会看到`student`在实例化实体`Student`后，变量是预期类型。 在第二个图中，使用 EF 从数据库中读取 student 实体后，会看到代理类。
+如果实体框架创建实体实例 (例如，在执行查询) 时，它通常会将其创建为作为实体代理的动态生成的派生类型的实例。 例如，请参阅以下两个调试器映像。 在第一个图像中，你会看到在 `student` `Student` 实例化实体后，变量是预期类型。 在第二个图中，使用 EF 从数据库中读取 student 实体后，会看到代理类。
 
 ![代理类之前](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
 
@@ -192,9 +192,9 @@ ms.locfileid: "58425270"
 
 大多数情况下，无需注意代理的这种使用，但有一些例外：
 
-- 在某些情况下，你可能想要阻止实体框架创建代理实例。 例如，在序列化实体时，通常需要 POCO 类，而不是代理类。 避免序列化问题的一种方法是序列化数据传输对象（Dto）而不是实体对象，如[使用带有实体框架的 WEB API](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md)教程中所示。 另一种方法是[禁用代理创建](https://msdn.microsoft.com/data/jj592886.aspx)。
-- 如果使用`new`运算符实例化实体类，则不会获得代理实例。 这意味着不会获得延迟加载和自动更改跟踪等功能。 这通常是正常的;通常不需要延迟加载，因为你要创建的是不在数据库中的新实体，并且如果你将实体显式标记为`Added`，则通常不需要更改跟踪。 但是，如果确实需要延迟加载并且需要更改跟踪，则可以使用`DbSet`类的[create](https://msdn.microsoft.com/library/gg679504.aspx)方法创建新的实体实例，其中包含代理。
-- 你可能需要从代理类型获取实际的实体类型。 您可以使用`ObjectContext`类的[GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx)方法来获取代理类型实例的实际实体类型。
+- 在某些情况下，你可能想要阻止实体框架创建代理实例。 例如，在序列化实体时，通常需要 POCO 类，而不是代理类。 避免序列化问题的一种方法是将数据传输对象序列化 (Dto) 而不是实体对象，如[使用带有实体框架的 WEB API](../../../../web-api/overview/data/using-web-api-with-entity-framework/part-1.md)教程中所示。 另一种方法是[禁用代理创建](https://msdn.microsoft.com/data/jj592886.aspx)。
+- 如果使用运算符实例化实体类 `new` ，则不会获得代理实例。 这意味着不会获得延迟加载和自动更改跟踪等功能。 这通常是正常的;通常不需要延迟加载，因为你要创建的是不在数据库中的新实体，并且如果你将实体显式标记为，则通常不需要更改跟踪 `Added` 。 但是，如果确实需要延迟加载并且需要更改跟踪，则可以使用类的[create](https://msdn.microsoft.com/library/gg679504.aspx)方法创建新的实体实例，其中包含代理 `DbSet` 。
+- 你可能需要从代理类型获取实际的实体类型。 您可以使用类的[GetObjectType](https://msdn.microsoft.com/library/system.data.objects.objectcontext.getobjecttype.aspx)方法 `ObjectContext` 来获取代理类型实例的实际实体类型。
 
 有关详细信息，请参阅 MSDN 上[的使用代理](https://msdn.microsoft.com/data/JJ592886.aspx)。
 
@@ -216,7 +216,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 ## <a name="automatic-validation"></a>自动验证
 
-在调用`SaveChanges`方法时，默认情况下，实体框架在更新数据库之前验证所有已更改实体的所有属性中的数据。 如果已更新大量实体，并且已验证数据，则不需要执行此操作，并且可以通过暂时关闭验证来使保存更改的过程更少。 可以使用[ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx)属性执行此操作。 有关详细信息，请参阅 MSDN 上的[验证](https://msdn.microsoft.com/data/gg193959)。
+在调用方法时 `SaveChanges` ，默认情况下，实体框架在更新数据库之前验证所有已更改实体的所有属性中的数据。 如果已更新大量实体，并且已验证数据，则不需要执行此操作，并且可以通过暂时关闭验证来使保存更改的过程更少。 可以使用[ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled.aspx)属性执行此操作。 有关详细信息，请参阅 MSDN 上的[验证](https://msdn.microsoft.com/data/gg193959)。
 
 ## <a name="entity-framework-power-tools"></a>实体框架 Power Tools
 
@@ -233,7 +233,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 ## <a name="acknowledgments"></a>鸣谢
 
 - Tom Dykstra 编写了本教程的原始版本，共同创作了 EF 5 更新，并编写了 EF 6 更新。 Tom 是 Microsoft Web 平台和工具内容团队的高级编程编写器。
-- [Rick Anderson](https://blogs.msdn.com/b/rickandy/)（twitter [@RickAndMSFT](http://twitter.com/RickAndMSFT)）大部分工作正在更新 ef 5 和 MVC 4 的教程，并共同创作了 ef 6 更新。 Rick 是 Microsoft 的高级编程编写人员，侧重于 Azure 和 MVC。
+- [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (twitter [@RickAndMSFT](http://twitter.com/RickAndMSFT)) 完成了对 EF 5 和 MVC 4 的教程的大部分工作，并共同创作了 ef 6 更新。 Rick 是 Microsoft 的高级编程编写人员，侧重于 Azure 和 MVC。
 - [Rowan 莎莎](http://www.romiller.com)和实体框架团队的其他成员协助进行代码评审，并帮助调试在我们更新 EF 5 和 ef 6 教程时出现的许多迁移问题。
 
 ## <a name="troubleshoot-common-errors"></a>常见错误疑难解答
@@ -242,7 +242,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 错误消息：
 
-> 如果文件已存在，则&lt;无法&gt;创建/卷影复制 "filename"。
+> &lt; &gt; 如果文件已存在，则无法创建/卷影复制 "filename"。
 
 解决方案
 
@@ -250,9 +250,9 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 ### <a name="update-database-not-recognized"></a>更新-无法识别数据库
 
-错误消息（来自 PMC `Update-Database`中的命令）：
+PMC) 中的命令 (的错误消息 `Update-Database` ：
 
-> 术语 "更新-数据库" 未被识别为 cmdlet、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包含路径，请验证路径是否正确，然后重试。
+> 术语 "更新-数据库" 未被识别为 cmdlet、函数、脚本文件或可运行程序的名称。 请检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。
 
 解决方案
 
@@ -260,13 +260,13 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 ### <a name="validation-failed"></a>验证失败
 
-错误消息（来自 PMC `Update-Database`中的命令）：
+PMC) 中的命令 (的错误消息 `Update-Database` ：
 
 > 对一个或多个实体的验证失败。 有关更多详细信息，请参阅 "EntityValidationErrors" 属性。
 
 解决方案
 
-此问题的一个原因是在`Seed`方法运行时出现验证错误。 有关调试`Seed`方法的提示，请参阅[播种和调试实体框架（EF）](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx)数据库。
+此问题的一个原因是在方法运行时出现验证错误 `Seed` 。 有关调试方法的提示，请参阅[播种和调试实体框架 (EF) ](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx)数据库 `Seed` 。
 
 ### <a name="http-50019-error"></a>HTTP 500.19 错误
 
@@ -282,7 +282,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 错误消息：
 
-> 建立到 SQL Server 的连接时出现与网络相关或特定于实例的错误。 未找到或无法访问服务器。 请验证实例名称是否正确，SQL Server 是否已配置为允许远程连接。 （提供程序：SQL 网络接口，错误：26 - 定位指定服务器/实例出错）
+> 建立到 SQL Server 的连接时出现与网络相关或特定于实例的错误。 找不到或无法访问服务器。 请验证实例名称是否正确，SQL Server 是否已配置为允许远程连接。 （提供程序：SQL 网络接口，错误：26 - 定位指定服务器/实例出错）
 
 解决方案
 
