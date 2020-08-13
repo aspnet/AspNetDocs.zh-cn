@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: b66e812f0324be95effdd8d232baa6a59302b9df
-ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
+ms.openlocfilehash: 58e2d62da2181108f34bbf3e1e948977241e1dee
+ms.sourcegitcommit: b3c0e67bb231dbb0db9e8dfccd51cf715481edcc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85240600"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88161352"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax 内容分发网络
 
@@ -53,20 +53,20 @@ ms.locfileid: "85240600"
  [CDN 上的 ASP.NET MVC 版本](#ASPNET_MVC_Releases_on_the_CDN_16)  
  [CDN 上的 ASP.NET SignalR](#ASPNET_SignalR_Releases_on_the_CDN_17)
 
-Microsoft Ajax 内容交付网络（CDN）承载流行的第三方 JavaScript 库（如 jQuery），使你能够轻松地将它们添加到你的 Web 应用程序。 例如，你可以开始使用在此 CDN 上托管的 jQuery，只需将 &lt; 脚本 &gt; 标记添加到指向 ajax.aspnetcdn.com 的页面即可。
+Microsoft Ajax 内容交付网络 (CDN) 托管流行的第三方 JavaScript 库（如 jQuery），并使你能够轻松地将其添加到你的 Web 应用程序。 例如，你可以开始使用在此 CDN 上托管的 jQuery，只需将 &lt; 脚本 &gt; 标记添加到指向 ajax.aspnetcdn.com 的页面即可。
 
 利用 CDN，可以显著提高 Ajax 应用程序的性能。 CDN 的内容缓存在位于世界各地的服务器上。 此外，CDN 还允许浏览器对位于不同域中的网站重用缓存的第三方 JavaScript 文件。
 
-如果需要使用安全套接字层为网页提供服务，CDN 支持 SSL （HTTPS）。
+如果需要使用安全套接字层为网页提供服务，CDN 支持 SSL (HTTPS) 。
 
 CDN 承载以下第三方脚本库，这些库已上传并由这些库的所有者授权给你：
 
-- jQuery （www.jquery.com）
-- jQuery UI （www.jqueryui.com）
-- jQuery Mobile （www.jquerymobile.com）
-- jQuery 验证（https://jqueryvalidation.org/)
-- jQuery 循环（www.malsup.com/jquery/cycle/）
-- jQuery 数据表（http://datatables.net/)
+- jQuery (www.jquery.com) 
+- jQuery UI (www.jqueryui.com) 
+- jQuery Mobile (www.jquerymobile.com) 
+- jQuery 验证 (https://jqueryvalidation.org/)
+- jQuery 循环 (www.malsup.com/jquery/cycle/) 
+- jQuery 数据表 (http://datatables.net/)
 
 Microsoft Ajax CDN 还包括以下库，这些库已由 Microsoft 上传：
 
@@ -74,9 +74,9 @@ Microsoft Ajax CDN 还包括以下库，这些库已由 Microsoft 上传：
 - ASP.NET MVC JavaScript 文件
 - ASP.NET SignalR JavaScript 文件
 
-Microsoft 不会宣称此 CDN 上托管的任何第三方库的所有权。 库的版权所有者将向你授权这些库。 你可能需要下载并使用此类库的任何权限仅由各自的版权所有者授予。 由于这些不是 Microsoft 库，Microsoft 不为此 CDN 上托管的第三方库提供任何担保或知识产权许可（包括无默示专利权限）。
+Microsoft 不会宣称此 CDN 上托管的任何第三方库的所有权。 库的版权所有者将向你授权这些库。 你可能需要下载并使用此类库的任何权限仅由各自的版权所有者授予。 由于这些不是 Microsoft 库，Microsoft 不提供任何明示或知识产权许可许可 (包括此 CDN 上托管的第三方库的任何默示专利权限) 。
 
-如果你想要提交 JavaScript 库，并且你的库是最热门的 JavaScript 库（如中所列的 http://trends.builtwith.com) 或扩展插件/插件），请访问这些库（a），或者（b）有助于在 ASP.NET 上使用，请联系 AjaxCDNSubmission@Microsoft.com 。
+如果你想要提交 JavaScript 库，并且你的库是 (如 () 流行的这些库的或扩展/插件上所示的最前面的 JavaScript 库之一 http://trends.builtwith.com) ; 或者 (b) 可用于 ASP.NET，请联系 AjaxCDNSubmission@Microsoft.com 。
 
 <a id="ajaxmicrosoftcom_renamed_to_ajaxaspnetcdncom_18"></a>
 
@@ -124,7 +124,7 @@ CDN 还包括 jQuery 脚本的缩小版本，可以使用以下元素获取该�
 
 [!code-html[Main](overview/samples/sample4.html)]
 
-下面的示例页使用 jQuery 库的 CDN 版本（回退到本地副本）在单击按钮时显示 div 元素的内容。
+下面的示例页面使用 (的 jQuery library 的 CDN 版本，并回退到本地副本) 以便在单击按钮时显示 div 元素的内容。
 
 [!code-html[Main](overview/samples/sample5.html)]
 
@@ -156,13 +156,21 @@ CDN 还承载 jQuery UI 库。 JQuery UI 库包括一组丰富的小组件和效
 
 ## <a name="third-party-files-on-the-cdn"></a>CDN 上的第三方文件
 
-CDN 承载一些最常用的第三方 JavaScript 库。 Microsoft 不会宣称此 CDN 上托管的任何第三方库的所有权。 库的版权所有者将向你授权这些库。 你可能需要下载并使用此类库的任何权限仅由各自的版权所有者授予。 由于这些不是 Microsoft 库，Microsoft 不为此 CDN 上托管的第三方库提供任何担保或知识产权许可（包括无默示专利权限）。
+CDN 承载一些最常用的第三方 JavaScript 库。 Microsoft 不会宣称此 CDN 上托管的任何第三方库的所有权。 库的版权所有者将向你授权这些库。 你可能需要下载并使用此类库的任何权限仅由各自的版权所有者授予。 由于这些不是 Microsoft 库，Microsoft 不提供任何明示或知识产权许可许可 (包括此 CDN 上托管的第三方库的任何默示专利权限) 。
 
 <a id="jQuery_Releases_on_the_CDN_0"></a>
 
 ### <a name="jquery-releases-on-the-cdn"></a>CDN 上的 jQuery 版本
 
 以下版本的 jQuery 在 CDN 上托管：
+
+#### <a name="jquery-version-351"></a>jQuery 版本3.5。1
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.map
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.map
 
 #### <a name="jquery-version-350"></a>jQuery 版本3.5。0
 - https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js
@@ -686,7 +694,7 @@ jQuery 迁移版本1.2。0
 
 此 CDN 上承载了以下版本的 jQuery 循环插件。 单击每个链接以查看文件的实际列表。
 
-- [jQuery 循环2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
+- [jQuery Cycle 2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
 - [jQuery Cycle 2.94](jquery-cycle/cdnjquerycycle294.md "jQuery Cycle 2.94")
 - [jQuery Cycle 2.88](jquery-cycle/cdnjquerycycle288.md "jQuery Cycle 2.88")
 
@@ -702,7 +710,7 @@ jQuery 迁移版本1.2。0
 - [jQuery DataTables 1.9.3](jquery-datatables/cdnjquerydatatables193.md "jQuery DataTables 1.9.3")
 - [jQuery DataTables 1.9.2](jquery-datatables/cdnjquerydatatables192.md "jQuery DataTables 1.9.2")
 - [jQuery DataTables 1.9.1](jquery-datatables/cdnjquerydatatables191.md "jQuery DataTables 1.9.1")
-- [jQuery 数据表1.9。0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
+- [jQuery DataTables 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
 - [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md "jQuery DataTables 1.8.2")
 
 <a id="Modernizr_Releases_on_the_CDN_8"></a>
