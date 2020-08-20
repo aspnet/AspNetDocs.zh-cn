@@ -9,10 +9,10 @@ ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: f8f079f6d8ea663c6888456be422a2bae93a4b87
-ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
+ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 08/20/2020
 ms.locfileid: "86163421"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>MVC Web 应用程序的高级实体框架方案 (10 个) 
@@ -21,11 +21,11 @@ ms.locfileid: "86163421"
 
 [下载完成的项目](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
 
-> Contoso 大学示例 web 应用程序演示了如何使用实体框架 5 Code First 和 Visual Studio 2012 创建 ASP.NET MVC 4 应用程序。 若要了解教程系列，请参阅[本系列中的第一个教程](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)。 你可以从头开始学习本系列教程，也可以从此处[下载入门项目](building-the-ef5-mvc4-chapter-downloads.md)。
+> Contoso 大学示例 web 应用程序演示了如何使用实体框架 5 Code First 和 Visual Studio 2012 创建 ASP.NET MVC 4 应用程序。 若要了解教程系列，请参阅[本系列中的第一个教程](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)。 你可以从头开始学习本系列教程，也可以从此处 [下载入门项目](building-the-ef5-mvc4-chapter-downloads.md) 。
 > 
 > > [!NOTE] 
 > > 
-> > 如果遇到无法解决的问题，请[下载已完成的章节](building-the-ef5-mvc4-chapter-downloads.md)并尝试重现你的问题。 通常可以通过将代码与已完成的代码进行比较，查找问题的解决方案。 有关一些常见错误以及如何解决这些错误，请参阅[错误和解决方法。](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
+> > 如果遇到无法解决的问题，请 [下载已完成的章节](building-the-ef5-mvc4-chapter-downloads.md) 并尝试重现你的问题。 通常可以通过将代码与已完成的代码进行比较，查找问题的解决方案。 有关一些常见错误以及如何解决这些错误，请参阅 [错误和解决方法。](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
 
 在上一教程中，你已实现了存储库和工作单元模式。 本教程包括以下主题：
 
@@ -51,7 +51,7 @@ ms.locfileid: "86163421"
 
 - 使用`DbSet.SqlQuery`返回实体类型的查询方法。 返回的对象必须是对象所需的类型 `DbSet` ，并且数据库上下文会自动跟踪这些对象，除非关闭跟踪。  (参见以下有关方法的部分 `AsNoTracking` 。 ) 
 - `Database.SqlQuery`对于返回非实体类型的查询，请使用方法。 数据库上下文不会跟踪返回的数据，即使你使用该方法来检索实体类型也是如此。
-- 将[Database.ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456(v=vs.103).aspx)用于非查询命令。
+- 将 [Database.ExecuteSqlCommand](https://msdn.microsoft.com/library/gg679456(v=vs.103).aspx) 用于非查询命令。
 
 使用 Entity Framework 的优点之一是它可避免你编写跟数据库过于耦合的代码 它会自动生成 SQL 查询和命令，使得你无需自行编写。 但在某些情况下，你需要运行已手动创建的特定 SQL 查询，并且这些方法使你能够处理此类异常。
 
@@ -65,25 +65,25 @@ ms.locfileid: "86163421"
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample1.cs)]
 
-在*CourseController.cs*中，从方法调用新方法 `Details` ，如以下示例中所示：
+在 *CourseController.cs*中，从方法调用新方法 `Details` ，如以下示例中所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample2.cs)]
 
 在这种情况下，您可以使用 `GetByID` 方法，但使用 `GetWithRawSql` 方法来验证 `GetWithRawSQL` 方法是否有效。
 
-运行 "详细信息" 页，验证 "选择查询是否有效" (选择 "**课程**" 选项卡，然后选择一个课程) 的**详细信息**。
+运行 "详细信息" 页，验证 "选择查询是否有效" (选择 " **课程** " 选项卡，然后选择一个课程) 的 **详细信息** 。
 
 ![Course_Details_page](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image3.png)
 
 ### <a name="calling-a-query-that-returns-other-types-of-objects"></a>调用返回其他类型对象的查询
 
-之前你在“关于”页面创建了一个学生统计信息网格，显示每个注册日期的学生数量。 在*HomeController.cs*中执行此操作的代码使用 LINQ：
+之前你在“关于”页面创建了一个学生统计信息网格，显示每个注册日期的学生数量。 在 *HomeController.cs* 中执行此操作的代码使用 LINQ：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample3.cs)]
 
 假设您要编写在 SQL 中直接检索此数据的代码，而不是使用 LINQ。 为此，您需要运行一个返回除 entity 对象之外的内容的查询，这意味着您需要使用 `Database.SqlQuery` 方法。
 
-在*HomeController.cs*中，将方法中的 LINQ 语句替换 `About` 为以下代码：
+在 *HomeController.cs*中，将方法中的 LINQ 语句替换 `About` 为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 
@@ -99,31 +99,31 @@ ms.locfileid: "86163421"
 
 在上一教程中，你使用了通用存储库来读取和更新 `Course` 控制器中的实体 `Course` 。 对于此大容量更新操作，需要创建不在通用存储库中的新存储库方法。 为此，你将创建一个 `CourseRepository` 派生自类的专用类 `GenericRepository` 。
 
-在*DAL*文件夹中，创建*CourseRepository.cs* ，并将现有代码替换为以下代码：
+在 *DAL* 文件夹中，创建 *CourseRepository.cs* ，并将现有代码替换为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample5.cs)]
 
-在*UnitOfWork.cs*中，将 `Course` 存储库类型从更改 `GenericRepository<Course>` 为`CourseRepository:`
+在 *UnitOfWork.cs*中，将 `Course` 存储库类型从更改 `GenericRepository<Course>` 为 `CourseRepository:`
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.cs)]
 
-在*CourseController.cs*中，添加 `UpdateCourseCredits` 方法：
+在 *CourseController.cs*中，添加 `UpdateCourseCredits` 方法：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 
 此方法将用于 `HttpGet` 和 `HttpPost` 。 当该 `HttpGet` `UpdateCourseCredits` 方法运行时， `multiplier` 变量将为 null，并且该视图将显示一个空文本框和一个提交按钮，如上图所示。
 
-单击 "**更新**" 按钮并运行该 `HttpPost` 方法时， `multiplier` 会在文本框中输入值。 然后，该代码调用存储库 `UpdateCourseCredits` 方法，该方法返回受影响的行数，该值存储在对象中 `ViewBag` 。 当视图接收到对象中受影响的行数时 `ViewBag` ，它将显示该数字，而不是文本框和提交按钮，如下图所示：
+单击 " **更新** " 按钮并运行该 `HttpPost` 方法时， `multiplier` 会在文本框中输入值。 然后，该代码调用存储库 `UpdateCourseCredits` 方法，该方法返回受影响的行数，该值存储在对象中 `ViewBag` 。 当视图接收到对象中受影响的行数时 `ViewBag` ，它将显示该数字，而不是文本框和提交按钮，如下图所示：
 
 ![Update_Course_Credits_rows_affected_page](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image6.png)
 
-在 "更新课程信用额度" 页的*Views\Course*文件夹中创建视图：
+在 "更新课程信用额度" 页的 *Views\Course* 文件夹中创建视图：
 
 ![Add_View_dialog_box_for_Update_Course_Credits](https://asp.net/media/2578203/Windows-Live-Writer_Advanced-Entity-Framework-Scenarios-for-_CEF8_Add_View_dialog_box_for_Update_Course_Credits.png)
 
-在*Views\Course\UpdateCourseCredits.cshtml*中，将模板代码替换为以下代码：
+在 *Views\Course\UpdateCourseCredits.cshtml*中，将模板代码替换为以下代码：
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample9.cshtml)]
 
@@ -139,7 +139,7 @@ ms.locfileid: "86163421"
 
 ![Courses_Index_page_showing_revised_credits](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image9.png)
 
-有关原始 SQL 查询的详细信息，请参阅实体框架团队博客上的[原始 Sql 查询](https://blogs.msdn.com/b/adonet/archive/2011/02/04/using-dbcontext-in-ef-feature-ctp5-part-10-raw-sql-queries.aspx)。
+有关原始 SQL 查询的详细信息，请参阅实体框架团队博客上的 [原始 Sql 查询](https://blogs.msdn.com/b/adonet/archive/2011/02/04/using-dbcontext-in-ef-feature-ctp5-part-10-raw-sql-queries.aspx) 。
 
 ## <a name="no-tracking-queries"></a>非跟踪查询
 
@@ -152,7 +152,7 @@ ms.locfileid: "86163421"
 
 在本部分中，你将实现用于阐释其中第二种情况的业务逻辑。 具体来说，您将强制实施一条业务规则，指出讲师不能是多个部门的管理员。
 
-在*DepartmentController.cs*中，添加一个可从和方法调用的新方法， `Edit` `Create` 以确保没有两个部门具有相同的管理员：
+在 *DepartmentController.cs*中，添加一个可从和方法调用的新方法， `Edit` `Create` 以确保没有两个部门具有相同的管理员：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample10.cs)]
 
@@ -164,7 +164,7 @@ ms.locfileid: "86163421"
 
 ![Department_Edit_page_with_duplicate_administrator_error_message](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image10.png)
 
-现在再次运行 "部门编辑" 页，此时更改**预算**金额。 单击 "**保存**" 时，会看到错误页：
+现在再次运行 "部门编辑" 页，此时更改 **预算** 金额。 单击 " **保存**" 时，会看到错误页：
 
 ![Department_Edit_page_with_object_state_manager_error_message](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image11.png)
 
@@ -175,11 +175,11 @@ ms.locfileid: "86163421"
 
 此问题的一种解决方法是使上下文不会跟踪由验证查询检索到的内存中部门实体。 执行此操作没有任何缺点，因为你不会更新此实体，也不会以一种可从其缓存在内存中的方式对其进行读取。
 
-在*DepartmentController.cs*的方法中， `ValidateOneAdministratorAssignmentPerInstructor` 指定 no 跟踪，如下所示：
+在 *DepartmentController.cs*的方法中， `ValidateOneAdministratorAssignmentPerInstructor` 指定 no 跟踪，如下所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample12.cs?highlight=4)]
 
-重复尝试编辑部门的**预算**金额。 此操作成功后，站点会按预期方式返回到 "部门索引" 页，其中显示了修改后的预算值。
+重复尝试编辑部门的 **预算** 金额。 此操作成功后，站点会按预期方式返回到 "部门索引" 页，其中显示了修改后的预算值。
 
 ## <a name="examining-queries-sent-to-the-database"></a>检查发送到数据库的查询
 
@@ -189,7 +189,7 @@ ms.locfileid: "86163421"
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample13.cs?highlight=3)]
 
-现在，在的*GenericRepository.cs*中设置一个断点，并在方法的语句上设置一个断点 `return query.ToList();` `return orderBy(query).ToList();` `Get` 。 在调试模式下运行项目，然后选择 "课程索引" 页。 当代码到达断点时，检查 `query` 变量。 你会看到发送到 SQL Server 的查询。 这是一个简单的 `Select` 语句：
+现在，在的 *GenericRepository.cs* 中设置一个断点，并在方法的语句上设置一个断点 `return query.ToList();` `return orderBy(query).ToList();` `Get` 。 在调试模式下运行项目，然后选择 "课程索引" 页。 当代码到达断点时，检查 `query` 变量。 你会看到发送到 SQL Server 的查询。 这是一个简单的 `Select` 语句：
 
 [!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample14.json)]
 
@@ -199,7 +199,7 @@ ms.locfileid: "86163421"
 
 ![Copy_value_of_variable_in_debug_mode](https://asp.net/media/2578239/Windows-Live-Writer_Advanced-Entity-Framework-Scenarios-for-_CEF8_Copy_value_of_variable_in_debug_mode_0902a2b1-b799-47a6-9b4b-f266c79d83c1.png)
 
-现在，您将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载 `Department` 导航属性。 在*CourseController.cs*中，将 `Index` 方法替换为以下代码：
+现在，您将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载 `Department` 导航属性。 在 *CourseController.cs*中，将 `Index` 方法替换为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample15.cs)]
 
@@ -209,11 +209,11 @@ ms.locfileid: "86163421"
 
 对于 `Get` 存储库的方法 `Course` ，代码指定筛选器表达式、排序顺序以及预先加载 `Department` 导航属性。 `true`如果未在下拉列表中选择任何内容，则筛选表达式始终返回 (即 `SelectedDepartment` 为 null) 。
 
-在*Views\Course\Index.cshtml*中，紧跟在开始 `table` 标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
+在 *Views\Course\Index.cshtml*中，紧跟在开始 `table` 标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample16.cshtml)]
 
-在类中仍设置断点的情况 `GenericRepository` 下，运行 "课程索引" 页。 继续执行第两次：代码命中断点，以便在浏览器中显示该页。 从下拉列表中选择一个部门，然后单击 "**筛选器**"：
+在类中仍设置断点的情况 `GenericRepository` 下，运行 "课程索引" 页。 继续执行第两次：代码命中断点，以便在浏览器中显示该页。 从下拉列表中选择一个部门，然后单击 " **筛选器**"：
 
 ![Course_Index_page_with_department_selected](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image13.png)
 
@@ -235,7 +235,7 @@ ms.locfileid: "86163421"
 - 如果使用运算符实例化实体类 `new` ，则不会获得代理实例。 这意味着不会获得延迟加载和自动更改跟踪等功能。 这通常是正常的;通常不需要延迟加载，因为你要创建的是不在数据库中的新实体，并且如果你将实体显式标记为，则通常不需要更改跟踪 `Added` 。 但是，如果确实需要延迟加载并且需要更改跟踪，则可以使用类的方法通过代理创建新的实体实例 `Create` `DbSet` 。
 - 你可能需要从代理类型获取实际的实体类型。 您可以使用 `GetObjectType` 类的方法 `ObjectContext` 来获取代理类型实例的实际实体类型。
 
-有关详细信息，请参阅在实体框架团队博客上使用[代理](https://blogs.msdn.com/b/adonet/archive/2011/02/02/using-dbcontext-in-ef-feature-ctp5-part-8-working-with-proxies.aspx)。
+有关详细信息，请参阅在实体框架团队博客上使用 [代理](https://blogs.msdn.com/b/adonet/archive/2011/02/02/using-dbcontext-in-ef-feature-ctp5-part-8-working-with-proxies.aspx) 。
 
 ## <a name="disabling-automatic-detection-of-changes"></a>禁用更改的自动检测
 
@@ -251,27 +251,27 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 - `DbContext.Entry`
 - `DbChangeTracker.Entries`
 
-如果正在跟踪大量实体，并且在循环中多次调用这些方法之一，则使用[AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled(VS.103).aspx)属性暂时关闭自动更改检测可能会显著提高性能。 有关详细信息，请参阅[自动检测更改](https://blogs.msdn.com/b/adonet/archive/2011/02/06/using-dbcontext-in-ef-feature-ctp5-part-12-automatically-detecting-changes.aspx)。
+如果正在跟踪大量实体，并且在循环中多次调用这些方法之一，则使用 [AutoDetectChangesEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.autodetectchangesenabled(VS.103).aspx) 属性暂时关闭自动更改检测可能会显著提高性能。 有关详细信息，请参阅 [自动检测更改](https://blogs.msdn.com/b/adonet/archive/2011/02/06/using-dbcontext-in-ef-feature-ctp5-part-12-automatically-detecting-changes.aspx)。
 
 ## <a name="disabling-validation-when-saving-changes"></a>保存更改时禁用验证
 
-在调用方法时 `SaveChanges` ，默认情况下，实体框架在更新数据库之前验证所有已更改实体的所有属性中的数据。 如果已更新大量实体，并且已验证数据，则不需要执行此操作，并且可以通过暂时关闭验证来使保存更改的过程更少。 可以使用[ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled(VS.103).aspx)属性执行此操作。 有关详细信息，请参阅[验证](https://blogs.msdn.com/b/adonet/archive/2010/12/15/ef-feature-ctp5-validation.aspx)。
+在调用方法时 `SaveChanges` ，默认情况下，实体框架在更新数据库之前验证所有已更改实体的所有属性中的数据。 如果已更新大量实体，并且已验证数据，则不需要执行此操作，并且可以通过暂时关闭验证来使保存更改的过程更少。 可以使用 [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled(VS.103).aspx) 属性执行此操作。 有关详细信息，请参阅 [验证](https://blogs.msdn.com/b/adonet/archive/2010/12/15/ef-feature-ctp5-validation.aspx)。
 
 ## <a name="summary"></a>摘要
 
-这将完成本系列教程，介绍如何在 ASP.NET MVC 应用程序中使用实体框架。 可在[ASP.NET 数据访问内容映射](../../../../whitepapers/aspnet-data-access-content-map.md)中找到指向其他实体框架资源的链接。
+这将完成本系列教程，介绍如何在 ASP.NET MVC 应用程序中使用实体框架。 可在 [ASP.NET 数据访问内容映射](../../../../whitepapers/aspnet-data-access-content-map.md)中找到指向其他实体框架资源的链接。
 
-有关如何在生成 web 应用程序后对其进行部署的详细信息，请参阅 MSDN Library 中的[ASP.NET 部署内容映射](https://msdn.microsoft.com/library/bb386521.aspx)。
+有关如何在生成 web 应用程序后对其进行部署的详细信息，请参阅 MSDN Library 中的 [ASP.NET 部署内容映射](https://msdn.microsoft.com/library/bb386521.aspx) 。
 
-有关与 MVC 相关的其他主题（如身份验证和授权）的信息，请参阅[Mvc 推荐资源](../../getting-started/recommended-resources-for-mvc.md)。
+有关与 MVC 相关的其他主题（如身份验证和授权）的信息，请参阅 [Mvc 推荐资源](../../getting-started/recommended-resources-for-mvc.md)。
 
 <a id="acknowledgments"></a>
 
-## <a name="acknowledgments"></a>鸣谢
+## <a name="acknowledgments"></a>致谢
 
 - Tom Dykstra 编写了本教程的原始版本，它是 Microsoft Web 平台和工具内容团队的高级编程编写者。
 - [Rick Anderson](https://blogs.msdn.com/b/rickandy/) (twitter [@RickAndMSFT](http://twitter.com/RickAndMSFT)) 共同创作此教程，并为 EF 5 和 MVC 4 更新了大部分工作。 Rick 是 Microsoft 的高级编程编写人员，侧重于 Azure 和 MVC。
-- [Rowan 莎莎](http://www.romiller.com)和实体框架团队的其他成员协助进行代码评审，并帮助调试在我们更新 EF 5 的教程时出现的许多迁移问题。
+- [Rowan 莎莎](http://www.romiller.com) 和实体框架团队的其他成员协助进行代码评审，并帮助调试在我们更新 EF 5 的教程时出现的许多迁移问题。
 
 ## <a name="vb"></a>VB
 
@@ -309,7 +309,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 解决方案：
 
-此问题的一个原因是在方法运行时出现验证错误 `Seed` 。 有关调试方法的提示，请参阅[播种和调试实体框架 (EF) ](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx)数据库 `Seed` 。
+此问题的一个原因是在方法运行时出现验证错误 `Seed` 。 有关调试方法的提示，请参阅 [播种和调试实体框架 (EF) ](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) 数据库 `Seed` 。
 
 ### <a name="http-50019-error"></a>HTTP 500.19 错误
 
@@ -319,7 +319,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 解决方案：
 
-获取此错误的一种方法是使用解决方案的多个副本，每个副本使用相同的端口号。 通常可以通过退出 Visual Studio 的所有实例，然后重新启动正在处理的项目，来解决此问题。 如果这不起作用，请尝试更改端口号。 右键单击项目文件，然后单击 "属性"。 选择 " **Web** " 选项卡，然后在 "**项目 Url** " 文本框中更改端口号。
+获取此错误的一种方法是使用解决方案的多个副本，每个副本使用相同的端口号。 通常可以通过退出 Visual Studio 的所有实例，然后重新启动正在处理的项目，来解决此问题。 如果这不起作用，请尝试更改端口号。 右键单击项目文件，然后单击 "属性"。 选择 " **Web** " 选项卡，然后在 " **项目 Url** " 文本框中更改端口号。
 
 ### <a name="error-locating-sql-server-instance"></a>定位 SQL Server 实例出错
 
