@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 58e2d62da2181108f34bbf3e1e948977241e1dee
-ms.sourcegitcommit: b3c0e67bb231dbb0db9e8dfccd51cf715481edcc
+ms.openlocfilehash: 9eebe0e52af2a0fca967a51afb58c7db174d9fdb
+ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161352"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88702915"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax 内容分发网络
 
@@ -22,7 +22,7 @@ ms.locfileid: "88161352"
 >
 > Microsoft Ajax CDN 不会使用 Azure CDN。
 >
-> 使用[此 GitHub 问题](https://github.com/dotnet/AspNetDocs/issues/116)可报告 MICROSOFT Ajax CDN 的问题。
+> 使用 [此 GitHub 问题](https://github.com/dotnet/AspNetDocs/issues/116) 可报告 MICROSOFT Ajax CDN 的问题。
 
 ## <a name="table-of-contents"></a>目录
 
@@ -48,7 +48,7 @@ ms.locfileid: "88161352"
  [在 CDN 上响应发布](#Respond_Releases_on_the_CDN_13)  
  [CDN 上的启动版本](#Bootstrap_Releases_on_the_CDN_14)  
  [CDN 上的启动 TouchCarousel 版本](#BootstrapTouchCarousel_Releases_on_the_CDN_18)  
- [CDN 上的Hammer.js 版本](#Hammerjs_Releases_on_the_CDN_19)  
+ [ CDN 上的Hammer.js 版本](#Hammerjs_Releases_on_the_CDN_19)  
  [CDN 上的 ASP.NET Web 窗体和 Ajax 版本](#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15)  
  [CDN 上的 ASP.NET MVC 版本](#ASPNET_MVC_Releases_on_the_CDN_16)  
  [CDN 上的 ASP.NET SignalR](#ASPNET_SignalR_Releases_on_the_CDN_17)
@@ -84,8 +84,8 @@ Microsoft 不会宣称此 CDN 上托管的任何第三方库的所有权。 库�
 
 用于使用 microsoft.com 域名并且已更改为使用 aspnetcdn.com 域名的 CDN。 进行此更改是为了提高性能，因为当浏览器引用 microsoft.com 域时，它会在每个请求的网络中从该域发送任何 cookie。 通过重命名为 microsoft.com 以外的域名，可以将最多增加25%。 请注意，ajax.microsoft.com 将继续运行，但建议使用 ajax.aspnetcdn.com。
 
-- 旧格式：https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
-- 新格式：https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
+- 旧格式： https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
+- 新格式： https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
 
 <a id="Visual_Studio_vsdoc_Support_19"></a>
 
@@ -128,7 +128,7 @@ CDN 还包括 jQuery 脚本的缩小版本，可以使用以下元素获取该�
 
 [!code-html[Main](overview/samples/sample5.html)]
 
-可以通过访问[jquery](http://jquery.com/)网站来了解有关 jquery 的详细信息并下载 jquery 的本地副本。
+可以通过访问 [jquery](http://jquery.com/) 网站来了解有关 jquery 的详细信息并下载 jquery 的本地副本。
 
 <a id="Using_jQuery_UI_from_the_CDN_22"></a>
 
@@ -148,9 +148,9 @@ CDN 还承载 jQuery UI 库。 JQuery UI 库包括一组丰富的小组件和效
 - JQuery ui 库 &mdash; JQUERY ui library 包含所有 JQUERY ui 效果和小组件，例如上一页中使用的 Datepicker 小组件。
 - Jquery UI 主题 &mdash; JQUERY ui 支持不同的主题。 上述页面包含指向用于导入 Redmond 主题的 CSS 文件的链接。
 
-所有标准 jQuery UI 主题都在 CDN 上托管。 [访问此页](jquery-ui/cdnjqueryui1910.md "Microsoft Ajax CDN 的 jQuery UI 1.8.10")可查看每个主题的缩略图。
+所有标准 jQuery UI 主题都在 CDN 上托管。 [访问此页](jquery-ui/cdnjqueryui1910.md "Microsoft Ajax CDN 的 jQuery UI 1.8.10") 可查看每个主题的缩略图。
 
-若要了解有关 jQuery UI 库的详细信息，请访问官方[JQUERY ui 网站](http://jQueryUI.com "jQuery UI 网站")。
+若要了解有关 jQuery UI 库的详细信息，请访问官方 [JQUERY ui 网站](http://jQueryUI.com "jQuery UI 网站")。
 
 <a id="Third-Party_Files_on_the_CDN_23"></a>
 
@@ -633,7 +633,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="jquery-validation-releases-on-the-cdn"></a>CDN 上的 jQuery 验证版本
 
-此 CDN 上承载了以下版本的[JQuery 验证](https://jqueryvalidation.org/ "jQuery 验证插件")插件。 单击每个链接以查看文件的实际列表。
+此 CDN 上承载了以下版本的 [JQuery 验证](https://jqueryvalidation.org/ "jQuery 验证插件") 插件。 单击每个链接以查看文件的实际列表。
 
 - [jQuery 验证1.19。2](jquery-validate/cdnjqueryvalidate1192.md "jQuery 验证1.19。2")
 - [jQuery 验证1.19。1](jquery-validate/cdnjqueryvalidate1191.md "jQuery 验证1.19。1")
@@ -717,7 +717,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="modernizr-releases-on-the-cdn"></a>CDN 上的 Modernizr 版本
 
-以下版本的[Modernizr](http://www.modernizr.com "Modernizr")托管在 CDN 上：
+以下版本的 [Modernizr](http://www.modernizr.com "Modernizr") 托管在 CDN 上：
 
 - https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-3.5.0.js
 - https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js
@@ -731,7 +731,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="jshint-releases-on-the-cdn"></a>CDN 上的 JSHint 版本
 
-以下版本的[JSHint](http://www.jshint.com "JSHint")托管在 CDN 上：
+以下版本的 [JSHint](http://www.jshint.com "JSHint") 托管在 CDN 上：
 
 - https://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js
 
@@ -739,7 +739,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="knockout-releases-on-the-cdn"></a>CDN 上的挖空版本
 
-以下版本的[挖空](http://www.knockoutjs.com "拆装")在 CDN 上托管：
+以下版本的 [挖空](http://www.knockoutjs.com "拆装") 在 CDN 上托管：
 
 - https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js
 - https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.debug.js
@@ -766,7 +766,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="globalize-releases-on-the-cdn"></a>CDN 上的全球化版本
 
-在 CDN 上托管以下版本的[全球](https://github.com/jquery/globalize "全球化")化：
+在 CDN 上托管以下版本的 [全球](https://github.com/jquery/globalize "全球化") 化：
 
 #### <a name="globalize-version-100"></a>全球化版本1.0。0
 
@@ -794,7 +794,7 @@ jQuery 迁移版本1.2。0
 
 ### <a name="respond-releases-on-the-cdn"></a>在 CDN 上响应发布
 
-以下版本的[响应](https://github.com/scottjehl/Respond "响应")在 CDN 上托管：
+以下版本的 [响应](https://github.com/scottjehl/Respond "响应") 在 CDN 上托管：
 
 #### <a name="respond-version-142"></a>响应版本1.4。2
 
@@ -829,7 +829,22 @@ jQuery 迁移版本1.2。0
 
 ### <a name="bootstrap-releases-on-the-cdn"></a>CDN 上的启动版本
 
-以下版本的[getbootstrap.com](http://getbootstrap.com "getbootstrap.com")启动在 CDN 上托管：
+以下版本的 [getbootstrap.com](http://getbootstrap.com "getbootstrap.com") 启动在 CDN 上托管：
+
+#### <a name="bootstrap-version-452"></a>启动版本4.5。2
+
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.min.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/bootstrap.bundle.js
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.css.map
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-grid.css.map
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.min.css
+- https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.2/css/bootstrap-reboot.css.map
 
 #### <a name="bootstrap-version-450"></a>启动版本4.5。0
 
@@ -1335,4 +1350,4 @@ jQuery 迁移版本1.2。0
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.0.1.min.js
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.0.1.js
 
-有关 CDN 使用条款的信息，请参阅[Microsoft AJAX CDN 使用条款](https://www.asp.net/terms-of-use "Microsoft Ajax CDN 使用条款")。
+有关 CDN 使用条款的信息，请参阅 [Microsoft AJAX CDN 使用条款](https://www.asp.net/terms-of-use "Microsoft Ajax CDN 使用条款")。
