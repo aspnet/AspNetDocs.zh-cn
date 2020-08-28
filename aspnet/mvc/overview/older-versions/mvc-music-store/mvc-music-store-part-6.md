@@ -2,20 +2,20 @@
 uid: mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 title: 第6部分：使用数据批注进行模型验证 |Microsoft Docs
 author: jongalloway
-description: 本教程系列详细介绍了生成 ASP.NET MVC 音乐应用商店示例应用程序所需执行的所有步骤。 第6部分介绍如何对模型 V 使用数据批注 。
+description: 本教程系列详细介绍了生成 ASP.NET MVC 音乐应用商店示例应用程序所需执行的所有步骤。 第6部分介绍如何对模型 V 使用数据批注 .。。
 ms.author: riande
 ms.date: 04/21/2011
 ms.assetid: b3193d33-2d0b-4d98-9712-58bd897c62ec
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: bc031dd5be61cc6707c522f85f6af77a420c8b31
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 24d3f028a9a720e5b526518624c9c1c2ce2c37d4
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78433532"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044943"
 ---
-# <a name="part-6-using-data-annotations-for-model-validation"></a>第6部分：使用数据批注进行模型验证
+# <a name="part-6-using-data-annotations-for-model-validation"></a>第 6 部分：使用数据注释进行模型验证
 
 作者： [Jon Galloway](https://github.com/jongalloway)
 
@@ -33,16 +33,16 @@ ms.locfileid: "78433532"
 
 我们将使用以下数据批注属性：
 
-- **必需**–指示属性是必填字段
+- **必需** –指示属性是必填字段
 - **DisplayName** –定义要用于窗体字段和验证消息的文本
 - **StringLength** –定义字符串字段的最大长度
-- **范围**–为数值字段提供最大值和最小值
-- **绑定**–在将参数或窗体值绑定到模型属性时列出要排除或包含的字段
+- **范围** –为数值字段提供最大值和最小值
+- **绑定** –在将参数或窗体值绑定到模型属性时列出要排除或包含的字段
 - **ScaffoldColumn** –允许从编辑器窗体中隐藏字段
 
-*注意：有关使用数据批注属性进行模型验证的详细信息，请参阅 MSDN 文档，网址*为[`https://go.microsoft.com/fwlink/?LinkId=159063`](https://go.microsoft.com/fwlink/?LinkId=159063)
+*注意：有关使用数据批注属性进行模型验证的详细信息，请参阅 MSDN 文档，网址为*[`https://go.microsoft.com/fwlink/?LinkId=159063`](https://go.microsoft.com/fwlink/?LinkId=159063)
 
-打开唱片集类并向顶部添加以下*using*语句。
+打开唱片集类并向顶部添加以下 *using* 语句。
 
 [!code-csharp[Main](mvc-music-store-part-6/samples/sample1.cs)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "78433532"
 
 [!code-csharp[Main](mvc-music-store-part-6/samples/sample3.cs)]
 
-将这些属性添加到唱集模型后，我们的 "创建和编辑" 屏幕会立即开始验证字段并使用所选的显示名称（例如唱片集画面 Url 而不是 AlbumArtUrl）。 运行应用程序并浏览到/StoreManager/Create。
+将这些属性添加到唱集模型后，我们的 "创建和编辑" 屏幕会立即开始验证字段并使用所选的显示名称 (例如唱片集画面 Url 而不是 AlbumArtUrl) 。 运行应用程序并浏览到/StoreManager/Create。
 
 ![](mvc-music-store-part-6/_static/image1.png)
 

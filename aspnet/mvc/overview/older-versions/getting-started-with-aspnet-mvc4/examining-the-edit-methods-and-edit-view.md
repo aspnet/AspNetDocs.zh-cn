@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 41eb99ca-e88f-4720-ae6d-49a958da8116
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 85ad9a5758d70b5fe4ed792efb80217d7b3e2132
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 16ce02ba00e13b4cff2d6e86b2d9e0684aab096e
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86162944"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044514"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>检查 Edit 方法和编辑视图
 
@@ -24,7 +24,7 @@ ms.locfileid: "86162944"
 
 在本部分中，你将检查电影控制器的生成的操作方法和视图。 然后，将添加自定义搜索页面。
 
-运行应用程序，并通过将 `Movies` */Movies*追加到浏览器地址栏中的 URL 来浏览到控制器。 将鼠标指针停留在**编辑**链接上可查看它所链接到的 URL。
+运行应用程序，并通过将 `Movies` */Movies* 追加到浏览器地址栏中的 URL 来浏览到控制器。 将鼠标指针停留在 **编辑** 链接上可查看它所链接到的 URL。
 
 ![EditLink_sm](examining-the-edit-methods-and-edit-view/_static/image1.png)
 
@@ -34,9 +34,9 @@ ms.locfileid: "86162944"
 
 ![Html.actionlink](examining-the-edit-methods-and-edit-view/_static/image2.png)
 
-`Html`对象是一个使用[WebViewPage](https://msdn.microsoft.com/library/gg402107(VS.98).aspx)基类上的属性公开的帮助器。 `ActionLink`利用帮助器的方法，可以轻松地动态生成链接到控制器操作方法的 HTML 超链接。 方法的第一个参数 `ActionLink` 是要呈现的链接文本 (例如 `<a>Edit Me</a>`) 。 第二个参数是要调用的操作方法的名称。 最后一个自变量是在此示例中生成路由数据 (的[匿名对象](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx)，ID 为 4) 。
+`Html`对象是一个使用[WebViewPage](https://msdn.microsoft.com/library/gg402107(VS.98).aspx)基类上的属性公开的帮助器。 `ActionLink`利用帮助器的方法，可以轻松地动态生成链接到控制器操作方法的 HTML 超链接。 方法的第一个参数 `ActionLink` 是要呈现的链接文本 (例如 `<a>Edit Me</a>`) 。 第二个参数是要调用的操作方法的名称。 最后一个自变量是在此示例中生成路由数据 (的 [匿名对象](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx) ，ID 为 4) 。
 
-上图中显示的生成链接是 `http://localhost:xxxxx/Movies/Edit/4` 。 在*应用 \_ Start\RouteConfig.cs*中建立的默认路由 () 采用 URL 模式 `{controller}/{action}/{id}` 。 因此，ASP.NET 将转换为 `http://localhost:xxxxx/Movies/Edit/4` `Edit` 控制器操作方法的请求，该方法的 `Movies` 参数 `ID` 等于4。 从*应用程序 \_ Start\RouteConfig.cs*文件中检查以下代码。
+上图中显示的生成链接是 `http://localhost:xxxxx/Movies/Edit/4` 。 在 *应用 \_ Start\RouteConfig.cs* 中建立的默认路由 () 采用 URL 模式 `{controller}/{action}/{id}` 。 因此，ASP.NET 将转换为 `http://localhost:xxxxx/Movies/Edit/4` `Edit` 控制器操作方法的请求，该方法的 `Movies` 参数 `ID` 等于4。 从 *应用程序 \_ Start\RouteConfig.cs* 文件中检查以下代码。
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample2.cs)]
 
@@ -50,19 +50,19 @@ ms.locfileid: "86162944"
 
 请注意第二个 `Edit` 操作方法的前面是 `HttpPost` 特性。 此特性指定只能 `Edit` 为 POST 请求调用方法的重载。 您可以将属性应用于 `HttpGet` 第一个编辑方法，但这并不是必需的，因为它是默认值。  (将引用隐式分配属性作为方法的操作方法 `HttpGet` `HttpGet` 。 ) 
 
-`HttpGet` `Edit` 方法采用 "影片 ID" 参数，使用实体框架方法查找电影 `Find` ，并将所选电影返回到 "编辑" 视图。 如果在没有参数的情况下调用方法，ID 参数将指定[默认值](https://msdn.microsoft.com/library/dd264739.aspx)零 `Edit` 。 如果找不到电影，则返回[HttpNotFound](https://msdn.microsoft.com/library/gg453938(VS.98).aspx) 。 当基架系统创建“编辑”视图时，它会检查 `Movie` 类并创建代码为类的每个属性呈现 `<label>` 和 `<input>` 元素。 下面的示例演示生成的编辑视图：
+`HttpGet` `Edit` 方法采用 "影片 ID" 参数，使用实体框架方法查找电影 `Find` ，并将所选电影返回到 "编辑" 视图。 如果在没有参数的情况下调用方法，ID 参数将指定 [默认值](https://msdn.microsoft.com/library/dd264739.aspx) 零 `Edit` 。 如果找不到电影，则返回 [HttpNotFound](https://msdn.microsoft.com/library/gg453938(VS.98).aspx) 。 当基架系统创建“编辑”视图时，它会检查 `Movie` 类并创建代码为类的每个属性呈现 `<label>` 和 `<input>` 元素。 下面的示例演示生成的编辑视图：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample4.cshtml)]
 
 请注意视图模板如何 `@model MvcMovie.Models.Movie` 在文件顶部包含一条语句，这会指定该视图要求视图模板的模型为类型 `Movie` 。
 
-基架代码使用多个*帮助器方法*来简化 HTML 标记。 [`Html.LabelFor`](https://msdn.microsoft.com/library/gg401864(VS.98).aspx)帮助器显示 (&quot; 标题 &quot; 、 &quot; ReleaseDate &quot; 、 &quot; 流派 &quot; 或 &quot; 价格 &quot;) 的字段的名称。 [`Html.EditorFor`](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx)帮助器呈现一个 HTML `<input>` 元素。 [`Html.ValidationMessageFor`](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx)帮助器将显示与该属性相关联的所有验证消息。
+基架代码使用多个 *帮助器方法* 来简化 HTML 标记。 [`Html.LabelFor`](https://msdn.microsoft.com/library/gg401864(VS.98).aspx)帮助器显示 (&quot; 标题 &quot; 、 &quot; ReleaseDate &quot; 、 &quot; 流派 &quot; 或 &quot; 价格 &quot;) 的字段的名称。 [`Html.EditorFor`](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx)帮助器呈现一个 HTML `<input>` 元素。 [`Html.ValidationMessageFor`](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx)帮助器将显示与该属性相关联的所有验证消息。
 
 运行应用程序并导航到 */Movies* URL。 点击“编辑”链接。 在浏览器中查看页面的源。 窗体元素的 HTML 如下所示。
 
 [!code-html[Main](examining-the-edit-methods-and-edit-view/samples/sample5.html?highlight=7,10-11)]
 
-`<input>`元素位于一个 HTML 元素中， `<form>` 其 `action` 特性设置为发布到 */Movies/Edit* URL。 单击 "**编辑**" 按钮后，窗体数据将发布到服务器。
+`<input>`元素位于一个 HTML 元素中， `<form>` 其 `action` 特性设置为发布到 */Movies/Edit* URL。 单击 " **编辑** " 按钮后，窗体数据将发布到服务器。
 
 ## <a name="processing-the-post-request"></a>处理 POST 请求
 
@@ -77,7 +77,7 @@ ms.locfileid: "86162944"
 ![abcNotValid](examining-the-edit-methods-and-edit-view/_static/image4.png)
 
 > [!NOTE]
-> 若要支持使用逗号 (的非英语区域设置的 jQuery 验证 &quot; ， &quot;) 对于小数点，必须包括*globalize.js* ，并从 (和 JavaScript ) 使用特定*区域性/globalize.cultures.js*文件 [https://github.com/jquery/globalize](https://github.com/jquery/globalize) `Globalize.parseFloat` 。 下面的代码演示对 Views\Movies\Edit.cshtml 文件所做的修改，以便使用 &quot; fr-fr &quot; 区域性：
+> 若要支持使用逗号 (的非英语区域设置的 jQuery 验证 &quot; ， &quot;) 对于小数点，必须包括 *globalize.js* ，并从 (和 JavaScript ) 使用特定 *区域性/globalize.cultures.js* 文件 [https://github.com/jquery/globalize](https://github.com/jquery/globalize) `Globalize.parseFloat` 。 下面的代码演示对 Views\Movies\Edit.cshtml 文件所做的修改，以便使用 &quot; fr-fr &quot; 区域性：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample7.cshtml)]
 
@@ -85,7 +85,7 @@ ms.locfileid: "86162944"
 
 [!code-xml[Main](examining-the-edit-methods-and-edit-view/samples/sample8.xml)]
 
-所有 `HttpGet` 方法都遵循类似的模式。 它们获取影片对象 (或对象列表（在) 情况下）， `Index` 并将模型传递给视图。 `Create`方法将空电影对象传递到 "创建" 视图。 在方法的 `HttpPost` 重载中，创建、编辑、删除或以其他方式修改数据的所有方法都执行此操作。 修改 HTTP GET 方法中的数据存在安全风险，如博客文章[ASP.NET MVC Tip #46 中所述–不要使用删除链接，因为它们创建了安全漏洞](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx)。 修改 GET 方法中的数据也违反了 HTTP 最佳做法和体系结构[REST](http://en.wikipedia.org/wiki/Representational_State_Transfer)模式，该模式指定 GET 请求不应更改应用程序的状态。 换句话说，执行 GET 操作应是没有任何隐患的安全操作，也不会修改持久数据。
+所有 `HttpGet` 方法都遵循类似的模式。 它们获取影片对象 (或对象列表（在) 情况下）， `Index` 并将模型传递给视图。 `Create`方法将空电影对象传递到 "创建" 视图。 在方法的 `HttpPost` 重载中，创建、编辑、删除或以其他方式修改数据的所有方法都执行此操作。 修改 HTTP GET 方法中的数据存在安全风险，如博客文章 [ASP.NET MVC Tip #46 中所述–不要使用删除链接，因为它们创建了安全漏洞](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx)。 修改 GET 方法中的数据也违反了 HTTP 最佳做法和体系结构 [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) 模式，该模式指定 GET 请求不应更改应用程序的状态。 换句话说，执行 GET 操作应是没有任何隐患的安全操作，也不会修改持久数据。
 
 ## <a name="adding-a-search-method-and-search-view"></a>添加搜索方法和搜索视图
 
@@ -97,7 +97,7 @@ ms.locfileid: "86162944"
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample9.cs)]
 
-方法的第一行 `SearchIndex` 创建以下[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询来选择电影：
+方法的第一行 `SearchIndex` 创建以下 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 查询来选择电影：
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample10.cs)]
 
@@ -107,13 +107,13 @@ ms.locfileid: "86162944"
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample11.cs)]
 
-上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询中用作标准查询运算符方法的参数，如以上代码中使用的[Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx)方法。 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `SearchIndex` 示例中，在 SearchIndex 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
+上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 查询中用作标准查询运算符方法的参数，如以上代码中使用的 [Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx) 方法。 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `SearchIndex` 示例中，在 SearchIndex 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
 
-现在，您可以实现 `SearchIndex` 将向用户显示窗体的视图。 在方法内右键单击 `SearchIndex` ，然后单击 "**添加视图**"。 在 "**添加视图**" 对话框中，指定要将 `Movie` 对象作为其模型类传递到视图模板。 在**基架模板**列表中，选择 "**列表**"，然后单击 "**添加**"。
+现在，您可以实现 `SearchIndex` 将向用户显示窗体的视图。 在方法内右键单击 `SearchIndex` ，然后单击 " **添加视图**"。 在 " **添加视图** " 对话框中，指定要将 `Movie` 对象作为其模型类传递到视图模板。 在 **基架模板** 列表中，选择 " **列表**"，然后单击 " **添加**"。
 
 ![AddSearchView](examining-the-edit-methods-and-edit-view/_static/image5.png)
 
-单击 "**添加**" 按钮时，会创建*Views\Movies\SearchIndex.cshtml*视图模板。 由于你在**基架模板**列表中选择了 "**列表**"，Visual Studio 会自动生成 (基架) 该视图中的某些默认标记。 基架创建了一个 HTML 窗体。 它检查 `Movie` 类并创建了代码，以便为 `<label>` 类的每个属性呈现元素。 下面的列表显示了生成的 "创建" 视图：
+单击 " **添加** " 按钮时，会创建 *Views\Movies\SearchIndex.cshtml* 视图模板。 由于你在**基架模板**列表中选择了 "**列表**"，Visual Studio 会自动生成 (基架) 该视图中的某些默认标记。 基架创建了一个 HTML 窗体。 它检查 `Movie` 类并创建了代码，以便为 `<label>` 类的每个属性呈现元素。 下面的列表显示了生成的 "创建" 视图：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample12.cshtml)]
 
@@ -121,9 +121,9 @@ ms.locfileid: "86162944"
 
 ![SearchQryStr](examining-the-edit-methods-and-edit-view/_static/image6.png)
 
-如果将方法的签名更改 `SearchIndex` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *global.asax*文件中设置的默认路由的占位符匹配。
+如果将方法的签名更改 `SearchIndex` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *global.asax* 文件中设置的默认路由的占位符匹配。
 
-[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample13.json)]
+[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample13.txt)]
 
 原始方法如下所 `SearchIndex` 示：
 
@@ -141,11 +141,11 @@ ms.locfileid: "86162944"
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample16.cs)]
 
-打开*Views\Movies\SearchIndex.cshtml*文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下内容：
+打开 *Views\Movies\SearchIndex.cshtml* 文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下内容：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample17.cshtml?highlight=2)]
 
-下面的示例显示了*Views\Movies\SearchIndex.cshtml*文件的一部分，其中包含添加的筛选标记。
+下面的示例显示了 *Views\Movies\SearchIndex.cshtml* 文件的一部分，其中包含添加的筛选标记。
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample18.cshtml?highlight=12-15)]
 
@@ -197,7 +197,7 @@ ms.locfileid: "86162944"
 
 ## <a name="adding-markup-to-the-searchindex-view-to-support-search-by-genre"></a>将标记添加到 SearchIndex 视图以支持按流派搜索
 
-将 `Html.DropDownList` helper 添加到*Views\Movies\SearchIndex.cshtml*文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
+将 `Html.DropDownList` helper 添加到 *Views\Movies\SearchIndex.cshtml* 文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample24.cshtml?highlight=4)]
 

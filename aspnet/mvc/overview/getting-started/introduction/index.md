@@ -8,18 +8,18 @@ ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
-ms.openlocfilehash: ca751a5b0eb43b9fa2ad26493b4a627bb964332f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 9dc77b4a5b9d9e2e528428c3c4f440ae120756c9
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78470594"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045306"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>ASP.NET MVC 5 入门
 
 > ASP.NET MVC 5 简介
 
-[!INCLUDE [consider RP](../../../../includes/razor.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 以下教程系列介绍了[GitHub](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)上的 ASP.NET MVC： Source
 

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
+ms.openlocfilehash: 2bfa4401c73b56be87502ffbb189abab3c59c226
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "86188665"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044995"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>教程：了解 MVC 5 Web 应用的高级 EF 方案
 
@@ -130,7 +130,7 @@ ms.locfileid: "86188665"
 
 现在，在语句上设置一个断点 `return` (F9，并将光标置于该行) 上。 按 **F5** 在调试模式下运行项目，然后选择 "课程索引" 页。 当代码到达断点时，检查 `sql` 变量。 你会看到发送到 SQL Server 的查询。 这是一个简单的 `Select` 语句。
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.sql)]
 
 单击放大镜可查看 **文本可视化工具**中的查询。
 
@@ -282,7 +282,7 @@ PMC) 中的命令 (的错误消息 `Update-Database` ：
 
 错误消息：
 
-> 建立到 SQL Server 的连接时出现与网络相关或特定于实例的错误。 未找到或无法访问服务器。 请验证实例名称是否正确，SQL Server 是否已配置为允许远程连接。 （提供程序：SQL 网络接口，错误：26 - 定位指定服务器/实例出错）
+> 建立到 SQL Server 的连接时出现与网络相关或特定于实例的错误。 找不到或无法访问服务器。 请验证实例名称是否正确，SQL Server 是否已配置为允许远程连接。 （提供程序：SQL 网络接口，错误：26 - 定位指定服务器/实例出错）
 
 解决方案
 

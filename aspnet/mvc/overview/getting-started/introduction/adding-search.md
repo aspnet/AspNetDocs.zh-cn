@@ -8,26 +8,26 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: f6d6d32a648fed453be924790a1b55698c9cf209
-ms.sourcegitcommit: 0d583ed9253103f3e50b6d729276e667591cdd41
+ms.openlocfilehash: be4e4d13e574b0fcb77d2d0fb8c6f58041b1ece2
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211472"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044829"
 ---
 # <a name="search"></a>搜索
 
-[!INCLUDE [Tutorial Note](index.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 ## <a name="adding-a-search-method-and-search-view"></a>添加搜索方法和搜索视图
 
 在本部分中，你将向操作方法添加搜索功能 `Index` ，以允许你按流派或名称搜索电影。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要匹配此部分的屏幕截图，需要运行应用程序 (F5) 并将以下电影添加到数据库中。
 
-| 标题 | 发布日期 | 流派 | 价格 |
+| Title | 发布日期 | 流派 | 价格 |
 | ----- | ------------ | ----- | ----- |
 | Ghostbusters | 6/8/1984 | 喜剧 | 6.99 |
 | Ghostbusters II | 6/16/1989 | 喜剧 | 6.99 |
@@ -39,7 +39,7 @@ ms.locfileid: "86211472"
 
 [!code-csharp[Main](adding-search/samples/sample1.cs?highlight=1,6-9)]
 
-方法的第一行 `Index` 创建以下[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询来选择电影：
+方法的第一行 `Index` 创建以下 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 查询来选择电影：
 
 [!code-csharp[Main](adding-search/samples/sample2.cs)]
 
@@ -49,10 +49,10 @@ ms.locfileid: "86211472"
 
 [!code-csharp[Main](adding-search/samples/sample3.cs)]
 
-上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询中用作标准查询运算符方法的参数，如以上代码中使用的[Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx)方法。 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `Search` 示例中，将在 "*索引*" 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
+上面的 `s => s.Title` 代码是 [Lambda 表达式](https://msdn.microsoft.com/library/bb397687.aspx)。 Lambda 在基于方法的 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 查询中用作标准查询运算符方法的参数，如以上代码中使用的 [Where](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx) 方法。 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `Search` 示例中，将在 " *索引* " 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
 
 > [!NOTE]
-> [Contains](https://msdn.microsoft.com/library/bb155125.aspx)方法在数据库上运行，而不是上面的 c # 代码。 在数据库上，[包含](https://msdn.microsoft.com/library/bb155125.aspx)映射到[SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx)，这是不区分大小写的。
+> [Contains](https://msdn.microsoft.com/library/bb155125.aspx)方法在数据库上运行，而不是上面的 c # 代码。 在数据库上， [包含](https://msdn.microsoft.com/library/bb155125.aspx) 映射到 [SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx)，这是不区分大小写的。
 
 现在可以更新 `Index` 将向用户显示窗体的视图。
 
@@ -60,9 +60,9 @@ ms.locfileid: "86211472"
 
 ![SearchQryStr](adding-search/_static/image1.png)
 
-如果将方法的签名更改 `Index` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *应用 \_ Start\RouteConfig.cs*文件中设置的默认路由的占位符匹配。
+如果将方法的签名更改 `Index` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *应用 \_ Start\RouteConfig.cs* 文件中设置的默认路由的占位符匹配。
 
-[!code-json[Main](adding-search/samples/sample4.json)]
+[!code-json[Main](adding-search/samples/sample4.txt)]
 
 原始方法如下所 `Index` 示：
 
@@ -80,7 +80,7 @@ ms.locfileid: "86211472"
 
 [!code-csharp[Main](adding-search/samples/sample7.cs)]
 
-打开*Views\Movies\Index.cshtml*文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下突出显示的窗体标记：
+打开 *Views\Movies\Index.cshtml* 文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下突出显示的窗体标记：
 
 [!code-cshtml[Main](adding-search/samples/sample8.cshtml?highlight=12-15)]
 
@@ -128,7 +128,7 @@ Visual Studio 2013 在显示和编辑视图文件时具有良好的改善。 当
 
 [!code-csharp[Main](adding-search/samples/sample12.cs)]
 
-该代码使用 `AddRange` 泛型集合的方法 `List` 将所有不同的流派添加到列表中。  (没有 `Distinct` 修饰符，将添加重复的流派，例如，在我们的示例) 中添加了两次。 然后，代码会在对象中存储流派列表 `ViewBag.MovieGenre` 。 将类别数据 (此类电影流派) 为中的[SelectList](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx)对象 `ViewBag` ，然后访问下拉列表框中的类别数据是 MVC 应用程序的典型方法。
+该代码使用 `AddRange` 泛型集合的方法 `List` 将所有不同的流派添加到列表中。  (没有 `Distinct` 修饰符，将添加重复的流派，例如，在我们的示例) 中添加了两次。 然后，代码会在对象中存储流派列表 `ViewBag.MovieGenre` 。 将类别数据 (此类电影流派) 为中的 [SelectList](https://msdn.microsoft.cus/library/system.web.mvc.selectlist(v=vs.108).aspx) 对象 `ViewBag` ，然后访问下拉列表框中的类别数据是 MVC 应用程序的典型方法。
 
 下面的代码演示如何检查 `movieGenre` 参数。 如果不为空，则代码会进一步限制影片查询，以将所选电影限制为指定的流派。
 
@@ -138,7 +138,7 @@ Visual Studio 2013 在显示和编辑视图文件时具有良好的改善。 当
 
 ## <a name="adding-markup-to-the-index-view-to-support-search-by-genre"></a>将标记添加到索引视图以支持按流派搜索
 
-将 `Html.DropDownList` helper 添加到*Views\Movies\Index.cshtml*文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
+将 `Html.DropDownList` helper 添加到 *Views\Movies\Index.cshtml* 文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
 
 [!code-cshtml[Main](adding-search/samples/sample14.cshtml?highlight=11)]
 

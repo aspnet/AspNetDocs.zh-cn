@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 1d266bf0-a61e-423b-a3d2-13773d7dafe2
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 0fb3d3cf6c1f4634834aaac1e9170218ca5730bb
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: baa300c66bfae9fe602a8fe597e21b0abbaf3a63
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "86163629"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044982"
 ---
 # <a name="examining-the-edit-methods-and-edit-view-c"></a>检查 Edit 方法和编辑视图 (C#)
 
@@ -23,7 +23,7 @@ ms.locfileid: "86163629"
 > > [此处](../../../getting-started/introduction/getting-started.md)提供了本教程的更新版本，其中使用 ASP.NET MVC 5 和 Visual Studio 2013。 更安全的方法是遵循更多功能，并演示更多的功能。
 > 
 > 
-> 本教程将教你如何使用 Microsoft Visual Web Developer 2010 Express Service Pack 1 （Microsoft Visual Studio 免费版）生成 ASP.NET MVC Web 应用程序的基础知识。 在开始之前，请确保已安装下列必备组件。 可以通过单击以下链接安装所有这些[程序： Web 平台安装程序](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)。 或者，你可以使用以下链接单独安装必备组件：
+> 本教程将教你如何使用 Microsoft Visual Web Developer 2010 Express Service Pack 1 （Microsoft Visual Studio 免费版）生成 ASP.NET MVC Web 应用程序的基础知识。 在开始之前，请确保已安装下列必备组件。 可以通过单击以下链接安装所有这些 [程序： Web 平台安装程序](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)。 或者，你可以使用以下链接单独安装必备组件：
 > 
 > - [Visual Studio Web Developer Express SP1 必备组件](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [ASP.NET MVC 3 工具更新](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
@@ -31,11 +31,11 @@ ms.locfileid: "86163629"
 > 
 > 如果你使用的是 Visual Studio 2010 而不是 Visual Web Developer 2010，请通过单击以下链接安装必备组件： [Visual Studio 2010 必备组件](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)。
 > 
-> 本主题提供了包含 c # 源代码的 Visual Web Developer 项目。 [下载 c # 版本](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098)。 如果希望 Visual Basic，请切换到本教程的[Visual Basic 版本](../vb/intro-to-aspnet-mvc-3.md)。
+> 本主题提供了包含 c # 源代码的 Visual Web Developer 项目。 [下载 c # 版本](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098)。 如果希望 Visual Basic，请切换到本教程的 [Visual Basic 版本](../vb/intro-to-aspnet-mvc-3.md) 。
 
 在本部分中，你将检查电影控制器的生成的操作方法和视图。 然后，将添加自定义搜索页面。
 
-运行应用程序，并通过将 `Movies` */Movies*追加到浏览器地址栏中的 URL 来浏览到控制器。 将鼠标指针停留在**编辑**链接上可查看它所链接到的 URL。
+运行应用程序，并通过将 `Movies` */Movies* 追加到浏览器地址栏中的 URL 来浏览到控制器。 将鼠标指针停留在 **编辑** 链接上可查看它所链接到的 URL。
 
 [![EditLink_sm](examining-the-edit-methods-and-edit-view/_static/image2.png)](examining-the-edit-methods-and-edit-view/_static/image1.png)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86163629"
 
 [![Html.actionlink](examining-the-edit-methods-and-edit-view/_static/image4.png)](examining-the-edit-methods-and-edit-view/_static/image3.png)
 
-`Html`对象是一个使用基类上的属性公开的帮助器 `WebViewPage` 。 `ActionLink`利用帮助器的方法，可以轻松地动态生成链接到控制器操作方法的 HTML 超链接。 方法的第一个参数 `ActionLink` 是要呈现的链接文本 (例如 `<a>Edit Me</a>`) 。 第二个参数是要调用的操作方法的名称。 最后一个自变量是在此示例中生成路由数据 (的[匿名对象](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx)，ID 为 4) 。
+`Html`对象是一个使用基类上的属性公开的帮助器 `WebViewPage` 。 `ActionLink`利用帮助器的方法，可以轻松地动态生成链接到控制器操作方法的 HTML 超链接。 方法的第一个参数 `ActionLink` 是要呈现的链接文本 (例如 `<a>Edit Me</a>`) 。 第二个参数是要调用的操作方法的名称。 最后一个自变量是在此示例中生成路由数据 (的 [匿名对象](https://weblogs.asp.net/scottgu/archive/2007/05/15/new-orcas-language-feature-anonymous-types.aspx) ，ID 为 4) 。
 
 上图中显示的生成链接是 `http://localhost:xxxxx/Movies/Edit/4` 。 默认路由采用 URL 模式 `{controller}/{action}/{id}` 。 因此，ASP.NET 将转换为 `http://localhost:xxxxx/Movies/Edit/4` `Edit` 控制器操作方法的请求，该方法的 `Movies` 参数 `ID` 等于4。
 
@@ -65,13 +65,13 @@ ms.locfileid: "86163629"
 
 请注意视图模板如何 `@model MvcMovie.Models.Movie` 在文件顶部包含一条语句，这会指定该视图要求视图模板的模型为类型 `Movie` 。
 
-基架代码使用多个*帮助器方法*来简化 HTML 标记。 [`Html.LabelFor`](https://msdn.microsoft.com/library/gg401864(VS.98).aspx)帮助器将显示字段的名称， ( "Title"、"ReleaseDate"、"流派" 或 "Price" ) 。 [`Html.EditorFor`](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx)帮助器显示 HTML `<input>` 元素。 [`Html.ValidationMessageFor`](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx)帮助器将显示与该属性相关联的所有验证消息。
+基架代码使用多个 *帮助器方法* 来简化 HTML 标记。 [`Html.LabelFor`](https://msdn.microsoft.com/library/gg401864(VS.98).aspx)帮助器将显示字段的名称， ( "Title"、"ReleaseDate"、"流派" 或 "Price" ) 。 [`Html.EditorFor`](https://msdn.microsoft.com/library/system.web.mvc.html.editorextensions.editorfor(VS.98).aspx)帮助器显示 HTML `<input>` 元素。 [`Html.ValidationMessageFor`](https://msdn.microsoft.com/library/system.web.mvc.html.validationextensions.validationmessagefor(VS.98).aspx)帮助器将显示与该属性相关联的所有验证消息。
 
 运行应用程序并导航到 */Movies* URL。 点击“编辑”链接。 在浏览器中查看页面的源。 页面中的 HTML 类似于下面的示例。 为清楚起见，已排除菜单标记 () 
 
 [!code-html[Main](examining-the-edit-methods-and-edit-view/samples/sample4.html)]
 
-`<input>`元素位于一个 HTML 元素中， `<form>` 其 `action` 特性设置为发布到 */Movies/Edit* URL。 单击 "**编辑**" 按钮后，窗体数据将发布到服务器。
+`<input>`元素位于一个 HTML 元素中， `<form>` 其 `action` 特性设置为发布到 */Movies/Edit* URL。 单击 " **编辑** " 按钮后，窗体数据将发布到服务器。
 
 ## <a name="processing-the-post-request"></a>处理 POST 请求
 
@@ -85,7 +85,7 @@ ASP.NET framework 模型联编程序使用已发布的窗体值并创建 `Movie`
 
 [![abcNotValid](examining-the-edit-methods-and-edit-view/_static/image8.png)](examining-the-edit-methods-and-edit-view/_static/image7.png)
 
-> **有关区域设置的注释**如果通常使用非英语区域设置，请参阅[支持使用非英语区域设置的 ASP.NET MVC 3 验证。](https://msdn.microsoft.com/library/gg674880(VS.98).aspx)
+> **有关区域设置的注释** 如果通常使用非英语区域设置，请参阅 [支持使用非英语区域设置的 ASP.NET MVC 3 验证。](https://msdn.microsoft.com/library/gg674880(VS.98).aspx)
 
 ## <a name="making-the-edit-method-more-robust"></a>使编辑方法更可靠
 
@@ -99,7 +99,7 @@ ASP.NET framework 模型联编程序使用已发布的窗体值并创建 `Movie`
 
 如果未找到电影，则 `HttpNotFound` 调用方法。
 
-所有 `HttpGet` 方法都遵循类似的模式。 它们获取影片对象 (或对象列表（在) 情况下）， `Index` 并将模型传递给视图。 `Create`方法将空电影对象传递到 "创建" 视图。 在方法的 `HttpPost` 重载中，创建、编辑、删除或以其他方式修改数据的所有方法都执行此操作。 修改 HTTP GET 方法中的数据存在安全风险，如博客文章[ASP.NET MVC Tip #46 中所述–不要使用删除链接，因为它们创建了安全漏洞](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx)。 修改 GET 方法中的数据也违反了 HTTP 最佳做法和体系结构 REST 模式，该模式指定 GET 请求不应更改应用程序的状态。 换句话说，执行 GET 操作应该是没有任何副作用的安全操作。
+所有 `HttpGet` 方法都遵循类似的模式。 它们获取影片对象 (或对象列表（在) 情况下）， `Index` 并将模型传递给视图。 `Create`方法将空电影对象传递到 "创建" 视图。 在方法的 `HttpPost` 重载中，创建、编辑、删除或以其他方式修改数据的所有方法都执行此操作。 修改 HTTP GET 方法中的数据存在安全风险，如博客文章 [ASP.NET MVC Tip #46 中所述–不要使用删除链接，因为它们创建了安全漏洞](http://stephenwalther.com/blog/archive/2009/01/21/asp.net-mvc-tip-46-ndash-donrsquot-use-delete-links-because.aspx)。 修改 GET 方法中的数据也违反了 HTTP 最佳做法和体系结构 REST 模式，该模式指定 GET 请求不应更改应用程序的状态。 换句话说，执行 GET 操作应该是没有任何副作用的安全操作。
 
 ## <a name="adding-a-search-method-and-search-view"></a>添加搜索方法和搜索视图
 
@@ -111,7 +111,7 @@ ASP.NET framework 模型联编程序使用已发布的窗体值并创建 `Movie`
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample7.cs)]
 
-方法的第一行 `SearchIndex` 创建以下[LINQ](https://msdn.microsoft.com/library/bb397926.aspx)查询来选择电影：
+方法的第一行 `SearchIndex` 创建以下 [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) 查询来选择电影：
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample8.cs)]
 
@@ -123,11 +123,11 @@ ASP.NET framework 模型联编程序使用已发布的窗体值并创建 `Movie`
 
 LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执行 `Where` `OrderBy` 。 相反，查询执行延迟，这意味着表达式的计算会延迟，直到实际循环访问它的实际值或 [`ToList`](https://msdn.microsoft.com/library/bb342261.aspx) 调用方法。 在此 `SearchIndex` 示例中，在 SearchIndex 视图中执行查询。 有关延迟执行查询的详细信息，请参阅[Query Execution](https://msdn.microsoft.com/library/bb738633.aspx)（查询执行）。
 
-现在，您可以实现 `SearchIndex` 将向用户显示窗体的视图。 在方法内右键单击 `SearchIndex` ，然后单击 "**添加视图**"。 在 "**添加视图**" 对话框中，指定要将 `Movie` 对象作为其模型类传递到视图模板。 在**基架模板**列表中，选择 "**列表**"，然后单击 "**添加**"。
+现在，您可以实现 `SearchIndex` 将向用户显示窗体的视图。 在方法内右键单击 `SearchIndex` ，然后单击 " **添加视图**"。 在 " **添加视图** " 对话框中，指定要将 `Movie` 对象作为其模型类传递到视图模板。 在 **基架模板** 列表中，选择 " **列表**"，然后单击 " **添加**"。
 
 [![AddSearchView](examining-the-edit-methods-and-edit-view/_static/image12.png)](examining-the-edit-methods-and-edit-view/_static/image11.png)
 
-单击 "**添加**" 按钮时，会创建*Views\Movies\SearchIndex.cshtml*视图模板。 由于在**基架模板**列表中选择了 "**列表**"，Visual Web Developer 会自动生成 (基架) 该视图中的某些默认内容。 基架创建了一个 HTML 窗体。 它检查 `Movie` 类并创建了代码，以便为 `<label>` 类的每个属性呈现元素。 下面的列表显示了生成的 "创建" 视图：
+单击 " **添加** " 按钮时，会创建 *Views\Movies\SearchIndex.cshtml* 视图模板。 由于在**基架模板**列表中选择了 "**列表**"，Visual Web Developer 会自动生成 (基架) 该视图中的某些默认内容。 基架创建了一个 HTML 窗体。 它检查 `Movie` 类并创建了代码，以便为 `<label>` 类的每个属性呈现元素。 下面的列表显示了生成的 "创建" 视图：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample10.cshtml)]
 
@@ -135,9 +135,9 @@ LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执
 
 [![SearchQryStr](examining-the-edit-methods-and-edit-view/_static/image14.png)](examining-the-edit-methods-and-edit-view/_static/image13.png)
 
-如果将方法的签名更改 `SearchIndex` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *global.asax*文件中设置的默认路由的占位符匹配。
+如果将方法的签名更改 `SearchIndex` 为具有一个名为的参数 `id` ，则该 `id` 参数将与 `{id}` *global.asax* 文件中设置的默认路由的占位符匹配。
 
-[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample11.json)]
+[!code-json[Main](examining-the-edit-methods-and-edit-view/samples/sample11.txt)]
 
 修改后的 `SearchIndex` 方法如下所示：
 
@@ -151,11 +151,11 @@ LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执
 
 [!code-csharp[Main](examining-the-edit-methods-and-edit-view/samples/sample13.cs)]
 
-打开*Views\Movies\SearchIndex.cshtml*文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下内容：
+打开 *Views\Movies\SearchIndex.cshtml* 文件，并在后面 `@Html.ActionLink("Create New", "Create")` 添加以下内容：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample14.cshtml)]
 
-下面的示例显示了*Views\Movies\SearchIndex.cshtml*文件的一部分，其中包含添加的筛选标记。
+下面的示例显示了 *Views\Movies\SearchIndex.cshtml* 文件的一部分，其中包含添加的筛选标记。
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample15.cshtml)]
 
@@ -207,7 +207,7 @@ LINQ 查询在定义或通过调用方法（如或）进行修改时，不会执
 
 ## <a name="adding-markup-to-the-searchindex-view-to-support-search-by-genre"></a>将标记添加到 SearchIndex 视图以支持按流派搜索
 
-将 `Html.DropDownList` helper 添加到*Views\Movies\SearchIndex.cshtml*文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
+将 `Html.DropDownList` helper 添加到 *Views\Movies\SearchIndex.cshtml* 文件中的 `TextBox` 帮助器之前。 完成的标记如下所示：
 
 [!code-cshtml[Main](examining-the-edit-methods-and-edit-view/samples/sample21.cshtml)]
 
