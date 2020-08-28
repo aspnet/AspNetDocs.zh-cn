@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: a106374a-5e74-4fd0-9ac0-1a32280e5d0d
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e11487cbb863bae230ccb9dfdaf7172c65ec4d43
-ms.sourcegitcommit: ffd0f59ef9b7d221a5b2010c32aa61c89c14f406
+ms.openlocfilehash: 6d669d00a1e061b4bcaf38b1a4002757cdebb21a
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042087"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045190"
 ---
 # <a name="understanding-models-views-and-controllers-vb"></a>了解模型、视图和控制器 (VB)
 
@@ -111,7 +111,7 @@ Global.asax 文件中定义的默认路由包含所有三个参数的默认值�
 
 操作 = 索引
 
-Id =？
+Id = 
 
 最后，如果在不提供任何 URL 的情况下打开 ASP.NET MVC 应用程序 (例如， `http://localhost`) 则会分析 URL，如下所示：
 
@@ -119,7 +119,7 @@ Id =？
 
 操作 = 索引
 
-Id =？
+Id = 
 
 请求路由到 HomeController 类上 ( # A1 操作的索引。
 
