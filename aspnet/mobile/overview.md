@@ -8,22 +8,24 @@ ms.date: 01/28/2011
 ms.assetid: 1febce65-cdd4-47da-bdb5-1e6022ccd20a
 msc.legacyurl: /mobile
 msc.type: content
-ms.openlocfilehash: 769484ee505599eef48ff4a106ddd4f7ec7d99af
-ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
+ms.openlocfilehash: 41cf393f307808e457e0ab2529129ca8ecbc3b5d
+ms.sourcegitcommit: dfd3ce87ffc9e3a7076f8252abb5d5d6b991333b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85240731"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89449699"
 ---
 # <a name="mobile-apps--sites-with-aspnet"></a>ASP.NET 的移动应用 & 站点
 
 ## <a name="develop-mobile-apps"></a>开发移动应用
 
-### <a name="cloud-connected-mobile-apps---create-a-web-service-with-azure-web-apps-and-webjobspart-1"></a>[连接云的移动应用-使用 Azure Web 应用和 Web 作业创建 Web 服务](https://msdn.microsoft.com/magazine/mt185572)（第1部分）
+### <a name="cloud-connected-mobile-apps"></a>连接到云的移动应用
+
+[第1部分-使用 Azure Web 应用和 web 作业创建 Web 服务](https://msdn.microsoft.com/magazine/mt185572)
 
 在两篇文章的第一部分中，作者将探讨创建云后端时所涉及的一些问题，该后端聚合并处理数据，并将其提供给移动客户端。
 
-### <a name="cloud-connected-mobile-apps---build-a-xamarin-app-with-authentication-and-offline-supportpart-2"></a>[已连接云的移动应用-构建具有身份验证和脱机支持的 Xamarin 应用](https://msdn.microsoft.com/magazine/mt422581.aspx)（第2部分）
+[第2部分-构建具有身份验证和脱机支持的 Xamarin 应用程序](https://msdn.microsoft.com/magazine/mt422581.aspx)
 
 在其系列的第二篇文章中，作者讨论了如何使用 Xamarin 来面向多个移动客户端平台，并说明如何实现身份验证并维护同步的客户端数据缓存。
 
