@@ -9,10 +9,10 @@ ms.assetid: 3332d6e7-e2e1-4144-b805-e71d51e7e415
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-web-services
 msc.type: authoredcontent
 ms.openlocfilehash: eac3d53fd871d0cb5a2870488ce752c057cc5b1a
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.sourcegitcommit: 45754124123403520b9fa2e706a4d1292494159b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 09/12/2020
 ms.locfileid: "86162747"
 ---
 # <a name="understanding-aspnet-ajax-web-services"></a>了解 ASP.NET AJAX Web 服务
@@ -285,11 +285,11 @@ AutoCompleteExtender 具有多个不同的属性，包括在服务器控件上�
 
 [!code-csharp[Main](understanding-asp-net-ajax-web-services/samples/sample28.cs)]
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
 
 ASP.NET AJAX 提供了对调用 Web 服务的出色支持，无需编写大量的自定义 JavaScript 代码来处理请求和响应消息。 在本文中，你已了解如何通过 AJAX 启用 .NET Web 服务来处理 JSON 消息，以及如何使用 ScriptManager 控件定义 JavaScript 代理。 你还了解了如何使用 JavaScript 代理来调用 Web 服务、处理简单和复杂类型并处理故障。 最后，你已了解了如何使用页面方法来简化创建和发出 Web 服务调用的过程，以及 AutoCompleteExtender 控件如何向最终用户键入信息。 尽管 ASP.NET AJAX 中提供的 UpdatePanel 当然会对许多 AJAX 程序员做出选择，因为它是简单的，但了解如何通过 JavaScript 代理调用 Web 服务在许多应用程序中都很有用。
 
-## <a name="bio"></a>Bio
+## <a name="bio"></a>个人简介
 
 Dan Wahlin (Microsoft 最有价值的 ASP.NET 和 XML Web Services 专业人员) 是 .NET 开发讲师和体系结构顾问，提供 () 的界面技术培训 [http://www.interfacett.com](http://www.interfacett.com) 。 Dan 构建了 XML for ASP.NET 开发人员网站 ([www.XMLforASP.NET](http://www.XMLforASP.NET)) ，位于 INETA 演讲者的局上，并发表了几个会议。 Dan 共同创作的专业 Windows 责任 (Wrox) ，ASP.NET：技巧，教程和代码 (Sam) ，ASP.NET 1.1 有问必答解决方案，专业 ASP.NET 2.0 AJAX (Wrox) ，ASP.NET 2.0 MVP 黑客和为 ASP.NET 开发人员编写的 XML (Sams) 。 当他不编写代码、文章或书籍时，Dan 喜欢撰写和录制音乐，并通过他的妻子和孩子玩高尔夫和篮球。
 
