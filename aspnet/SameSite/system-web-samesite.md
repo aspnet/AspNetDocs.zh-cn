@@ -5,12 +5,12 @@ description: 了解如何使用在 ASP.NET 中 SameSite cookie
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 2a39663dcbfa97ae441edd9a9768172cafbaab03
-ms.sourcegitcommit: 09a34635ed0e74d6c2625f6a485c78f201c689ee
+ms.openlocfilehash: d50f157c6d92cb56cb6c59381af9139d1d3d1d3d
+ms.sourcegitcommit: a309ca7af61e59195beb745b501a1a9f06fcd493
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763466"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92119358"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>在 ASP.NET 中使用 SameSite cookie
 
@@ -115,7 +115,7 @@ Microsoft 不支持将4.7.2 用于写入同一站点 cookie 属性的 .NET 版�
 * 在修补程序的值为之前 `None` ：
   * 根本不发出属性。
 * 修补后：
-  * 如果值为， `None` 则表示 "发出属性，其值为 `None` "。
+  * 值为 `None` 表示 "发出属性，其值为 `None` "。
   * `SameSite`值为将 `(SameSiteMode)(-1)` 导致不发出属性。
 
 Forms 身份验证和会话状态 cookie 的默认 SameSite 值从更改 `None` 为 `Lax` 。
@@ -163,7 +163,7 @@ SameSite 支持是在使用 [2016 草案标准](https://tools.ietf.org/html/draf
 
 ## <a name="supporting-older-browsers"></a>支持旧版浏览器
 
-2016 SameSite 标准规定，未知值必须被视为 `SameSite=Strict` 值。 从支持 2016 SameSite 标准的旧版浏览器访问的应用在收到值为的 SameSite 属性时可能会中断 `None` 。 如果 Web 应用要支持较旧的浏览器，则必须实现浏览器检测。 ASP.NET 不实现浏览器检测，因为用户代理值非常不稳定，并且经常更改。
+2016 SameSite 标准规定，未知值必须被视为 `SameSite=Strict` 值。 从支持 2016 SameSite 标准的旧版浏览器访问的应用在收到值为的 SameSite 属性时可能会中断 `None` 。 如果 Web 应用要支持较旧的浏览器，则必须实现浏览器检测。 ASP.NET 不会实现浏览器检测，因为 User-Agents 的值非常不稳定，会频繁更改。
 
 Microsoft 解决该问题的方法是帮助您实现浏览器检测组件，以便在 `sameSite=None` 浏览器不支持时从 cookie 中去除属性。 Google 建议颁发双重 cookie，一个具有新属性，另一个不包含属性。 但我们认为 Google 的建议有限。 某些浏览器，尤其是移动浏览器对站点的 cookie 数的限制非常小，或者域名可以发送。 发送多个 cookie，尤其是大型 cookie （例如身份验证 cookie）会很快达到移动浏览器限制，从而导致难以诊断和修复的应用失败。 此外，作为一个框架，有一大一小部分第三方代码和组件可能未更新为使用 double cookie 方法。
 

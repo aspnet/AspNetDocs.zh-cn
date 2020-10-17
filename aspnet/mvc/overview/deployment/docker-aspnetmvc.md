@@ -7,16 +7,16 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/14/2018
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
-ms.openlocfilehash: 1c5e6af79c87123891ddd4d30c60e3a427910e9d
-ms.sourcegitcommit: 09a34635ed0e74d6c2625f6a485c78f201c689ee
+ms.openlocfilehash: d706c07fdb7fea3d271cb61fde3a245187ea9e84
+ms.sourcegitcommit: a309ca7af61e59195beb745b501a1a9f06fcd493
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763485"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92119371"
 ---
 # <a name="migrating-aspnet-mvc-applications-to-windows-containers"></a>将 ASP.NET MVC 应用程序迁移到 Windows 容器
 
-在 Windows 容器中运行现有的 .NET Framework 应用程序不需要对应用程序进行任何更改。 若要在 Windows 容器中运行应用程序，请创建包含应用程序的 Docker 映像，然后启动容器。 本主题介绍了如何获取现有的 [ASP.NET MVC 应用程序](http://www.asp.net/mvc)，并在 Windows 容器中进行部署。
+在 Windows 容器中运行现有的 .NET Framework 应用程序不需要对应用程序进行任何更改。 若要在 Windows 容器中运行应用程序，请创建包含应用程序的 Docker 映像，然后启动容器。 本主题介绍了如何获取现有的 [ASP.NET MVC 应用程序](https://dotnet.microsoft.com/apps/aspnet/mvc)，并在 Windows 容器中进行部署。
 
 从现有的 ASP.NET MVC 应用程序入手，然后使用 Visual Studio 生成已发布的资产。 使用 Docker 创建包含并运行应用程序的映像。 转到在 Windows 容器中运行的网站，验证应用程序是否正常运行。
 
@@ -33,7 +33,7 @@ ms.locfileid: "91763485"
 
 [完成的应用程序](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/deployment/docker-aspnetmvc/samples/MVCRandomAnswerGenerator)位于 GitHub 上。
 
-## <a name="prerequisites"></a>必备知识
+## <a name="prerequisites"></a>必备条件
 
 开发计算机必须具有以下软件：
 
@@ -93,7 +93,7 @@ COPY ./bin/Release/PublishOutput/ /inetpub/wwwroot
 docker build -t mvcrandomanswers .
 ```
 
-此命令将使用 Dockerfile 中的说明生成新映像，并将映像) 命名 ( 标记为 mvcrandomanswers。 这样做可能还会从 [Docker 中心](http://hub.docker.com)拉取基本映像，然后将应用程序添加到基本映像中。
+此命令将使用 Dockerfile 中的说明生成新映像，并将映像) 命名 ( 标记为 mvcrandomanswers。 这样做可能还会从 [Docker 中心](https://hub.docker.com)拉取基本映像，然后将应用程序添加到基本映像中。
 
 命令完成后，便可以运行 `docker images` 命令，查看有关新映像的信息：
 
