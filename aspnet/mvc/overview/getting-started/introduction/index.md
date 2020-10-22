@@ -9,11 +9,11 @@ ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
 ms.openlocfilehash: 9dc77b4a5b9d9e2e528428c3c4f440ae120756c9
-ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
+ms.sourcegitcommit: c62ec20b453cee3249eb894ecd75013b57d078f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89045306"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92345181"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>ASP.NET MVC 5 入门
 
