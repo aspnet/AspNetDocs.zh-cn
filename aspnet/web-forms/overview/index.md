@@ -8,12 +8,12 @@ ms.date: 08/08/2011
 ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
-ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 86e587ff46835bbef5d4234bd247bae10c930dd2
+ms.sourcegitcommit: db13f9477981daabd57b99a410ec34e31e8d6aae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78519380"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94670227"
 ---
 # <a name="aspnet-web-forms-guidance"></a>ASP.NET Web 窗体指南
 
@@ -33,13 +33,14 @@ ms.locfileid: "78519380"
         - [ASP.NET 错误处理](getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
     - [在 Visual Studio 2013 中创建基本的 Web 窗体页](getting-started/creating-a-basic-web-forms-page.md)
     - [在 Visual Studio 2013 中编辑 ASP.NET Web 窗体的代码](getting-started/code-editing-in-web-forms-pages.md)
+    - [如何：在 Web 窗体应用程序中使用事件](how-to-consume-events.md)
     - [在 ASP.NET Web 窗体中使用适用于 Visual Studio 2012 的 Page Inspector](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
     - [Visual Studio 2012 实践实验](getting-started/hands-on-labs/index.md)
 
         - [Visual Studio 2012 中 ASP.NET 和 Web 开发的新增功能](getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
         - [ASP.NET 4.5 中 Web 窗体的新增功能](getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
         - [在 Visual Studio 2012 中使用 Page Inspector](getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
-- [使用数据](presenting-and-managing-data/index.md)
+- [处理数据](presenting-and-managing-data/index.md)
 
     - [Visual Studio 2013 中的模型绑定和 Web 窗体](presenting-and-managing-data/model-binding/index.md)
 
@@ -53,7 +54,7 @@ ms.locfileid: "78519380"
 
     - [创建具有用户注册、电子邮件确认和密码重置功能的安全 ASP.NET Web 窗体应用 (C#)](security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
     - [创建具有 SMS 双因素身份验证功能的 ASP.NET Web 窗体应用 (C#)](security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
-- [性能](performance-and-caching/index.md)
+- [“性能”](performance-and-caching/index.md)
 
     - [在 ASP.NET 4.5 中使用异步方法](performance-and-caching/using-asynchronous-methods-in-aspnet-45.md)
 - [部署](deployment/index.md)
@@ -63,7 +64,7 @@ ms.locfileid: "78519380"
         - [介绍](deployment/visual-studio-web-deployment/introduction.md)
         - [准备数据库部署](deployment/visual-studio-web-deployment/preparing-databases.md)
         - [Web.config 文件转换](deployment/visual-studio-web-deployment/web-config-transformations.md)
-        - [项目属性](deployment/visual-studio-web-deployment/project-properties.md)
+        - [Project 属性](deployment/visual-studio-web-deployment/project-properties.md)
         - [部署到测试](deployment/visual-studio-web-deployment/deploying-to-iis.md)
         - [设置文件夹权限](deployment/visual-studio-web-deployment/setting-folder-permissions.md)
         - [部署到生产中](deployment/visual-studio-web-deployment/deploying-to-production.md)
@@ -71,7 +72,7 @@ ms.locfileid: "78519380"
         - [部署数据库更新](deployment/visual-studio-web-deployment/deploying-a-database-update.md)
         - [命令行部署](deployment/visual-studio-web-deployment/command-line-deployment.md)
         - [部署附加文件](deployment/visual-studio-web-deployment/deploying-extra-files.md)
-        - [疑难解答](deployment/visual-studio-web-deployment/troubleshooting.md)
+        - [故障排除](deployment/visual-studio-web-deployment/troubleshooting.md)
     - [ASP.NET 4 - 企业部署简介](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
         - [使用 Visual Studio 2010 在企业方案中部署 Web 应用程序](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
@@ -107,7 +108,7 @@ ms.locfileid: "78519380"
 
         - [配置用于 Web 部署的 Team Foundation Server](deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md)
         - [在 TFS 中创建团队项目](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-team-project-in-tfs.md)
-        - [向源控件添加内容](deployment/configuring-team-foundation-server-for-web-deployment/adding-content-to-source-control.md)
+        - [向源代码管理添加内容](deployment/configuring-team-foundation-server-for-web-deployment/adding-content-to-source-control.md)
         - [配置用于 Web 部署的 TFS 生成服务器](deployment/configuring-team-foundation-server-for-web-deployment/configuring-a-tfs-build-server-for-web-deployment.md)
         - [创建支持部署的生成定义](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md)
         - [部署特定生成](deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md)
@@ -140,14 +141,14 @@ ms.locfileid: "78519380"
         - [第 8 部分：最终页面、异常处理和结论](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
     - [ASP.NET 4 - Entity Framework 4 和 Web 窗体入门](older-versions-getting-started/getting-started-with-ef/index.md)
 
-        - [Entity Framework 4.0 数据库入门](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
-        - [Entity Framework 4.0 数据库入门 - 第 2 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
-        - [Entity Framework 4.0 数据库入门 - 第 3 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
-        - [Entity Framework 4.0 数据库入门 - 第 4 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
-        - [Entity Framework 4.0 数据库入门 - 第 5 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5.md)
-        - [Entity Framework 4.0 数据库入门 - 第 6 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
-        - [Entity Framework 4.0 数据库入门 - 第 7 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
-        - [Entity Framework 4.0 数据库入门 - 第 8 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
+        - [Entity Framework 4.0 Database First 入门](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 2 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 3 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 4 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 5 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 6 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 7 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
+        - [Entity Framework 4.0 Database First 入门 - 第 8 部分](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
     - [ASP.NET 4 - 继续使用 Entity Framework 4 和 Web 窗体](older-versions-getting-started/continuing-with-ef/index.md)
 
         - [Entity Framework 4.0 和 ObjectDataSource 控件，第 1 部分：入门](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
@@ -165,8 +166,8 @@ ms.locfileid: "78519380"
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 作为测试环境部署到 IIS](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md)
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 设置文件夹权限](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12.md)
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署到生产环境](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12.md)
-        - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署到仅代码更新](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12.md)
-        - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署到数据库更新](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
+        - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署仅代码更新](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12.md)
+        - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署数据库更新](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md)
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 迁移到 SQL Server](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 部署 SQL Server 数据库更新](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
         - [通过 SQL Server Compact 进行 Visual Studio Web 部署 - 疑难解答](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
@@ -202,7 +203,7 @@ ms.locfileid: "78519380"
         - [嵌套的母版页 (VB)](older-versions-getting-started/master-pages/nested-master-pages-vb.md)
     - [在 Visual Studio 2008 及更早版本中部署网站项目](older-versions-getting-started/deploying-web-site-projects/index.md)
 
-        - [ASP.NET 承载选项 (C#)](older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs.md)
+        - [ASP.NET 托管选项 (C#)](older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs.md)
         - [确定需要部署哪些文件 (C#)](older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs.md)
         - [使用 FTP 客户端部署站点 (C#)](older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs.md)
         - [使用 Visual Studio 部署站点 (C#)](older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs.md)
@@ -218,7 +219,7 @@ ms.locfileid: "78519380"
         - [ELMAH 的日志记录错误详细信息 (C#)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs.md)
         - [预编译网站 (C#)](older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs.md)
         - [生产网站的用户和角色 (C#)](older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md)
-        - [ASP.NET 承载选项 (VB)](older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb.md)
+        - [ASP.NET 托管选项 (VB)](older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb.md)
         - [确定需要部署哪些文件 (VB)](older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-vb.md)
         - [使用 FTP 客户端部署站点 (VB)](older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-vb.md)
         - [使用 Visual Studio 部署站点 (VB)](older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-vb.md)
@@ -238,12 +239,12 @@ ms.locfileid: "78519380"
 
     - [入门](ajax-control-toolkit/getting-started/index.md)
 
-        - [开始使用 AJAX 控件工具包 (C#)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
-        - [使用 AJAX 控件工具包控件和扩展程序控件 (C#)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)
-        - [创建自定义 AJAX 控件工具包扩展程序控件 (C#)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md)
-        - [开始使用 AJAX 控件工具包 (VB)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb.md)
-        - [使用 AJAX 控件工具包控件和扩展程序控件 (VB)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-vb.md)
-        - [创建自定义 AJAX 控件工具包扩展程序控件 (VB)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-vb.md)
+        - [AJAX 控件工具包入门 (C#)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
+        - [使用 AJAX 控件工具包控件和控件扩展程序 (C#)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)
+        - [创建自定义 AJAX 控件工具包控件扩展程序 (C#)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs.md)
+        - [AJAX 控件工具包入门 (VB)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb.md)
+        - [使用 AJAX 控件工具包控件和控件扩展程序 (VB)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-vb.md)
+        - [创建自定义 AJAX 控件工具包控件扩展程序 (VB)](ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-vb.md)
     - [Accordion](ajax-control-toolkit/accordion/index.md)
 
         - [数据绑定到 Accordion (C#)](ajax-control-toolkit/accordion/databinding-to-an-accordion-cs.md)
@@ -256,20 +257,20 @@ ms.locfileid: "78519380"
         - [同时执行多个动画 (C#)](ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs.md)
         - [逐一执行多个动画 (C#)](ajax-control-toolkit/animation/executing-several-animations-after-each-other-cs.md)
         - [取决于条件的动画 (C#)](ajax-control-toolkit/animation/animation-depending-on-a-condition-cs.md)
-        - [选取列表中的动画 (C#)](ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-cs.md)
+        - [选取列表中的一个动画 (C#)](ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-cs.md)
         - [响应用户交互的动画 (C#)](ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs.md)
         - [动画过程中禁用操作 (C#)](ajax-control-toolkit/animation/disabling-actions-during-animation-cs.md)
         - [触发另一控件的动画 (C#)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md)
         - [从服务器端修改动画 (C#)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md)
         - [使用客户端代码执行动画 (C#)](ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md)
         - [使用客户端代码更改动画 (C#)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
-        - [对 UpdatePanel 控件 执行动画处理 (C#)](ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md)
+        - [对 UpdatePanel 控件执行动画处理 (C#)](ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md)
         - [动态控制 UpdatePanel 动画 (C#)](ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-cs.md)
         - [将动画添加到控件 (VB)](ajax-control-toolkit/animation/adding-animation-to-a-control-vb.md)
         - [同时执行多个动画 (VB)](ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb.md)
         - [逐一执行多个动画 (VB)](ajax-control-toolkit/animation/executing-several-animations-after-each-other-vb.md)
         - [取决于条件的动画 (VB)](ajax-control-toolkit/animation/animation-depending-on-a-condition-vb.md)
-        - [选取列表中的动画 (VB)](ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-vb.md)
+        - [选取列表中的一个动画 (VB)](ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-vb.md)
         - [响应用户交互的动画 (VB)](ajax-control-toolkit/animation/animating-in-response-to-user-interaction-vb.md)
         - [动画过程中禁用操作 (VB)](ajax-control-toolkit/animation/disabling-actions-during-animation-vb.md)
         - [触发另一控件的动画 (VB)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb.md)
@@ -296,7 +297,7 @@ ms.locfileid: "78519380"
 
         - [ColorPicker 控件扩展程序 (C#)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-cs.md)
         - [ColorPicker 控件扩展程序 (VB)](ajax-control-toolkit/colorpicker/using-the-colorpicker-control-extender-vb.md)
-    - [组合框](ajax-control-toolkit/combobox/index.md)
+    - [ComboBox](ajax-control-toolkit/combobox/index.md)
 
         - [组合框控件 (C#)](ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-cs.md)
         - [组合框控件 (VB)](ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-vb.md)
@@ -307,9 +308,9 @@ ms.locfileid: "78519380"
     - [DropShadow](ajax-control-toolkit/dropshadow/index.md)
 
         - [调整 DropShadow 的 Z-索引 (C#)](ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md)
-        - [通过客户端代码操作 DropShadow (C#)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
+        - [通过客户端代码操作 DropShadow 属性 (C#)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
         - [调整 DropShadow 的 Z-索引 (VB)](ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md)
-        - [通过客户端代码操作 DropShadow (VB)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
+        - [通过客户端代码操作 DropShadow 属性 (VB)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
     - [DynamicPopulate](ajax-control-toolkit/dynamicpopulate/index.md)
 
         - [动态填充控件 (C#)](ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs.md)
@@ -356,7 +357,7 @@ ms.locfileid: "78519380"
 
         - [测试密码强度 (C#)](ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs.md)
         - [测试密码强度 (VB)](ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb.md)
-    - [弹出项](ajax-control-toolkit/popup/index.md)
+    - [Popup](ajax-control-toolkit/popup/index.md)
 
         - [使用多个弹出控件 (C#)](ajax-control-toolkit/popup/using-multiple-popup-controls-cs.md)
         - [使用带 UpdatePanel 的弹出控件处理回发 (C#)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)
@@ -364,7 +365,7 @@ ms.locfileid: "78519380"
         - [使用多个弹出控件 (VB)](ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
         - [使用带 UpdatePanel 的弹出控件处理回发 (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
         - [使用没有 UpdatePanel 的弹出控件处理回发 (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-    - [分级](ajax-control-toolkit/rating/index.md)
+    - [评级](ajax-control-toolkit/rating/index.md)
 
         - [创建分级控件 (C#)](ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
         - [创建分级控件 (VB)](ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -404,7 +405,7 @@ ms.locfileid: "78519380"
         - [使用 ObjectDataSource 显示数据 (VB)](data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb.md)
         - [声明性参数 (VB)](data-access/basic-reporting/declarative-parameters-vb.md)
         - [以编程方式设置 ObjectDataSource 的参数值 (VB)](data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb.md)
-    - [母版/详细信息](data-access/masterdetail/index.md)
+    - [主/详细信息](data-access/masterdetail/index.md)
 
         - [使用一个 DropDownList 实现母版/详细信息筛选 (C#)](data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md)
         - [使用两个 DropDownList 实现母版/详细信息筛选 (C#)](data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs.md)
@@ -414,7 +415,7 @@ ms.locfileid: "78519380"
         - [使用两个 DropDownList 实现母版/详细信息筛选 (VB)](data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-vb.md)
         - [跨两个页面的母版/详细信息筛选 (VB)](data-access/masterdetail/master-detail-filtering-across-two-pages-vb.md)
         - [使用带有详细信息 DetailView 的可选母版 GridView 来实现母版/详细信息查看 (VB)](data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-vb.md)
-    - [自定义格式设置](data-access/custom-formatting/index.md)
+    - [自定义格式](data-access/custom-formatting/index.md)
 
         - [基于数据的自定义格式设置 (C#)](data-access/custom-formatting/custom-formatting-based-upon-data-cs.md)
         - [在 GridView 控件中使用 TemplateField (C#)](data-access/custom-formatting/using-templatefields-in-the-gridview-control-cs.md)
@@ -430,7 +431,7 @@ ms.locfileid: "78519380"
 
         - [插入、更新和删除数据概述 (C#)](data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md)
         - [检查与插入、更新和删除操作有关的事件 (C#)](data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
-        - [在 ASP.NET 页中处理 BLL- 和 DAL 级别的异常 (C#)](data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md)
+        - [在 ASP.NET 页中处理 BLL 和 DAL 级别的异常 (C#)](data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md)
         - [向编辑和插入界面添加验证控件 (C#)](data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md)
         - [自定义数据修改界面 (C#)](data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md)
         - [实现乐观并发 (C#)](data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md)
@@ -438,7 +439,7 @@ ms.locfileid: "78519380"
         - [限制基于用户的数据修改功能 (C#)](data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-cs.md)
         - [插入、更新和删除数据概述 (VB)](data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md)
         - [检查与插入、更新和删除操作有关的事件 (VB)](data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-vb.md)
-        - [在 ASP.NET 页中处理 BLL- 和 DAL 级别的异常 (VB)](data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb.md)
+        - [在 ASP.NET 页中处理 BLL 和 DAL 级别的异常 (VB)](data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-vb.md)
         - [向编辑和插入界面添加验证控件 (VB)](data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-vb.md)
         - [自定义数据修改界面 (VB)](data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-vb.md)
         - [实现乐观并发 (VB)](data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md)
@@ -518,14 +519,14 @@ ms.locfileid: "78519380"
         - [从 GridView 页脚插入新记录 (VB)](data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb.md)
     - [处理二进制文件](data-access/working-with-binary-files/index.md)
 
-        - [上传文件 (C#)](data-access/working-with-binary-files/uploading-files-cs.md)
+        - [上载文件 (C#)](data-access/working-with-binary-files/uploading-files-cs.md)
         - [显示数据 Web 控件中的二进制数据 (C#)](data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs.md)
-        - [添加新纪录时增加文件上传选项 (C#)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs.md)
-        - [上传和删除现有的二进制数据 (C#)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs.md)
-        - [上传文件 (VB)](data-access/working-with-binary-files/uploading-files-vb.md)
+        - [添加新纪录时增加文件上载选项 (C#)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs.md)
+        - [上载和删除现有的二进制数据 (C#)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs.md)
+        - [上载文件 (VB)](data-access/working-with-binary-files/uploading-files-vb.md)
         - [显示数据 Web 控件中的二进制数据 (VB)](data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb.md)
-        - [添加新纪录时增加文件上传选项 (VB)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
-        - [上传和删除现有的二进制数据 (VB)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
+        - [添加新纪录时增加文件上载选项 (VB)](data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb.md)
+        - [上载和删除现有的二进制数据 (VB)](data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb.md)
     - [缓存数据](data-access/caching-data/index.md)
 
         - [使用 ObjectDataSource 缓存数据 (C#)](data-access/caching-data/caching-data-with-the-objectdatasource-cs.md)
@@ -605,7 +606,7 @@ ms.locfileid: "78519380"
         - [生成用于从多个用户帐户中选择一个帐户的界面 (C#)](older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs.md)
         - [恢复和更改密码 (C#)](older-versions-security/admin/recovering-and-changing-passwords-cs.md)
         - [解锁和审批用户帐户 (C#)](older-versions-security/admin/unlocking-and-approving-user-accounts-cs.md)
-        - [生成用于从多个用户帐户中选择一个帐户的接口 (VB)](older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-vb.md)
+        - [生成用于从多个用户帐户中选择一个帐户的界面 (VB)](older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-vb.md)
         - [恢复和更改密码 (VB)](older-versions-security/admin/recovering-and-changing-passwords-vb.md)
         - [解锁和审批用户帐户 (VB)](older-versions-security/admin/unlocking-and-approving-user-accounts-vb.md)
 - [旧版本 - ASP.NET 2.0](moving-to-aspnet-20/index.md)
@@ -617,6 +618,6 @@ ms.locfileid: "78519380"
     - [数据源控件](moving-to-aspnet-20/data-source-controls.md)
     - [数据绑定控件](moving-to-aspnet-20/data-bound-controls.md)
     - [缓存](moving-to-aspnet-20/caching.md)
-    - [成员身份](moving-to-aspnet-20/membership.md)
+    - [Membership](moving-to-aspnet-20/membership.md)
     - [配置和检测](moving-to-aspnet-20/configuration-and-instrumentation.md)
     - [配置文件、主题和 Web 部件](moving-to-aspnet-20/profiles-themes-and-web-parts.md)
