@@ -40,6 +40,8 @@
               href: web-forms/overview/getting-started/creating-a-basic-web-forms-page.md
             - name: 在 Visual Studio 2013 中编辑 ASP.NET Web 窗体的代码
               href: web-forms/overview/getting-started/code-editing-in-web-forms-pages.md
+            - name: 操作说明：使用事件
+              href: web-forms/overview/how-to-consume-events.md
             - name: 在 ASP.NET Web 窗体中使用适用于 Visual Studio 2012 的 Page Inspector
               href: web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md
             - name: Visual Studio 2012 实践实验
