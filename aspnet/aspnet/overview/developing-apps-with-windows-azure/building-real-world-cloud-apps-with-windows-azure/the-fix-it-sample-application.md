@@ -1,6 +1,6 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
-title: 附录： Fix It 示例应用程序 (用 Azure) 构建实际云应用 |Microsoft Docs
+title: 附录： Fix It 示例应用程序 (用 Azure) 生成 Real-World 云应用 |Microsoft Docs
 author: MikeWasson
 description: 使用 Azure 电子书构建真实的云应用基于 Scott Guthrie 开发的演示文稿。 它介绍了13种模式和实践，
 ms.author: riande
@@ -8,25 +8,25 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: 549d1513279190ae5abe87c59a48e1caa1cfa5f7
-ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
+ms.openlocfilehash: 53ae9633277b38f1d2c8a8bd43eaf0014da54c45
+ms.sourcegitcommit: 4b78855427f1397df0a7be3559e04ec94a78c308
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88702928"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96151875"
 ---
-# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>附录： Fix It 示例应用程序 (用 Azure) 构建实际云应用
+# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>附录： Fix It 示例应用程序 (用 Azure) 生成 Real-World 云应用
 
 作者： [Mike Wasson](https://github.com/MikeWasson)， [Rick Anderson](https://twitter.com/RickAndMSFT)， [Tom Dykstra](https://github.com/tdykstra)
 
 [下载 Fix It 项目](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
 
-> **使用 Azure 电子书构建真实的云应用**基于 Scott Guthrie 开发的演示文稿。 它介绍了可帮助你成功开发云的 web 应用的13种模式和实践。 有关电子书的信息，请参阅 [第一章](introduction.md)。
+> **使用 Azure 电子书构建真实的云应用** 基于 Scott Guthrie 开发的演示文稿。 它介绍了可帮助你成功开发云的 web 应用的13种模式和实践。 有关电子书的信息，请参阅 [第一章](introduction.md)。
 
 本附录介绍了如何通过 Azure 电子书构建实际的云应用程序，其中包含了有关可以下载的 Fix It 示例应用程序的其他信息：
 
 - [已知问题](#knownissues)
-- [最佳做法](#bestpractices)
+- [最佳实践](#bestpractices)
 - [如何在本地计算机上从 Visual Studio 运行应用](#run-in-vs)
 - [如何使用 Windows PowerShell 脚本将基本应用部署到 Azure App Service Web 应用](#deploybase)
 - [Windows PowerShell 脚本疑难解答](#troubleshooting)
@@ -84,7 +84,7 @@ Fix It 应用将上传的图像存储为公用，这意味着查找 URL 的任�
 ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶意用户可能尝试跨站点脚本攻击的多种方式。 `DisplayFor`用于显示任务标题和备注的 MVC 帮助器会自动对其发送到浏览器的值进行 HTML 编码。 但在生产应用程序中，你可能需要采取其他措施。 有关详细信息，请参阅 [ASP.NET 中的请求验证](https://msdn.microsoft.com/library/hh882339.aspx)。
 
 <a id="bestpractices"></a>
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 下面是在代码评审和测试 Fix It 应用程序的原始版本中发现后修复的一些问题。 其中一些原因是最初的编码员无法识别特定的最佳实践，只是因为代码是快速编写的，而不是用于发布的软件。 我们将在此处列出问题，因为我们在此审查和测试中了解到的内容可能对也正在开发 web 应用的其他人员有所帮助。
 
@@ -102,7 +102,7 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
 
 ### <a name="register-singletons-as-such-with-di"></a>用 DI 注册单一实例
 
-由于只 `PhotoService` 需要类和类的一个实例 `Logger` ，因此应将这些类注册为*DependenciesConfig.cs*中[的依赖项注入的单一实例](https://code.google.com/p/autofac/wiki/InstanceScope)：
+由于只 `PhotoService` 需要类和类的一个实例 `Logger` ，因此应将这些类注册为 *DependenciesConfig.cs* 中 [的依赖项注入的单一实例](https://code.google.com/p/autofac/wiki/InstanceScope)：
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample3.cs?highlight=1,3)]
 
@@ -200,7 +200,7 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
 
 ### <a name="set-an-expiration-time-out-for-authentication-cookies"></a>设置身份验证 cookie 的过期超时
 
-默认情况下，身份验证 cookie 在两周后过期。 更短的时间更安全。 可以在 *StartupAuth.cs*中更改此设置：
+默认情况下，身份验证 cookie 在两周后过期。 更短的时间更安全。 可以在 *StartupAuth.cs* 中更改此设置：
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample18.cs?highlight=4-5)]
 
@@ -233,7 +233,7 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
 
 1. 按照 [运行基本应用程序](#runbase)的说明进行操作，然后关闭浏览器并关闭 Visual Studio。
 2. 以管理员权限启动 Visual Studio。  (你将使用 Azure 计算模拟器，并且需要管理员权限。 ) 
-3. 在*MyFixIt*项目的应用程序*Web.config*文件中 (web 项目) ，将的值更改 `appSettings/UseQueues` 为 "true"：
+3. 在 *MyFixIt* 项目的应用程序 *Web.config* 文件中 (web 项目) ，将的值更改 `appSettings/UseQueues` 为 "true"：
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample19.cmd?highlight=3)]
 4. 如果 [Azure 存储模拟器](https://msdn.microsoft.com/library/windowsazure/hh403989.aspx) 仍未运行，请重新启动。
@@ -242,14 +242,14 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
     使用 Visual Studio：
 
    1. 按 **F5** 运行 fix it 项目。
-   2. 在**解决方案资源管理器**中，右键单击 MyFixItCloudService 项目，然后单击 "**调试**" "  >  **启动新实例**"。
+   2. 在 **解决方案资源管理器** 中，右键单击 MyFixItCloudService 项目，然后单击 "**调试**" "  >  **启动新实例**"。
 
     使用 Visual Studio 2013 Express for Web：
 
    3. 在解决方案资源管理器中，右键单击 Fix it 解决方案，然后选择 " **属性**"。
    4. 选择 **多个启动项目**。
    5. 在 MyFixIt 和 MyFixItCloudService 下的 " **操作** " 下拉列表中，选择 " **启动**"。
-   6. 单击 **“确定”** 。
+   6. 单击" **确定**"。
    7. 按 **F5** 运行这两个项目。
 
       运行 MyFixItCloudService 项目时，Visual Studio 将启动 Azure 计算模拟器。 根据防火墙配置，可能需要通过防火墙允许模拟器。
@@ -279,7 +279,7 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
     [!code-console[Main](the-fix-it-sample-application/samples/sample21.cmd)]
 
     这些凭据将在一段时间后过期，你必须重新运行 `Add-AzureAccount` cmdlet。 在编写此电子书时，凭据过期前的时间限制为12小时。
-5. 如果有多个订阅，请使用 Get-azuresubscription cmdlet 来指定要在其中创建测试环境的订阅。
+5. 如果有多个订阅，请使用 Select-AzureSubscription cmdlet 来指定要在其中创建测试环境的订阅。
 6. 使用和 cmdlet 导入同一 Azure 订阅的管理证书 `Get-AzurePublishSettingsFile` `Import-AzurePublishSettingsFile` 。 其中的第一个 cmdlet 下载证书文件，并在第二个 cmdlet 中指定该文件的位置以将其导入。 > [!IMPORTANT]
    > 将下载的文件保存在安全的位置，或在完成后将其删除，因为它包含可用于管理 Azure 服务的证书。
 
@@ -317,9 +317,9 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample27.cmd)]
 
-    您可以使用 `Detailed` `Full` get-help cmdlet 的、、 `Parameters` 和 `Examples` 参数来筛选返回的帮助。
+    你可以使用 `Detailed` `Full` Get-Help cmdlet 的、、 `Parameters` 和 `Examples` 参数来筛选返回的帮助。
 
-    如果脚本失败或生成错误，如 "New-azurewebsite： Get-azuresubscription 和 Get-azuresubscription first"，则可能没有完成 Azure PowerShell 的配置。
+    如果脚本失败或生成错误，如 "New-azurewebsite： Call Set-AzureSubscription 和 Select-AzureSubscription first"，则可能尚未完成 Azure PowerShell 的配置。
 
     脚本完成后，可以使用 Azure 管理门户查看已创建的资源，如 " [自动执行所有](automate-everything.md) 操作" 一章中所示。
 10. 若要将 Fix it 项目部署到新的 Azure 环境，请使用 *AzureWebsite.ps1* 脚本。 例如：
@@ -341,7 +341,7 @@ ASP.NET 通过在 "用户输入" 文本框中输入 script，来自动防止恶�
 
 ### <a name="internalerror-the-server-encountered-an-internal-error"></a>InternalError：服务器遇到内部错误。
 
-`New-AzureWebsite`如果名称在 azurewebsites.net 域中不唯一，则该 cmdlet 将返回内部错误。 若要解决此错误，请使用不同的名称值，该名称位于 *New-AzureWebsiteEnv.ps1*的 name 参数中。
+`New-AzureWebsite`如果名称在 azurewebsites.net 域中不唯一，则该 cmdlet 将返回内部错误。 若要解决此错误，请使用不同的名称值，该名称位于 *New-AzureWebsiteEnv.ps1* 的 name 参数中。
 
 [!code-console[Main](the-fix-it-sample-application/samples/sample30.cmd)]
 
