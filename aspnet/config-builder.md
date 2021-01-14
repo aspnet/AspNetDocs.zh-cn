@@ -6,12 +6,12 @@ description: 了解如何从外部源中 web.config 值以外的源获取配置�
 ms.author: riande
 ms.date: 7/17/2020
 msc.type: content
-ms.openlocfilehash: c5a3d86487cd75d20aebe822e81f9b42d363faa7
-ms.sourcegitcommit: d4e2a07eeb2cdf19f0bfbfab4a469970bc7e1c99
+ms.openlocfilehash: 04bc6bcc2d9d0be561f8b1f2d909d8c46d90ad81
+ms.sourcegitcommit: 1dd64aab844e52ed27819c4ae62167081a067134
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98105229"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98206109"
 ---
 # <a name="configuration-builders-for-aspnet"></a>ASP.NET 的配置生成器
 
@@ -103,7 +103,7 @@ ms.locfileid: "98105229"
 
 例如，使用上一个 *web.config* 文件，前面的环境编辑器图像中的键/值和前面的代码将设置以下值：
 
-|  密钥              | 值 |
+|  密钥              | “值” |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | 从 env 变量 AppSetting_ServiceID|
 |    AppSetting_default            | 从 env AppSetting_default 值 |
@@ -136,7 +136,7 @@ ms.locfileid: "98105229"
 
 例如，使用上一个 *web.config* 文件，前面的环境编辑器图像中的键/值和前面的代码将设置以下值：
 
-|  密钥              | 值 |
+|  密钥              | “值” |
 | ----------------- | ------------ |
 |     ServiceID           | 从 env 变量 AppSetting_ServiceID|
 |    default            | 从 env AppSetting_default 值 |
@@ -217,7 +217,6 @@ ms.locfileid: "98105229"
     [mode|prefix|stripPrefix|tokenPattern]
     (vaultName="MyVaultName" |
      uri="https:/MyVaultName.vault.azure.net")
-    [connectionString="connection string"]
     [version="secrets version"]
     [preloadSecretNames="true"]
     type="Microsoft.Configuration.ConfigurationBuilders.AzureKeyVaultConfigBuilder,
@@ -229,7 +228,6 @@ ms.locfileid: "98105229"
 `vaultName` 需要 (保管库的名称或保管库的 URI) 。 其他属性允许控制要连接到哪个保管库，但仅当应用程序未在使用的环境中运行时才需要 `Microsoft.Azure.Services.AppAuthentication` 。 如果可能，将使用 Azure 服务身份验证库自动从执行环境中获取连接信息。 可以通过提供连接字符串来替代自动选取连接信息。
 
 * `vaultName` -如果未提供，则为必需 `uri` 。 指定 Azure 订阅中要从中读取键/值对的保管库的名称。
-* `connectionString`-可供[AzureServiceTokenProvider](https://docs.microsoft.com/azure/key-vault/service-to-service-authentication#connection-string-support)使用的连接字符串
 * `uri` -连接到其他具有指定值的 Key Vault 提供程序 `uri` 。 如果未指定，Azure (`vaultName`) 是保管库提供程序。
 * `version` -Azure Key Vault 为机密提供版本控制功能。 如果 `version` 指定了，则生成器仅检索与此版本匹配的机密。
 * `preloadSecretNames` -默认情况下，此生成器在初始化时 querys 密钥保管库中的 **所有** 密钥名称。 若要防止读取所有键值，请将此属性设置为 `false` 。 将此设置为 `false` 每次读取一个密钥。 如果保管库允许 "获取" 访问权限，但不允许 "列表" 访问，则一次读取一个机密会很有用。 **注意：** 使用 `Greedy` 模式时， `preloadSecretNames` 必须 `true` (默认值。 ) 
