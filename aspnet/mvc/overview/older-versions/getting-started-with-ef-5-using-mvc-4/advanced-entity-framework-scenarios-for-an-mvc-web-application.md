@@ -8,20 +8,18 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 85dd59016d904a9f654c438db977b5ae2c0187d2
-ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
+ms.openlocfilehash: 4b49ae0bee2a5ceb41dbf040dc6ea7c8d2d0dea2
+ms.sourcegitcommit: b4cdcf246850751579e45da80c9780fe56330dd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89045047"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99985110"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>MVC Web 应用程序的高级实体框架方案 (10 个) 
 
 作者： [Tom Dykstra](https://github.com/tdykstra)
 
-[下载完成的项目](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
-
-> Contoso 大学示例 web 应用程序演示了如何使用实体框架 5 Code First 和 Visual Studio 2012 创建 ASP.NET MVC 4 应用程序。 若要了解教程系列，请参阅[本系列中的第一个教程](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)。 你可以从头开始学习本系列教程，也可以从此处 [下载入门项目](building-the-ef5-mvc4-chapter-downloads.md) 。
+> Contoso 大学示例 web 应用程序演示了如何使用实体框架 5 Code First 和 Visual Studio 2012 创建 ASP.NET MVC 4 应用程序。 若要了解教程系列，请参阅[本系列中的第一个教程](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)。
 > 
 > > [!NOTE] 
 > > 
@@ -47,7 +45,7 @@ ms.locfileid: "89045047"
 
 ## <a name="performing-raw-sql-queries"></a>执行原始 SQL 查询
 
-实体框架 Code First API 包括使你能够将 SQL 命令直接传递到数据库的方法。 你有以下选择：
+实体框架 Code First API 包括使你能够将 SQL 命令直接传递到数据库的方法。 有下列选项：
 
 - 使用`DbSet.SqlQuery`返回实体类型的查询方法。 返回的对象必须是对象所需的类型 `DbSet` ，并且数据库上下文会自动跟踪这些对象，除非关闭跟踪。  (参见以下有关方法的部分 `AsNoTracking` 。 ) 
 - `Database.SqlQuery`对于返回非实体类型的查询，请使用方法。 数据库上下文不会跟踪返回的数据，即使你使用该方法来检索实体类型也是如此。
@@ -61,11 +59,11 @@ ms.locfileid: "89045047"
 
 假设您希望 `GenericRepository` 类提供附加的筛选和排序灵活性，而不需要使用其他方法创建派生类。 实现此目的的一种方法是添加接受 SQL 查询的方法。 然后，您可以在控制器中指定想要的任何类型的筛选或排序，如 `Where` 依赖于联接或子查询的子句。 在本节中，你将了解如何实现此类方法。
 
-`GetWithRawSql`通过将以下代码添加到*GenericRepository.cs*，创建方法：
+`GetWithRawSql`通过将以下代码添加到 *GenericRepository.cs*，创建方法：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample1.cs)]
 
-在 *CourseController.cs*中，从方法调用新方法 `Details` ，如以下示例中所示：
+在 *CourseController.cs* 中，从方法调用新方法 `Details` ，如以下示例中所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample2.cs)]
 
@@ -83,7 +81,7 @@ ms.locfileid: "89045047"
 
 假设您要编写在 SQL 中直接检索此数据的代码，而不是使用 LINQ。 为此，您需要运行一个返回除 entity 对象之外的内容的查询，这意味着您需要使用 `Database.SqlQuery` 方法。
 
-在 *HomeController.cs*中，将方法中的 LINQ 语句替换 `About` 为以下代码：
+在 *HomeController.cs* 中，将方法中的 LINQ 语句替换 `About` 为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample4.cs)]
 
@@ -103,13 +101,13 @@ ms.locfileid: "89045047"
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample5.cs)]
 
-在 *UnitOfWork.cs*中，将 `Course` 存储库类型从更改 `GenericRepository<Course>` 为 `CourseRepository:`
+在 *UnitOfWork.cs* 中，将 `Course` 存储库类型从更改 `GenericRepository<Course>` 为 `CourseRepository:`
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.cs)]
 
-在 *CourseController.cs*中，添加 `UpdateCourseCredits` 方法：
+在 *CourseController.cs* 中，添加 `UpdateCourseCredits` 方法：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 
@@ -123,15 +121,15 @@ ms.locfileid: "89045047"
 
 ![Add_View_dialog_box_for_Update_Course_Credits](https://asp.net/media/2578203/Windows-Live-Writer_Advanced-Entity-Framework-Scenarios-for-_CEF8_Add_View_dialog_box_for_Update_Course_Credits.png)
 
-在 *Views\Course\UpdateCourseCredits.cshtml*中，将模板代码替换为以下代码：
+在 *Views\Course\UpdateCourseCredits.cshtml* 中，将模板代码替换为以下代码：
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample9.cshtml)]
 
-通过选择**Courses**选项卡运行`UpdateCourseCredits`方法，然后在浏览器地址栏中 URL 的末尾添加"/ UpdateCourseCredits"到 (例如： `http://localhost:50205/Course/UpdateCourseCredits`)。 在文本框中输入数字：
+通过选择 **Courses** 选项卡运行`UpdateCourseCredits`方法，然后在浏览器地址栏中 URL 的末尾添加"/ UpdateCourseCredits"到 (例如： `http://localhost:50205/Course/UpdateCourseCredits`)。 在文本框中输入数字：
 
 ![Update_Course_Credits_initial_page_with_2_entered](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image7.png)
 
-单击**Update**。 你会看到受影响的行数：
+单击 **Update**。 你会看到受影响的行数：
 
 ![Update_Course_Credits_rows_affected_page](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image8.png)
 
@@ -152,7 +150,7 @@ ms.locfileid: "89045047"
 
 在本部分中，你将实现用于阐释其中第二种情况的业务逻辑。 具体来说，您将强制实施一条业务规则，指出讲师不能是多个部门的管理员。
 
-在 *DepartmentController.cs*中，添加一个可从和方法调用的新方法， `Edit` `Create` 以确保没有两个部门具有相同的管理员：
+在 *DepartmentController.cs* 中，添加一个可从和方法调用的新方法， `Edit` `Create` 以确保没有两个部门具有相同的管理员：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample10.cs)]
 
@@ -175,7 +173,7 @@ ms.locfileid: "89045047"
 
 此问题的一种解决方法是使上下文不会跟踪由验证查询检索到的内存中部门实体。 执行此操作没有任何缺点，因为你不会更新此实体，也不会以一种可从其缓存在内存中的方式对其进行读取。
 
-在 *DepartmentController.cs*的方法中， `ValidateOneAdministratorAssignmentPerInstructor` 指定 no 跟踪，如下所示：
+在 *DepartmentController.cs* 的方法中， `ValidateOneAdministratorAssignmentPerInstructor` 指定 no 跟踪，如下所示：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample12.cs?highlight=4)]
 
@@ -185,7 +183,7 @@ ms.locfileid: "89045047"
 
 有时能够以查看发送到数据库的实际 SQL 查询对于开发者来说是很有用的。 为此，可以在调试器中检查查询变量，或调用查询的 `ToString` 方法。 若要尝试此操作，你将看到一个简单的查询，然后在你添加预先加载、筛选和排序选项时，查看该查询所发生的情况。
 
-在 controller */CourseController*中，将 `Index` 方法替换为以下代码：
+在 controller */CourseController* 中，将 `Index` 方法替换为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample13.cs?highlight=3)]
 
@@ -199,7 +197,7 @@ ms.locfileid: "89045047"
 
 ![Copy_value_of_variable_in_debug_mode](https://asp.net/media/2578239/Windows-Live-Writer_Advanced-Entity-Framework-Scenarios-for-_CEF8_Copy_value_of_variable_in_debug_mode_0902a2b1-b799-47a6-9b4b-f266c79d83c1.png)
 
-现在，您将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载 `Department` 导航属性。 在 *CourseController.cs*中，将 `Index` 方法替换为以下代码：
+现在，您将向 "课程索引" 页添加一个下拉列表，以便用户可以筛选特定部门。 您将按标题对课程进行排序，并指定预先加载 `Department` 导航属性。 在 *CourseController.cs* 中，将 `Index` 方法替换为以下代码：
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample15.cs)]
 
@@ -209,7 +207,7 @@ ms.locfileid: "89045047"
 
 对于 `Get` 存储库的方法 `Course` ，代码指定筛选器表达式、排序顺序以及预先加载 `Department` 导航属性。 `true`如果未在下拉列表中选择任何内容，则筛选表达式始终返回 (即 `SelectedDepartment` 为 null) 。
 
-在 *Views\Course\Index.cshtml*中，紧跟在开始 `table` 标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
+在 *Views\Course\Index.cshtml* 中，紧跟在开始 `table` 标记之前，添加以下代码以创建下拉列表和 "提交" 按钮：
 
 [!code-cshtml[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample16.cshtml)]
 
@@ -257,7 +255,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 在调用方法时 `SaveChanges` ，默认情况下，实体框架在更新数据库之前验证所有已更改实体的所有属性中的数据。 如果已更新大量实体，并且已验证数据，则不需要执行此操作，并且可以通过暂时关闭验证来使保存更改的过程更少。 可以使用 [ValidateOnSaveEnabled](https://msdn.microsoft.com/library/system.data.entity.infrastructure.dbcontextconfiguration.validateonsaveenabled(VS.103).aspx) 属性执行此操作。 有关详细信息，请参阅 [验证](https://blogs.msdn.com/b/adonet/archive/2010/12/15/ef-feature-ctp5-validation.aspx)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这将完成本系列教程，介绍如何在 ASP.NET MVC 应用程序中使用实体框架。 可在 [ASP.NET 数据访问内容映射](../../../../whitepapers/aspnet-data-access-content-map.md)中找到指向其他实体框架资源的链接。
 
@@ -291,7 +289,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 请等待几秒钟，然后刷新页面。
 
-### <a name="update-database-not-recognized"></a>更新-无法识别数据库
+### <a name="update-database-not-recognized"></a>Update-Database 无法识别
 
 错误消息：
 
@@ -325,7 +323,7 @@ Entity Framework 通过比较的实体的当前值与原始值来判断更改实
 
 错误消息：
 
-*建立与 SQL Server 的连接时出现与网络相关或特定于实例的错误。找不到或无法访问服务器。请验证实例名称是否正确，以及 SQL Server 是否配置为允许远程连接。 (提供程序： SQL 网络接口，错误： 26-定位指定的服务器/实例时出错) *
+*建立与 SQL Server 的连接时出现与网络相关或特定于实例的错误。找不到或无法访问服务器。请验证实例名称是否正确，以及 SQL Server 是否配置为允许远程连接。 (提供程序： SQL 网络接口，错误： 26-定位指定的服务器/实例时出错)*
 
 解决方案：
 
