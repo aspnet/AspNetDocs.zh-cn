@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 9eebe0e52af2a0fca967a51afb58c7db174d9fdb
-ms.sourcegitcommit: feb88edfb01b32f6fc9488f0f0ddb3c5b34e6ff0
+ms.openlocfilehash: 4f5cb34ac8ef1750e7aacbbb47713846674e053d
+ms.sourcegitcommit: d5049dfb08ff14872ba3b29a702e0589a776b430
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88702915"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102194573"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Microsoft Ajax 内容分发网络
 
@@ -163,6 +163,14 @@ CDN 承载一些最常用的第三方 JavaScript 库。 Microsoft 不会宣称�
 ### <a name="jquery-releases-on-the-cdn"></a>CDN 上的 jQuery 版本
 
 以下版本的 jQuery 在 CDN 上托管：
+
+#### <a name="jquery-version-360"></a>jQuery 版本3.6。0
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.map
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.min.map
 
 #### <a name="jquery-version-351"></a>jQuery 版本3.5。1
 - https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js
@@ -694,7 +702,7 @@ jQuery 迁移版本1.2。0
 
 此 CDN 上承载了以下版本的 jQuery 循环插件。 单击每个链接以查看文件的实际列表。
 
-- [jQuery Cycle 2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
+- [jQuery 循环2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
 - [jQuery Cycle 2.94](jquery-cycle/cdnjquerycycle294.md "jQuery Cycle 2.94")
 - [jQuery Cycle 2.88](jquery-cycle/cdnjquerycycle288.md "jQuery Cycle 2.88")
 
@@ -710,7 +718,7 @@ jQuery 迁移版本1.2。0
 - [jQuery DataTables 1.9.3](jquery-datatables/cdnjquerydatatables193.md "jQuery DataTables 1.9.3")
 - [jQuery DataTables 1.9.2](jquery-datatables/cdnjquerydatatables192.md "jQuery DataTables 1.9.2")
 - [jQuery DataTables 1.9.1](jquery-datatables/cdnjquerydatatables191.md "jQuery DataTables 1.9.1")
-- [jQuery DataTables 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
+- [jQuery 数据表1.9。0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
 - [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md "jQuery DataTables 1.8.2")
 
 <a id="Modernizr_Releases_on_the_CDN_8"></a>

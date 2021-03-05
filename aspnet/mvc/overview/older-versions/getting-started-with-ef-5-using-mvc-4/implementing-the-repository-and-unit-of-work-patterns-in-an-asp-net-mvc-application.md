@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 44761193-04ba-4990-9f90-145d3c10a716
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5bcdf32f1aa48e0d4950f59ff7841413f6990812
-ms.sourcegitcommit: b4cdcf246850751579e45da80c9780fe56330dd0
+ms.openlocfilehash: 03579bbaf454583543f09f68ac1b94a3b1ec0d92
+ms.sourcegitcommit: d5049dfb08ff14872ba3b29a702e0589a776b430
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99984707"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102194547"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>在 ASP.NET MVC 应用程序中实现存储库和工作单元模式 (9 of 10) 
 
@@ -43,7 +43,6 @@ ms.locfileid: "99984707"
 不会在本系列教程中创建单元测试。 有关使用使用存储库模式的 MVC 应用程序的 TDD 简介，请参阅 [演练：将 TDD 与 ASP.NET MVC 配合使用](https://msdn.microsoft.com/library/ff847525.aspx)。 有关存储库模式的详细信息，请参阅以下资源：
 
 - MSDN 上[的存储库模式](https://msdn.microsoft.com/library/ff649690.aspx)。
-- 实体框架团队博客上的[实体框架4.0 使用存储库和工作单元模式](https://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx)。
 - Julie Lerman 的博客上的[敏捷实体框架4存储库](http://thedatafarm.com/blog/data-access/agile-entity-framework-4-repository-part-1-model-and-poco-classes/)系列。
 - 在 Dan Wahlin 的博客上[快速生成 HTML5/JQuery 应用程序的帐户](https://weblogs.asp.net/dwahlin/archive/2011/08/15/building-the-account-at-a-glance-html5-jquery-application.aspx)。
 
